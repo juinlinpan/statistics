@@ -1,0 +1,4 @@
+interface:
+  display_name: "互動統計講義工程"
+  short_description: "分四階段建立易懂、可練習且能診斷迷思的互動統計課程"
+  default_prompt: "使用 $build-statistics-course 從下一個未完成階段繼續建立統計講義。"
