@@ -1,0 +1,225 @@
+- id: m02-frame-vs-voluntary-01
+  chapter: 2
+  type: multiple-choice
+  concepts: [voluntary-response-bias, nonresponse-bias, undercoverage, measurement-bias]
+  difficulty: foundational
+  prompt: "市政府想了解全市成年居民對新公車路線的看法，於是把問卷連結公布在市府官網首頁，任何瀏覽者都能自由填寫並轉發給親友。這個做法最主要的問題是？"
+  options:
+    - id: a
+      text: "自願回應偏誤：是否填答由瀏覽者自行決定，較關心公車議題的人更可能填答"
+      correct: true
+      feedback: "沒有名單先界定誰是被抽中的人，是否填答完全由瀏覽者自行決定，且問卷可再被轉發，這是自願回應偏誤的典型樣態。"
+    - id: b
+      text: "無回應偏誤：被抽中的居民有一部分沒有回覆問卷"
+      correct: false
+      misconception: "把自願參與誤當成既定樣本的無回應"
+      feedback: "無回應偏誤的前提是先有一份明確被抽中的名單，其中部分人沒有回覆；本題從未指定任何被抽中對象。"
+    - id: c
+      text: "涵蓋不足：抽樣框沒有包含所有居民"
+      correct: false
+      misconception: "只關注抽樣框涵蓋範圍，忽略誰選擇填答才是核心"
+      feedback: "即使涵蓋良好，是否作答仍取決於個人意願與轉發擴散，這是自願回應的問題，不是名單漏掉誰。"
+    - id: d
+      text: "回應／測量偏誤：問卷題目的措辭引導受訪者"
+      correct: false
+      misconception: "把問題歸咎於題目措辭，卻沒有任何具體字句可供判斷"
+      feedback: "題目沒有提供問卷措辭資訊；核心問題在於徵集方式本身允許自我選擇與轉發擴散。"
+  answer: a
+  solution: "開放連結、自由填寫並轉發的徵集方式，使是否回應完全由個人意願決定，屬於自願回應偏誤。"
+
+- id: m02-srs-vs-stratified-01
+  chapter: 2
+  type: multiple-choice
+  concepts: [simple-random-sample, stratified-random-sampling, systematic-sampling, cluster-sampling]
+  difficulty: foundational
+  prompt: "某大學有五個學院，人數差異極大，從 200 人到 8,000 人不等。研究者想確保每個學院都有足夠樣本可分別比較滿意度，同時仍要估計全校平均滿意度。最適合的抽樣方法是？"
+  options:
+    - id: a
+      text: "簡單隨機抽樣：直接對全校學生名單做一次 SRS"
+      correct: false
+      misconception: "把全校樣本數夠大等同於每個子群樣本數都夠"
+      feedback: "SRS 不保證只有 200 人的學院能被抽到足夠人數，甚至可能一人都沒抽到，無法分別比較。"
+    - id: b
+      text: "分層隨機抽樣：先依學院分層，再於各層內個別做隨機抽樣"
+      correct: true
+      feedback: "分層可確保人數最少的學院也單獨獲得樣本，同時各層仍用隨機機制抽樣，兼顧代表性與可比較性。"
+    - id: c
+      text: "系統抽樣：把全校名單依固定間隔（例如每 20 人）抽 1 人"
+      correct: false
+      misconception: "把固定間隔挑選誤認為與隨機抽樣等價"
+      feedback: "系統抽樣的納入機制不是每個大小為 n 的樣本都等機率，也不特別確保每個學院都能分別比較。"
+    - id: d
+      text: "集群抽樣：隨機抽出 2 個學院，調查這兩個學院的所有學生"
+      correct: false
+      misconception: "把先隨機抽群體再普查群內所有人誤認為先分層再各層內抽樣"
+      feedback: "集群抽樣只調查中選的 2 個學院，其餘 3 個學院完全沒有機會被納入，與每個學院都要能分別比較的要求矛盾。"
+  answer: b
+  solution: "子群大小差異大、且都需要被代表，是分層隨機抽樣的典型適用情境。"
+
+- id: m02-bias-vs-chance-error-01
+  chapter: 2
+  type: multiple-choice
+  concepts: [bias, chance-error, sample-size, voluntary-response-bias]
+  difficulty: foundational
+  prompt: "一項產品滿意度調查一開始用自願網路問卷回收 800 份；研究者不改變招募方式，只是延長問卷開放時間，最後回收到 8,000 份。哪一項最準確描述這個改變的效果？"
+  options:
+    - id: a
+      text: "機會誤差與偏誤都會消失，因為樣本變大了"
+      correct: false
+      misconception: "把樣本數變大等同於自動修正抽樣程序的系統性問題"
+      feedback: "招募方式沒有改變，願意主動填答者的特徵傾向仍然一樣，偏誤不會消失。"
+    - id: b
+      text: "偏誤會消失，但機會誤差不變"
+      correct: false
+      misconception: "把機會誤差與偏誤的性質對調"
+      feedback: "機會誤差才是通常隨樣本數增加而縮小的部分；偏誤是系統性偏離，不會因樣本數變大而自動消失。"
+    - id: c
+      text: "機會誤差可能變小，但自願回應造成的偏誤不會因樣本變大而消除"
+      correct: true
+      feedback: "樣本數變大通常讓隨機波動變小，但招募方式沒有改變，自願回應造成的偏誤仍然存在。"
+    - id: d
+      text: "機會誤差與偏誤都會變大，因為更多不同的人參與"
+      correct: false
+      misconception: "假設人數變多就代表誤差全面惡化"
+      feedback: "隨機波動通常隨樣本數增加而縮小；樣本數變大主要留下的疑慮是代表性，不是兩種誤差同時變大。"
+  answer: c
+  solution: "增加自願回應樣本數通常降低機會誤差，但無法修正自願回應本身造成的偏誤。"
+
+- id: m02-srs-inclusion-probability-01
+  chapter: 2
+  type: calculation
+  concepts: [simple-random-sample, inclusion-probability, expected-value]
+  difficulty: intermediate
+  prompt: "某年級共有 N=360 名學生，教務處採不放回簡單隨機抽樣，抽出 n=45 人填寫問卷。(a) 求每位學生被抽中的機率；(b) 已知這 360 人中有一個 30 人的社團，抽樣機制預期會抽中這個社團多少人？"
+  answer: "每位學生被抽中的機率為 12.5%；該 30 人社團期望抽中約 3.75 人。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "母體 N=360 人，樣本 n=45 人；社團人數 30 人是母體的子集合，皆以人數計。"
+    - title: "選擇方法"
+      explanation: "(a) 使用 SRS 個體納入機率公式；(b) 利用每人納入機率相同，將社團人數乘以個體納入機率即為期望抽中人數（期望值具可加性）。"
+      formula_ref: formula-ch02-srs-sample-inclusion-probability
+    - title: "檢查條件"
+      explanation: "抽樣為不放回 SRS，且抽樣機制沒有針對此社團另外調整權重，可視社團與其餘學生適用相同納入機率。"
+    - title: "代入計算"
+      explanation: "p=45/360=0.125；社團期望抽中人數=30×0.125=3.75。"
+      formula_ref: formula-ch02-srs-sample-inclusion-probability
+    - title: "解讀"
+      explanation: "每位學生被抽中的機率是 12.5%；平均而言 30 人社團預期約 3.75 人被抽到。"
+    - title: "合理性檢查"
+      explanation: "0.125 介於 0 與 1 之間；3.75 介於 0 與 30 之間；但這只是期望值，實際抽樣結果可能是 0 到 30 之間任何整數。"
+  checks:
+    - "是否把個體納入機率與子群期望人數分開計算？"
+    - "是否說明期望值不是保證值？"
+
+- id: m02-stratified-weighted-mean-01
+  chapter: 2
+  type: calculation
+  concepts: [stratified-random-sampling, weighted-mean]
+  difficulty: intermediate
+  prompt: "某公司有三個部門，占全公司人數比例分別為 50%、30%、20%。研究者在各部門內各自抽樣後，得到平均通勤時間分別為 20 分鐘、25 分鐘、30 分鐘。求全公司平均通勤時間的分層估計，並與直接平均三個部門樣本平均的結果比較。"
+  answer: "分層估計為 23.5 分鐘；直接平均（不加權）得 25 分鐘，會高估全公司平均通勤時間。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "三層權重 W1=0.50、W2=0.30、W3=0.20（加總為 1）；各層樣本平均 20、25、30 分鐘。"
+    - title: "選擇方法"
+      explanation: "使用分層加權平均公式，以母體占比加權，而非直接對三個部門樣本平均取算術平均。"
+      formula_ref: formula-ch02-stratified-weighted-mean
+    - title: "檢查條件"
+      explanation: "三個部門互不重疊、沒有遺漏；權重反映母體人數占比，不是抽出樣本人數占比。"
+    - title: "代入計算"
+      explanation: "0.50(20)+0.30(25)+0.20(30)=10+7.5+6=23.5；未加權平均=(20+25+30)/3=25。"
+      formula_ref: formula-ch02-stratified-weighted-mean
+    - title: "解讀"
+      explanation: "分層估計 23.5 分鐘較準確；未加權的 25 分鐘把三部門當各占三分之一，忽略最大部門(50%)通勤時間較短。"
+    - title: "合理性檢查"
+      explanation: "23.5 介於 20 與 30 之間，且比未加權的 25 更靠近權重最大那一層(20 分鐘)，方向正確。"
+  checks:
+    - "權重是否用母體占比而非樣本占比？"
+    - "加權結果是否落在各層平均的最小值與最大值之間？"
+
+- id: m02-confounding-01
+  chapter: 2
+  type: multiple-choice
+  concepts: [observational-study, confounding-variable, association-vs-causation]
+  difficulty: intermediate
+  prompt: "觀察資料顯示，每週固定重量訓練的成年人骨密度明顯高於不訓練者。研究者據此建議所有中年人應立即開始重訓以提升骨密度。這個建議最主要的問題是？"
+  options:
+    - id: a
+      text: "樣本數不足，應該擴大調查人數"
+      correct: false
+      misconception: "把問題歸咎於估計的精確度而非研究設計"
+      feedback: "即使樣本再大，觀察研究本身仍可能有混淆，無法單靠增加人數排除因果方向錯誤或第三變數解釋。"
+    - id: b
+      text: "應該先做統計顯著性檢定，只要 p 值夠小就能確立這個建議"
+      correct: false
+      misconception: "把統計顯著性等同於因果確立"
+      feedback: "p 值小只顯示關聯不太可能單純是機會造成，不能排除混淆變數。"
+    - id: c
+      text: "應該畫散佈圖確認骨密度與訓練時間是否為線性關係"
+      correct: false
+      misconception: "把確認關聯的函數形式誤當成確認關聯是否為因果"
+      feedback: "不論關聯的圖形是線性或非線性，觀察研究都無法只靠關聯本身排除第三變數。"
+    - id: d
+      text: "可能存在混淆變數（如年齡、荷爾蒙狀況、原本骨骼健康），同時影響是否規律訓練與骨密度，使觀察到的關聯不足以確立因果方向"
+      correct: true
+      feedback: "這是觀察研究，是否重訓由參與者自己選擇，其他與訓練意願、骨骼健康都有關的因素可能同時影響兩個變數。"
+  answer: d
+  solution: "觀察研究可以發現關聯，但單靠關聯通常不能確認因果；本題可能有混淆變數同時影響是否訓練與骨密度。"
+
+- id: m02-sampling-vs-assignment-01
+  chapter: 2
+  type: multiple-choice
+  concepts: [random-sampling, random-assignment, generalization, causal-inference]
+  difficulty: intermediate
+  prompt: "研究者從某醫院所有自願參加研究的糖尿病患者中，隨機分派一半使用新藥、一半使用安慰劑，並追蹤血糖變化。哪一項陳述最準確？"
+  options:
+    - id: a
+      text: "因為有隨機分派，這個研究的結果可以直接推廣到所有糖尿病患者"
+      correct: false
+      misconception: "把隨機分派誤當成隨機抽樣"
+      feedback: "兩種隨機化解決不同問題：隨機分派支持因果比較，隨機抽樣才支持推廣範圍。本題參與者是自願參加，不是隨機抽樣。"
+    - id: b
+      text: "因為參與者不是隨機抽樣得來，這個研究完全沒有參考價值"
+      correct: false
+      misconception: "把推廣需謹慎誇大成研究完全沒有價值"
+      feedback: "即使樣本非隨機抽樣得來，隨機分派仍能為這些參與者本身提供較可信的因果比較。"
+    - id: c
+      text: "隨機分派讓組間比較較能支持對這些參與者的因果效果，但推廣到所有糖尿病患者需要謹慎"
+      correct: true
+      feedback: "這符合非隨機樣本加隨機分派的情況：對參與者本身的因果比較較有依據，但推廣需要審慎。"
+    - id: d
+      text: "這屬於觀察研究，因此只能看出用藥與血糖的關聯，不能談因果"
+      correct: false
+      misconception: "把參與者自願參加誤認為研究者沒有主動分派處置"
+      feedback: "研究者主動把新藥或安慰劑分派給病人，這是實驗，不是觀察研究。"
+  answer: c
+  solution: "非隨機樣本加隨機分派：對研究參與者的因果比較較有依據，但推廣到所有糖尿病患者需要謹慎。"
+
+- id: m02-block-vs-stratum-01
+  chapter: 2
+  type: multiple-choice
+  concepts: [randomized-block-design, stratified-random-sampling, confounding-variable, treatment]
+  difficulty: foundational
+  prompt: "研究者把 40 名參與者依性別分成兩組，再各自於組內隨機分派新舊兩種教學法，比較學習成效。性別在此設計中稱為什麼？"
+  options:
+    - id: a
+      text: "分層變數：如同分層抽樣中的層"
+      correct: false
+      misconception: "把區組設計誤認為分層抽樣"
+      feedback: "分層抽樣發生在抽樣階段，目的是從母體選出具代表性的樣本；本題是在實驗樣本中先分組再分派處置，屬於區組設計。"
+    - id: b
+      text: "區組變數：先讓相似的實驗單位放在一起，再於組內隨機分派處置"
+      correct: true
+      feedback: "先依性別分組讓組內個體更相似，再於組內隨機分派教學法，這正是隨機區組設計。"
+    - id: c
+      text: "混淆變數：性別已經和教學法糾纏在一起，難以分開效果"
+      correct: false
+      misconception: "把用來分組再隨機分派處置的特徵誤認為混淆變數"
+      feedback: "正因為性別在組內被固定、教學法在組內隨機分派，性別造成的差異才不會與教學法效果糾纏在一起。"
+    - id: d
+      text: "處置變數：性別是這個實驗真正要比較的對象"
+      correct: false
+      misconception: "把分組用的特徵誤當成研究者真正想比較的處置"
+      feedback: "本題要比較的處置是新舊兩種教學法；性別只是用來讓組內個體更相似的區組變數。"
+  answer: b
+  solution: "先依已知特徵分組、再於組內隨機分派處置，是隨機區組設計；性別在此扮演區組變數的角色。"

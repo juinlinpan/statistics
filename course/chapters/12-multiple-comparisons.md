@@ -3,7 +3,7 @@ chapter: 12
 slug: multiple-comparisons
 title: 多重比較
 phase1: 完成
-phase2: 進行中
+phase2: 完成
 phase3: 未開始
 ---
 

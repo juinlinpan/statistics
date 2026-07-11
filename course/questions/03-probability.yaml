@@ -1,0 +1,225 @@
+- id: p03-interpretation-01
+  chapter: 3
+  type: multiple-choice
+  concepts: [probability-interpretation, long-run-frequency, subjective-probability]
+  difficulty: foundational
+  prompt: "氣象員根據模型與最新氣象資料，宣布「明天下午出現定義中的強降雨事件機率是 80%」。這句話最適合如何理解？"
+  options:
+    - id: a
+      text: "表示明天下午將有 80% 的時間在下雨"
+      correct: false
+      misconception: "把事件機率誤當成時間占比"
+      feedback: "80% 描述的是「是否出現定義中的降雨事件」的可信程度，不是下雨時間所占比例。"
+    - id: b
+      text: "根據目前資訊與模型，對明天下午發生該事件的可信程度，並非精確保證"
+      correct: true
+      feedback: "單次、無法真正重複的情境適合用可信程度／模型詮釋，而非長期相對頻率或保證。"
+    - id: c
+      text: "表示過去 100 次類似氣象條件中，剛好有 80 次真的下雨，這是既定的歷史紀錄"
+      correct: false
+      misconception: "把單次模型機率誤當成已觀察到的長期相對頻率計數"
+      feedback: "並沒有 100 次「條件完全相同的明天」可供這樣計數；這是對單一事件的可信程度陳述。"
+    - id: d
+      text: "表示這個氣象模型有 20% 的機率是錯的"
+      correct: false
+      misconception: "把事件發生的機率和模型本身出錯的機率混為一談"
+      feedback: "80% 描述的是天氣事件是否發生，不是模型正確與否這件事的機率。"
+  answer: b
+  solution: "此機率結合模型與最新資料，屬於可信程度／模型詮釋，適用於無法真正重複的單次情境。"
+
+- id: p03-equally-likely-01
+  chapter: 3
+  type: calculation
+  concepts: [equally-likely-outcomes, sample-space]
+  difficulty: foundational
+  prompt: "園遊會摸彩箱中放入編號 1 到 45、大小材質相同的球，充分攪拌後隨機抽出一顆。求抽到的號碼是 3 的倍數的機率。"
+  answer: "1/3 ≈ 0.333"
+  steps:
+    - title: "辨認已知量"
+      explanation: "樣本空間 S={1,...,45}，|S|=45；事件 A 為「號碼是 3 的倍數」。"
+    - title: "選擇方法"
+      explanation: "球大小材質相同且充分攪拌，可視為等可能，使用等可能結果公式。"
+      formula_ref: formula-probability-equally-likely
+    - title: "檢查條件"
+      explanation: "樣本空間有限，且題目說明已充分攪拌，等可能假設成立。"
+    - title: "代入計算"
+      explanation: "3 的倍數為 3,6,...,45 共 15 個；P(A)=15/45=1/3≈0.333。"
+      formula_ref: formula-probability-equally-likely
+    - title: "解讀"
+      explanation: "隨機抽到 3 的倍數號碼的機率約為三分之一。"
+    - title: "合理性檢查"
+      explanation: "0<1/3<1；每連續 3 個號碼恰有 1 個是 3 的倍數，與直覺一致。"
+  checks:
+    - "是否確認每顆球被抽到的機會相同，才套用等可能公式？"
+    - "計數 3 的倍數時是否包含 45 本身？"
+
+- id: p03-complement-atleastone-01
+  chapter: 3
+  type: calculation
+  concepts: [complement, at-least-one, independence]
+  difficulty: intermediate
+  prompt: "品管人員對同一批次中 4 個獨立運作的小型電子元件分別做通電測試，每個元件發生故障的機率皆為 0.1，且元件之間互不影響。求這 4 個元件中至少一個故障的機率。"
+  answer: "約 0.3439"
+  steps:
+    - title: "辨認已知量"
+      explanation: "n=4 個獨立元件，各自故障機率 p=0.1；事件為「至少一個故障」。"
+    - title: "選擇方法"
+      explanation: "「至少一個」的補事件是「四個都正常」，用補事件公式；因元件獨立，正常機率可相乘。"
+      formula_ref: formula-probability-complement
+    - title: "檢查條件"
+      explanation: "題目已說明元件獨立測試，故障與正常互斥且涵蓋全部結果，補事件與獨立假設皆成立。"
+      formula_ref: formula-probability-independence
+    - title: "代入計算"
+      explanation: "每個元件正常機率為 0.9；P(四個都正常)=0.9^4=0.6561；P(至少一個故障)=1-0.6561=0.3439。"
+      formula_ref: formula-probability-complement
+    - title: "解讀"
+      explanation: "這批 4 個元件中至少有一個故障的機率約為 34.4%。"
+    - title: "合理性檢查"
+      explanation: "0.3439 大於單一元件故障機率 0.1，但小於直接相加的 4×0.1=0.4，因為直接相加會重複計數，方向合理。"
+  checks:
+    - "是否先算補事件「都沒故障」，而不是直接把 0.1 乘以 4？"
+    - "獨立假設是否有題目依據，而非自行假設？"
+
+- id: p03-addition-rule-01
+  chapter: 3
+  type: multiple-choice
+  concepts: [addition-rule, mutually-exclusive, union]
+  difficulty: intermediate
+  prompt: "某健身房 300 位會員中，180 人上瑜珈課，120 人上皮拉提斯課，其中 50 人兩門課都上。想計算「至少上瑜珈或皮拉提斯其中一門」的會員比例，應該使用哪種做法？"
+  options:
+    - id: a
+      text: "直接把 180 和 120 相加，因為兩門課都是運動課程，可視為互斥"
+      correct: false
+      misconception: "未檢查交集就假設互斥"
+      feedback: "題目已明白指出兩者有 50 人重疊；直接相加會把這 50 人重複計數兩次。"
+    - id: b
+      text: "用一般加法法則：P(瑜珈)+P(皮拉提斯)-P(兩者都上)"
+      correct: true
+      feedback: "已知兩門課有重疊人數，須用一般加法法則扣除重複計數的交集：0.6+0.4-1/6=5/6≈0.833。"
+    - id: c
+      text: "用乘法法則 P(瑜珈)×P(皮拉提斯)，因為題目出現「或」這個字"
+      correct: false
+      misconception: "把「或」（聯集）與「且」（交集）搞混，誤用乘法法則"
+      feedback: "乘法法則用於計算兩事件同時發生的機率，不是至少一個發生的機率。"
+    - id: d
+      text: "只算兩門課都上的 50 人"
+      correct: false
+      misconception: "把交集當成聯集"
+      feedback: "50 人是兩門課都上的交集，但題目要的是至少上一門的聯集，兩者是不同的量。"
+  answer: b
+  solution: "P(瑜珈∪皮拉提斯)=180/300+120/300-50/300=5/6≈0.833。"
+
+- id: p03-conditional-direction-01
+  chapter: 3
+  type: calculation
+  concepts: [conditional-probability, direction-of-conditioning]
+  difficulty: intermediate
+  prompt: "某公司 150 位員工中，90 人規律運動，60 人睡眠品質良好，其中 40 人同時規律運動且睡眠品質良好。求 P(睡眠良好|規律運動) 與 P(規律運動|睡眠良好)，並說明兩者是否相同。"
+  answer: "4/9≈0.444 與 2/3≈0.667，兩者不同。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "n=150；規律運動 90 人；睡眠良好 60 人；兩者都符合 40 人。"
+    - title: "選擇方法"
+      explanation: "使用條件機率定義，分母須改成已知條件所限定的新樣本空間。"
+      formula_ref: formula-conditional-probability
+    - title: "檢查條件"
+      explanation: "兩個條件機率的分母不同：一個以規律運動 90 人為分母，另一個以睡眠良好 60 人為分母。"
+    - title: "代入計算"
+      explanation: "P(睡眠良好|規律運動)=40/90=4/9≈0.444；P(規律運動|睡眠良好)=40/60=2/3≈0.667。"
+      formula_ref: formula-conditional-probability
+    - title: "解讀"
+      explanation: "在規律運動員工中約 44.4% 睡眠良好；在睡眠良好員工中約 66.7% 有規律運動，兩者回答不同問題。"
+    - title: "合理性檢查"
+      explanation: "兩值皆介於 0 與 1 之間，且都不等於全體睡眠良好比例 0.4 或全體運動比例 0.6，顯示兩變數有關聯。"
+  checks:
+    - "分母是否隨著條件事件改變，而非誤用同一個分母？"
+    - "是否清楚說明兩個條件機率方向不同、不能互換？"
+
+- id: p03-exclusive-vs-independent-01
+  chapter: 3
+  type: multiple-choice
+  concepts: [mutually-exclusive, independence]
+  difficulty: intermediate
+  prompt: "同一件產品上有兩個事件：M 表示「該產品由機器甲生產」，D 表示「該產品有瑕疵」。已知兩事件不互斥。已知整體瑕疵率為 5%，但已知產品來自機器甲後瑕疵率變成 8%。這說明 M 與 D 具有什麼關係？"
+  options:
+    - id: a
+      text: "M 與 D 互斥，因為兩者描述的是不同面向的事"
+      correct: false
+      misconception: "把「描述不同面向」誤當成互斥的定義"
+      feedback: "題目已說明兩事件不互斥（同一產品可同時來自機器甲且有瑕疵）；互斥指的是不能同時發生。"
+    - id: b
+      text: "M 與 D 獨立，因為兩者可以同時發生"
+      correct: false
+      misconception: "把「可同時發生」誤當成獨立的定義"
+      feedback: "獨立要看條件機率是否等於邊際機率，不是能否同時發生。"
+    - id: c
+      text: "M 與 D 不獨立，因為知道 M 發生後，D 的機率從 5% 變成了 8%"
+      correct: true
+      feedback: "P(D)=0.05 但 P(D|M)=0.08，兩者不相等，所以 M 與 D 不獨立。"
+    - id: d
+      text: "無法判斷，必須先重新畫出完整的列聯表"
+      correct: false
+      misconception: "以為獨立判斷永遠需要重建列聯表，忽略題目已直接給出可比較的機率"
+      feedback: "判斷獨立與否，只需比較 P(D) 與 P(D|M) 是否相等，題目已直接給出。"
+  answer: c
+  solution: "P(D|M)=0.08 ≠ P(D)=0.05，因此 M 與 D 不獨立；此例也顯示互斥與獨立是不同概念。"
+
+- id: p03-total-probability-bayes-01
+  chapter: 3
+  type: calculation
+  concepts: [total-probability, complete-enumeration, bayes-theorem]
+  difficulty: advanced
+  prompt: "某工廠零件 60% 來自供應商甲，40% 來自供應商乙。甲供應的零件瑕疵率為 2%，乙供應的瑕疵率為 5%。(a) 求隨機抽一個零件為瑕疵品的機率。(b) 若已知抽到的零件為瑕疵品，求它來自供應商乙的機率。"
+  answer: "(a) 0.032；(b) 0.625"
+  steps:
+    - title: "辨認已知量"
+      explanation: "P(甲)=0.6、P(乙)=0.4、P(瑕疵|甲)=0.02、P(瑕疵|乙)=0.05。"
+    - title: "選擇方法（a）"
+      explanation: "甲、乙構成一個分割，用全機率公式把「瑕疵」拆成兩條來源路徑相加。"
+      formula_ref: formula-law-total-probability
+    - title: "檢查條件（a）"
+      explanation: "兩供應商佔比加總為 1，符合分割定義。"
+    - title: "代入計算（a）"
+      explanation: "P(瑕疵)=0.6(0.02)+0.4(0.05)=0.012+0.020=0.032。"
+      formula_ref: formula-law-total-probability
+    - title: "解讀（a）"
+      explanation: "整批零件中約 3.2% 是瑕疵品，為以出貨比例加權的平均瑕疵率。"
+    - title: "選擇方法（b）"
+      explanation: "已知結果反推來源，屬於從證據更新原因的機率，使用貝氏法則，分母沿用（a）的全機率。"
+      formula_ref: formula-bayes-theorem
+    - title: "代入計算（b）"
+      explanation: "P(乙|瑕疵)=(0.05×0.4)/0.032=0.020/0.032=0.625。"
+      formula_ref: formula-bayes-theorem
+    - title: "解讀（b）"
+      explanation: "乙雖只佔出貨量 40%，但因瑕疵率較高，瑕疵品中來自乙的比例升高到 62.5%。"
+    - title: "合理性檢查"
+      explanation: "P(甲|瑕疵)=0.375，與 P(乙|瑕疵)=0.625 相加為 1，通過完備性檢查；(a) 的 0.032 也介於 0.02 與 0.05 之間。"
+  checks:
+    - "是否先確認甲、乙構成互斥且完備的分割，才套用全機率公式？"
+    - "(b) 的分母是否正確沿用 (a) 算出的整體瑕疵機率？"
+
+- id: p03-randomized-response-01
+  chapter: 3
+  type: calculation
+  concepts: [randomized-response, estimation]
+  difficulty: intermediate
+  prompt: "研究者使用隨機化回答設計估計某族群「曾在考試中作弊」的真實比例：受訪者私下擲一枚公平硬幣，正面則誠實作答；反面則再擲一次硬幣，正面回答「是」、反面回答「否」。在一次大樣本調查中，觀察到回答「是」的比例為 55%。估計真實比例（教學示例，非真實調查數字）。"
+  answer: "0.60"
+  steps:
+    - title: "辨認已知量"
+      explanation: "觀察到的樣本「是」比例 q̂=0.55；隨機化設計與本章介紹版本相同。"
+    - title: "選擇方法"
+      explanation: "受訪者回答不能直接當成真實比例，需用設計的機率結構反推。"
+      formula_ref: formula-randomized-response-estimator
+    - title: "檢查條件"
+      explanation: "須假設硬幣公平、受訪者依設計程序作答、樣本能代表目標族群。"
+    - title: "代入計算"
+      explanation: "p̂=2(q̂-0.25)=2(0.55-0.25)=2(0.30)=0.60。"
+      formula_ref: formula-randomized-response-estimator
+    - title: "解讀"
+      explanation: "估計約 60% 的受訪族群真實答案為「是」。"
+    - title: "合理性檢查"
+      explanation: "代回 P(Y)=(1/2)(0.60)+0.25=0.55，與觀察到的 55% 一致；且 0<0.60<1。"
+  checks:
+    - "是否記得公式中的 1/4 常數來自兩次硬幣程序的結構，而非任意設定？"
+    - "反推後的數值是否落在 0 到 1 之間？"

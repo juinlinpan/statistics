@@ -1,0 +1,229 @@
+- id: m10-homogeneity-vs-others-01
+  chapter: 10
+  type: multiple-choice
+  concepts: [homogeneity-test, goodness-of-fit, independence-test, study-design]
+  difficulty: foundational
+  prompt: "某連鎖餐飲品牌想知道顧客滿意度分布在甲、乙、丙三家分店是否相同，研究者分別在三家分店各抽 150 位顧客填答。應選擇哪一種檢定？"
+  options:
+    - id: a
+      text: "卡方適合度檢定"
+      correct: false
+      misconception: "把多個母體各自抽樣誤看成一個樣本與指定比例比較"
+      feedback: "適合度檢定只需要一個樣本與一組事先指定的比例比較，這裡是三個母體各自抽樣。"
+    - id: b
+      text: "卡方同質性檢定"
+      correct: true
+      feedback: "三個母體(分店)各自抽樣，比較同一類別變數的分布是否相同，屬於同質性檢定。"
+    - id: c
+      text: "卡方獨立性檢定"
+      correct: false
+      misconception: "把多個母體各自的樣本誤當成同一母體中同時測量的兩個變數"
+      feedback: "獨立性檢定要求單一樣本、單一母體同時記錄兩個類別變數，這裡是三個母體各自抽樣。"
+    - id: d
+      text: "兩樣本平均數檢定"
+      correct: false
+      misconception: "把有序類別變數當成可取平均數的定量變數"
+      feedback: "滿意度是類別變數，比較的是分布而非平均數。"
+  answer: b
+  solution: "三個母體各自抽樣比較同一類別變數分布，屬於同質性檢定；df=(3-1)(4-1)=6。"
+
+- id: m10-pvalue-meaning-01
+  chapter: 10
+  type: multiple-choice
+  concepts: [p-value, chi-square-test]
+  difficulty: foundational
+  prompt: "一項卡方適合度檢定得到 p=0.03。以下何者是正確的解讀？"
+  options:
+    - id: a
+      text: "虛無假設為真的機率是 3%"
+      correct: false
+      misconception: "把 p 值當成虛無假設為真的機率"
+      feedback: "p 值的條件是先假設 H0 成立，再問資料有多不尋常，不是 H0 為真的機率。"
+    - id: b
+      text: "若虛無假設成立，得到至少如此不相符的資料之機率為 3%"
+      correct: true
+      feedback: "這正是 p 值的條件機率定義。"
+    - id: c
+      text: "虛無假設錯誤的機率是 97%"
+      correct: false
+      misconception: "把 p 值的補數當成 H0 錯誤的機率"
+      feedback: "這是選項 A 誤解的補數版本，同樣弄反了條件機率的方向。"
+    - id: d
+      text: "對立假設成立的機率是 97%"
+      correct: false
+      misconception: "以為 p 值能對 H_A 直接指派機率"
+      feedback: "p 值完全沒有描述 H_A 的機率。"
+  answer: b
+  solution: "p 值是在 H0 成立前提下，得到至少如此極端統計量的條件機率。"
+
+- id: m10-gof-bakery-01
+  chapter: 10
+  type: calculation
+  concepts: [goodness-of-fit, expected-count, degrees-freedom, chi-square-statistic]
+  difficulty: intermediate
+  prompt: "某麵包店宣稱三款產品(原味、巧克力、抹茶)的每日銷售比例為 5:3:2。隨機抽查 300 筆訂單，觀察到 170、80、50 筆。資料是否符合宣稱比例？"
+  answer: "chi2≈5.44，df=2，p≈0.066，未能拒絕 H0。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "一個樣本、一個類別變數，n=300，比例 5:3:2 換算為 0.5,0.3,0.2。"
+    - title: "選擇方法"
+      explanation: "卡方適合度檢定，先算期望次數再算自由度。"
+      formula_ref: formula-ch10-gof-expected-count
+    - title: "檢查條件"
+      explanation: "比例為事先宣稱；E=150,90,60，全部≥5，加總為300。"
+    - title: "代入計算"
+      explanation: "chi2=(170-150)^2/150+(80-90)^2/90+(50-60)^2/60≈5.44；df=3-1=2；p≈0.066。"
+      formula_ref: formula-ch10-chi-square-statistic
+    - title: "解讀"
+      explanation: "p≈0.066>0.05，未能拒絕 H0，資料與宣稱比例相容。"
+    - title: "合理性檢查"
+      explanation: "三個期望次數加總為300，與n相符。"
+      formula_ref: formula-ch10-gof-degrees-freedom
+  checks:
+    - "期望次數是否加總為 n？"
+    - "df 是否為 k-1=2？"
+
+- id: m10-independence-membership-01
+  chapter: 10
+  type: calculation
+  concepts: [independence-test, two-way-expected-count, cramers-v]
+  difficulty: intermediate
+  prompt: "某電商從全體會員抽出一個樣本 240 位，同時記錄會員等級(一般/付費)與上月是否退貨：一般(退貨30,無退貨90)，付費(退貨50,無退貨70)。兩者是否有關聯？並計算 Cramér's V。"
+  answer: "chi2=7.5，df=1，p≈0.0062，拒絕 H0；V≈0.177。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "單一母體、單一樣本，同時測量兩個類別變數，n=240，2x2表。"
+    - title: "選擇方法"
+      explanation: "獨立性檢定，先算期望次數。"
+      formula_ref: formula-ch10-two-way-expected-count
+    - title: "檢查條件"
+      explanation: "E11=40,E12=80,E21=40,E22=80，全部≥5，且列欄合計相符。"
+    - title: "代入計算"
+      explanation: "chi2=2.5+1.25+2.5+1.25=7.5；df=(2-1)(2-1)=1；p≈0.0062。"
+      formula_ref: formula-ch10-chi-square-statistic
+    - title: "計算效果量"
+      explanation: "V=sqrt(7.5/240)≈0.177。"
+      formula_ref: formula-ch10-cramers-v
+    - title: "解讀"
+      explanation: "拒絕 H0，付費會員退貨比例(41.7%)高於一般會員(25%)，關聯強度中低。"
+    - title: "合理性檢查"
+      explanation: "四格期望次數加總為240；同列或同欄O-E正負相消。"
+  checks:
+    - "期望次數是否等於列合計乘欄合計除以n？"
+    - "V 是否落在 0 到 1 之間？"
+
+- id: m10-stat-vs-practical-01
+  chapter: 10
+  type: multiple-choice
+  concepts: [statistical-significance, practical-significance, cramers-v]
+  difficulty: intermediate
+  prompt: "一項含 50,000 名受訪者的大型調查做卡方獨立性檢定，得到 p<0.0001，但兩組的類別比例只相差 1 個百分點。以下何者最合適？"
+  options:
+    - id: a
+      text: "差異在統計上與實務上都非常巨大"
+      correct: false
+      misconception: "把統計顯著等同實務上的巨大差異"
+      feedback: "大樣本會讓小差異更容易被偵測到，統計顯著不等於效果量大。"
+    - id: b
+      text: "應報告統計顯著，但需搭配 Cramér's V 與實際比例差來判斷是否具有實務重要性"
+      correct: true
+      feedback: "小 p 值只代表偏離不尋常，效果量需要另外的指標評估。"
+    - id: c
+      text: "因為樣本過大，此檢定結果應視為無效"
+      correct: false
+      misconception: "以為大樣本會使檢定本身失效"
+      feedback: "樣本大不會使卡方檢定無效，只是提高偵測小差異的能力。"
+    - id: d
+      text: "p 值容易誤導，不應該呈現"
+      correct: false
+      misconception: "以偏概全，因噎廢食地放棄呈現 p 值"
+      feedback: "正確作法是補充效果量與情境判斷，而不是隱藏 p 值。"
+  answer: b
+  solution: "統計顯著只代表偏離不尋常，需搭配 Cramér's V 或比例差判斷實務重要性。"
+
+- id: m10-repeated-measures-pitfall-01
+  chapter: 10
+  type: multiple-choice
+  concepts: [independence-of-observations, chi-square-assumptions]
+  difficulty: intermediate
+  prompt: "某診所讓同一群病人在治療前與治療後各自回答是否感到疼痛(是/否)，想知道疼痛比例是否改變。是否可以直接用一般卡方獨立性檢定分析時間點x是否疼痛的2x2表？"
+  options:
+    - id: a
+      text: "可以，因為表格仍是 2x2，計算方式相同"
+      correct: false
+      misconception: "以為表格形狀相同就保證抽樣設計相同"
+      feedback: "2x2 表也可能來自不獨立的重複測量，形狀不能保證條件成立。"
+    - id: b
+      text: "不可以，因為同一群人被重複測量兩次，觀察值不獨立，違反獨立觀察條件"
+      correct: true
+      feedback: "同一人前後各回答一次，貢獻了兩筆相關觀察，不滿足獨立條件。"
+    - id: c
+      text: "不可以，因為卡方檢定只適用於三類以上的類別變數"
+      correct: false
+      misconception: "誤以為卡方檢定對類別數有下限限制"
+      feedback: "2x2 表本身沒有問題，問題在於觀察獨立性，不在類別數。"
+    - id: d
+      text: "可以，只要每格期望次數都大於 5"
+      correct: false
+      misconception: "把期望次數條件誤當成可以替代獨立觀察條件"
+      feedback: "E≥5 處理的是另一項獨立條件，不能修復觀察值不獨立的問題。"
+  answer: b
+  solution: "重複測量同一群人違反獨立觀察條件，一般卡方獨立性檢定不適用。"
+
+- id: m10-small-expected-merge-01
+  chapter: 10
+  type: calculation
+  concepts: [goodness-of-fit, expected-count-condition, category-merging]
+  difficulty: advanced
+  prompt: "某工廠品管員宣稱瑕疵類型比例為無瑕疵80%、瑕疵A 10%、瑕疵B 5%、瑕疵C 5%。抽查40件，記錄無瑕疵30、A 5、B 3、C 2。資料是否符合宣稱？"
+  answer: "合併後 chi2=0.625，df=1，p≈0.429，未能拒絕 H0。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "一個樣本，n=40，宣稱比例0.80,0.10,0.05,0.05。"
+    - title: "選擇方法"
+      explanation: "先算期望次數：32,4,2,2。"
+      formula_ref: formula-ch10-gof-expected-count
+    - title: "檢查條件"
+      explanation: "4格中3格E<5，僅25%的格子E≥5，不滿足期望次數條件，不能直接對四類做檢定。"
+    - title: "修正並重新代入"
+      explanation: "依科學意義合併A、B、C為有瑕疵類別(20%)，與無瑕疵(80%)兩類；期望次數32,8皆≥5；O=30,10。"
+      formula_ref: formula-ch10-chi-square-statistic
+    - title: "計算"
+      explanation: "chi2=(30-32)^2/32+(10-8)^2/8=0.625；df=2-1=1；p≈0.429。"
+      formula_ref: formula-ch10-gof-degrees-freedom
+    - title: "解讀"
+      explanation: "p≈0.429遠大於0.05，未能拒絕H0，合併後資料與宣稱相容。"
+    - title: "合理性檢查"
+      explanation: "合併依實質分類事先決定，非為製造顯著結果；兩格期望次數加總為40。"
+  checks:
+    - "是否事先檢查期望次數條件？"
+    - "合併類別的理由是否具科學意義而非事後挑選？"
+
+- id: m10-association-causation-01
+  chapter: 10
+  type: multiple-choice
+  concepts: [independence-test, association, causation, confounding]
+  difficulty: intermediate
+  prompt: "一項卡方獨立性檢定顯示，是否訂閱電子報與是否於三個月內回購有顯著關聯(p<0.01)。以下何者最合適？"
+  options:
+    - id: a
+      text: "訂閱電子報造成回購"
+      correct: false
+      misconception: "把觀察到的關聯直接當作因果"
+      feedback: "忽略了顧客本身活躍度、既有忠誠度等可能同時影響兩者的混淆變數。"
+    - id: b
+      text: "資料顯示兩者有關聯，但由於未隨機分派是否訂閱，不能直接推論因果，需考慮混淆變數"
+      correct: true
+      feedback: "獨立性檢定顯著只能說明關聯，因果需要隨機分派或排除混淆的設計。"
+    - id: c
+      text: "因為 p 值很小，幾乎可以確定是因果關係"
+      correct: false
+      misconception: "把 p 值小當成因果證據強度的指標"
+      feedback: "p 值小只代表在獨立假設下這個偏離不尋常，與因果證據無關。"
+    - id: d
+      text: "兩者無關聯，只是抽樣誤差"
+      correct: false
+      misconception: "與檢定顯著的結果矛盾"
+      feedback: "檢定顯著且拒絕了獨立的 H0，資料確實顯示關聯。"
+  answer: b
+  solution: "顯著關聯不等於因果；因果解釋需要隨機分派或排除混淆變數的設計。"
