@@ -1,0 +1,202 @@
+- id: m12-data-snooping-01
+  chapter: 12
+  type: multiple-choice
+  concepts: [data-snooping, family-of-hypotheses]
+  difficulty: foundational
+  prompt: "研究團隊比較 24 個結果變數，只報告唯一一個 p=0.032 的結果，並宣稱整個研究的誤報率低於 5%。最精確的判斷是？"
+  options:
+    - id: a
+      text: "正確，因為 0.032 小於 0.05。"
+      misconception: "把單項檢定的門檻誤當整個搜尋流程的錯誤率。"
+      feedback: "單一 p 值不會納入其他 23 次搜尋；必須把完整假設族納入判斷。"
+    - id: b
+      text: "錯誤，因為只報告選中的結果忽略了 24 次搜尋。"
+    - id: c
+      text: "錯誤，因為 p 值必須小於 0.001 才能使用。"
+      misconception: "以為多重檢定有一個適用所有研究的固定門檻。"
+      feedback: "門檻應由假設族大小、研究目的及錯誤控制方法決定，不固定為 0.001。"
+    - id: d
+      text: "正確，只要 24 個結果使用同一批受試者。"
+      misconception: "以為共用樣本會消除選擇性報告。"
+      feedback: "檢定可能因此相關，但搜尋與挑選仍會造成多重性問題。"
+  answer: b
+  solution: "24 項搜尋共同構成假設族；只報告選中的最小結果會低估整體誤報風險。"
+
+- id: m12-fwer-01
+  chapter: 12
+  type: calculation
+  concepts: [fwer, independent-tests]
+  difficulty: foundational
+  prompt: "12 個彼此獨立且皆為真的虛無假設，各以 alpha=0.05 檢定。至少一次誤報的機率是多少？"
+  answer: "1-0.95^12 = 0.45964，約 46.0%。"
+  steps:
+    - title: 辨認已知量
+      explanation: "m=12、alpha=0.05，目標是至少一次第一類錯誤。"
+    - title: 選擇方法
+      explanation: "所有虛無假設為真且檢定獨立，使用獨立檢定的 FWER 公式。"
+      formula_ref: formula-fwer-independent-tests
+    - title: 檢查假設
+      explanation: "題目已明示全體虛無假設為真與獨立性。"
+    - title: 代入計算
+      explanation: "1-(1-0.05)^12=1-0.95^12=0.45964。"
+      formula_ref: formula-fwer-independent-tests
+    - title: 解讀
+      explanation: "反覆執行整套分析時，約 46% 會至少誤報一項。"
+    - title: 合理性檢查
+      explanation: "結果高於單項 5%、低於 100%，且多次檢定使風險上升。"
+  checks:
+    - "是否計算至少一次，而不是恰好一次？"
+    - "是否把答案解讀為整套分析的長期比例？"
+
+- id: m12-bonferroni-01
+  chapter: 12
+  type: calculation
+  concepts: [bonferroni, fwer]
+  difficulty: intermediate
+  prompt: "8 個主要安全性結果的 family alpha 為 0.05；最小四個 p 值為 0.004、0.006、0.009、0.021。Bonferroni 下哪些顯著？"
+  answer: "門檻 0.00625；p=0.004 與 0.006 顯著。"
+  steps:
+    - title: 辨認已知量
+      explanation: "m=8、family alpha=0.05。"
+    - title: 選擇方法
+      explanation: "安全性結果重視至少一次誤報，使用 Bonferroni。"
+      formula_ref: formula-bonferroni-threshold
+    - title: 檢查假設
+      explanation: "假設族事先界定；Bonferroni 不要求檢定獨立。"
+    - title: 代入計算
+      explanation: "0.05/8=0.00625。"
+      formula_ref: formula-bonferroni-threshold
+    - title: 逐項判定
+      explanation: "0.004 與 0.006 不大於門檻；0.009、0.021 及其餘較大值不通過。"
+    - title: 情境解讀
+      explanation: "在這個 FWER 控制規則下，前兩項有足夠證據拒絕 H0。"
+    - title: 合理性檢查
+      explanation: "修正門檻應比 0.05 嚴格。"
+  checks:
+    - "分母是否為完整假設族的 8，而非只列出的 4？"
+    - "是否使用小於或等於門檻？"
+
+- id: m12-error-rate-selection-01
+  chapter: 12
+  type: multiple-choice
+  concepts: [fwer, fdr, method-selection]
+  difficulty: intermediate
+  prompt: "哪個配對最符合研究目的？"
+  options:
+    - id: a
+      text: "三項關鍵安全性結果用 FDR；一萬個初篩候選用 FWER。"
+      misconception: "顛倒 FWER 與 FDR 的損失函數。"
+      feedback: "安全性通常在意任何誤報；大量初篩通常在意發現集合的平均污染比例。"
+    - id: b
+      text: "三項關鍵安全性結果用 FWER；一萬個初篩候選用 FDR。"
+    - id: c
+      text: "兩者都只需未修正的 alpha=0.05。"
+      misconception: "忽略檢定數對整體錯誤風險的影響。"
+      feedback: "多個檢定需要明確界定並控制合適的整體錯誤率。"
+    - id: d
+      text: "兩者都只能使用資料切分，不能做錯誤率修正。"
+      misconception: "把資料切分與多重性修正誤認為互斥方法。"
+      feedback: "兩者可以互補；確認集若檢定多項假設，仍需要錯誤率控制。"
+  answer: b
+  solution: "高代價的少數關鍵結果適合 FWER；大量探索性篩選適合 FDR。"
+
+- id: m12-bh-01
+  chapter: 12
+  type: calculation
+  concepts: [fdr, benjamini-hochberg]
+  difficulty: intermediate
+  prompt: "排序 p 值為 0.004、0.011、0.024、0.029、0.051、0.200，以 q=0.05 執行 BH，拒絕哪些假設？"
+  answer: "k=4；拒絕排序後第 1 至第 4 個假設。"
+  steps:
+    - title: 辨認已知量
+      explanation: "m=6、q=0.05，p 值已排序。"
+    - title: 選擇方法
+      explanation: "依題意使用 BH 階梯式程序。"
+      formula_ref: formula-benjamini-hochberg-step-up
+    - title: 檢查假設
+      explanation: "實務上需確認 p 值有效，且相依結構符合所用 BH 版本的保證。"
+    - title: 計算門檻
+      explanation: "六個門檻為 0.00833、0.01667、0.02500、0.03333、0.04167、0.05000。"
+      formula_ref: formula-benjamini-hochberg-step-up
+    - title: 找最大排名
+      explanation: "第 4 名仍通過，第 5、6 名不通過，所以 k=4。"
+    - title: 解讀
+      explanation: "拒絕前四項；q 控制的是程序的 FDR，不是每項假設為真的機率。"
+    - title: 合理性檢查
+      explanation: "p_(4)=0.029 小於 0.03333，而 p_(5)=0.051 大於 0.04167。"
+  checks:
+    - "是否找最大通過排名？"
+    - "是否把第 1 到第 k 項全部拒絕？"
+
+- id: m12-fdr-interpretation-01
+  chapter: 12
+  type: multiple-choice
+  concepts: [fdr, interpretation]
+  difficulty: intermediate
+  prompt: "BH 程序控制 FDR 在 0.05 並得到 20 個發現。何者是正確解讀？"
+  options:
+    - id: a
+      text: "20 個發現中必定恰好有 1 個錯誤。"
+      misconception: "把期望比例當成單次研究的確定個數。"
+      feedback: "FDR 不規定本次 FDP 或錯誤個數必須等於其期望。"
+    - id: b
+      text: "每個發現各有 95% 機率為真。"
+      misconception: "把頻率學派程序錯誤率當成個別假設的後驗機率。"
+      feedback: "FDR 描述整個程序，不為每個已拒絕假設提供為真的機率。"
+    - id: c
+      text: "重複執行整個程序時，FDP 的期望值受到 0.05 控制。"
+    - id: d
+      text: "至少一個錯誤發現的機率不超過 0.05。"
+      misconception: "把 FDR 與 FWER 混淆。"
+      feedback: "至少一次錯誤的機率是 FWER 關注的量。"
+  answer: c
+  solution: "FDR 定義為 E(FDP)，是整個程序在重複研究下的平均錯誤發現比例。"
+
+- id: m12-fdp-01
+  chapter: 12
+  type: calculation
+  concepts: [fdp, fdr, interpretation]
+  difficulty: foundational
+  prompt: "某次篩選拒絕 12 個假設，其中 3 個經獨立確認為錯誤發現。FDP 是多少？是否等於程序的 FDR？"
+  answer: "FDP=3/12=0.25；它是本次比例，不等於跨重複研究的 FDR。"
+  steps:
+    - title: 辨認已知量
+      explanation: "R=12、V=3，兩者皆為個數。"
+    - title: 選擇方法
+      explanation: "使用 FDP=V/max(R,1)。"
+      formula_ref: formula-false-discovery-rate
+    - title: 檢查條件
+      explanation: "R 大於 0，可直接用 V/R。"
+    - title: 代入計算
+      explanation: "3/12=0.25=25%。"
+      formula_ref: formula-false-discovery-rate
+    - title: 解讀
+      explanation: "本次發現中四分之一是錯誤發現；FDR 則是 FDP 的期望值。"
+    - title: 合理性檢查
+      explanation: "V 小於 R，比例應介於 0 與 1。"
+  checks:
+    - "是否區分單次 FDP 與程序的 FDR？"
+
+- id: m12-data-splitting-01
+  chapter: 12
+  type: multiple-choice
+  concepts: [data-splitting, confirmation]
+  difficulty: intermediate
+  prompt: "分析者切分探索集與確認集，卻在看過確認結果後刪假設並改模型，再稱為獨立確認。最精確的判斷是？"
+  options:
+    - id: a
+      text: "有效，因為一開始確實做了隨機切分。"
+      misconception: "只看切分動作，忽略確認資料後來參與選擇。"
+      feedback: "確認集一旦用來修改假設或模型，就不再是未被看過的獨立確認資料。"
+    - id: b
+      text: "無效，因為確認集參與後續選擇，已不再提供純粹的獨立確認。"
+    - id: c
+      text: "有效，只要修改後的 p 值小於 0.05。"
+      misconception: "以為小 p 值能消除資料驅動選擇。"
+      feedback: "p 值的有效性取決於完整分析流程；修改後再檢定會低估選擇造成的變異。"
+    - id: d
+      text: "無效，因為資料切分永遠不能用於假設檢定。"
+      misconception: "否定資料切分的確認用途。"
+      feedback: "鎖定假設後，未參與探索的確認集可以用於檢定；多項檢定仍需控制。"
+  answer: b
+  solution: "確認集必須不參與假設與模型選擇；否則只能視為新一輪探索。"

@@ -1,0 +1,222 @@
+- id: m01-variable-chart-01
+  chapter: 1
+  type: multiple-choice
+  concepts: [categorical-variable, bar-graph]
+  difficulty: foundational
+  prompt: "某校記錄每位學生的主要通勤方式，想比較各方式的人數。最合適的起點是？"
+  options:
+    - id: a
+      text: "長條圖"
+      correct: true
+      feedback: "主要通勤方式是類別變數，長條圖可直接比較各類頻數。"
+    - id: b
+      text: "直方圖"
+      correct: false
+      misconception: "把類別頻數誤當成數值變數的分布"
+      feedback: "直方圖的水平軸應是具數量意義的連續區間，不是類別名稱。"
+    - id: c
+      text: "散佈圖"
+      correct: false
+      misconception: "以為每位學生有一筆資料就構成兩變數問題"
+      feedback: "散佈圖需要同一觀察單位的一對數值；本題只有一個類別變數。"
+    - id: d
+      text: "對交通方式代碼取平均"
+      correct: false
+      misconception: "把類別的數字編碼當成可運算數量"
+      feedback: "交通方式代碼只是標籤，平均值沒有交通意義。"
+  answer: a
+  solution: "先辨認主要通勤方式為類別變數，再以長條圖比較各類頻數。"
+
+- id: m01-pie-chart-01
+  chapter: 1
+  type: multiple-choice
+  concepts: [pie-chart, mutually-exclusive-categories]
+  difficulty: foundational
+  prompt: "問卷允許每人複選手機、平板、筆電等裝置。把各選項比例畫成一個圓餅圖，最主要的問題是？"
+  options:
+    - id: a
+      text: "圓餅圖只能呈現數值變數"
+      correct: false
+      misconception: "顛倒圓餅圖適用的資料型態"
+      feedback: "圓餅圖用於類別的部分占整體，不是數值變數的分布。"
+    - id: b
+      text: "複選類別不互斥，比例可能超過 100%"
+      correct: true
+      feedback: "一個圓代表完整整體；複選使同一人可進入多個扇形。"
+    - id: c
+      text: "所有圓餅圖都必須改用直方圖"
+      correct: false
+      misconception: "把特定資料結構的限制誤記成全面禁用規則"
+      feedback: "此例可用長條圖；直方圖仍不適合類別資料。"
+    - id: d
+      text: "樣本數超過 30 就不能用圓餅圖"
+      correct: false
+      misconception: "把推論統計的樣本數經驗規則套到描述圖"
+      feedback: "是否適合圓餅圖取決於類別是否互斥且構成完整整體。"
+  answer: b
+  solution: "複選項目不互斥，不能用單一圓形表示加總為 100% 的整體。"
+
+- id: m01-center-outlier-01
+  chapter: 1
+  type: calculation
+  concepts: [sample-mean, median, resistant-statistic]
+  difficulty: foundational
+  prompt: "六筆外送時間為 6, 7, 8, 9, 10, 44 分鐘。計算平均數與中位數，並選擇較能代表典型時間的摘要。"
+  answer: "平均數 14 分鐘；中位數 8.5 分鐘；中位數較適合。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "資料已排序，n=6，單位為分鐘。"
+    - title: "選擇方法"
+      explanation: "平均數使用總和除以筆數；偶數筆中位數取中央兩值平均。"
+      formula_ref: formula-ch01-sample-mean
+    - title: "檢查條件"
+      explanation: "時間可加總，但 44 是明顯偏高值，平均數可能受影響。"
+    - title: "代入計算"
+      explanation: "平均數=(6+7+8+9+10+44)/6=14；中位數=(8+9)/2=8.5。"
+      formula_ref: formula-ch01-sample-median
+    - title: "解讀"
+      explanation: "44 將平均數往上拉，中位數較能代表典型外送時間。"
+    - title: "合理性檢查"
+      explanation: "兩者均在資料範圍內，且右側極端值使平均數高於中位數。"
+  checks:
+    - "平均數與中位數的單位是否都是分鐘？"
+    - "是否說明極端值影響平均數的方向？"
+
+- id: m01-iqr-outlier-01
+  chapter: 1
+  type: calculation
+  concepts: [five-number-summary, interquartile-range, outlier-fence]
+  difficulty: intermediate
+  prompt: "依上下半部各取中位數的慣例，分析 2, 4, 5, 7, 8, 9, 20：求五數摘要、IQR、1.5 IQR 界線與潛在離群值。"
+  answer: "五數摘要 (2,4,7,9,20)；IQR=5；界線 -3.5 與 16.5；20 為潛在離群值。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "7 筆資料已排序，奇數筆的總中位數不重複放入上下半部。"
+    - title: "選擇方法"
+      explanation: "先求三個四分位數，再計算 IQR 與 1.5 IQR 界線。"
+      formula_ref: formula-ch01-interquartile-range
+    - title: "檢查條件"
+      explanation: "下半部為 2,4,5，上半部為 8,9,20；結果依本章四分位數慣例。"
+    - title: "代入計算"
+      explanation: "Q1=4、Q2=7、Q3=9；IQR=9-4=5；下界=-3.5，上界=16.5。"
+      formula_ref: formula-ch01-iqr-fences
+    - title: "解讀"
+      explanation: "20 超過上界，因此標記為潛在離群值。"
+    - title: "合理性檢查"
+      explanation: "標記的用途是回查資料，不是自動刪除。"
+  checks:
+    - "是否說明採用的四分位數慣例？"
+    - "是否把潛在離群標記誤解成刪除命令？"
+
+- id: m01-sample-sd-01
+  chapter: 1
+  type: calculation
+  concepts: [sample-standard-deviation]
+  difficulty: foundational
+  prompt: "三筆樣本量測值為 2, 4, 6 公斤。求樣本標準差。"
+  answer: "2 公斤"
+  steps:
+    - title: "辨認已知量"
+      explanation: "n=3，資料被視為樣本，單位為公斤。"
+    - title: "選擇方法"
+      explanation: "使用分母為 n-1 的樣本標準差。"
+      formula_ref: formula-ch01-sample-standard-deviation
+    - title: "檢查條件"
+      explanation: "題目要求樣本標準差，不使用完整母體的分母 N。"
+    - title: "代入計算"
+      explanation: "平均數為 4；s=sqrt(((-2)^2+0^2+2^2)/(3-1))=2 公斤。"
+      formula_ref: formula-ch01-sample-standard-deviation
+    - title: "解讀"
+      explanation: "觀察值相對平均數的典型距離尺度為 2 公斤。"
+    - title: "合理性檢查"
+      explanation: "結果非負、單位為公斤，且符合資料對稱間距。"
+  checks:
+    - "是否使用 n-1？"
+    - "開根號後單位是否回到公斤？"
+
+- id: m01-sd-transform-01
+  chapter: 1
+  type: multiple-choice
+  concepts: [sample-standard-deviation, unit-conversion]
+  difficulty: foundational
+  prompt: "某組長度的標準差是 3 公尺。將每個值換成公分後，新的標準差是多少？"
+  options:
+    - id: a
+      text: "0.03 公分"
+      correct: false
+      misconception: "顛倒公尺換算為公分的倍率方向"
+      feedback: "使用較小的公分為單位時，同一長度的數值應變大。"
+    - id: b
+      text: "3 公分"
+      correct: false
+      misconception: "誤以為標準差對所有線性轉換都不變"
+      feedback: "加同一常數不改變標準差；乘以常數會改變尺度。"
+    - id: c
+      text: "300 公分"
+      correct: true
+      feedback: "每筆值乘以 100，標準差也乘以 100。"
+    - id: d
+      text: "30,000 公分"
+      correct: false
+      misconception: "把變異數的平方倍率套到標準差"
+      feedback: "變異數乘以 100^2；標準差只乘以 100。"
+  answer: c
+  solution: "3 公尺乘以每公尺 100 公分，得到 300 公分。"
+
+- id: m01-association-causation-01
+  chapter: 1
+  type: multiple-choice
+  concepts: [association, causation, confounding]
+  difficulty: intermediate
+  prompt: "觀察資料顯示，帶雨傘的人較常穿雨鞋。哪個結論最合理？"
+  options:
+    - id: a
+      text: "帶雨傘造成穿雨鞋"
+      correct: false
+      misconception: "把關聯直接當成由解釋變數到反應變數的因果"
+      feedback: "觀察關聯沒有排除共同原因或其他替代解釋。"
+    - id: b
+      text: "穿雨鞋造成帶雨傘"
+      correct: false
+      misconception: "只反轉因果方向，仍忽略混淆"
+      feedback: "改變箭頭方向仍不能由觀察資料建立因果。"
+    - id: c
+      text: "兩者有關聯，降雨可能是共同原因"
+      correct: true
+      feedback: "這個結論區分已觀察到的關聯與合理但仍待驗證的共同原因。"
+    - id: d
+      text: "散佈圖方向明顯即可排除第三變數"
+      correct: false
+      misconception: "把視覺關聯強度當成排除混淆的證據"
+      feedback: "圖形再明顯也不能單獨排除第三變數。"
+  answer: c
+  solution: "只能描述兩者有關聯；降雨是可同時影響兩者的合理混淆因子。"
+
+- id: m01-skewed-summary-01
+  chapter: 1
+  type: multiple-choice
+  concepts: [skewness, median, interquartile-range, histogram, box-plot]
+  difficulty: intermediate
+  prompt: "診所候診時間明顯右偏且有少數極長等待。若要呈現典型值、分散與分布特徵，哪組報告最合適？"
+  options:
+    - id: a
+      text: "只報平均數"
+      correct: false
+      misconception: "忽略平均數對極端值敏感且單一中心不能呈現分散"
+      feedback: "右側極端值會拉高平均數，而且只報平均數看不到分散與形狀。"
+    - id: b
+      text: "中位數、IQR，並搭配直方圖或盒鬚圖"
+      correct: true
+      feedback: "抗拒型數值摘要搭配圖形，可同時呈現中心、分散與偏態。"
+    - id: c
+      text: "類別長條圖與樣本標準差"
+      correct: false
+      misconception: "把連續數值分布當成類別資料"
+      feedback: "候診時間是數值變數，不應以類別長條圖呈現。"
+    - id: d
+      text: "只報最大值與最小值"
+      correct: false
+      misconception: "以為兩個極端點足以描述整個分布"
+      feedback: "極值無法呈現中央位置或中央資料的分散。"
+  answer: b
+  solution: "右偏且有極端值時，以中位數和 IQR 摘要，並用圖形保留分布形狀。"

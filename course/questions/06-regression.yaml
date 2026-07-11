@@ -1,0 +1,196 @@
+- id: m06-correlation-01
+  chapter: 6
+  type: multiple-choice
+  concepts: [correlation, interpretation]
+  difficulty: foundational
+  prompt: "運動時數與靜息心率的 r=-0.62，何者解讀正確？"
+  options:
+    - id: a
+      text: "每週多運動 1 小時，心率必定下降 0.62 下／分鐘。"
+      correct: false
+      misconception: "把無單位的相關係數當成有單位的斜率。"
+      feedback: "斜率還取決於 s_y/s_x；相關也不保證個體結果。"
+    - id: b
+      text: "兩者有中等偏強負向線性關聯，但 r 本身不提供斜率或因果效果。"
+      correct: true
+      feedback: "正確；方向、線性強度與因果效果是不同問題。"
+    - id: c
+      text: "運動時數解釋了心率 62% 的變異。"
+      correct: false
+      misconception: "把 r 直接當成 R^2。"
+      feedback: "含截距簡單迴歸中 R^2=r^2，約為 38.4%。"
+    - id: d
+      text: "因為 r<0，所以散佈圖不可能有離群點。"
+      correct: false
+      misconception: "以摘要值取代圖形診斷。"
+      feedback: "r 無法保證沒有離群點，解讀前仍需查看散佈圖。"
+  answer: b
+  solution: "r=-0.62 只支持中等偏強的負向線性關聯；它無單位，不是斜率，也不證明因果。"
+
+- id: m06-line-calc-01
+  chapter: 6
+  type: calculation
+  concepts: [least-squares-line, prediction]
+  difficulty: intermediate
+  prompt: "已知 x̄=4 小時、s_x=2 小時、ȳ=70 分、s_y=8 分、r=0.50，求迴歸線及 x=7 的預測。"
+  answer: "ŷ=62+2x；x=7 時預測 76 分。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "目標是以練習時數 x 預測分數 y。"
+    - title: "選擇方法"
+      explanation: "由相關、標準差求斜率，再由平均數求截距。"
+      formula_ref: formula-ch06-slope-correlation
+    - title: "檢查假設"
+      explanation: "需有成對資料、近似線性，且無足以扭曲結果的異常點。"
+    - title: "代入與計算"
+      explanation: "b_1=0.50(8/2)=2 分／小時；b_0=70-2(4)=62 分。"
+      formula_ref: formula-ch06-regression-line
+    - title: "解釋"
+      explanation: "x=7 時 ŷ=62+2(7)=76 分，是平均趨勢預測而非個體保證。"
+    - title: "合理性檢查"
+      explanation: "x 高於平均 1.5 SD，預測應高於平均 0.75 個 y SD，即 70+0.75(8)=76。"
+      formula_ref: formula-ch06-standardized-regression
+  checks:
+    - "斜率單位是否為分／小時？"
+    - "是否避免把預測寫成因果或個體保證？"
+
+- id: m06-regression-fallacy-01
+  chapter: 6
+  type: method-selection
+  concepts: [regression-to-the-mean, study-design]
+  difficulty: intermediate
+  prompt: "只讓本月滿意度最低的員工受訓，下月平均上升；如何判斷訓練是否有效？"
+  options:
+    - id: a
+      text: "只算前後分數的相關係數。"
+      correct: false
+      misconception: "認為相關可分離介入效果與自然波動。"
+      feedback: "前後相關不能排除依極端值篩選造成的平均值迴歸。"
+    - id: b
+      text: "設置同樣因低分被選出、但暫未受訓的適當對照組。"
+      correct: true
+      feedback: "正確；若能隨機分派受訓時點更好。"
+    - id: c
+      text: "刪除下月仍最低分者。"
+      correct: false
+      misconception: "以結果導向刪除資料來製造改善。"
+      feedback: "這會造成選擇偏誤，不能辨認訓練效果。"
+    - id: d
+      text: "過半數改善就宣布有效。"
+      correct: false
+      misconception: "把簡單多數當成因果門檻。"
+      feedback: "仍需對照自然波動，並考慮改善幅度。"
+  answer: b
+  solution: "極端低分者即使沒有介入也可能自然回升；適當對照組可提供同期間的反事實基準。"
+
+- id: m06-direction-01
+  chapter: 6
+  type: multiple-choice
+  concepts: [prediction-direction, least-squares-line]
+  difficulty: intermediate
+  prompt: "已有以身高預測體重的線且 |r|<1，如何改由體重預測身高？"
+  options:
+    - id: a
+      text: "把原式代數移項後直接使用。"
+      correct: false
+      misconception: "混淆代數反解與反向最小平方法。"
+      feedback: "反應變數改變後，最小化的殘差方向不同。"
+    - id: b
+      text: "交換反應與解釋變數後重新配適。"
+      correct: true
+      feedback: "正確；只有 |r|=1 時兩方向的線才重合。"
+    - id: c
+      text: "只把斜率改成負值。"
+      correct: false
+      misconception: "認為交換變數會反轉關聯方向。"
+      feedback: "交換變數不會改變相關係數的正負號。"
+    - id: d
+      text: "交換後相關係數會變成 1，不需模型。"
+      correct: false
+      misconception: "認為交換順序能消除資料散布。"
+      feedback: "交換 x、y 後 r 的數值不變。"
+  answer: b
+  solution: "兩個方向分別最小化不同變數的垂直殘差，因此必須重新配適。"
+
+- id: m06-residual-diagnosis-01
+  chapter: 6
+  type: method-selection
+  concepts: [residual-plot, heteroscedasticity]
+  difficulty: foundational
+  prompt: "殘差圖中心在 0 附近，但隨預測值增加向上下張開，應如何診斷？"
+  options:
+    - id: a
+      text: "所有迴歸條件都已滿足。"
+      correct: false
+      misconception: "把沒有曲率誤當成所有條件成立。"
+      feedback: "扇形本身就是等變異條件的警訊。"
+    - id: b
+      text: "殘差平均不為 0。"
+      correct: false
+      misconception: "混淆殘差中心與殘差寬度。"
+      feedback: "題目描述的是散布寬度改變。"
+    - id: c
+      text: "可能不等變異，單一誤差尺度未必適用所有水準。"
+      correct: true
+      feedback: "正確；可考慮合理轉換或適當的穩健推論。"
+    - id: d
+      text: "相關係數必定為 0。"
+      correct: false
+      misconception: "混淆殘差變異結構與線性相關強度。"
+      feedback: "強線性關係也可能伴隨扇形殘差。"
+  answer: c
+  solution: "扇形代表殘差變異隨預測水準改變，違反共同變異數的簡化假設。"
+
+- id: m06-log-linear-01
+  chapter: 6
+  type: calculation
+  concepts: [transformation, log-linear-model]
+  difficulty: intermediate
+  prompt: "模型 log(y)=4.10+0.08x；x 增加 1 時，y 的預測乘數與百分比改變為何？"
+  answer: "乘數約 1.0833；增加約 8.33%。"
+  steps:
+    - title: "辨認尺度"
+      explanation: "反應變數取自然對數，斜率為 0.08。"
+    - title: "選擇方法"
+      explanation: "原尺度乘數為 exp(b_1)。"
+      formula_ref: formula-ch06-log-linear-interpretation
+    - title: "檢查假設"
+      explanation: "y 必須為正，且應在 log(y) 尺度檢查線性與殘差。"
+    - title: "代入與計算"
+      explanation: "exp(0.08)=1.08329；100(exp(0.08)-1)%=8.33%。"
+    - title: "解釋"
+      explanation: "x 增加 1 時，模型預測的條件幾何平均 y 約增加 8.33%。"
+    - title: "合理性檢查"
+      explanation: "小斜率近似為 8%，應與精確值接近。"
+  checks:
+    - "是否使用 exp(b_1)-1 而非把 b_1 當精確百分比？"
+    - "是否避免自動作因果解讀？"
+
+- id: m06-influence-01
+  chapter: 6
+  type: interpretation
+  concepts: [leverage, influence, sensitivity-analysis]
+  difficulty: intermediate
+  prompt: "移除一個 x 極端點後斜率由 1.8 變 0.4，應如何處理？"
+  options:
+    - id: a
+      text: "直接刪除且不說明。"
+      correct: false
+      misconception: "把高影響等同資料錯誤。"
+      feedback: "影響力是診斷訊號，不是自動刪除規則。"
+    - id: b
+      text: "既然可能是真值，就完全不查核。"
+      correct: false
+      misconception: "忽略極端點可能揭露輸入錯誤或不同母體。"
+      feedback: "真實性、母體歸屬與測量流程仍需查核。"
+    - id: c
+      text: "查核資料與母體歸屬，透明報告含入／排除的敏感性分析。"
+      correct: true
+      feedback: "正確；這同時保留資料完整性與結論透明度。"
+    - id: d
+      text: "把觀測 y 改成預測值。"
+      correct: false
+      misconception: "為改善配適而竄改觀測。"
+      feedback: "不可用模型預測取代真實觀測來美化結果。"
+  answer: c
+  solution: "高槓桿點實際改變斜率，屬高影響點；應查核、理解並做敏感性報告，而非機械刪除。"
