@@ -20,7 +20,7 @@ Do not reproduce Coursera quizzes, transcripts, or paywalled course material. Us
 
 ## Phase 1: Write Core Notes
 
-Create one file per module under `course/chapters/`. For every lesson topic:
+Create one canonical Markdown file per module under `course/chapters/`. This same file is the living lecture note for all later phases; do not create separate Phase 2 or Phase 3 lecture-note copies. For every lesson topic:
 
 1. State what the learner will be able to decide or compute.
 2. Open with a concrete question or visual intuition.
@@ -35,11 +35,11 @@ Generate figures only when they materially improve understanding. Prefer reprodu
 
 ### Phase 1 gate
 
-Confirm curriculum coverage, mathematical correctness, defined notation, explicit assumptions, useful intuition, accessible figures, and no unexplained prerequisite jumps.
+Confirm curriculum coverage, mathematical correctness, defined notation, explicit assumptions, useful intuition, accessible figures, no unexplained prerequisite jumps, and VSCode Markdown compatibility (see the formatting rules in `references/authoring-standard.md`).
 
-## Phase 2: Add Diagnostic Practice
+## Phase 2: Add Diagnostic Practice to the Same Chapter Note
 
-Extend the Phase 1 sections without replacing their explanations. Add practice close to the concept it tests.
+Open the existing Phase 1 chapter Markdown and extend it in place without replacing its explanations. Add practice immediately after the concept it tests. Keep the chapter readable from top to bottom as one lesson; do not put learner-facing exercise content only in YAML or in a second Markdown file.
 
 - Include conceptual, method-selection, interpretation, and calculation questions.
 - For each multiple-choice distractor, record the specific misconception that makes it tempting and give corrective feedback without revealing unrelated answers.
@@ -47,20 +47,21 @@ Extend the Phase 1 sections without replacing their explanations. Add practice c
 - Link every solution to the exact formula anchor it uses.
 - Vary surface contexts and numbers; do not create copies solved by blind substitution.
 
-Store reusable structured question data in `course/questions/<chapter>.yaml` when Phase 4 will render it interactively. Keep the Markdown version readable without JavaScript.
+Store reusable structured question data in `course/questions/<chapter>.yaml` when Phase 4 will render it interactively, but treat YAML as a rendering supplement, never the canonical lesson. The complete prompt, answer, misconception feedback, and step-by-step explanation must remain in the chapter Markdown.
 
 ### Phase 2 gate
 
 Verify every answer independently, ensure distractors map to distinct plausible misconceptions, and ensure solutions teach the decision process rather than only arithmetic.
 
-## Phase 3: Connect Chapters and Select Methods
+## Phase 3: Add Cross-Chapter Guidance to the Same Chapter Note
 
-Add cross-links at the point of confusion, not only in an appendix. Maintain `course/concept-map.md` and `course/method-selector.md`.
+Open each existing chapter Markdown and add cross-chapter comparisons and method-selection guidance in place. Do not create a separate Phase 3 version or move the explanations out of the chapter note. Also maintain `course/concept-map.md` and `course/method-selector.md` as course-wide indexes that link back to the canonical chapter sections.
 
 - Compare similar quantities and methods in tables: parameter vs statistic, SD vs SE, normal vs t, independent vs paired samples, confidence intervals vs tests, chi-square variants, ANOVA vs repeated pairwise tests, bootstrap vs parametric inference.
 - For each method, specify data type, target quantity, number/dependence of groups, assumptions, statistic, uncertainty measure, and interpretation.
 - Include finance-oriented transfer examples such as returns, volatility, event comparisons, proportions, regression, and multiple testing, while clearly warning that statistical evidence is not investment advice.
 - Add “why not the neighboring formula?” explanations wherever two methods are easily confused.
+- Preserve Phase 1 and Phase 2 text while adding Phase 3; later phases are cumulative edits to the same document.
 
 ### Phase 3 gate
 

@@ -2,6 +2,8 @@
 
 ## Chapter Contract
 
+`course/chapters/<chapter>.md` is the single canonical learner-facing document for a chapter. Phase 1 creates it; Phase 2 and Phase 3 revise and extend that same file. Never fork a chapter into `phase2/`, `phase3/`, `*-practice.md`, or another competing Markdown source.
+
 Use this order unless pedagogy clearly requires another:
 
 1. Chapter title and status metadata
@@ -14,7 +16,19 @@ Use this order unless pedagogy clearly requires another:
 8. Cumulative check
 9. Links to prerequisites and next chapter
 
+When adding later phases, retain this structure and insert content at the relevant concept. A useful cumulative pattern is `觀念 → 公式與判斷 → 類題與詳解 → 常見誤選 → 跨章比較 → 自我檢核`.
+
 Write in natural Traditional Chinese for a learner who found the original lecture too compressed. Include English terminology on first mention. Use short sentences around dense formulas, but do not dilute precise distinctions.
+
+## VSCode Markdown Compatibility
+
+Write all learner-facing chapter Markdown so the VSCode Markdown renderer can parse it reliably:
+
+1. Use dollar-delimited math only. Use `$E = mc^2$` for inline formulas and `$$ \\bar{x} = \\frac{1}{n}\\sum x_i $$` for display formulas. Do not use `\\( ... \\)` or `\\[ ... \\]`, which fail in some VSCode renderers.
+2. Use ASCII parentheses `( )` everywhere, including Chinese-English terminology. Write `**平均數(mean)**` rather than `**平均數（mean）**`; full-width parentheses can interfere with Markdown parser boundary matching.
+3. Put one literal ASCII space immediately after every closing `**` before the next text or symbol. Write `**平均數(mean)** 是...`, not `**平均數(mean)**是...`. Chinese characters, English letters, punctuation, and `$` do not count as that separator; insert the space manually.
+
+Before marking a chapter phase complete, search the changed Markdown for `\\(`, `\\[`, `（`, `）`, and bold closings followed immediately by a non-space character. Review any intentional exceptions manually.
 
 ## Formula Contract
 
@@ -52,6 +66,8 @@ Recommended YAML shape:
 ```
 
 Never encode only `correct: false` for a distractor. Store the inferred misconception and a targeted correction.
+
+Question YAML is optional structured data for rendering. It must not be the only place where a learner can read a question or its explanation; keep the complete learner-facing content in the chapter Markdown.
 
 ## Figure Contract
 

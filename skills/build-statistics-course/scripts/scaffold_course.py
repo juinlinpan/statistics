@@ -55,11 +55,11 @@ phase3: 未開始
 
 ## 練習與逐步詳解
 
-<!-- Phase 2 content -->
+<!-- Phase 2 content: append practice to this same chapter note; do not create a second note. -->
 
 ## 跨章比較與選法
 
-<!-- Phase 3 content -->
+<!-- Phase 3 content: append cross-chapter guidance to this same chapter note; do not create a second note. -->
 """
 
 
