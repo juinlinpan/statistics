@@ -5,6 +5,7 @@ title: 描述統計與資料探索
 phase1: 完成
 phase2: 完成
 phase3: 完成
+phase4: 未開始
 ---
 
 # 第 1 章：描述統計與資料探索
@@ -685,3 +686,7 @@ D. 只報最大值與最小值
 完整的跨章公式與方法對照，請見 [`concept-map.md`](../concept-map.md) 與 [`method-selector.md`](../method-selector.md)。
 
 <!-- Phase 3：通過 Phase 2 後再加入跨章方法選擇與連結。 -->
+
+## 圖表補充
+
+<!-- Phase 4：於此章節既有說明或範例旁插入對應圖表，不集中另列圖庫。 -->

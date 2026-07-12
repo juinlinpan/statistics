@@ -31,11 +31,11 @@ Create one canonical Markdown file per module under `course/chapters/`. This sam
 
 Use stable anchors such as `<a id="formula-standard-error-mean"></a>` immediately before important formulas. Keep anchors unique across the course so Phase 3 and Phase 4 can link to them.
 
-Generate figures only when they materially improve understanding. Prefer reproducible Python scripts under `course/figures/scripts/`, run them with `uv run`, and store outputs under `course/figures/generated/`. Give every figure alt text and explain what the learner should notice.
+Do not generate figures in Phase 1. Figures are addressed for the whole course in Phase 4, once Phase 1-3 text is stable across all chapters.
 
 ### Phase 1 gate
 
-Confirm curriculum coverage, mathematical correctness, defined notation, explicit assumptions, useful intuition, accessible figures, no unexplained prerequisite jumps, and VSCode Markdown compatibility (see the formatting rules in `references/authoring-standard.md`).
+Confirm curriculum coverage, mathematical correctness, defined notation, explicit assumptions, useful intuition, no unexplained prerequisite jumps, and VSCode Markdown compatibility (see the formatting rules in `references/authoring-standard.md`).
 
 ## Phase 2: Add Diagnostic Practice to the Same Chapter Note
 
@@ -67,14 +67,29 @@ Open each existing chapter Markdown and add cross-chapter comparisons and method
 
 Test the selector using mixed, unlabeled scenarios. A learner should be able to choose a method and justify why nearby alternatives do not apply.
 
-## Phase 4: Build the Interactive Course
+## Phase 4: Add Supporting Figures
 
-Do not begin Phase 4 until every one of the 12 chapters is marked `完成` for Phase 1, Phase 2, and Phase 3 in `course/進度.md`. Scaffolding a web app, selecting a framework, or implementing shared site components also counts as beginning Phase 4 and must wait. When the gate opens, develop Phase 4 as one coordinated course-wide project rather than chapter by chapter.
+Do not begin Phase 4 for a chapter until its Phase 1, Phase 2, and Phase 3 are all `完成`. Open the existing chapter Markdown and review it end-to-end for places where a figure would materially strengthen an explanation, example, or comparison that is currently text-only. Treat the course's current lack of figures as a real gap worth actively closing, not a default to preserve — the earlier "only add a figure when necessary" instinct from Phase 1 undershot this in practice.
+
+- Good candidates: probability histograms, sampling-distribution simulations (the three-histogram comparison), scatterplots with the fitted regression line and residual plot, side-by-side boxplots for group comparisons, chi-square observed-vs-expected bar charts, confidence-interval coverage simulations, bootstrap replicate distributions, and any other relationship a chapter currently only describes in words.
+- Generate figures with reproducible Python scripts under `course/figures/scripts/`, run them with `uv run`, and store outputs under `course/figures/generated/`.
+- Every figure needs alt text and a short caption stating what the learner should notice. Figures supplement the running text; the chapter must still read completely without images (this also preserves the no-JavaScript-readable requirement for Phase 5).
+- Insert each figure immediately next to the explanation or example it supports, not batched into a separate gallery.
+- Reuse one consistent visual style (palette, font, sizing) across every figure in the course.
+
+### Phase 4 gate
+
+For each new figure, confirm it is reproducible from its script, the data/numbers it shows match the surrounding text exactly, it has alt text and an explanatory caption, and it measurably clarifies something the text alone left harder to grasp. Removing a figure that fails this bar is a valid gate outcome — do not keep a figure just because it was already drawn.
+
+## Phase 5: Build the Interactive Course
+
+Do not begin Phase 5 until every one of the 12 chapters is marked `完成` for Phase 1, Phase 2, Phase 3, and Phase 4 in `course/進度.md`. Scaffolding a web app, selecting a framework, or implementing shared site components also counts as beginning Phase 5 and must wait. When the gate opens, develop Phase 5 as one coordinated course-wide project rather than chapter by chapter.
 
 Create a responsive chapter-based site that progressively reveals one learning unit at a time while preserving direct links and browser navigation.
 
 - Make each chapter a route and each concept/formula a stable deep link.
 - Render math accessibly and keep a no-JavaScript-readable content source where practical.
+- Reuse the Phase 4 figures (and their generating scripts) rather than redrawing them for the site.
 - For multiple choice, give option-specific misconception feedback after submission and allow retry.
 - For calculations, reveal one scaffolded step at a time; never require the learner to expose the full solution immediately.
 - Link each solution step to the formula and prerequisite concept it uses.
@@ -84,7 +99,7 @@ Create a responsive chapter-based site that progressively reveals one learning u
 
 Choose the site's framework from existing repository conventions. Do not replace an established stack without an explicit request.
 
-### Phase 4 gate
+### Phase 5 gate
 
 Run the repository's type checks, tests, and production build. Manually verify at least one full chapter, every interaction type, narrow and wide viewports, and all formula deep links touched by the change.
 
@@ -94,7 +109,7 @@ Run the repository's type checks, tests, and production build. Manually verify a
 - Distinguish definitions, approximations, conventions, and theorems.
 - Never claim that a small p-value proves an alternative, that correlation proves causation, or that a confidence interval assigns probability to a fixed realized parameter under the standard frequentist interpretation.
 - Prefer small reviewable chapter increments. Do not mark an entire phase complete from scaffolding alone.
-- Use only `未開始`, `進行中`, `待驗收`, and `完成` for chapter Phase 1–3 statuses. Do not start a later phase for a chapter until its preceding phase is `完成`. Keep Phase 4 `鎖定` until all 36 chapter-phase cells through Phase 3 are `完成`.
+- Use only `未開始`, `進行中`, `待驗收`, and `完成` for chapter Phase 1–4 statuses. Do not start a later phase for a chapter until its preceding phase is `完成`. Keep Phase 5 `鎖定` until all 48 chapter-phase cells through Phase 4 are `完成`.
 
 ## Resources
 

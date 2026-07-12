@@ -2,7 +2,7 @@
 
 ## Chapter Contract
 
-`course/chapters/<chapter>.md` is the single canonical learner-facing document for a chapter. Phase 1 creates it; Phase 2 and Phase 3 revise and extend that same file. Never fork a chapter into `phase2/`, `phase3/`, `*-practice.md`, or another competing Markdown source.
+`course/chapters/<chapter>.md` is the single canonical learner-facing document for a chapter. Phase 1 creates it; Phase 2, Phase 3, and Phase 4 revise and extend that same file. Never fork a chapter into `phase2/`, `phase3/`, `*-practice.md`, or another competing Markdown source.
 
 Use this order unless pedagogy clearly requires another:
 
@@ -91,8 +91,8 @@ Scaffolds and TODO placeholders count as `未開始`, never `完成`.
 
 ## Progress Ledger Contract
 
-Maintain `course/進度.md` as the only authoritative progress ledger. Keep a table with all 12 chapters and separate Phase 1, Phase 2, and Phase 3 columns. Use `未開始`, `進行中`, `待驗收`, or `完成` exactly.
+Maintain `course/進度.md` as the only authoritative progress ledger. Keep a table with all 12 chapters and separate Phase 1, Phase 2, Phase 3, and Phase 4 columns. Use `未開始`, `進行中`, `待驗收`, or `完成` exactly.
 
 Below the table, maintain dated evidence entries containing the chapter, phase, files reviewed, checks performed, and known limitations. Never infer completion merely from file existence.
 
-Keep Phase 4 status as `鎖定` unless all 36 cells in the table are `完成`. After that condition is met, change it to `未開始`; only then may website implementation begin.
+Keep Phase 5 status as `鎖定` unless all 48 cells in the table are `完成`. After that condition is met, change it to `未開始`; only then may website implementation begin.

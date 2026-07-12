@@ -39,6 +39,7 @@ title: {title}
 phase1: 未開始
 phase2: 未開始
 phase3: 未開始
+phase4: 未開始
 ---
 
 # 第 {number} 章：{title}
@@ -60,6 +61,10 @@ phase3: 未開始
 ## 跨章比較與選法
 
 <!-- Phase 3 content: append cross-chapter guidance to this same chapter note; do not create a second note. -->
+
+## 圖表補充
+
+<!-- Phase 4 content: insert figures next to the explanations/examples they support; do not batch into a separate gallery. -->
 """
 
 
@@ -80,21 +85,21 @@ def scaffold(root: Path) -> list[Path]:
             created.append(path)
 
     rows = "\n".join(
-        f"| {n:02d} | {title} | 未開始 | 未開始 | 未開始 |"
+        f"| {n:02d} | {title} | 未開始 | 未開始 | 未開始 | 未開始 |"
         for n, _, title in CHAPTERS
     )
     progress = f"""# 統計講義工程進度
 
 ## 章節進度
 
-| 章節 | 名稱 | Phase 1 講義 | Phase 2 類題與詳解 | Phase 3 跨章串聯 |
-|---:|---|---|---|---|
+| 章節 | 名稱 | Phase 1 講義 | Phase 2 類題與詳解 | Phase 3 跨章串聯 | Phase 4 圖表補充 |
+|---:|---|---|---|---|---|
 {rows}
 
-## Phase 4 互動網站
+## Phase 5 互動網站
 
 - 狀態：鎖定
-- 解鎖條件：上表 12 章的 Phase 1、Phase 2、Phase 3 共 36 格全部為「完成」。
+- 解鎖條件：上表 12 章的 Phase 1、Phase 2、Phase 3、Phase 4 共 48 格全部為「完成」。
 - 執行原則：解鎖後才可開始，並以全課程為單位統一開發。
 
 ## 驗收證據

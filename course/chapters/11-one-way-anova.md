@@ -5,6 +5,7 @@ title: 單因子變異數分析
 phase1: 完成
 phase2: 完成
 phase3: 完成
+phase4: 未開始
 ---
 
 # 第 11 章：單因子變異數分析
@@ -619,3 +620,7 @@ D. 「結果顯著即可，不需要在報告中列出 $F$ 值或自由度。」
 本章用組間、組內變異的拆解，把[第 1 章](01-descriptive-statistics.md)用盒鬚圖／並排比較多組資料分散情形時只能「用眼睛看」的直覺，轉換成可以計算 p 值的正式檢定。
 
 完整的跨章公式與方法對照，請見 [`concept-map.md`](../concept-map.md) 與 [`method-selector.md`](../method-selector.md)。
+
+## 圖表補充
+
+<!-- Phase 4：於此章節既有說明或範例旁插入對應圖表，不集中另列圖庫。 -->

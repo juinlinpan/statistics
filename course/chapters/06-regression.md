@@ -5,6 +5,7 @@ title: 迴歸
 phase1: 完成
 phase2: 完成
 phase3: 完成
+phase4: 未開始
 ---
 
 # 第 6 章：迴歸
@@ -607,3 +608,7 @@ $$
 完整的跨章公式與方法對照，請見 [`concept-map.md`](../concept-map.md) 與 [`method-selector.md`](../method-selector.md)。
 
 > Phase 2 狀態：完成。核心講義、診斷型類題、逐步計算詳解與迷思回饋均已通過本章驗收；跨章方法比較（Phase 3）已完成。
+
+## 圖表補充
+
+<!-- Phase 4：於此章節既有說明或範例旁插入對應圖表，不集中另列圖庫。 -->

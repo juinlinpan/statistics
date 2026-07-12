@@ -5,6 +5,7 @@ title: 重抽樣
 phase1: 完成
 phase2: 完成
 phase3: 完成
+phase4: 未開始
 ---
 
 # 第 9 章：重抽樣
@@ -769,3 +770,7 @@ D. 逐人重抽，但把 $B$ 設為一百萬就能補償校內相依
 本章依賴的大數法則，與[第 5 章](05-sampling-distributions-clt.md)中「樣本數增加、標準誤依平方根律縮小」是同一個現象的兩種說法：這裡的 Monte Carlo 標準誤隨模擬次數 $B$ 縮小，正是第 5 章平方根律的直接應用。
 
 完整的跨章公式與方法對照，請見 [`concept-map.md`](../concept-map.md) 與 [`method-selector.md`](../method-selector.md)。
+
+## 圖表補充
+
+<!-- Phase 4：於此章節既有說明或範例旁插入對應圖表，不集中另列圖庫。 -->
