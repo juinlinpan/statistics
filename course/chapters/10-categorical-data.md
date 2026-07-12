@@ -4,7 +4,7 @@ slug: categorical-data
 title: 類別資料分析
 phase1: 完成
 phase2: 完成
-phase3: 未開始
+phase3: 完成
 ---
 
 # 第 10 章：類別資料分析
@@ -688,3 +688,19 @@ D. 兩者無關聯，只是抽樣誤差
 - 選 D：檢定顯著且拒絕了獨立的 $H_0$，資料確實顯示關聯；說「無關聯」與檢定結果矛盾。
 
 </details>
+
+## 跨章比較與選法
+
+本章前面已經比較過適合度、同質性與獨立性三種卡方檢定各自的資料來源與結論語言，這裡不重複，改為補上一個本章尚未點名的跨章連結。
+
+### 類別資料的卡方檢定 vs. 單一比例的常態近似方法
+
+| | 常態近似方法（第 4、7、8 章） | 卡方檢定（本章） |
+|---|---|---|
+| 目標量 | 單一比例是否等於某個假設值，例如 $p=0.5$ | 一整組類別分布是否符合某模型，或兩個類別變數是否有關聯 |
+| 本課公式 | [常態近似二項](04-normal-and-binomial.md#formula-ch04-normal-approx-binomial)、[比例的 Wald 區間](07-confidence-intervals.md#formula-ci-proportion-wald)、[單側精確二項 p 值](08-significance-tests.md#formula-exact-binomial-pvalue-ch08) | 本章的[適合度期望次數](#formula-ch10-gof-expected-count)、[雙向表期望次數](#formula-ch10-two-way-expected-count)與[卡方統計量](#formula-ch10-chi-square-statistic) |
+| 何時選它 | 只有一個類別、兩種結果，且只關心單一比例 | 有 3 個以上類別，或要看兩個類別變數是否關聯，此時沒有單一的 $z$ 可用 |
+
+**為什麼不是互斥的兩套方法：** 若只有 2 個類別（例如「成功／失敗」），檢定單一比例 $p=p_0$ 時，用一個 2 類別、1 自由度的卡方適合度檢定，其實與雙尾的單一比例 $z$ 檢定完全等價——可以證明此時卡方統計量恰好等於 $z^2$。差別在於卡方檢定能自然推廣到 3 個以上類別或雙向列聯表，那裡沒有單一的 $z$ 可以回頭套用；這也是為什麼類別變數超過兩類，或牽涉兩個類別變數的關聯時，本章的卡方方法才是唯一選項。
+
+完整的跨章公式與方法對照，請見 [`concept-map.md`](../concept-map.md) 與 [`method-selector.md`](../method-selector.md)。

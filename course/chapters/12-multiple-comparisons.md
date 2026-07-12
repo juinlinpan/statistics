@@ -4,7 +4,7 @@ slug: multiple-comparisons
 title: 多重比較
 phase1: 完成
 phase2: 完成
-phase3: 未開始
+phase3: 完成
 ---
 
 # 第 12 章：多重比較
@@ -494,4 +494,16 @@ D. 無效，因為資料切分永遠不能用於假設檢定
 
 完成題目後，你應能把流程說成四句話：先界定假設族；依代價選 FWER 或 FDR；依公式完整計算並作情境解讀；探索過的資料不可假裝成未看過的確認資料。
 
-<!-- Phase 3 將在此加入跨章方法比較與選法。 -->
+## 跨章比較與選法
+
+本章前面已經詳細比較過 Bonferroni（控制 FWER）與 Benjamini–Hochberg（控制 FDR）兩種修正各自適用的情境與代價，這裡不再重複；以下補上本章一直依賴、卻還沒正式點名的兩個跨章連結。
+
+### 回到第 8 章：每一項檢定仍是第 8 章的那個檢定
+
+本章的[獨立檢定 FWER 公式](#formula-fwer-independent-tests)裡，$m$ 個虛無假設中的每一個，都是[第 8 章](08-significance-tests.md)一般[標準化檢定統計量](08-significance-tests.md#formula-test-statistic-general-ch08)架構下的一次獨立檢定：算出統計量、對照其抽樣分配、得到 p 值，再用顯著水準 $\alpha$ 判定。第 8 章保證的是「單一這樣的檢定」在 $H_0$ 為真時，誤報機率剛好是 $\alpha$。本章整章要處理的問題，其實就是一句話：當你把第 8 章這個保證重複套用 $m$ 次，這個 $\alpha$ 保證會發生什麼事——FWER 公式與 Bonferroni 門檻，都是在替第 8 章的 $\alpha$ 找回等效的整族保證。
+
+### 銜接第 11 章：ANOVA 顯著之後，換誰負責定位差異
+
+[第 11 章](11-one-way-anova.md)的[F 統計量](11-one-way-anova.md#formula-anova-f-statistic)回答的是「這 $k$ 組母體平均數是否全部相等」這個整體問題，並解釋了為何用一次 $F$ 檢定取代大量逐對 t 檢定：後者會讓多次檢定各自累積誤報風險，這正是本章開頭「多看幾次就更容易誤報」的具體案例。若 ANOVA 的 $F$ 檢定顯著，自然的下一步是問「究竟是哪幾對平均數不同」，而這批逐對比較本身就是一組新的假設族——對它們直接套用未修正的 $\alpha$，會重現本章第 1 節那種 FWER 膨脹。因此，ANOVA 顯著後的成對比較，需要正式套用本章的 Bonferroni 或 BH 修正，才能在「找出哪裡不同」的同時，控制好整體誤報風險。這也是本章存在的具體動機之一。
+
+完整的跨章公式與方法對照，請見 [`concept-map.md`](../concept-map.md) 與 [`method-selector.md`](../method-selector.md)。

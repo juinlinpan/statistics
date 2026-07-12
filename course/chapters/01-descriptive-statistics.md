@@ -4,7 +4,7 @@ slug: descriptive-statistics
 title: 描述統計與資料探索
 phase1: 完成
 phase2: 完成
-phase3: 未開始
+phase3: 完成
 ---
 
 # 第 1 章：描述統計與資料探索
@@ -676,5 +676,12 @@ D. 只報最大值與最小值
 題目結構化版本存於 `course/questions/01-descriptive-statistics.yaml`，供後續互動網站沿用；Markdown 版不需 JavaScript 也能完整閱讀。
 
 ## 跨章比較與選法
+
+本章是全課程最早介紹「用一組數字摘要一批資料」的地方，還沒有其他方法可以互相比較，因此本節不建立新的比較表；本章的統計量會在後面章節被重新賦予推論意義：
+
+- 這裡的[樣本標準差](#formula-ch01-sample-standard-deviation)是描述單一樣本分散程度的量；第 5 章會把它換算成描述「統計量本身抽樣波動」的標準誤(SE)，兩者的名稱雖然相似但回答的問題不同，比較留在[第 5 章](05-sampling-distributions-clt.md)處理。
+- 這裡用五數摘要、盒鬚圖比較「單一批資料的分布」；第 11 章會把同樣的比較擴大成「三組以上母體平均數是否相同」的正式檢定，比較留在[第 11 章](11-one-way-anova.md)處理。
+
+完整的跨章公式與方法對照，請見 [`concept-map.md`](../concept-map.md) 與 [`method-selector.md`](../method-selector.md)。
 
 <!-- Phase 3：通過 Phase 2 後再加入跨章方法選擇與連結。 -->

@@ -4,7 +4,7 @@ slug: resampling
 title: 重抽樣
 phase1: 完成
 phase2: 完成
-phase3: 未開始
+phase3: 完成
 ---
 
 # 第 9 章：重抽樣
@@ -751,4 +751,21 @@ D. 逐人重抽，但把 $B$ 設為一百萬就能補償校內相依
 
 ## 跨章比較與選法
 
-<!-- Phase 3：完成 Phase 2 驗收後再加入全課程方法選擇連結。 -->
+### Bootstrap vs. 傳統母體模型方法(CLT-based)
+
+| | 傳統母體模型方法（第 7、8 章） | Bootstrap 重抽樣（本章） |
+|---|---|---|
+| 依賴什麼假設 | 統計量的抽樣分配近似常態（CLT），且有現成的 SE 公式，如[平均數的大樣本區間](07-confidence-intervals.md#formula-ci-mean-large-sample)、[比例的 Wald 區間](07-confidence-intervals.md#formula-ci-proportion-wald)、第 8 章的 [t 統計量](08-significance-tests.md#formula-one-sample-t-ch08) | 對母體分配形狀要求較少，直接用[bootstrap 標準誤](#formula-ch09-bootstrap-standard-error)從資料本身重抽估計波動 |
+| 需要什麼 | 一個封閉形式的 SE 公式 | 電腦重複重抽與計算 |
+| 較擅長處理 | 假設成立時計算快、行為已被充分研究（平均數、比例等常見統計量） | 沒有簡單 SE 公式的統計量（例如中位數、相關係數、比率），或母體明顯非常態時 |
+| 何時不是萬能解 | 假設不成立時（例如嚴重偏態、小樣本）會失真 | 小樣本本身資訊不足時 bootstrap 也無法生出額外資訊；資料若有群聚或相依結構，需要 block／cluster bootstrap 等變化版本；也不能修正原本抽樣設計的偏誤 |
+
+**提醒：** 「假設較少」不等於「沒有假設」——bootstrap 仍假設樣本能代表母體、觀測之間的（不）獨立結構被正確處理。遇到小樣本、依賴資料或有偏抽樣設計時，不能只因為「改用 bootstrap」就迴避這些限制。
+
+### 兩個簡短的橋接
+
+本章的蒙地卡羅模擬，本質上是用大量重複試驗去逼近[第 3 章](03-probability.md)已經用公式精確定義過的機率；模擬給的是數值近似，第 3 章的公式才是精確定義本身。
+
+本章依賴的大數法則，與[第 5 章](05-sampling-distributions-clt.md)中「樣本數增加、標準誤依平方根律縮小」是同一個現象的兩種說法：這裡的 Monte Carlo 標準誤隨模擬次數 $B$ 縮小，正是第 5 章平方根律的直接應用。
+
+完整的跨章公式與方法對照，請見 [`concept-map.md`](../concept-map.md) 與 [`method-selector.md`](../method-selector.md)。
