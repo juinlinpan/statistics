@@ -1,0 +1,233 @@
+- id: m11-method-selection-01
+  chapter: 11
+  type: multiple-choice
+  concepts: [factor, level, response-variable, method-selection]
+  difficulty: foundational
+  prompt: "某公司想比較五種包裝顏色對顧客滿意度評分(0–10 分，數值量表)的影響。每位顧客隨機分派到一種包裝顏色，只評分一次，各顧客互不影響。應選用哪一種分析？"
+  options:
+    - id: a
+      text: "單因子 ANOVA：一個類別因子(包裝顏色，5 個水準)搭配一個數值反應(滿意度評分)，且觀測獨立"
+      correct: true
+      feedback: "包裝顏色是類別因子，滿意度評分是數值反應，觀測獨立，符合單因子 ANOVA 的資料結構。"
+    - id: b
+      text: "卡方同質性檢定，因為因子有 5 個水準，水準數已經超過兩組"
+      correct: false
+      misconception: "把水準數大於二誤當成需要卡方檢定的理由，忽略反應變數的型態"
+      feedback: "決定用卡方或 ANOVA 的關鍵是反應變數的型態；此處反應是數值評分，不是類別資料。"
+    - id: c
+      text: "對每兩種顏色分別做兩樣本 t 檢定，不需要先做整體檢定"
+      correct: false
+      misconception: "略過整體檢定，直接做多次成對比較，忽略偽陽性累積"
+      feedback: "略過整體檢定直接做多次兩樣本比較，會讓多次檢定各自累積偽陽性風險。"
+    - id: d
+      text: "兩因子 ANOVA，因為有 5 個水準，水準數等於因子數"
+      correct: false
+      misconception: "把一個因子的多個水準誤記成多個因子"
+      feedback: "單因子表示只有一個分組變數；水準數與因子數是不同概念。"
+  answer: a
+  solution: "包裝顏色(因子，5 個水準)搭配滿意度評分(數值反應)且觀測獨立，屬於單因子 ANOVA 的典型資料結構。"
+
+- id: m11-hypothesis-interpretation-01
+  chapter: 11
+  type: multiple-choice
+  concepts: [anova-hypotheses, p-value-interpretation]
+  difficulty: intermediate
+  prompt: "某行銷團隊對四種行銷方案做單因子 ANOVA，比較平均回應率，得到 p=0.004。下列哪句話最恰當？"
+  options:
+    - id: a
+      text: "至少有一個方案的母體平均回應率與其他方案不同，但整體檢定尚未指出是哪一個"
+      correct: true
+      feedback: "對立假設只說並非所有母體平均數都相等，拒絕 H0 只代表至少有一組不同。"
+    - id: b
+      text: "p 值代表虛無假設為假的機率是 99.6%"
+      correct: false
+      misconception: "把 p 值誤解成虛無假設為假的機率"
+      feedback: "p 值是在 H0 成立前提下觀察到目前或更極端統計量的機率，不是關於 H0 真假的機率陳述。"
+    - id: c
+      text: "p 值很小，所以四個方案的平均回應率兩兩之間都有顯著差異"
+      correct: false
+      misconception: "把整體顯著誤推成所有兩兩比較都顯著"
+      feedback: "整體檢定顯著時仍可能只有其中一兩對方案不同，其餘方案彼此接近。"
+    - id: d
+      text: "因為結果顯著，可以判定行銷方案造成回應率的差異"
+      correct: false
+      misconception: "把統計顯著直接當成因果證據，忽略研究設計"
+      feedback: "能否談因果取決於研究設計是否隨機分派，不是取決於 p 值大小。"
+  answer: a
+  solution: "拒絕 H0 只代表至少一組母體平均數不同，定位差異需要第 12 章的多重比較方法。"
+
+- id: m11-scale-transform-01
+  chapter: 11
+  type: multiple-choice
+  concepts: [sum-of-squares, scale-invariance, f-statistic]
+  difficulty: intermediate
+  prompt: "老師把某次閱讀測驗的原始分數都乘以 1.5，換算成滿分 150 分的量表，再用換算後的分數對三個班級做單因子 ANOVA。相較於用原始分數算出的 SS_B、SS_W、SS_T 與 F，換算後的這些統計量有什麼變化？"
+  options:
+    - id: a
+      text: "SS_B、SS_W、SS_T 都變成原本的 1.5^2=2.25 倍，但 F 不變"
+      correct: true
+      feedback: "離均差乘以 1.5，平方和是離均差平方和所以乘 2.25；MS_B 與 MS_W 同倍率縮放，相除後 F 不變。"
+    - id: b
+      text: "所有統計量都不變，因為 ANOVA 只比較平均數之間的差異"
+      correct: false
+      misconception: "忽略平方和是離均差的平方和，量測尺度改變時平方和一定跟著變"
+      feedback: "平方和的定義是離均差的平方和，尺度改變時平方和一定改變，只是 F 這個比值不受影響。"
+    - id: c
+      text: "SS_B、SS_W、SS_T 都變成原本的 1.5 倍，F 也變成 1.5 倍"
+      correct: false
+      misconception: "把平方和的縮放倍率算成與資料倍率相同，忽略平方單位"
+      feedback: "平方和的單位是資料單位的平方，縮放倍率應是資料倍率的平方(2.25 倍)，不是 1.5 倍。"
+    - id: d
+      text: "資料被人為乘上常數後，F 已經不能再用來做檢定"
+      correct: false
+      misconception: "誤以為任何線性轉換都會使 F 檢定失效"
+      feedback: "乘上正的常數不會使 F 檢定失效；F 作為比值在這種縮放下維持不變，仍可正常解讀。"
+  answer: a
+  solution: "所有觀測、組平均與總平均同乘 1.5，離均差也乘 1.5，平方和乘 1.5^2=2.25；MS_B、MS_W 同倍率縮放使 F 不變。"
+
+- id: m11-f-not-significant-01
+  chapter: 11
+  type: multiple-choice
+  concepts: [f-distribution, p-value-interpretation, fail-to-reject]
+  difficulty: intermediate
+  prompt: "某單因子 ANOVA 得到 F(3,36)=1.2，對應 p=0.32，事先設定 α=0.05。下列哪個結論最恰當？"
+  options:
+    - id: a
+      text: "沒有足夠證據拒絕「四組母體平均數相等」的虛無假設"
+      correct: true
+      feedback: "p=0.32 大於 α=0.05，屬於沒有足夠證據拒絕，不是接受或證明 H0。"
+    - id: b
+      text: "資料已經證明四組母體平均數完全相等"
+      correct: false
+      misconception: "把未拒絕虛無假設當成證明虛無假設為真"
+      feedback: "未拒絕不等於證明相等；母體平均數仍可能有微小差異，只是本次資料證據不足。"
+    - id: c
+      text: "F 大於 1，所以應該拒絕虛無假設"
+      correct: false
+      misconception: "把 F 是否大於 1 當成判斷顯著的門檻"
+      feedback: "F 在 H0 下本來就會在 1 附近隨機波動，必須對照對應 F 分配得出的 p 值，而不是看 F 是否超過 1。"
+    - id: d
+      text: "為了讓結果顯著，應該把 α 調高到 0.40 再重新判斷"
+      correct: false
+      misconception: "在看到資料後才調整顯著水準以求顯著"
+      feedback: "α 必須在分析前依研究設計預先選定，看到結果後才調整是本末倒置的作法。"
+  answer: a
+  solution: "p=0.32 大於預先設定的 α=0.05，結論是沒有足夠證據拒絕四組母體平均數相等的虛無假設。"
+
+- id: m11-assumptions-01
+  chapter: 11
+  type: multiple-choice
+  concepts: [homogeneity-of-variance, independence, unequal-sample-sizes]
+  difficulty: intermediate
+  prompt: "一位老師想比較四個班級的期中考成績，各班人數分別是 50、22、48、25 人，且某一班成績的標準差是另一班的 5 倍。在套用標準單因子 ANOVA 之前，下列哪一項描述最貼近本章對假設條件的說明？"
+  options:
+    - id: a
+      text: "標準差相差到 5 倍是等變異假設的警訊，應先用箱形圖或殘差圖比較各班分散程度，必要時考慮 Welch ANOVA 等替代方法"
+      correct: true
+      feedback: "各組共享同一個 σ^2 是等變異假設；樣本數不平衡且變異差異很大時，標準 ANOVA 特別可能失真。"
+    - id: b
+      text: "各班人數不同就違反了 ANOVA 的基本假設，這組資料完全不能分析"
+      correct: false
+      misconception: "把樣本數必須相等當成 ANOVA 的必要假設"
+      feedback: "不等樣本數本身不是拒絕分析的理由，只是總平均要用樣本數加權，且不等變異時風險較高。"
+    - id: c
+      text: "只要總樣本數夠大，各組標準差差到 5 倍也可以忽略不看"
+      correct: false
+      misconception: "以為大樣本能自動抵消嚴重的變異數不齊一問題"
+      feedback: "樣本數不平衡且變異差異很大時風險升高，並不會因為總樣本數大就自動抵消。"
+    - id: d
+      text: "應該先做多重比較找出哪些班級不同，再決定要不要做整體 F 檢定"
+      correct: false
+      misconception: "把分析順序顛倒，先做事後比較再做整體檢定"
+      feedback: "分析順序應該是先做整體 F 檢定，顯著後才需要有多重比較校正的後續分析。"
+  answer: a
+  solution: "5 倍的標準差差距加上樣本數不平衡，是等變異假設的警訊，應先用圖形檢查，必要時考慮 Welch ANOVA 等替代方法。"
+
+- id: m11-full-anova-table-01
+  chapter: 11
+  type: calculation
+  concepts: [sum-of-squares, degrees-of-freedom, mean-squares, f-statistic]
+  difficulty: intermediate
+  prompt: "三種肥料(甲、乙、丙)各隨機分配到 4 盆同批種苗，記錄一個月後的生長量(公分)：甲 10,12,14,12；乙 14,16,18,16；丙 18,20,22,20。求 SS_B、SS_W、SS_T、對應自由度、均方與 F。"
+  answer: "SS_B=128，SS_W=24，SS_T=152；df=(2,9,11)；MS_B=64，MS_W≈2.667；F=24。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "k=3 組，各組 n_i=4，N=12，反應變數為生長量(公分)，各盆栽獨立分配肥料。"
+    - title: "選擇方法"
+      explanation: "先用總平均公式求總平均，再用平方和拆解求 SS_B、SS_W，接著用自由度與均方、F 統計量完成 ANOVA 表。"
+      formula_ref: formula-anova-grand-mean
+    - title: "檢查條件"
+      explanation: "三組樣本數相等，種苗隨機分配肥料可視為獨立觀測；三組組內離散型態相近，等變異假設大致合理。"
+    - title: "代入計算(總平均與組間平方和)"
+      explanation: "總平均=(4×12+4×16+4×20)/12=192/12=16 公分；SS_B=4(12-16)^2+4(16-16)^2+4(20-16)^2=64+0+64=128 公分^2。"
+      formula_ref: formula-anova-sums-of-squares
+    - title: "代入計算(組內平方和與 ANOVA 表)"
+      explanation: "每組組內平方和皆為(-2)^2+0^2+2^2+0^2=8，SS_W=8+8+8=24；SS_T=128+24=152。df_B=2，df_W=9，df_T=11。MS_B=128/2=64，MS_W=24/9≈2.667，F=64/2.667=24。"
+      formula_ref: formula-anova-mean-squares
+    - title: "解讀"
+      explanation: "F(2,9)=24，遠大於 1，是很強的訊號；正式結論仍需對照 F(2,9)分配求出的 p 值，不能只看 24 很大就下結論。"
+      formula_ref: formula-anova-f-statistic
+    - title: "合理性檢查"
+      explanation: "df 兩欄可加總(2+9=11)，平方和也可加總(128+24=152)；F 為正值且無單位。"
+  checks:
+    - "SS_B+SS_W 是否等於 SS_T？df 是否能加總？"
+    - "是否記得 F 大不代表可以跳過對照 F 分配求 p 值這一步？"
+
+- id: m11-weighted-summary-01
+  chapter: 11
+  type: calculation
+  concepts: [grand-mean, unequal-sample-sizes, sum-of-squares, f-statistic, p-value-decision]
+  difficulty: intermediate
+  prompt: "某連鎖企業比較三家門市的平均週銷售額(千元)：甲 n=3, 平均60；乙 n=5, 平均48；丙 n=4, 平均51。已知 SS_W=270(千元^2)。求總平均、SS_B、對應自由度、均方與 F；若 p=0.02，在 α=0.05 下可下什麼結論？"
+  answer: "總平均=52千元；SS_B=276；df=(2,9)；MS_B=138，MS_W=30；F=4.6；p=0.02<0.05，拒絕三家門市平均週銷售額相等的 H0。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "k=3，N=3+5+4=12，各組 n_i 與平均已知，SS_W=270 千元^2 已知。"
+    - title: "選擇方法"
+      explanation: "各組樣本數不同，總平均須用樣本數加權的總平均公式，再用平方和拆解求 SS_B，用自由度與均方、F 統計量完成計算。"
+      formula_ref: formula-anova-grand-mean
+    - title: "檢查條件"
+      explanation: "三家門市各自獨立記錄，樣本數不等不違反 ANOVA 基本假設，只代表總平均需加權；此處先假設等變異大致成立。"
+    - title: "代入計算(加權總平均)"
+      explanation: "總平均=(3×60+5×48+4×51)/12=(180+240+204)/12=624/12=52 千元，注意不是簡單平均(60+48+51)/3=53。"
+      formula_ref: formula-anova-sums-of-squares
+    - title: "代入計算(組間平方和與 ANOVA 表)"
+      explanation: "SS_B=3(60-52)^2+5(48-52)^2+4(51-52)^2=192+80+4=276。df_B=2，df_W=9。MS_B=276/2=138，MS_W=270/9=30，F=138/30=4.6。"
+      formula_ref: formula-anova-mean-squares
+    - title: "解讀"
+      explanation: "F(2,9)=4.6，p=0.02<α=0.05，拒絕三家門市平均週銷售額相等的 H0；資料支持至少一家門市與其他不同，但不指出是哪一家，也不保證三家兩兩都不同。"
+      formula_ref: formula-anova-p-value
+    - title: "合理性檢查"
+      explanation: "SS_T=SS_B+SS_W=276+270=546；df_T=2+9=11=N-1；F 為正值且無單位。"
+  checks:
+    - "總平均是否用樣本數加權，而不是三組平均數的簡單平均？"
+    - "拒絕 H0 後是否避免宣稱哪幾家門市彼此不同？"
+
+- id: m11-full-conclusion-01
+  chapter: 11
+  type: multiple-choice
+  concepts: [reporting-results, observational-vs-experimental, multiple-comparisons]
+  difficulty: intermediate
+  prompt: "一項觀察性研究(非隨機分派)蒐集網路使用者回報的四個手機品牌電池續航時間(小時)，做單因子 ANOVA 後得到 F(3,116)=3.85，p=0.011。下列哪個結論寫法最恰當？"
+  options:
+    - id: a
+      text: "F(3,116)=3.85，p=0.011，有統計證據顯示至少一個品牌的平均續航時間與其他品牌不同；但因為資料非隨機分派，只能視為關聯而非因果的證據，且定位哪些品牌不同仍需經校正的多重比較。"
+      correct: true
+      feedback: "包含 F 值與自由度、p 值與 α 的比較、對虛無假設的結論，以及研究設計限制下的因果/關聯區分。"
+    - id: b
+      text: "四個品牌的平均續航時間彼此都不相同。"
+      correct: false
+      misconception: "把整體顯著誤推成所有品牌兩兩都不同"
+      feedback: "整體 ANOVA 顯著只代表至少有一個品牌不同，不能推論成彼此都不同。"
+    - id: c
+      text: "p 值小於 0.05，證明使用某品牌的手機會導致續航時間改變。"
+      correct: false
+      misconception: "把觀察性資料的顯著關聯當成因果證據"
+      feedback: "資料來自使用者回報而非隨機分派實驗，觀察性資料上的顯著關聯不能直接說是導致的因果關係。"
+    - id: d
+      text: "結果顯著即可，不需要在報告中列出 F 值或自由度。"
+      correct: false
+      misconception: "省略檢定統計量與自由度等可重現分析所需的要素"
+      feedback: "完整結論至少要包含 F 值、自由度與 p 值，只說顯著讓讀者無法檢查或重現分析。"
+  answer: a
+  solution: "完整結論需包含 F 值與自由度、p 值與 α 的比較、對虛無假設的結論、以及研究設計允許的因果或關聯層級。"

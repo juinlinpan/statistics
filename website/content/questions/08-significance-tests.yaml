@@ -1,0 +1,206 @@
+- id: m08-hypotheses-01
+  chapter: 8
+  concepts: [hypotheses, two-sided-test]
+  type: multiple-choice
+  difficulty: foundational
+  prompt: "某電商目前長期退貨率為 12%，團隊想檢查新尺寸表是否改變退貨率。令 p 為新制度的母體退貨率，哪組假設正確？"
+  options:
+    - id: a
+      text: "H0: p = 0.12；HA: p ≠ 0.12"
+      correct: true
+    - id: b
+      text: "H0: p-hat = 0.12；HA: p-hat ≠ 0.12"
+      correct: false
+      misconception: "把樣本統計量當成假設中的未知母體參數"
+      feedback: "假設應描述母體退貨率 p；樣本比例是已觀察到的統計量。"
+    - id: c
+      text: "H0: p ≠ 0.12；HA: p = 0.12"
+      correct: false
+      misconception: "顛倒虛無基準與研究主張"
+      feedback: "等號應放在建立參考分配的虛無假設中。"
+    - id: d
+      text: "H0: p = 0.12；HA: p < 0.12"
+      correct: false
+      misconception: "把『改變』擅自縮窄成『下降』"
+      feedback: "改變包含上升與下降；沒有事前方向時使用雙尾。"
+  answer: a
+  solution: "假設針對母體參數 p；『改變』對應雙尾對立假設。"
+
+- id: m08-pvalue-01
+  chapter: 8
+  concepts: [p-value, interpretation]
+  type: multiple-choice
+  difficulty: foundational
+  prompt: "一項雙尾檢定得到 p = 0.03，哪個解讀正確？"
+  options:
+    - id: a
+      text: "H0 為真的機率是 3%。"
+      correct: false
+      misconception: "把 P(資料 | H0) 與 P(H0 | 資料) 顛倒"
+      feedback: "p 值以 H0 成立為條件，不能給出 H0 為真的後驗機率。"
+    - id: b
+      text: "若 H0 成立，得到至少同樣不利於 H0 的統計量之機率是 3%。"
+      correct: true
+    - id: c
+      text: "研究結論有 97% 機率可重現。"
+      correct: false
+      misconception: "把尾端機率當成重現機率"
+      feedback: "重現率還取決於真實效果、樣本量與研究品質。"
+    - id: d
+      text: "觀察到的效果有 3% 是由運氣造成。"
+      correct: false
+      misconception: "把 p 值當成效果的運氣占比"
+      feedback: "p 值不會把觀察效果拆成真實與運氣兩部分。"
+  answer: b
+  solution: "p 值是 H0 與模型成立時，至少同樣極端之統計量的機率。"
+
+- id: m08-binomial-01
+  chapter: 8
+  concepts: [exact-binomial-test, p-value]
+  type: calculation
+  difficulty: intermediate
+  prompt: "12 次獨立二選一試驗中答對 10 次，檢驗 H0: p = 0.5 對 HA: p > 0.5。"
+  answer: "P(X >= 10) = 79/4096 ≈ 0.0193；在 alpha = 0.05 下拒絕 H0。"
+  steps:
+    - title: "辨認已知量"
+      explanation: "n = 12、x_obs = 10、p0 = 0.5。"
+    - title: "選擇方法與方向"
+      explanation: "固定二元獨立試驗，使用精確二項右尾檢定。"
+      formula_ref: formula-exact-binomial-pvalue-ch08
+    - title: "代入計算"
+      explanation: "[C(12,10)+C(12,11)+C(12,12)]/2^12 = 79/4096 ≈ 0.0193。"
+      formula_ref: formula-exact-binomial-pvalue-ch08
+    - title: "解讀"
+      explanation: "資料對答對率高於猜測提供統計證據。"
+  checks:
+    - "是否納入 10、11、12 次答對，而非只算恰好 10 次？"
+    - "p 值是否介於 0 與 1？"
+
+- id: m08-one-sample-t-01
+  chapter: 8
+  concepts: [one-sample-t, left-tailed-test]
+  type: calculation
+  difficulty: intermediate
+  prompt: "n = 36、x-bar = 3.7 分鐘、s = 0.9 分鐘，檢驗 H0: mu = 4 對 HA: mu < 4。"
+  answer: "t = -2.00，df = 35，左尾 p ≈ 0.0266；在 alpha = 0.05 下拒絕 H0。"
+  steps:
+    - title: "辨認方法"
+      explanation: "單一平均數且母體標準差未知，使用單樣本 t。"
+    - title: "檢查假設"
+      explanation: "確認隨機、獨立及無嚴重偏態或離群值。"
+    - title: "計算標準誤"
+      explanation: "SE = 0.9/sqrt(36) = 0.15 分鐘。"
+      formula_ref: formula-one-sample-t-ch08
+    - title: "計算統計量"
+      explanation: "t = (3.7-4)/0.15 = -2.00，df = 35。"
+      formula_ref: formula-one-sample-t-ch08
+    - title: "解讀"
+      explanation: "資料對母體平均出杯時間低於 4 分鐘提供統計證據。"
+  checks:
+    - "t 是否無單位？"
+    - "樣本平均低於基準時，t 是否為負？"
+
+- id: m08-nonsignificant-01
+  chapter: 8
+  concepts: [failure-to-reject, confidence-interval, practical-significance]
+  type: multiple-choice
+  difficulty: intermediate
+  prompt: "平均差 6 分、95% 信賴區間 -2 到 14 分、雙尾 p = 0.13，最佳結論為何？"
+  options:
+    - id: a
+      text: "已證明兩種教材完全沒有差異。"
+      correct: false
+      misconception: "把未拒絕 H0 當成證明相等"
+      feedback: "證據不足不等於零差異獲證明；區間仍包含多種效果。"
+    - id: b
+      text: "新教材必定提高 6 分。"
+      correct: false
+      misconception: "把樣本估計值當成沒有不確定性的母體真值"
+      feedback: "6 分是點估計；信賴區間顯示估計仍很不精確。"
+    - id: c
+      text: "未能拒絕零差異；資料仍容許小幅負效果到相當大的正效果。"
+      correct: true
+    - id: d
+      text: "因 p > 0.05，新教材在實務上沒有價值。"
+      correct: false
+      misconception: "把統計顯著性等同實質價值"
+      feedback: "實質價值還需效果門檻、成本與不確定性共同判斷。"
+  answer: c
+  solution: "p 值未跨過門檻，且寬廣區間顯示研究估計不夠精確。"
+
+- id: m08-paired-selection-01
+  chapter: 8
+  concepts: [paired-data, method-selection]
+  type: multiple-choice
+  difficulty: foundational
+  prompt: "哪個設計最適合先形成差值，再使用成對 t 檢定？"
+  options:
+    - id: a
+      text: "25 位甲校學生與 25 位乙校學生比較成績。"
+      correct: false
+      misconception: "忽略兩校樣本沒有一對一關係"
+      feedback: "這是兩個獨立樣本，除非設計中另有明確匹配。"
+    - id: b
+      text: "25 位受試者介入前後各量一次血壓。"
+      correct: true
+    - id: c
+      text: "從兩家工廠各抽 25 件產品比較重量。"
+      correct: false
+      misconception: "把兩次獨立抽樣誤認為配對"
+      feedback: "產品之間沒有自然的一對一關係。"
+    - id: d
+      text: "兩組剛好各 25 人，但成員沒有匹配關係。"
+      correct: false
+      misconception: "認為樣本數相等就構成配對"
+      feedback: "配對來自同一個體或事先匹配，不來自列數相同。"
+  answer: b
+  solution: "同一受試者的前後測自然成對，分析單位是個人差值。"
+
+- id: m08-paired-t-01
+  chapter: 8
+  concepts: [paired-t, direction-of-difference]
+  type: calculation
+  difficulty: intermediate
+  prompt: "12 位使用者更新前後皆受測；定義 d = 更新後 - 更新前，d-bar = -1.5 分鐘、sd = 1.8 分鐘。檢驗更新是否縮短時間。"
+  answer: "t ≈ -2.89，df = 11，左尾 p ≈ 0.0074；在 alpha = 0.05 下拒絕 H0。"
+  steps:
+    - title: "建立假設"
+      explanation: "H0: mu_d = 0；縮短對應 HA: mu_d < 0。"
+    - title: "檢查方法條件"
+      explanation: "使用成對 t；不同使用者差值應獨立，差值不應有嚴重偏態或離群值。"
+    - title: "代入計算"
+      explanation: "SE = 1.8/sqrt(12) ≈ 0.520；t = -1.5/0.520 ≈ -2.89，df = 11。"
+      formula_ref: formula-paired-t-ch08
+    - title: "解讀"
+      explanation: "資料對更新能縮短母體平均完成時間提供統計證據。"
+  checks:
+    - "差值方向是否與對立假設一致？"
+    - "若反轉差值方向，t 與 HA 是否一起反轉？"
+
+- id: m08-practical-significance-01
+  chapter: 8
+  concepts: [statistical-significance, practical-significance]
+  type: multiple-choice
+  difficulty: intermediate
+  prompt: "大型平台估計按鈕改版使點擊率增加 0.02 個百分點，p < 0.001。哪個判斷最完整？"
+  options:
+    - id: a
+      text: "p 值極小，所以一定值得全面改版。"
+      correct: false
+      misconception: "把小 p 值當成大效果與決策價值的保證"
+      feedback: "仍需比較效果與商業門檻、成本及信賴區間。"
+    - id: b
+      text: "資料與零差異很不相容，但仍需檢查效果區間、商業門檻、設計與成本。"
+      correct: true
+    - id: c
+      text: "樣本很大，所以 p 值無效，應完全忽略。"
+      correct: false
+      misconception: "因大樣本容易顯著而否定所有統計證據"
+      feedback: "大樣本不使 p 值自動失效；它使效果大小的報告更加重要。"
+    - id: d
+      text: "統計顯著證明顏色是每位使用者行為改變的唯一原因。"
+      correct: false
+      misconception: "把平均因果效果誇張成個體一致且排除所有限制"
+      feedback: "即使是良好實驗，平均效果也不表示每個人都同樣受影響。"
+  answer: b
+  solution: "統計證據、效果大小、設計品質與決策成本必須分開評估。"

@@ -1,0 +1,199 @@
+- id: m09-monte-carlo-error-01
+  chapter: 9
+  concepts: [monte-carlo-error, bootstrap-limitations]
+  type: multiple-choice
+  difficulty: foundational
+  prompt: 將非參數 bootstrap 次數從 2,000 增至 200,000，最直接改善什麼？
+  answer: b
+  options:
+    - id: a
+      text: 消除自願填答造成的選擇偏誤
+      misconception: 把計算誤差當成抽樣設計偏誤
+      feedback: 增加重抽次數不會改變原始受訪者如何進入樣本。
+    - id: b
+      text: 降低有限重抽次數造成的 Monte Carlo 誤差
+      feedback: 正確；較大的 B 讓同一 bootstrap 世界的數值摘要更穩定。
+    - id: c
+      text: 讓原始樣本等同於 200,000 個獨立觀測
+      misconception: 把重複使用資料當成新增獨立資訊
+      feedback: 所有複本都來自同一份原始樣本，沒有新增觀測。
+    - id: d
+      text: 保證 percentile interval 的實際覆蓋率恰好為 95%
+      misconception: 把名目信心水準當成有限樣本保證
+      feedback: 覆蓋率仍取決於樣本、統計量、重抽機制與區間方法。
+  solution: 增加 B 只直接降低 Monte Carlo 誤差，不能修正資料偏誤或不合適的方法。
+  formula_refs: [formula-ch09-monte-carlo-standard-error]
+
+- id: m09-method-world-01
+  chapter: 9
+  concepts: [monte-carlo, bootstrap, plug-in-principle]
+  type: multiple-choice
+  difficulty: foundational
+  prompt: 哪一情境最直接屬於 Monte Carlo，而不是 bootstrap？
+  answer: a
+  options:
+    - id: a
+      text: 從已知勝率 0.4 的模型估計 100 局至少贏 50 局的機率
+      feedback: 正確；機率模型及參數已指定。
+    - id: b
+      text: 從 80 筆實際資料有放回重抽，估計中位數標準誤
+      misconception: 只要反覆隨機抽樣就都是 Monte Carlo
+      feedback: 這是用經驗分配代替未知母體的非參數 bootstrap。
+    - id: c
+      text: 由樣本估計常態參數後反覆產生資料
+      misconception: 從參數模型抽樣就不可能是 bootstrap
+      feedback: 參數由原資料估計後再模擬，屬於參數式 bootstrap。
+    - id: d
+      text: 重抽迴歸資料對以估計斜率不確定性
+      misconception: 迴歸重抽樣是 bootstrap 以外的方法
+      feedback: 重抽整對資料是 pairs bootstrap。
+  solution: 判斷重點是模擬世界的來源；已指定模型對應 Monte Carlo，以資料建立 plug-in 世界則是 bootstrap。
+
+- id: m09-monte-carlo-se-01
+  chapter: 9
+  concepts: [monte-carlo-standard-error]
+  type: calculation
+  difficulty: foundational
+  prompt: B=6,400 且事件比例為 0.36，估計 Monte Carlo 標準誤。
+  answer: "0.006，或 0.6 個百分點"
+  steps:
+    - title: 辨認已知量
+      explanation: B=6,400，事件比例為 0.36。
+    - title: 選擇方法
+      explanation: 使用 Bernoulli 事件比例的 Monte Carlo 標準誤。
+      formula_ref: formula-ch09-monte-carlo-standard-error
+    - title: 檢查假設
+      explanation: 各次模擬獨立且來自同一指定模型。
+    - title: 代入與計算
+      explanation: sqrt(0.36×0.64/6,400)=sqrt(0.000036)=0.006。
+    - title: 解讀
+      explanation: 有限模擬次數造成的典型變動約為 0.6 個百分點。
+    - title: 合理性檢查
+      explanation: 0.006 小於最壞情況上界 1/(2sqrt(6,400))=0.00625。
+  checks: [答案介於 0 與最壞情況上界之間, 機率標準誤無測量單位]
+
+- id: m09-bootstrap-se-bias-01
+  chapter: 9
+  concepts: [bootstrap-standard-error, bootstrap-bias]
+  type: calculation
+  difficulty: intermediate
+  prompt: bootstrap 複本為 8、10、11、13、13 秒，原估計為 10.5 秒，計算標準誤與偏誤。
+  answer: "標準誤約 2.12 秒；偏誤估計為 +0.5 秒"
+  steps:
+    - title: 辨認已知量
+      explanation: B=5，複本平均為 11 秒，原估計為 10.5 秒。
+    - title: 選擇方法
+      explanation: 複本樣本標準差估計標準誤，複本平均減原估計估計偏誤。
+      formula_ref: formula-ch09-bootstrap-standard-error
+    - title: 檢查假設
+      explanation: 實務上須另行確認重抽單位與 plug-in 模型合理；B=5 只供手算。
+    - title: 代入與計算
+      explanation: 平方離差和為 18，故 SE=sqrt(18/4)=2.12 秒；bias=11-10.5=0.5 秒。
+      formula_ref: formula-ch09-bootstrap-bias
+    - title: 解讀
+      explanation: 抽樣散布約 2.12 秒，bootstrap 世界中平均高估約 0.5 秒。
+    - title: 合理性檢查
+      explanation: 兩者單位都應為秒，而非秒平方。
+  checks: [標準誤使用 B-1, 偏誤方向為複本平均減原估計, 單位為秒]
+
+- id: m09-percentile-interpretation-01
+  chapter: 9
+  concepts: [percentile-interval, confidence-interval-interpretation]
+  type: multiple-choice
+  difficulty: intermediate
+  prompt: 95% percentile bootstrap interval 為 42 到 58 分鐘，何者解讀最恰當？
+  answer: c
+  options:
+    - id: a
+      text: 母體中位數有 95% 機率位於已實現區間
+      misconception: 將頻率學派區間當成母數的後驗機率區間
+      feedback: 標準頻率學派下，固定母數不被視為隨機變數。
+    - id: b
+      text: 約 95% 的個別觀測位於區間內
+      misconception: 混淆母數區間與資料中央範圍
+      feedback: 此區間描述中位數估計的不確定性，不是個別資料分布。
+    - id: c
+      text: 重複同一抽樣與建構程序時，長期希望約 95% 的區間涵蓋母體中位數
+      feedback: 正確；這是信賴區間程序的長期覆蓋率解讀。
+    - id: d
+      text: 未來一筆觀測有 95% 機率位於區間內
+      misconception: 混淆信賴區間與預測區間
+      feedback: 預測個別觀測還需納入個體變動。
+  solution: 95% 描述建構程序的名目長期覆蓋率。
+  formula_refs: [formula-ch09-bootstrap-percentile-interval]
+
+- id: m09-bootstrap-type-01
+  chapter: 9
+  concepts: [parametric-bootstrap, nonparametric-bootstrap]
+  type: multiple-choice
+  difficulty: intermediate
+  prompt: 物理機制與診斷支持 Weibull 壽命模型，且要產生模型允許的新值，應優先考慮何法？
+  answer: a
+  options:
+    - id: a
+      text: 估計 Weibull 參數後進行參數式 bootstrap
+      feedback: 正確；模型有實質依據且允許產生原樣本未見數值。
+    - id: b
+      text: 無放回抽取全部原始資料
+      misconception: 忽略 bootstrap 必須產生抽樣變動
+      feedback: 無放回抽全部資料通常只會重新排序。
+    - id: c
+      text: 複製原始資料作為新增元件
+      misconception: 把複製資料當成新獨立資訊
+      feedback: 複製不會產生新的獨立觀測。
+    - id: d
+      text: 因容易模擬而任選常態模型
+      misconception: 把計算便利當成模型證據
+      feedback: 參數式 bootstrap 依賴模型合理性。
+  solution: 有科學機制與診斷支持時，可用擬合 Weibull 分配作為 plug-in 世界。
+
+- id: m09-regression-bootstrap-01
+  chapter: 9
+  concepts: [residual-bootstrap, fixed-design-regression]
+  type: multiple-choice
+  difficulty: intermediate
+  prompt: 固定施肥量、線性與同質變異合理時，何法最貼近固定設計？
+  answer: a
+  options:
+    - id: a
+      text: 固定施肥量並重抽殘差的 residual bootstrap
+      feedback: 正確；它保留固定設計點並模擬條件誤差。
+    - id: b
+      text: 任何迴歸都必須使用 pairs bootstrap
+      misconception: 認為資料對重抽永遠優於殘差重抽
+      feedback: pairs bootstrap 會讓設計點比例改變，未貼合固定設計目標。
+    - id: c
+      text: 單獨重抽 y 後任意配回 x
+      misconception: 忽略條件平均結構
+      feedback: 任意重配會破壞 Y 隨 X 改變的關係。
+    - id: d
+      text: 只增加 B，不檢查模型假設
+      misconception: 以模擬次數取代模型診斷
+      feedback: 大 B 不能修正非線性或異質變異。
+  solution: 固定 x 並以 y*=fitted value+resampled residual 生成反應值。
+  formula_refs: [formula-ch09-residual-bootstrap-response]
+
+- id: m09-resampling-unit-01
+  chapter: 9
+  concepts: [cluster-bootstrap, dependence, resampling-unit]
+  type: multiple-choice
+  difficulty: challenging
+  prompt: 抽取 25 所學校、每校 20 位學生且校內相依時，何種重抽單位較合理？
+  answer: b
+  options:
+    - id: a
+      text: 將 500 位學生視為 i.i.d. 並逐人重抽
+      misconception: 把資料列數等同於獨立資訊量
+      feedback: 逐人重抽破壞校內相依，通常低估標準誤。
+    - id: b
+      text: 以學校為群聚重抽並保留校內資料結構
+      feedback: 正確；重抽機制應模仿第一階段抽取學校的設計。
+    - id: c
+      text: 每校只留第一位學生再重抽
+      misconception: 為取得獨立性而任意丟棄資料
+      feedback: 這會浪費資訊並改變原估計程序。
+    - id: d
+      text: 逐人重抽但把 B 設為一百萬
+      misconception: 認為極大 B 可修正錯誤依賴模型
+      feedback: 增加 B 只會穩定錯誤重抽機制下的結果。
+  solution: 優先以學校作為重抽單位；實作仍須配合抽樣機率、每校樣本數與權重。

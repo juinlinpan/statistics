@@ -1,0 +1,219 @@
+- id: m04-notation-parameters-01
+  chapter: 4
+  type: multiple-choice
+  concepts: [normal-distribution, notation]
+  difficulty: foundational
+  prompt: "某手搖飲料店一杯飲品的咖啡因含量近似常態分配 X~N(80,12^2)（單位：毫克）。下列敘述何者正確？"
+  options:
+    - id: a
+      text: "144 是標準差，12 只是計算過程中的中繼值"
+      correct: false
+      misconception: "把 sigma 與 sigma^2 的角色對調"
+      feedback: "平方後的數字是變異數，不是標準差；還原標準差要開根號。"
+    - id: b
+      text: "12 是標準差，12^2=144 是變異數，單位是毫克平方"
+      correct: true
+      feedback: "N(mu,sigma^2) 中第一個參數是平均數，第二個是變異數；sigma=12 毫克，sigma^2=144 毫克平方。"
+    - id: c
+      text: "12 是這杯飲品咖啡因估計值的標準誤"
+      correct: false
+      misconception: "把單一觀測值的標準差誤當成抽樣分配的標準誤"
+      feedback: "標準誤描述統計量的不確定性，這裡的 12 只是單一常態分配本身的散布。"
+    - id: d
+      text: "12 與 144 其實是同一個標準差，只是使用了不同單位"
+      correct: false
+      misconception: "忽略平方運算會改變單位"
+      feedback: "12 毫克與 144 毫克平方是不同單位的量，不能互換。"
+  answer: b
+  solution: "N(mu,sigma^2) 的第二個參數是變異數；sigma=12 毫克，sigma^2=144 毫克平方。"
+
+- id: m04-cdf-interpretation-01
+  chapter: 4
+  type: multiple-choice
+  concepts: [normal-cdf, interpretation]
+  difficulty: intermediate
+  prompt: "某型號電池壽命近似常態分配 X~N(500,40^2)（單位：小時）。已知 P(X<=550)=Phi(1.25)≈0.8944。下列何者正確解讀這個 0.8944？"
+  options:
+    - id: a
+      text: "任一顆電池壽命剛好等於 550 小時的機率是 89.44%"
+      correct: false
+      misconception: "把累積機率當成連續變數的單點機率"
+      feedback: "連續分配中 P(X=550)=0；0.8944 描述的是一段區間下的面積。"
+    - id: b
+      text: "只要收集夠多電池，89.44% 這個比例本身就會隨樣本數增加而趨近 100%"
+      correct: false
+      misconception: "把樣本數增加與母體模型比例混為一談"
+      feedback: "0.8944 由固定的 mu、sigma 決定，是模型設定後就固定的比例，不會因蒐集更多電池而系統性趨近 100%。"
+    - id: c
+      text: "模型預測約 89.44% 的電池壽命落在 550 小時以下"
+      correct: true
+      feedback: "Phi(1.25) 是標準常態左側累積面積，對應原尺度 X<=550 這個事件在模型下的比例。"
+    - id: d
+      text: "有 89.44% 的電池壽命會超過 550 小時"
+      correct: false
+      misconception: "把左尾累積機率誤讀成右尾機率，方向顛倒"
+      feedback: "應先用補事件：P(X>550)=1-0.8944=0.1056，而不是直接把 0.8944 當右尾。"
+  answer: c
+  solution: "P(X<=x)=Phi((x-mu)/sigma) 算出的是模型下的比例，不是針對已實現觀測值的機率宣稱。"
+
+- id: m04-binomial-condition-01
+  chapter: 4
+  type: multiple-choice
+  concepts: [binomial-setting, hypergeometric, waiting-time]
+  difficulty: foundational
+  prompt: "下列哪一個情境最符合嚴格二項分配的四個條件？"
+  options:
+    - id: a
+      text: "獨立寄出固定 200 封行銷簡訊，每封點擊率固定為 5%，求點擊封數的機率"
+      correct: true
+      feedback: "n=200 事先固定、結果為二元、點擊率固定為 0.05、且各封信彼此獨立，四條件皆滿足。"
+    - id: b
+      text: "持續投籃直到第一次投進才停止，記錄投籃次數"
+      correct: false
+      misconception: "把等待時間模型當成固定次數的二項設定"
+      feedback: "試驗次數不是事先固定，而是隨機停止時間，屬於等待時間模型，不是二項分配。"
+    - id: c
+      text: "從 30 人小組中不放回抽 10 人，記錄其中支持某提案的人數"
+      correct: false
+      misconception: "忽略不放回抽樣造成的依賴"
+      feedback: "抽出一人後剩餘人員組成改變，成功機率不再固定，應考慮超幾何分配。"
+    - id: d
+      text: "記錄某疾病病人的體溫（連續數值），檢查是否近似常態分配"
+      correct: false
+      misconception: "把連續測量值誤當成二元計數問題"
+      feedback: "體溫是連續變數，這裡問的是常態模型是否合適，不是固定次數中的成功次數計數。"
+  answer: a
+  solution: "二項機率公式要求固定 n、二元結果、固定 p 與獨立性，任一條件不符就不能直接代入。"
+
+- id: m04-continuity-correction-01
+  chapter: 4
+  type: multiple-choice
+  concepts: [normal-approximation, continuity-correction]
+  difficulty: intermediate
+  prompt: "若 X~Bin(60,0.5)，要近似 P(X>=35)，下列做法何者正確？"
+  options:
+    - id: a
+      text: "直接以 Y>35 代入標準化，不需要連續性修正"
+      correct: false
+      misconception: "省略連續性修正"
+      feedback: "忽略 0.5 的邊界移動會讓常態曲線下面積與離散柱子面積對不齊。"
+    - id: b
+      text: "不檢查 np 與 n(1-p)，直接套用常態近似"
+      correct: false
+      misconception: "跳過門檻檢查，逕自套用近似"
+      feedback: "np、n(1-p) 太小時分配會偏斜，常態近似可能失真；先檢查門檻是必要步驟。"
+    - id: c
+      text: "判斷應改用超幾何分配，因為二項分配本身就不精確"
+      correct: false
+      misconception: "把近似二項與不放回抽樣造成的依賴混為一談"
+      feedback: "本題沒有不放回抽樣情境，X 本身就是嚴格二項變數，只是用常態近似其機率。"
+    - id: d
+      text: "先檢查 np=30、n(1-p)=30 皆 >=10，通過後以連續性修正取 Y>34.5 再標準化"
+      correct: true
+      feedback: "門檻通過；至少 35 次對應連續事件應取右邊界 34.5。"
+  answer: d
+  solution: "先確認二項四條件、再檢查 np 與 n(1-p) 門檻、再做連續性修正，最後才標準化。"
+
+- id: m04-zscore-tailprob-01
+  chapter: 4
+  type: calculation
+  concepts: [z-score, normal-cdf, tail-probability]
+  difficulty: foundational
+  prompt: "某物流中心包裹重量近似常態分配，平均 12 公斤、標準差 2.5 公斤。超過 16 公斤需要加收超重費。求需要加收超重費的包裹比例。"
+  answer: "約 5.48%"
+  steps:
+    - title: "辨認已知量"
+      explanation: "mu=12 公斤，sigma=2.5 公斤（sigma>0），目標是 P(X>16)。"
+    - title: "選擇方法"
+      explanation: "先用 z 分數把 16 公斤標準化，再用常態累積機率配合補事件求右尾機率。"
+      formula_ref: formula-ch04-z-score
+    - title: "檢查條件"
+      explanation: "題目已說明重量近似常態，且 mu、sigma 對應同一分配，可直接標準化。"
+    - title: "代入計算"
+      explanation: "z=(16-12)/2.5=1.6；Phi(1.6)≈0.9452，因此 P(X>16)=1-0.9452=0.0548。"
+      formula_ref: formula-ch04-normal-cdf-transform
+    - title: "解讀"
+      explanation: "模型預測約 5.48% 的包裹重量超過 16 公斤，需要加收超重費。"
+    - title: "合理性檢查"
+      explanation: "16 公斤高於平均約 1.6 個標準差，右尾機率遠小於 0.5，量級合理。"
+  checks:
+    - "z 是否為無單位量？"
+    - "是否使用補事件求右尾機率？"
+
+- id: m04-percentile-01
+  chapter: 4
+  type: calculation
+  concepts: [percentile, normal-distribution]
+  difficulty: intermediate
+  prompt: "某巧克力工廠的烘焙時間近似常態分配，平均 18 分鐘、標準差 1.5 分鐘。求使約 20% 批次烘焙時間低於此門檻的界線。"
+  answer: "約 16.74 分鐘"
+  steps:
+    - title: "辨認已知量"
+      explanation: "mu=18 分鐘，sigma=1.5 分鐘，目標比例 p=0.20。"
+    - title: "選擇方法"
+      explanation: "先找 z_0.20，再轉回原尺度。"
+      formula_ref: formula-ch04-normal-percentile
+    - title: "檢查條件"
+      explanation: "題目已假設烘焙時間近似常態，求的是模型下的比例界線。"
+    - title: "代入計算"
+      explanation: "z_0.20≈-0.8416；x_0.20=18+(-0.8416)(1.5)=18-1.2624≈16.74 分鐘。"
+      formula_ref: formula-ch04-normal-percentile
+    - title: "解讀"
+      explanation: "模型預測約 20% 的批次烘焙時間低於約 16.74 分鐘。"
+    - title: "合理性檢查"
+      explanation: "p=0.20<0.5，門檻應低於平均數 18 分鐘；16.74 分鐘確實低於 18，方向正確。"
+  checks:
+    - "z_0.20 是否為負值？"
+    - "門檻是否位於平均數之下？"
+
+- id: m04-binomial-pmf-01
+  chapter: 4
+  type: calculation
+  concepts: [binomial-pmf, binomial-coefficient]
+  difficulty: intermediate
+  prompt: "某疫苗臨床試驗中，每位受試者出現輕微副作用的機率固定為 0.15，且各受試者彼此獨立。獨立追蹤 8 位受試者，求恰有 2 位出現副作用的機率。"
+  answer: "約 0.2376（23.76%）"
+  steps:
+    - title: "辨認已知量"
+      explanation: "n=8，p=0.15，目標 k=2。"
+    - title: "選擇方法"
+      explanation: "先確認二項四條件成立，再用二項機率公式，其中排列數來自二項係數。"
+      formula_ref: formula-ch04-binomial-pmf
+    - title: "檢查條件"
+      explanation: "人數固定、結果為二元、機率固定 0.15、且獨立，四條件成立。"
+    - title: "代入計算"
+      explanation: "C(8,2)=28；P(X=2)=28*(0.15)^2*(0.85)^6=28*0.0225*0.377150≈0.2376。"
+      formula_ref: formula-ch04-binomial-coefficient
+    - title: "解讀"
+      explanation: "追蹤 8 位受試者時，恰有 2 位出現輕微副作用的機率約為 23.76%。"
+    - title: "合理性檢查"
+      explanation: "np=1.2，k=2 離平均不遠，機率落在中等偏高範圍，結果介於 0 與 1 之間。"
+  checks:
+    - "是否使用二項係數而非單一排列的機率？"
+    - "結果是否介於 0 與 1 之間？"
+
+- id: m04-normal-approx-binomial-01
+  chapter: 4
+  type: calculation
+  concepts: [normal-approximation, continuity-correction, binomial-mean-sd]
+  difficulty: challenging
+  prompt: "某線上問卷平台獨立寄送固定 200 份邀請，每份邀請的回覆率固定為 0.25。求至少 60 份回覆的機率的常態近似值。"
+  answer: "約 0.0604（6.04%）"
+  steps:
+    - title: "辨認已知量"
+      explanation: "n=200，p=0.25，目標為 P(X>=60)。"
+    - title: "選擇方法"
+      explanation: "先求 mu、sigma，再用常態近似二項配合連續性修正。"
+      formula_ref: formula-ch04-binomial-mean-sd
+    - title: "檢查條件"
+      explanation: "np=50>=10，n(1-p)=150>=10，門檻通過；至少 60 次需連續性修正為 Y>59.5。"
+    - title: "代入計算"
+      explanation: "mu=50，sigma=sqrt(200*0.25*0.75)=sqrt(37.5)≈6.124；z=(59.5-50)/6.124≈1.551；Phi(1.551)≈0.9396，P(X>=60)≈1-0.9396=0.0604。"
+      formula_ref: formula-ch04-normal-approx-binomial
+    - title: "解讀"
+      explanation: "至少 60 份問卷獲得回覆的機率約為 6.04%。"
+    - title: "合理性檢查"
+      explanation: "60 份高於平均 50 份約 1.55 個標準差，右尾機率應明顯小於 0.5，0.0604 符合判斷。"
+  checks:
+    - "是否先檢查 np 與 n(1-p) 門檻？"
+    - "是否對「至少」使用正確方向的連續性修正？"

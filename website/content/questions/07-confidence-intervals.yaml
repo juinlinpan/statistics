@@ -1,0 +1,222 @@
+- id: m07-ci-interpretation-01
+  chapter: 7
+  type: multiple-choice
+  concepts: [confidence-interval-interpretation, frequentist-interpretation]
+  difficulty: foundational
+  prompt: "品管人員以隨機抽樣建立某批瓶裝飲料平均填充量的 95% 信賴區間為 [498,502] 毫升。下列哪一句最符合標準頻率學派的解讀？"
+  options:
+    - id: a
+      text: "這套建構區間的方法，若重複抽樣使用，長期約有 95% 的區間會涵蓋母體平均填充量。"
+      correct: true
+      feedback: "信心水準描述的是建構區間這套方法的長期表現，不是這一次已算出區間的性質。"
+    - id: b
+      text: "95% 的瓶子填充量介於 498 到 502 毫升之間。"
+      correct: false
+      misconception: "把估計母體平均數的區間誤當成個別觀測值的範圍"
+      feedback: "個別瓶子填充量的分散通常遠比此區間寬；此區間估計的是母體平均值。"
+    - id: c
+      text: "母體平均填充量有 95% 的機率落在 [498,502] 之間。"
+      correct: false
+      misconception: "把機率指派給已實現的固定區間與固定但未知的參數"
+      feedback: "資料一旦觀察完成，這個區間要嘛涵蓋母體平均填充量、要嘛沒有；95% 描述方法長期涵蓋比例，不是這個特定區間的事後機率。"
+    - id: d
+      text: "只要把樣本數加倍，就能保證這個特定區間涵蓋母體平均填充量。"
+      correct: false
+      misconception: "把樣本數增加會使區間變窄誤推成保證單次結果正確"
+      feedback: "樣本數只影響隨機誤差大小，不能決定單次結果是否落在涵蓋參數的那多數區間之中。"
+  answer: a
+  solution: "信心水準是方法的長期涵蓋比例，不能說固定參數有多少機率落在已實現的特定區間內。"
+
+- id: m07-method-select-01
+  chapter: 7
+  type: multiple-choice
+  concepts: [method-selection, bootstrap, median]
+  difficulty: intermediate
+  prompt: "研究者蒐集 40 筆高度右偏的申請等待天數，想估計「中位數」的標準誤，但中位數沒有像平均數一樣簡單的理論標準誤公式。下列作法何者最合適？"
+  options:
+    - id: a
+      text: "直接用 s/根號n 公式計算標準誤。"
+      correct: false
+      misconception: "把平均數的標準誤公式套用到中位數"
+      feedback: "s/根號n 是平均數的標準誤公式，不是中位數的標準誤，套用會得到錯誤的不確定性大小。"
+    - id: b
+      text: "把等待天數轉成是否超過某門檻的二元結果，套用比例的 Wald 公式。"
+      correct: false
+      misconception: "把連續變數硬轉成二元結果，換掉了目標參數"
+      feedback: "轉成二元結果後估計的是某個比例，不再是原本想估計的中位數。"
+    - id: c
+      text: "對原樣本反覆做 bootstrap 重抽樣，計算重抽樣中位數的樣本標準差來估計 SE。"
+      correct: true
+      feedback: "中位數缺乏簡單理論公式，正是 bootstrap 標準誤設計來處理的情境。"
+    - id: d
+      text: "因為資料偏斜、中位數沒有公式可用，只報中位數點估計，不呈現不確定性。"
+      correct: false
+      misconception: "誤以為缺乏理論公式就必須放棄呈現不確定性"
+      feedback: "中位數沒有簡單公式不代表無法評估不確定性；bootstrap 正是為此而生。"
+  answer: c
+  solution: "中位數沒有簡單的理論標準誤公式時，應以 bootstrap 重抽樣估計 SE，而不是套用其他統計量的公式或放棄評估不確定性。"
+
+- id: m07-moe-scaling-01
+  chapter: 7
+  type: multiple-choice
+  concepts: [margin-of-error, sample-size, standard-error]
+  difficulty: intermediate
+  prompt: "在其他條件不變、且以獨立樣本數 n 建立信賴區間的情況下，若把獨立樣本數提高為原本的 9 倍，誤差範圍約變成原本的多少倍？"
+  options:
+    - id: a
+      text: "1/9 倍"
+      correct: false
+      misconception: "把標準誤想成與樣本數成反比的線性關係"
+      feedback: "SE 是與根號 n 成反比，不是與 n 本身成反比。"
+    - id: b
+      text: "1/3 倍"
+      correct: true
+      feedback: "根號(1/9)=1/3，因此樣本數變 9 倍時誤差範圍約縮小為原本的三分之一。"
+    - id: c
+      text: "1/81 倍"
+      correct: false
+      misconception: "把變異數的縮小倍率誤用在標準差或誤差範圍上"
+      feedback: "1/9 這個倍率適用於變異數；標準差與誤差範圍要再開一次根號，變成 1/3。"
+    - id: d
+      text: "不變，因為信心水準沒有變"
+      correct: false
+      misconception: "把信心水準與樣本數對誤差範圍的影響混為一談"
+      feedback: "信心水準決定臨界值，樣本數透過 SE 影響誤差範圍；信心水準不變不代表誤差範圍不變。"
+  answer: b
+  solution: "誤差範圍 = 臨界值 × SE，SE 與根號 n 成反比，樣本數變 9 倍時誤差範圍變成根號(1/9)=1/3 倍。"
+
+- id: m07-coverage-vs-confidence-01
+  chapter: 7
+  type: multiple-choice
+  concepts: [confidence-level, coverage]
+  difficulty: intermediate
+  prompt: "某調查方法設計時宣稱信心水準為 95%，但因觀測值彼此有相依性卻被當成獨立處理，事後模擬顯示這套方法實際只有約 80% 的區間涵蓋真值。下列敘述何者正確？"
+  options:
+    - id: a
+      text: "信心水準本身算錯了，應該重新指定成 80%。"
+      correct: false
+      misconception: "把分析者選定的設計目標與事後模擬得到的涵蓋率混為一談"
+      feedback: "信心水準是分析者選定的設計目標，不是由涵蓋率倒推出來的量。"
+    - id: b
+      text: "名目信心水準是方法設計時設定的目標涵蓋比例；實際涵蓋率因獨立性假設不成立而降到約 80%，兩者是不同概念。"
+      correct: true
+      feedback: "信心水準是設計目標，涵蓋率是實際長期表現；近似或假設失準時兩者可能不一致。"
+    - id: c
+      text: "涵蓋率只有 80%，代表這次實際算出的這個特定區間一定沒有涵蓋到母體參數。"
+      correct: false
+      misconception: "把長期涵蓋比例套用到單一已實現區間的判斷上"
+      feedback: "涵蓋率描述的是長期、多次重複下的比例，無法從中判斷這一次算出的特定區間是否涵蓋參數。"
+    - id: d
+      text: "只要把信心水準提高到 99%，就能自動修正相依性造成的涵蓋率不足。"
+      correct: false
+      misconception: "以為提高名目信心水準能修正假設違反的問題"
+      feedback: "提高名目信心水準只改變臨界值與區間寬度，不會修正相依性被誤當獨立處理這個根本問題。"
+  answer: b
+  solution: "信心水準是方法設計的目標涵蓋比例，涵蓋率是該方法在指定條件下實際達到的長期比例，兩者可能因假設失準而不一致。"
+
+- id: c07-ci-mean-battery-01
+  chapter: 7
+  type: calculation
+  concepts: [confidence-interval-mean, large-sample, margin-of-error]
+  difficulty: intermediate
+  prompt: "品牌 X 隨機抽測 n=64 顆同型號電池的連續使用時間，樣本平均數 x_bar=10.2 小時，樣本標準差 s=1.6 小時，可合理視為近似獨立觀測。求平均連續使用時間的 95% 大樣本信賴區間，並說明其意義。"
+  answer: "[9.808, 10.592] 小時"
+  steps:
+    - title: "辨認已知量"
+      explanation: "n=64，x_bar=10.2 小時，s=1.6 小時，信心水準 95% 對應 z*=1.96。"
+    - title: "選擇方法"
+      explanation: "大樣本下使用母體平均數的大樣本信賴區間公式。"
+      formula_ref: formula-ci-mean-large-sample
+    - title: "檢查條件"
+      explanation: "抽測方式視為隨機、近似獨立；n=64 不算小，題目未提示嚴重偏斜或離群值主導，常態近似可接受。"
+    - title: "代入計算"
+      explanation: "SE=1.6/sqrt(64)=1.6/8=0.2 小時；MOE=1.96(0.2)=0.392 小時；區間=10.2±0.392=[9.808,10.592] 小時。"
+      formula_ref: formula-ci-mean-large-sample
+    - title: "解讀"
+      explanation: "若抽樣設計與近似條件成立，此方法建立的區間長期約有 95% 會涵蓋母體平均連續使用時間。"
+    - title: "合理性檢查"
+      explanation: "誤差範圍與平均數單位一致（小時）；區間寬度遠小於單顆電池的變異尺度 s=1.6 小時，量級合理；不代表 95% 的電池續航時間都落在此區間。"
+  checks:
+    - "SE 與 MOE 的單位是否都是小時？"
+    - "是否誤把此區間解讀成個別電池續航時間的範圍？"
+
+- id: c07-ci-proportion-defect-01
+  chapter: 7
+  type: calculation
+  concepts: [confidence-interval-proportion, wald-interval, sample-size-check]
+  difficulty: intermediate
+  prompt: "品管人員抽驗 n=250 件產品，其中 X=15 件為不良品。以 90% 信心水準估計母體不良比例的信賴區間。"
+  answer: "約 [0.0353, 0.0847]，即約 3.5% 到 8.5%"
+  steps:
+    - title: "辨認已知量"
+      explanation: "n=250，X=15，p_hat=15/250=0.06，信心水準 90% 對應 z*=1.645。"
+    - title: "選擇方法"
+      explanation: "二元結果（良品／不良品），使用母體比例的常態近似（Wald）區間。"
+      formula_ref: formula-ci-proportion-wald
+    - title: "檢查條件"
+      explanation: "n p_hat=15>=10，n(1-p_hat)=235>=10，經驗檢查通過；p_hat 偏低，若比例更接近 0 應更謹慎看待常態近似。"
+    - title: "代入計算"
+      explanation: "SE=sqrt(0.06(0.94)/250)=sqrt(0.0002256)≈0.01502；MOE=1.645(0.01502)≈0.0247；區間=0.06±0.0247≈[0.0353,0.0847]。"
+      formula_ref: formula-ci-proportion-wald
+    - title: "解讀"
+      explanation: "若抽樣具代表性且各件檢驗近似獨立，此方法建立的區間長期約有 90% 會涵蓋母體不良比例。"
+    - title: "合理性檢查"
+      explanation: "端點皆落在 [0,1] 內、以 p_hat=0.06 為中心對稱，單位為比例，數值合理。"
+  checks:
+    - "np_hat 與 n(1-p_hat) 是否都達到常見的 10 門檻？"
+    - "端點是否落在 [0,1] 之間？"
+
+- id: c07-bootstrap-se-median-01
+  chapter: 7
+  type: calculation
+  concepts: [bootstrap-standard-error, median, resampling]
+  difficulty: intermediate
+  prompt: "某高度偏斜樣本沒有中位數的理論標準誤公式，研究者對原樣本做 B=5 次獨立 bootstrap 重抽樣，得到重抽樣中位數分別為 4.0, 4.5, 5.0, 4.0, 5.5 分鐘。求 bootstrap 標準誤。"
+  answer: "約 0.652 分鐘"
+  steps:
+    - title: "辨認已知量"
+      explanation: "B=5，重抽樣中位數為 4.0,4.5,5.0,4.0,5.5 分鐘。"
+    - title: "選擇方法"
+      explanation: "中位數缺乏簡單理論公式，使用 bootstrap 標準誤，以 B 個重抽樣統計量的樣本標準差估計 SE。"
+      formula_ref: formula-bootstrap-standard-error
+    - title: "檢查條件"
+      explanation: "假設原樣本可代表母體、觀測值近似獨立，逐筆放回抽樣合理；若原資料有配對或群聚結構則不能直接逐筆重抽。"
+    - title: "代入計算"
+      explanation: "平均=(4.0+4.5+5.0+4.0+5.5)/5=4.6；離差平方和=0.36+0.01+0.16+0.36+0.81=1.70；SE=sqrt(1.70/4)=sqrt(0.425)≈0.652 分鐘。"
+      formula_ref: formula-bootstrap-standard-error
+    - title: "解讀"
+      explanation: "中位數在重抽樣下的典型變動幅度約為 0.652 分鐘，可作為中位數標準誤的估計。"
+    - title: "合理性檢查"
+      explanation: "SE 非負、單位為分鐘，量級小於原始資料尺度；B=5 僅為示範，實務上需遠多於 5 次重抽樣才能穩定估計。"
+  checks:
+    - "分母是否使用 B-1 而非 B？"
+    - "是否清楚說明 B=5 只是示範，實務需要更多次重抽樣？"
+
+- id: m07-large-n-bias-01
+  chapter: 7
+  type: multiple-choice
+  concepts: [convenience-sample, selection-bias, margin-of-error]
+  difficulty: intermediate
+  prompt: "某網路自願填答調查蒐集 100 萬筆資料，計算出的政策支持比例 95% 信賴區間為 [62.1%,62.3%]，區間非常窄。下列敘述何者最恰當？"
+  options:
+    - id: a
+      text: "區間很窄，因此這個估計幾乎不可能有系統性偏誤。"
+      correct: false
+      misconception: "把隨機誤差小與沒有系統性偏誤混為一談"
+      feedback: "窄區間可能是一個非常精確地估到錯誤數值的結果；隨機誤差小不代表沒有偏誤。"
+    - id: b
+      text: "樣本數極大使標準誤很小，因此區間很窄；但這只反映此模型下的隨機抽樣誤差，不能修正自願填答造成的自我選擇偏誤。"
+      correct: true
+      feedback: "大 n 只會讓公式算出的 SE 變小、區間變窄，不會修正自我選擇造成的系統性偏誤。"
+    - id: c
+      text: "因為 n 非常大，常態近似必定完全準確，可以不必檢查獨立性等假設。"
+      correct: false
+      misconception: "以為樣本數很大就能自動滿足所有假設"
+      feedback: "獨立性、代表性等條件仍需依資料蒐集方式檢查，不會因 n 大而自動滿足。"
+    - id: d
+      text: "區間越窄代表信心水準越高。"
+      correct: false
+      misconception: "把區間寬度與信心水準這個設計目標混為一談"
+      feedback: "同一信心水準下，區間仍可能因 n 或資料變異不同而寬窄不一；寬度不等於信心水準。"
+  answer: b
+  solution: "大樣本數降低隨機誤差、讓區間變窄，但不能消除自願填答等自我選擇造成的系統性偏誤。"

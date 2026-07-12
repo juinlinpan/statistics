@@ -1,0 +1,25 @@
+@import "../app/globals.css";
+
+html, body, #root { min-height: 100%; }
+body { min-width: 320px; }
+.desktop-app-header { -webkit-app-region: drag; }
+.desktop-app-header button { -webkit-app-region: no-drag; }
+.desktop-brand-button, .desktop-all-chapters, .desktop-link-button, .desktop-primary, .desktop-chapter-card, .chapter-next button { font: inherit; color: inherit; cursor: pointer; }
+.desktop-brand-button, .desktop-all-chapters, .desktop-link-button { border: 0; background: transparent; }
+.brand-title { font-size: 16px; font-weight: 800; }
+.desktop-all-chapters { padding: 8px 0; border-bottom: 2px solid transparent; font-size: 14px; font-weight: 700; }
+.desktop-all-chapters:hover { border-color: var(--ink); }
+.desktop-primary { border: 0; }
+.desktop-chapter-card { width: 100%; color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.desktop-home-hero { min-height: 620px; }
+.desktop-progress { margin-top: 80px; }
+.desktop-link-button { padding: 0; }
+.chapter-next button { padding: 20px; border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; background: rgba(255,254,251,.6); text-align: left; }
+.chapter-next button:last-child { text-align: right; }
+.chapter-next button small { display: block; color: var(--muted); margin-bottom: 4px; }
+.chapter-next button:hover { border-color: var(--chapter-accent); }
+
+@media (max-width: 720px) {
+  .desktop-all-chapters { display: none; }
+  .desktop-home-hero { min-height: 0; }
+}
