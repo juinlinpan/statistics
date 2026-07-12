@@ -5,7 +5,7 @@ title: 常態近似與二項分配
 phase1: 完成
 phase2: 完成
 phase3: 完成
-phase4: 未開始
+phase4: 完成
 ---
 
 # 第 4 章：常態近似與二項分配
@@ -481,6 +481,10 @@ $$
 
 合理性檢查：45 高於中心 40 約一個標準差，因此左側機率應明顯大於 0.5，但不會接近 1；0.869 符合這個判斷。
 
+![二項機率直方圖（藍色柱）疊加常態近似曲線（綠色線），陰影標示連續性修正後 P(X≤45)≈Φ(1.123)≈0.869 的面積，柱子與曲線幾乎重合](../figures/generated/04-binomial-normal-approx.png)
+
+*圖：$X\sim\operatorname{Bin}(100,0.4)$ 的機率直方圖與常態近似曲線 $N(40,24)$ 疊圖，紅色虛線標示連續性修正邊界 45.5，陰影面積對應 $P(X\le45)\approx0.869$。資料來源：示意圖（依二項機率質量函數與常態密度函數繪製）。重新產生：`uv run course/figures/scripts/04-binomial-normal-approx.py`*
+
 **非例子。** 若 $n=20,p=0.05$，則 $np=1$。分配大量集中在 0、1、2 且明顯右偏，用對稱常態曲線近似並不合適。
 
 #### 自我檢查 7
@@ -713,6 +717,10 @@ D. 先檢查 $np=30$、$n(1-p)=30$ 皆 $\ge10$，通過後以連續性修正取 
 
 </details>
 
+![常態曲線下，包裹重量超過 16 公斤（z=1.6）的右尾陰影面積約為 0.0548，對應約 5.48% 的包裹需要加收超重費](../figures/generated/04-normal-tail-package-weight.png)
+
+*圖：包裹重量 $X\sim N(12,2.5^2)$ 的常態曲線，陰影標示 $P(X>16)\approx0.0548$ 的右尾機率，對應題 4-5 的計算。資料來源：示意圖（依常態機率密度函數繪製）。重新產生：`uv run course/figures/scripts/04-normal-tail-package-weight.py`*
+
 ### 題 4-6：由比例反推百分位數
 
 **題目 ID：** `m04-percentile-01`
@@ -793,4 +801,7 @@ D. 先檢查 $np=30$、$n(1-p)=30$ 皆 $\ge10$，通過後以連續性修正取 
 
 ## 圖表補充
 
-<!-- Phase 4：於此章節既有說明或範例旁插入對應圖表，不集中另列圖庫。 -->
+本章新增兩張圖，皆緊接在對應範例之後，未另立圖庫：
+
+1. **常態右尾陰影圖**（題 4-5 之後）：以包裹重量 $X\sim N(12,2.5^2)$ 為例，標示 $x=16$（$z=1.6$）的右尾陰影，對應 $P(X>16)\approx0.0548$。檔案：[`course/figures/generated/04-normal-tail-package-weight.png`](../figures/generated/04-normal-tail-package-weight.png)。
+2. **二項機率直方圖疊加常態近似曲線**（第 7 節「例：近似至多 45 次成功」之後）：以 $X\sim\operatorname{Bin}(100,0.4)$ 為例，柱狀圖為二項機率，曲線為常態近似 $N(40,24)$，並標示連續性修正邊界 45.5 與 $P(X\le45)\approx0.869$ 的陰影面積。檔案：[`course/figures/generated/04-binomial-normal-approx.png`](../figures/generated/04-binomial-normal-approx.png)。

@@ -5,7 +5,7 @@ title: 重抽樣
 phase1: 完成
 phase2: 完成
 phase3: 完成
-phase4: 未開始
+phase4: 完成
 ---
 
 # 第 9 章：重抽樣
@@ -93,6 +93,10 @@ $$
 **大數法則(Law of Large Numbers, LLN)** 指出：在適當條件下，獨立同分配且期望值存在的重複結果，其平均值會隨次數增加而趨近真實期望值。因為 $E(I_b)=p$，所以 $\hat p_{MC}$ 會隨 $B$ 增加而趨近 $p$。
 
 這裡的關鍵是：LLN 讓你更精確地計算「你所模擬的模型」，卻不保證模型本身正確。若把公平硬幣寫成正面率 0.6，跑十億次只會非常精確地得到錯誤模型的答案。
+
+![Monte Carlo 累積估計值隨模擬次數 B 增加而收斂到真實機率，且 ±2 倍 Monte Carlo 標準誤的包絡線同步收窄](../figures/generated/09-mc-convergence.png)
+
+*圖：模擬「擲 20 枚公平硬幣、至少 14 次正面」這個 1.1 節的例子，$B$ 從 1 增加到 20,000 時，累積 Monte Carlo 估計 $\hat p_{MC}(B)$ 逐漸貼近真實機率 $p=0.0577$（由二項分配精確算出，只用於畫出參考線），$\pm2\,SE_{MC}(B)$ 包絡線也隨 $B$ 增加而收窄，呼應大數法則與 $1/\sqrt B$ 的量級關係。資料來源：模擬。重新產生：`uv run course/figures/scripts/09-mc-convergence.py`*
 
 <a id="formula-ch09-monte-carlo-standard-error"></a>
 
@@ -348,6 +352,10 @@ $$
 | $\alpha$ | 區間兩端合計的名目尾端比例 | 無單位 |
 | $q^*_{\gamma}$ | bootstrap 複本的第 $\gamma$ 分位數 | 與 $\theta$ 相同 |
 | $CI_{perc}$ | percentile bootstrap 信賴區間 | 兩端點皆與 $\theta$ 同單位 |
+
+![非參數 bootstrap 複本中位數的直方圖，呈現原始樣本中位數與 95% percentile 信賴區間的相對位置](../figures/generated/09-bootstrap-median.png)
+
+*圖：呼應本章開頭「40 位顧客等待時間、樣本中位數有多不穩定」的例子，模擬一份 $n=40$ 的等待時間資料，以非參數 bootstrap（第 2.2 節）重抽 $B=5{,}000$ 次計算中位數複本，紅線為原始樣本中位數 $\hat\theta=2.75$ 分鐘，兩條虛線為 95% percentile bootstrap 信賴區間 $[1.80,4.85]$ 分鐘。複本分配呈現不連續、多個小峰的形狀，原因是中位數只能取原始 40 筆資料中兩個中間順序統計量的平均，樣本中段本身有數值間隙——這正是本節「何時不要把它當萬用答案」提醒「離散統計量、小樣本」可能讓 percentile interval 表現不佳的具體例子。資料來源：模擬。重新產生：`uv run course/figures/scripts/09-bootstrap-median.py`*
 
 **直覺。** 若 bootstrap 世界合理近似真實世界，而且估計量的誤差結構適合 percentile 方法，bootstrap 複本中央 95% 的範圍可用來校準未知母數的合理區間。
 
@@ -773,4 +781,9 @@ D. 逐人重抽，但把 $B$ 設為一百萬就能補償校內相依
 
 ## 圖表補充
 
-<!-- Phase 4：於此章節既有說明或範例旁插入對應圖表，不集中另列圖庫。 -->
+本章新增兩張圖，皆直接插入相關說明旁（不另集中列出）：
+
+- **1.2 節「大數法則保證的是模擬平均會穩定」段落後**：`09-mc-convergence.png`，模擬 1.1 節「擲 20 枚公平硬幣、至少 14 次正面」的例子，展示 Monte Carlo 累積估計隨 $B$ 增加而收斂，且 $\pm2\,SE_{MC}$ 包絡線同步收窄，對應大數法則與 Monte Carlo 標準誤的量級討論。
+- **第 5 節「Percentile bootstrap 信賴區間」公式表後**：`09-bootstrap-median.png`，呼應本章開頭「40 位顧客等待時間」的例子，以模擬資料展示非參數 bootstrap 中位數複本的分配、原始樣本中位數與 95% percentile 信賴區間端點，並說明複本分配的不連續多峰形狀如何連結本節對離散統計量與小樣本的提醒。
+
+兩張圖的產生腳本皆位於 `course/figures/scripts/`，各自標註隨機種子以利重現。
