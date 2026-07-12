@@ -18,7 +18,7 @@ phase4: 完成
 
 > 金融例子只用來練習機率推理，不構成投資建議。真實報酬事件通常不獨立，且機率會隨時間改變。
 
-## 先備檢查
+## 先備觀念檢查
 
 開始前，請確認你能：
 
@@ -488,7 +488,7 @@ $$
 
 </details>
 
-## 10. 本章整合：先辨認文字，再選規則
+## 本章整合
 
 遇到機率問題時，可依序問：
 
@@ -517,7 +517,7 @@ $$
 
 重要術語：樣本空間(sample space)、事件(event)、補事件(complement)、聯集(union)、交集(intersection)、互斥(mutually exclusive)、條件機率(conditional probability)、獨立(independence)、先驗(prior)、概似(likelihood)、後驗(posterior)、隨機化回答(randomized response)。
 
-## 累積自我檢查
+## 累積自我檢核
 
 判斷下列說法是否正確，並用一句話說明：
 
