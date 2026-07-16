@@ -88,7 +88,7 @@ def scaffold(root: Path) -> list[Path]:
             created.append(path)
 
     rows = "\n".join(
-        "| {t} | {p1} | 未開始 | 未開始 | 未開始 | {p5} | {p6} |".format(
+        "| {t} | {p1} | 未開始 | 未開始 | 未開始 | {p5} | {p6} | 未開始 |".format(
             t=title,
             p1="未開始（可開始）" if deck else "未開始（等投影片）",
             p5="不適用" if chapter == "7-10" else "未開始",
@@ -98,7 +98,7 @@ def scaffold(root: Path) -> list[Path]:
     )
     progress = f"""# course_2 商業統計講義進度
 
-考試範圍 Ch12–18；第 7–10 章為複習（無考古題，Phase 5/6 不適用）。投影片還沒到手的章節不可開始 Phase 1（見下方素材公布紀錄）。
+考試範圍 Ch12–18；第 7–10 章為複習（無考古題，Phase 5/6 不適用，但仍要做 Phase 7 定性融會）。投影片還沒到手的章節不可開始 Phase 1（見下方素材公布紀錄）。
 
 ## 素材公布紀錄
 
@@ -106,20 +106,20 @@ def scaffold(root: Path) -> list[Path]:
 
 | 日期 | 新到素材 | 解鎖的工作 |
 |---|---|---|
-| 2026-07-12 | 考古題 Ch12–18（quiz-set/） | Ch12–18 的 Phase 6、Phase 7 素材已備 |
+| 2026-07-12 | 考古題 Ch12–18（quiz-set/） | Ch12–18 的 Phase 6、Phase 8 素材已備 |
 | 2026-07-15 | 投影片：Ch7–10 複習、Ch12、Ch13、Ch14、Ch15、Ch16（ppt/） | 這六份講義可開始 Phase 1 |
 | （待補） | 投影片：Ch17、Ch18 | 公布後其講義才可開始 Phase 1 |
 
 ## 講義進度
 
-| 講義 | Phase 1 投影片講義化 | Phase 2 課本查核 | Phase 3 先備補強 | Phase 4 圖表 | Phase 5 跨章分辨 | Phase 6 考古題詳解 |
-|---|---|---|---|---|---|---|
+| 講義 | Phase 1 投影片講義化 | Phase 2 課本查核 | Phase 3 先備補強 | Phase 4 圖表 | Phase 5 跨章分辨 | Phase 6 考古題詳解 | Phase 7 定性融會 |
+|---|---|---|---|---|---|---|---|
 {rows}
 
-## Phase 7 題型攻略（course_2/題型攻略.md）
+## Phase 8 題型攻略（course_2/題型攻略.md）
 
 - 狀態：未開始
-- 解鎖條件：所有適用章節（Ch12–18）的 Phase 6 皆為「完成」。
+- 解鎖條件：所有適用章節（Ch12–18）的 Phase 7 皆為「完成」。
 
 ## 驗收證據
 

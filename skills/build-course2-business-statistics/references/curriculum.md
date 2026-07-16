@@ -24,7 +24,7 @@
 
 ## 考古題
 
-`course_2/quiz-set/Quan1150(Chap12~18)Q-set/` 內有 Ch12–18 各一份考古題 PDF（Phase 6、7 素材）。Ch7–10 複習講義無對應考古題。
+`course_2/quiz-set/Quan1150(Chap12~18)Q-set/` 內有 Ch12–18 各一份考古題 PDF（Phase 6、8 素材）。Ch7–10 複習講義無對應考古題，但仍要執行 Phase 7 定性意義補強。
 
 ## 各章主題範圍（供 Phase 1 涵蓋檢查與 Phase 2 查核定位）
 
