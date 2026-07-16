@@ -1,0 +1,1468 @@
+CHAPTER 14—SIMPLE LINEAR REGRESSION
+
+
+MULTIPLE CHOICE
+
+  1. In a regression analysis, the error term  is a random variable with a mean or expected value of
+     a. zero
+     b. one
+     c. any positive value
+     d. any value
+  2. The coefficient of determination
+     a. cannot be negative
+     b. is the square root of the coefficient of correlation
+     c. is the same as the coefficient of correlation
+     d. can be negative or positive
+  3. If the coefficient of determination is a positive value, then the coefficient of correlation
+     a. must also be positive
+     b. must be zero
+     c. can be either negative or positive
+     d. must be larger than 1
+
+  4. In regression analysis, the model in the form                                           is called
+     a. regression equation
+     b. correlation equation
+     c. estimated regression equation
+     d. regression model
+  5. The mathematical equation relating the independent variable to the expected value of the dependent
+     variable; that is, E(y) = 0 + 1x, is known as
+     a. regression equation
+     b. correlation equation
+     c. estimated regression equation
+     d. regression model
+  6. The model developed from sample data that has the form of                                                is known as
+     a. regression equation
+     b. correlation equation
+     c. estimated regression equation
+     d. regression model
+  7. In the following estimated regression equation
+     a. b1 is the slope
+     b. b1 is the intercept
+     c. b0 is the slope
+     d. None of these alternatives is correct.
+  8. In regression analysis, the unbiased estimate of the variance is
+     a. coefficient of correlation
+     b. coefficient of determination
+     c. mean square error
+     d. slope of the regression equation
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+ 9. The interval estimate of the mean value of y for a given value of x is
+    a. prediction interval estimate
+    b. confidence interval estimate
+    c. average regression
+    d. x versus y correlation interval
+10. The interval estimate of an individual value of y for a given value of x is
+    a. prediction interval estimate
+    b. confidence interval estimate
+    c. average regression
+    d. x versus y correlation interval
+11. The standard error is the
+    a. t-statistic squared
+    b. square root of SSE
+    c. square root of SST
+    d. square root of MSE
+12. If only MSE is known, you can compute the
+    a. r square
+    b. coefficient of determination
+    c. standard error
+    d. all of these alternatives are correct
+13. The value of the coefficient of correlation (R)
+    a. can be equal to the value of the coefficient of determination (R2)
+    b. can never be equal to the value of the coefficient of determination (R2)
+    c. is always smaller than the value of the coefficient of determination
+    d. is always larger than the value of the coefficient of determination
+14. In a regression analysis the standard error is determined to be 4. In this situation the MSE
+    a. is 2
+    b. is 16
+    c. depends on the sample size
+    d. depends on the degrees of freedom
+15. In regression analysis, which of the following is not a required assumption about the error term ?
+    a. The expected value of the error term is one.
+    b. The variance of the error term is the same for all values of X.
+    c. The values of the error term are independent.
+    d. The error term is normally distributed.
+16. A regression analysis between sales (Y in $1000) and advertising (X in dollars) resulted in the
+    following equation
+         = 30,000 + 4 X
+     The above equation implies that an
+     a. increase of $4 in advertising is associated with an increase of $4,000 in sales
+     b. increase of $1 in advertising is associated with an increase of $4 in sales
+     c. increase of $1 in advertising is associated with an increase of $34,000 in sales
+     d. increase of $1 in advertising is associated with an increase of $4,000 in sales
+17. Regression analysis is a statistical procedure for developing a mathematical equation that describes
+    how
+    a. one independent and one or more dependent variables are related
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     b. several independent and several dependent variables are related
+     c. one dependent and one or more independent variables are related
+     d. None of these alternatives is correct.
+18. In a simple regression analysis (where Y is a dependent and X an independent variable), if the Y
+    intercept is positive, then
+    a. there is a positive correlation between X and Y
+    b. if X is increased, Y must also increase
+    c. if Y is increased, X must also increase
+    d. None of these alternatives is correct.
+19. In regression analysis, the variable that is being predicted is the
+    a. dependent variable
+    b. independent variable
+    c. intervening variable
+    d. is usually x
+20. The equation that describes how the dependent variable (y) is related to the independent variable (x) is
+    called
+    a. the correlation model
+    b. the regression model
+    c. correlation analysis
+    d. None of these alternatives is correct.
+21. In regression analysis, the independent variable is
+    a. used to predict other independent variables
+    b. used to predict the dependent variable
+    c. called the intervening variable
+    d. the variable that is being predicted
+22. Larger values of r2 imply that the observations are more closely grouped about the
+    a. average value of the independent variables
+    b. average value of the dependent variable
+    c. least squares line
+    d. origin
+23. In a regression analysis, the coefficient of determination is 0.4225. The coefficient of correlation in
+    this situation is
+    a. 0.65
+    b. 0.1785
+    c. any positive value
+    d. any value
+24. In a regression analysis, the coefficient of correlation is 0.16. The coefficient of determination in this
+    situation is
+    a. 0.4000
+    b. 0.0256
+    c. 4
+    d. 2.56
+25. In simple linear regression analysis, which of the following is not true?
+    a. The F test and the t test yield the same conclusion.
+    b. The F test and the t test may or may not yield the same conclusion.
+    c. The relationship between X and Y is represented by means of a straight line.
+    d. The value of F = t2.
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+26. Correlation analysis is used to determine
+    a. the equation of the regression line
+    b. the strength of the relationship between the dependent and the independent variables
+    c. a specific value of the dependent variable for a given value of the independent variable
+    d. None of these alternatives is correct.
+27. In a regression and correlation analysis if r2 = 1, then
+    a. SSE must also be equal to one
+    b. SSE must be equal to zero
+    c. SSE can be any positive value
+    d. SSE must be negative
+28. In a regression and correlation analysis if r2 = 1, then
+    a. SSE = SST
+    b. SSE = 1
+    c. SSR = SSE
+    d. SSR = SST
+29. In a regression analysis, the regression equation is given by y = 12 - 6x. If SSE = 510 and SST = 1000,
+    then the coefficient of correlation is
+    a. -0.7
+    b. +0.7
+    c. 0.49
+    d. -0.49
+30. In a regression analysis if SSE = 200 and SSR = 300, then the coefficient of determination is
+    a. 0.6667
+    b. 0.6000
+    c. 0.4000
+    d. 1.5000
+31. If the coefficient of determination is equal to 1, then the coefficient of correlation
+    a. must also be equal to 1
+    b. can be either -1 or +1
+    c. can be any value between -1 to +1
+    d. must be -1
+32. In a regression analysis, the variable that is being predicted
+    a. must have the same units as the variable doing the predicting
+    b. is the independent variable
+    c. is the dependent variable
+    d. usually is denoted by x
+33. Regression analysis was applied between demand for a product (Y) and the price of the product (X),
+    and the following estimated regression equation was obtained.
+
+         = 120 - 10 X
+
+     Based on the above estimated regression equation, if price is increased by 2 units, then demand is
+     expected to
+     a. increase by 120 units
+     b. increase by 100 units
+     c. increase by 20 units
+     d. decease by 20 units
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+34. The coefficient of correlation
+    a. is the square of the coefficient of determination
+    b. is the square root of the coefficient of determination
+    c. is the same as r-square
+    d. can never be negative
+35. If the coefficient of correlation is a positive value, then the regression equation
+    a. must have a positive slope
+    b. must have a negative slope
+    c. could have either a positive or a negative slope
+    d. must have a positive y intercept
+36. If the coefficient of correlation is 0.8, the percentage of variation in the dependent variable explained
+    by the variation in the independent variable is
+    a. 0.80%
+    b. 80%
+    c. 0.64%
+    d. 64%
+37. In regression and correlation analysis, if SSE and SST are known, then with this information the
+    a. coefficient of determination can be computed
+    b. slope of the line can be computed
+    c. Y intercept can be computed
+    d. x intercept can be computed
+38. In regression analysis, if the independent variable is measured in pounds, the dependent variable
+    a. must also be in pounds
+    b. must be in some unit of weight
+    c. cannot be in pounds
+    d. can be any units
+39. If there is a very weak correlation between two variables, then the coefficient of determination must be
+    a. much larger than 1, if the correlation is positive
+    b. much smaller than -1, if the correlation is negative
+    c. much larger than one
+    d. None of these alternatives is correct.
+40. SSE can never be
+    a. larger than SST
+    b. smaller than SST
+    c. equal to 1
+    d. equal to zero
+41. If the coefficient of correlation is -0.4, then the slope of the regression line
+    a. must also be -0.4
+    b. can be either negative or positive
+    c. must be negative
+    d. must be 0.16
+42. If the coefficient of correlation is a negative value, then the coefficient of determination
+    a. must also be negative
+    b. must be zero
+    c. can be either negative or positive
+    d. must be positive
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+43. It is possible for the coefficient of determination to be
+    a. larger than 1
+    b. less than one
+    c. less than -1
+    d. None of these alternatives is correct.
+44. If two variables, x and y, have a strong linear relationship, then
+    a. there may or may not be any causal relationship between x and y
+    b. x causes y to happen
+    c. y causes x to happen
+    d. None of these alternatives is correct.
+45. If the coefficient of determination is 0.81, the coefficient of correlation
+    a. is 0.6561
+    b. could be either + 0.9 or - 0.9
+    c. must be positive
+    d. must be negative
+46. A least squares regression line
+    a. may be used to predict a value of y if the corresponding x value is given
+    b. implies a cause-effect relationship between x and y
+    c. can only be determined if a good linear relationship exists between x and y
+    d. None of these alternatives is correct.
+47. If all the points of a scatter diagram lie on the least squares regression line, then the coefficient of
+    determination for these variables based on these data is
+    a. 0
+    b. 1
+    c. either 1 or -1, depending upon whether the relationship is positive or negative
+    d. could be any value between -1 and 1
+48. If a data set has SSR = 400 and SSE = 100, then the coefficient of determination is
+    a. 0.10
+    b. 0.25
+    c. 0.40
+    d. 0.80
+49. Compared to the confidence interval estimate for a particular value of y (in a linear regression model),
+    the interval estimate for an average value of y will be
+    a. narrower
+    b. wider
+    c. the same
+    d. None of these alternatives is correct.
+50. A regression analysis between sales (in $1000) and price (in dollars) resulted in the following equation
+
+         = 60 - 8X
+
+     The above equation implies that an
+     a. increase of $1 in price is associated with a decrease of $8 in sales
+     b. increase of $8 in price is associated with an decrease of $52,000 in sales
+     c. increase of $1 in price is associated with a decrease of $52 in sales
+     d. increase of $1 in price is associated with a decrease of $8000 in sales
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+51. In a regression analysis if SST = 500 and SSE = 300, then the coefficient of determination is
+    a. 0.20
+    b. 1.67
+    c. 0.60
+    d. 0.40
+52. Regression analysis was applied between sales (in $1000) and advertising (in $100) and the following
+    regression function was obtained.
+
+         = 500 + 4 X
+
+     Based on the above estimated regression line if advertising is $10,000, then the point estimate for sales
+     (in dollars) is
+     a. $900
+     b. $900,000
+     c. $40,500
+     d. $505,000
+53. The coefficient of correlation
+    a. is the square of the coefficient of determination
+    b. is the square root of the coefficient of determination
+    c. is the same as r-square
+    d. can never be negative
+54. If the coefficient of correlation is 0.4, the percentage of variation in the dependent variable explained
+    by the variation in the independent variable
+    a. is 40%
+    b. is 16%.
+    c. is 4%
+    d. can be any positive value
+55. In regression analysis if the dependent variable is measured in dollars, the independent variable
+    a. must also be in dollars
+    b. must be in some units of currency
+    c. can be any units
+    d. cannot be in dollars
+56. If there is a very strong correlation between two variables then the coefficient of determination must
+    be
+    a. much larger than 1, if the correlation is positive
+    b. much smaller than -1, if the correlation is negative
+    c. any value larger than 1
+    d. None of these alternatives is correct.
+57. If the coefficient of correlation is 0.90, then the coefficient of determination
+    a. is also 0.9
+    b. is either 0.81 or -0.81
+    c. can be either negative or positive
+    d. must be 0.81
+58. A regression analysis between demand (Y in 1000 units) and price (X in dollars) resulted in the
+    following equation
+
+         = 9 - 3X
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     The above equation implies that if the price is increased by $1, the demand is expected to
+     a. increase by 6 units
+     b. decrease by 3 units
+     c. decrease by 6,000 units
+     d. decrease by 3,000 units
+59. In a regression analysis if SST = 4500 and SSE = 1575, then the coefficient of determination is
+    a. 0.35
+    b. 0.65
+    c. 2.85
+    d. 0.45
+60. Regression analysis was applied between sales (in $10,000) and advertising (in $100) and the
+    following regression function was obtained.
+
+         = 50 + 8 X
+
+     Based on the above estimated regression line if advertising is $1,000, then the point estimate for sales
+     (in dollars) is
+     a. $8,050
+     b. $130
+     c. $130,000
+     d. $1,300,000
+61. If the coefficient of correlation is a positive value, then
+    a. the intercept must also be positive
+    b. the coefficient of determination can be either negative or positive, depending on the value
+         of the slope
+    c. the regression equation could have either a positive or a negative slope
+    d. the slope of the line must be positive
+62. If the coefficient of determination is 0.9, the percentage of variation in the dependent variable
+    explained by the variation in the independent variable
+    a. is 0.90%
+    b. is 90%.
+    c. is 81%
+    d. 0.81%
+63. Regression analysis was applied between sales (Y in $1,000) and advertising (X in $100), and the
+    following estimated regression equation was obtained.
+
+         = 80 + 6.2 X
+
+     Based on the above estimated regression line, if advertising is $10,000, then the point estimate for
+     sales (in dollars) is
+     a. $62,080
+     b. $142,000
+     c. $700
+     d. $700,000
+
+
+     NARRBEGIN: Exhibit 12-01
+     Exhibit 14-1
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     The following information regarding a dependent variable (Y) and an independent variable (X) is
+     provided.
+        Y      X
+        4       2
+        3       1
+        4       4
+        6       3
+        8       5
+     SSE = 6
+     SST = 16
+     NARREND
+
+64. Refer to Exhibit 14-1. The least squares estimate of the Y intercept is
+    a. 1
+    b. 2
+    c. 3
+    d. 4
+65. Refer to Exhibit 14-1. The least squares estimate of the slope is
+    a. 1
+    b. 2
+    c. 3
+    d. 4
+66. Refer to Exhibit 14-1. The coefficient of determination is
+    a. 0.7096
+    b. - 0.7906
+    c. 0.625
+    d. 0.375
+67. Refer to Exhibit 14-1. The coefficient of correlation is
+    a. 0.7906
+    b. - 0.7906
+    c. 0.625
+    d. 0.375
+68. Refer to Exhibit 14-1. The MSE is
+    a. 1
+    b. 2
+    c. 3
+    d. 4
+
+
+     NARRBEGIN: Exhibit 12-02
+     Exhibit 14-2
+     You are given the following information about y and x.
+                    y                               x
+           Dependent Variable             Independent Variable
+                    5                               1
+                    4                               2
+                    3                               3
+                    2                               4
+                    1                               5
+     NARREND
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+69. Refer to Exhibit 14-2. The least squares estimate of b1 (slope) equals
+    a. 1
+    b. -1
+    c. 6
+    d. 5
+70. Refer to Exhibit 14-2. The least squares estimate of b0 (intercept)equals
+    a. 1
+    b. -1
+    c. 6
+    d. 5
+71. Refer to Exhibit 14-2. The point estimate of y when x = 10 is
+    a. -10
+    b. 10
+    c. -4
+    d. 4
+72. Refer to Exhibit 14-2. The sample correlation coefficient equals
+    a. 0
+    b. +1
+    c. -1
+    d. -0.5
+73. Refer to Exhibit 14-2. The coefficient of determination equals
+    a. 0
+    b. -1
+    c. +1
+    d. -0.5
+
+
+     NARRBEGIN: Exhibit 12-03
+     Exhibit 14-3
+     You are given the following information about y and x.
+
+                 y                                               x
+         Dependent Variable                             Independent Variable
+                12                                               4
+                 3                                               6
+                 7                                               2
+                 6                                               4
+     NARREND
+
+74. Refer to Exhibit 14-3. The least squares estimate of b1 equals
+    a. 1
+    b. -1
+    c. -11
+    d. 11
+75. Refer to Exhibit 14-3. The least squares estimate of b0 equals
+    a. 1
+    b. -1
+    c. -11
+    d. 11
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+76. Refer to Exhibit 14-3. The sample correlation coefficient equals
+    a. -0.4364
+    b. 0.4364
+    c. -0.1905
+    d. 0.1905
+77. Refer to Exhibit 14-3. The coefficient of determination equals
+    a. -0.4364
+    b. 0.4364
+    c. -0.1905
+    d. 0.1905
+
+
+     NARRBEGIN: Exhibit 12-04
+     Exhibit 14-4
+     Regression analysis was applied between sales data (Y in $1,000s) and advertising data (x in $100s)
+     and the following information was obtained.
+        = 12 + 1.8 x
+     n = 17
+     SSR = 225
+     SSE = 75
+     Sb1 = 0.2683
+     NARREND
+
+78. Refer to Exhibit 14-4. Based on the above estimated regression equation, if advertising is $3,000, then
+    the point estimate for sales (in dollars) is
+    a. $66,000
+    b. $5,412
+    c. $66
+    d. $17,400
+79. Refer to Exhibit 14-4. The F statistic computed from the above data is
+    a. 3
+    b. 45
+    c. 48
+    d. 50
+80. Refer to Exhibit 14-4. To perform an F test, the p-value is
+    a. less than .01
+    b. between .01 and .025
+    c. between .025 and .05
+    d. between .05 and 0.1
+81. Refer to Exhibit 14-4. The t statistic for testing the significance of the slope is
+    a. 1.80
+    b. 1.96
+    c. 6.708
+    d. 0.555
+82. Refer to Exhibit 14-4. The critical t value for testing the significance of the slope at 95% confidence is
+    a. 1.753
+    b. 2.131
+    c. 1.746
+    d. 2.120
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     NARRBEGIN: Exhibit 12-05
+     Exhibit 14-5
+     The following information regarding a dependent variable (Y) and an independent variable (X) is
+     provided.
+        Y       X
+        1       1
+        2       2
+        3       3
+        4       4
+        5       5
+     NARREND
+
+83. Refer to Exhibit 14-5. The least squares estimate of the Y intercept is
+    a. 1
+    b. 0
+    c. -1
+    d. 3
+84. Refer to Exhibit 14-5. The least squares estimate of the slope is
+    a. 1
+    b. -1
+    c. 0
+    d. 3
+85. Refer to Exhibit 14-5. The coefficient of correlation is
+    a. 0
+    b. -1
+    c. 0.5
+    d. 1
+86. Refer to Exhibit 14-5. The coefficient of determination is
+    a. 0
+    b. -1
+    c. 0.5
+    d. 1
+87. Refer to Exhibit 14-5. The MSE is
+    a. 0
+    b. -1
+    c. 1
+    d. 0.5
+
+
+     NARRBEGIN: Exhibit 12-06
+     Exhibit 14-6
+     For the following data the value of SSE = 0.4130.
+                     y                              x
+           Dependent Variable              Independent Variable
+                    15                              4
+                    17                              6
+                    23                              2
+                    17                              4
+
+     NARREND
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+88. Refer to Exhibit 14-6. The slope of the regression equation is
+    a. 18
+    b. 24
+    c. 0.707
+    d. -1.5
+89. Refer to Exhibit 14-6. The y intercept is
+    a. -1.5
+    b. 24
+    c. 0.50
+    d. -0.707
+90. Refer to Exhibit 14-6. The total sum of squares (SST) equals
+    a. 36
+    b. 18
+    c. 9
+    d. 1296
+91. Refer to Exhibit 14-6. The coefficient of determination (r2) equals
+    a. 0.7071
+    b. -0.7071
+    c. 0.5
+    d. -0.5
+
+
+     NARRBEGIN: Exhibit 12-07
+     Exhibit 14-7
+     You are given the following information about y and x.
+                    y                               x
+           Dependent Variable             Independent Variable
+                     5                              4
+                     7                              6
+                     9                              2
+                   11                               4
+     NARREND
+
+92. Refer to Exhibit 14-7. The least squares estimate of b1 (slope) equals
+    a. -10
+    b. 10
+    c. 0.5
+    d. -0.5
+93. Refer to Exhibit 14-7. The least squares estimate of b0 (intercept) equals
+    a. -10
+    b. 10
+    c. 0.5
+    d. -0.5
+94. Refer to Exhibit 14-7. The sample correlation coefficient equals
+    a. 0.3162
+    b. -0.3162
+    c. 0.10
+    d. -0.10
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+ 95. Refer to Exhibit 14-7. The coefficient of determination equals
+     a. 0.3162
+     b. -0.3162
+     c. 0.10
+     d. -0.10
+
+
+      NARRBEGIN: Exhibit 12-08
+      Exhibit 14-8
+      The following information regarding a dependent variable Y and an independent variable X is
+      provided
+
+      X = 90                          Y -      )(X - ) = -156
+      Y = 340                          (X -      )2 = 234
+      n=4                              Y -      )2 = 1974
+      SSR = 104
+      NARREND
+
+ 96. Refer to Exhibit 14-8. The total sum of squares (SST) is
+     a. -156
+     b. 234
+     c. 1870
+     d. 1974
+ 97. Refer to Exhibit 14-8. The sum of squares due to error (SSE) is
+     a. -156
+     b. 234
+     c. 1870
+     d. 1974
+ 98. Refer to Exhibit 14-8. The mean square error (MSE) is
+     a. 1870
+     b. 13
+     c. 1974
+     d. 935
+ 99. Refer to Exhibit 14-8. The slope of the regression equation is
+     a. -0.667
+     b. 0.667
+     c. 100
+     d. -100
+100. Refer to Exhibit 14-8. The Y intercept is
+     a. -0.667
+     b. 0.667
+     c. 100
+     d. -100
+101. Refer to Exhibit 14-8. The coefficient of correlation is
+     a. -0.2295
+     b. 0.2295
+     c. 0.0527
+     d. -0.0572
+
+
+       © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+             from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+      NARRBEGIN: Exhibit 12-09
+      Exhibit 14-9
+      A regression and correlation analysis resulted in the following information regarding a dependent
+      variable (y) and an independent variable (x).
+      X = 90                   (Y - )(X - ) = 466
+      Y = 170                 (X - )2 = 234
+      n = 10                    (Y - )2 = 1434
+      SSE = 505.98
+      NARREND
+
+102. Refer to Exhibit 14-9. The least squares estimate of b1 equals
+     a. 0.923
+     b. 1.991
+     c. -1.991
+     d. -0.923
+103. Refer to Exhibit 14-9. The least squares estimate of b0 equals
+     a. 0.923
+     b. 1.991
+     c. -1.991
+     d. -0.923
+104. Refer to Exhibit 14-9. The sum of squares due to regression (SSR) is
+     a. 1434
+     b. 505.98
+     c. 50.598
+     d. 928.02
+105. Refer to Exhibit 14-9. The sample correlation coefficient equals
+     a. 0.8045
+     b. -0.8045
+     c. 0
+     d. 1
+106. Refer to Exhibit 14-9. The coefficient of determination equals
+     a. 0.6472
+     b. -0.6472
+     c. 0
+     d. 1
+
+
+      NARRBEGIN: Exhibit 12-10
+      Exhibit 14-10
+      The following information regarding a dependent variable Y and an independent variable X is
+      provided.
+
+      X = 16                           (X - )(Y - ) = -8
+      Y = 28                           (X - )2 = 8
+      n=4                              SST = 42
+      SSE = 34
+
+      NARREND
+
+
+
+       © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+             from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+107. Refer to Exhibit 14-10. The slope of the regression function is
+     a. -1
+     b. 1.0
+     c. 11
+     d. 0.0
+108. Refer to Exhibit 14-10. The Y intercept is
+     a. -1
+     b. 1.0
+     c. 11
+     d. 0.0
+109. Refer to Exhibit 14-10. The coefficient of determination is
+     a. 0.1905
+     b. -0.1905
+     c. 0.4364
+     d. -0.4364
+110. Refer to Exhibit 14-10. The coefficient of correlation is
+     a. 0.1905
+     b. -0.1905
+     c. 0.4364
+     d. -0.4364
+111. Refer to Exhibit 14-10. The MSE is
+     a. 17
+     b. 8
+     c. 34
+     d. 42
+112. Refer to Exhibit 14-10. The point estimate of Y when X = 3 is
+     a. 11
+     b. 14
+     c. 8
+     d. 0
+113. Refer to Exhibit 14-10. The point estimate of Y when X = -3 is
+     a. 11
+     b. 14
+     c. 8
+     d. 0
+
+
+PROBLEM
+
+  1. Assume you have noted the following prices for books and the number of pages that each book
+     contains.
+                                     Book       Pages (x)     Price (y)
+                                       A           500          $7.00
+                                       B           700           7.50
+                                       C           750           9.00
+                                       D           590           6.50
+                                       E           540           7.50
+                                       F           650           7.00
+                                       G           480           4.50
+
+
+       © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+             from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+   a.    Develop a least-squares estimated regression line.
+   b.    Compute the coefficient of determination and explain its meaning.
+   c.    Compute the correlation coefficient between the price and the number of pages. Test to see if
+         x and y are related. Use  = 0.10.
+
+2. Assume you have noted the following prices for books and the number of pages that each book
+   contains.
+                                    Book       Pages (x)     Price (y)
+                                      A           500         $7.00
+                                      B           700          7.50
+                                      C           750          9.00
+                                      D           590          6.50
+                                      E           540          7.50
+                                      F           650          7.00
+                                      G           480          4.50
+    a. Perform an F test and determine if the price and the number of pages of the books are related.
+         Let  = 0.01.
+    b. Perform a t test and determine if the price and the number of pages of the books are related.
+         Let  = 0.01.
+    c. Develop a 90% confidence interval for estimating the average price of books that contain 800
+         pages.
+    d. Develop a 90% confidence interval to estimate the price of a specific book that has 800 pages.
+
+3. The following data represent the number of flash drives sold per day at a local computer shop and their
+   prices.
+                                       Price (x)      Units Sold (y)
+                                          $34               3
+                                           36               4
+                                           32               6
+                                           35               5
+                                           30               9
+                                           38               2
+                                           40               1
+   a. Develop a least-squares regression line and explain what the slope of the line indicates.
+   b. Compute the coefficient of determination and comment on the strength of relationship between
+       x and y.
+   c. Compute the sample correlation coefficient between the price and the number of flash drives
+       sold. Use = 0.01 to test the relationship between x and y.
+4. The following data represent the number of flash drives sold per day at a local computer shop and their
+   prices.
+                                       Price (x)      Units Sold (y)
+                                          $34               3
+                                           36               4
+                                           32               6
+                                           35               5
+                                           30               9
+                                           38               2
+                                           40               1
+   a. Perform an F test and determine if the price and the number of flash drives sold are related.
+       Let  = 0.01.
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+   b.    Perform a t test and determine if the price and the number of flash drives sold are related. Let
+          = 0.01.
+
+5. Shown below is a portion of an Excel output for regression analysis relating Y (dependent variable)
+   and X (independent variable).
+   ANOVA
+                                   df                   SS
+   Regression                       1                  110
+   Residual                         8                   74
+   Total                            9                  184
+
+                                          Coefficients             Standard Error
+   Intercept                               39.222                      5.943
+   x                                        -0.5556                    0.1611
+
+   a.    What has been the sample size for the above?
+   b.    Perform a t test and determine whether or not X and Y are related. Let  = 0.05.
+   c.    Perform an F test and determine whether or not X and Y are related. Let  = 0.05.
+   d.    Compute the coefficient of determination.
+   e.    Interpret the meaning of the value of the coefficient of determination that you found in d. Be
+         very specific.
+
+6. Shown below is a portion of a computer output for regression analysis relating Y (dependent variable)
+   and X (independent variable).
+
+   ANOVA
+                                                 df                        SS
+   Regression                                    1                       24.011
+   Residual                                      8                       67.989
+
+                                          Coefficients             Standard Error
+   Intercept                                11.065                     2.043
+   x                                        -0.511                     0.304
+
+   a.    What has been the sample size for the above?
+   b.    Perform a t test and determine whether or not X and Y are related. Let  = 0.05.
+   c.    Perform an F test and determine whether or not X and Y are related. Let  = 0.05.
+   d.    Compute the coefficient of determination.
+   e.    Interpret the meaning of the value of the coefficient of determination that you found in d. Be
+         very specific.
+
+7. Part of an Excel output relating X (independent variable) and Y (dependent variable) is shown below.
+   Fill in all the blanks marked with "?".
+
+   Summary Output
+
+   Regression Statistics
+   Multiple R                                    0.1347
+   R Square                                           ?
+   Adjusted R Square                                  ?
+   Standard Error                                3.3838
+   Observations                                       ?
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+   ANOVA
+                                  df                      SS                    MS                 F             Significance F
+   Regression                      ?                    2.7500                   ?                 ?                 0.632
+   Residual                        ?                       ?                   11.45
+   Total                          14                       ?
+
+                            Coefficients          Standard Error               t Stat          P-value
+   Intercept                   8.6                    2.2197                      ?            0.0019
+   x                           0.25                   0.5101                      ?            0.632
+
+8. Shown below is a portion of a computer output for a regression analysis relating Y (dependent variable)
+    and X (independent variable).
+
+
+   ANOVA
+                                                df                        SS
+   Regression                                    1                      115.064
+   Residual                                     13                       82.936
+   Total
+
+                                          Coefficients             Standard Error
+   Intercept                                15.532                     1.457
+   x                                        -1.106                     0.261
+
+   a.    Perform a t test using the p-value approach and determine whether or not Y and X are related.
+         Let  = 0.05.
+   b.    Using the p-value approach, perform an F test and determine whether or not X and Y are
+         related.
+   c.    Compute the coefficient of determination and fully interpret its meaning. Be very specific.
+
+9. Part of an Excel output relating X (independent variable) and Y (dependent variable) is shown below.
+   Fill in all the blanks marked with "?".
+   Summary Output
+   Regression Statistics
+   Multiple R                                         ?
+   R Square                                      0.5149
+   Adjusted R Square                                  ?
+   Standard Error                                7.3413
+   Observations                                      11
+   ANOVA
+                                  df                      SS                    MS                 F             Significance F
+   Regression                     ?                        ?                     ?                 ?                0.0129
+   Residual                       ?                        ?                     ?
+   Total                          ?                      1000
+
+                            Coefficients          Standard Error              t Stat           P-value
+   Intercept                     ?                   29.4818                  3.7946           0.0043
+   x                             ?                    0.7000                 -3.0911           0.0129
+
+
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+10. Shown below is a portion of a computer output for a regression analysis relating Y (demand) and X
+    (unit price).
+
+     ANOVA
+                                                  df                        SS
+     Regression                                    1                     5048.818
+     Residual                                     46                     3132.661
+     Total                                        47                     8181.479
+
+                                            Coefficients             Standard Error
+     Intercept                                80.390                     3.102
+     X                                        -2.137                     0.248
+
+     a. Perform a t test and determine whether or not demand and unit price are related. Let  = 0.05.
+     b. Perform an F test and determine whether or not demand and unit price are related. Let  =
+        0.05.
+    c. Compute the coefficient of determination and fully interpret its meaning. Be very specific.
+    d. Compute the coefficient of correlation and explain the relationship between demand and unit
+        price.
+11. Shown below is a portion of a computer output for a regression analysis relating supply (Y in
+    thousands of units) and unit price (X in thousands of dollars).
+
+     ANOVA
+                                                  df                        SS
+     Regression                                    1                      354.689
+     Residual                                     39                     7035.262
+
+                                            Coefficients             Standard Error
+     Intercept                                54.076                     2.358
+     X                                         0.029                     0.021
+
+     a.    What has been the sample size for this problem?
+     b.    Perform a t test and determine whether or not supply and unit price are related. Let  = 0.05.
+     c.    Perform and F test and determine whether or not supply and unit price are related. Let  =
+           0.05.
+     d.    Compute the coefficient of determination and fully interpret its meaning. Be very specific.
+     e.    Compute the coefficient of correlation and explain the relationship between supply and unit
+           price.
+     f.    Predict the supply (in units) when the unit price is $50,000.
+
+12. Given below are four observations collected in a regression study on two variables x (independent
+    variable) and y (dependent variable).
+
+          x         y
+          2         4
+          6         7
+          9         8
+          9         9
+
+     a.    Develop the least squares estimated regression equation.
+     b.    At 95% confidence, perform a t test and determine whether or not the slope is significantly
+           different from zero.
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     c.   Perform an F test to determine whether or not the model is significant. Let  = 0.05.
+     d.   Compute the coefficient of determination.
+
+13. Given below are five observations collected in a regression study on two variables, x (independent
+    variable) and y (dependent variable).
+
+          x        y
+          2        4
+          3        4
+          4        3
+          5        2
+          6        1
+
+     a.   Develop the least squares estimated regression equation.
+     b.   At 95% confidence, perform a t test and determine whether or not the slope is significantly
+          different from zero.
+     c.   Perform an F test to determine whether or not the model is significant. Let  = 0.05.
+     d.   Compute the coefficient of determination.
+     e.   Compute the coefficient of correlation.
+
+14. Below you are given a partial computer output based on a sample of 8 observations, relating an
+    independent variable (x) and a dependent variable (y).
+
+                                           Coefficient               Standard Error
+     Intercept                              13.251                       10.77
+     X                                       0.803                        0.385
+
+     Analysis of Variance
+
+     SOURCE                                                                  SS
+     Regression
+     Error (Residual)                                                     41.674
+     Total                                                                71.875
+
+     a.   Develop the estimated regression line.
+     b.   At  = 0.05, test for the significance of the slope.
+     c.   At  = 0.05, perform an F test.
+     d.   Determine the coefficient of determination.
+
+15. Below you are given a partial computer output based on a sample of 8 observations, relating an
+    independent variable (x) and a dependent variable (y).
+
+                                           Coefficient               Standard Error
+     Intercept                               -9.462                      7.032
+     x                                        0.769                      0.184
+
+     Analysis of Variance
+
+     SOURCE                                                                 SS
+     Regression                                                             400
+     Error (Residual)                                                       138
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     a.    Develop the estimated regression line.
+     b.    At  = 0.05, test for the significance of the slope.
+     c.    At  = 0.05, perform an F test.
+     d.    Determine the coefficient of determination.
+
+16. The following data represent a company's yearly sales volume and its advertising expenditure over a
+    period of 8 years.
+
+                  (Y)                              (X)
+                Sales in                      Advertising
+          Millions of Dollars                 in ($10,000)
+                   15                               32
+                   16                               33
+                   18                               35
+                   17                               34
+                   16                               36
+                   19                               37
+                   19                               39
+                   24                               42
+
+     a.    Develop a scatter diagram of sales versus advertising and explain what it shows regarding the
+           relationship between sales and advertising.
+     b.    Use the method of least squares to compute an estimated regression line between sales and
+           advertising.
+     c.    If the company's advertising expenditure is $400,000, what are the predicted sales? Give the
+           answer in dollars.
+     d.    What does the slope of the estimated regression line indicate?
+     e.    Compute the coefficient of determination and fully interpret its meaning.
+     f.    Use the F test to determine whether or not the regression model is significant at  = 0.05.
+     g.    Use the t test to determine whether the slope of the regression model is significant at  = 0.05.
+     h.    Develop a 95% confidence interval for predicting the average sales for the years when
+           $400,000 was spent on advertising.
+     i.    Compute the correlation coefficient.
+
+17. Given below are five observations collected in a regression study on two variables x (independent
+    variable) and y (dependent variable).
+
+           x        y
+          10        7
+          20        5
+          30        4
+          40        2
+          50        1
+
+     a.    Develop the least squares estimated regression equation
+     b.    At 95% confidence, perform a t test and determine whether or not the slope is significantly
+           different from zero.
+     c.    Perform an F test to determine whether or not the model is significant. Let  = 0.05.
+     d.    Compute the coefficient of determination.
+     e.    Compute the coefficient of correlation.
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+18. Below you are given a partial computer output based on a sample of 14 observations, relating an
+    independent variable (x) and a dependent variable (y).
+
+     Predictor                                Coefficient                    Standard Error
+     Constant                                   6.428                            1.202
+     X                                          0.470                            0.035
+
+     Analysis of Variance
+
+     SOURCE                                                                          SS
+     Regression                                                                    958.584
+     Error (Residual)
+     Total                                                                       1021.429
+
+     a.    Develop the estimated regression line.
+     b.    At  = 0.05, test for the significance of the slope.
+     c.    At  = 0.05, perform an F test.
+     d.    Determine the coefficient of determination.
+     e.    Determine the coefficient of correlation.
+
+19. Below you are given a partial computer output based on a sample of 21 observations, relating an
+    independent variable (x) and a dependent variable (y).
+
+     Predictor                                Coefficient                    Standard Error
+     Constant                                  30.139                            1.181
+     X                                          -0.252                           0.022
+
+     Analysis of Variance
+
+     SOURCE                                                                        SS
+     Regression                                                                 1,759.481
+     Error                                                                        259.186
+
+     a.    Develop the estimated regression line.
+     b.    At  = 0.05, test for the significance of the slope.
+     c.    At  = 0.05, perform an F test.
+     d.    Determine the coefficient of determination.
+     e.    Determine the coefficient of correlation.
+
+20. An automobile dealer wants to see if there is a relationship between monthly sales and the interest rate.
+    A random sample of 4 months was taken. The results of the sample are presented below. The estimated
+    least squares regression equation is
+
+          = 75.061 - 6.254X
+
+                     Y                                           X
+                Monthly Sales                        Interest Rate (In Percent)
+                    22                                           9.2
+                    20                                           7.6
+                    10                                          10.4
+                    45                                           5.3
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     a.   Obtain a measure of how well the estimated regression line fits the data.
+     b.   You want to test to see if there is a significant relationship between the interest rate and
+          monthly sales at the 1% level of significance. State the null and alternative hypotheses.
+     c.   At 99% confidence, test the hypotheses.
+     d.   Construct a 99% confidence interval for the average monthly sales for all months with a 10%
+          interest rate.
+     e.   Construct a 99% confidence interval for the monthly sales of one month with a 10% interest
+          rate.
+
+21. Jason believes that the sales of coffee at his coffee shop depend upon the weather. He has taken a
+    sample of 6 days. Below you are given the results of the sample.
+
+
+            Cups of Coffee Sold                               Temperature
+                    350                                           50
+                    200                                           60
+                    210                                           70
+                    100                                           80
+                     60                                           90
+                     40                                          100
+
+     a.   Which variable is the dependent variable?
+     b.   Compute the least squares estimated line.
+     c.   Compute the correlation coefficient between temperature and the sales of coffee.
+     d.   Is there a significant relationship between the sales of coffee and temperature? Use a .05 level
+          of significance. Be sure to state the null and alternative hypotheses.
+     e.   Predict sales of a 90 degree day.
+
+22. Researchers have collected data on the hours of television watched in a day and the age of a person.
+    You are given the data below.
+          Hours of Television                        Age
+                    1                                45
+                    3                                30
+                    4                                22
+                    3                                25
+                    6                                 5
+    a. Determine which variable is the dependent variable.
+    b. Compute the least squares estimated line.
+    c. Is there a significant relationship between the two variables? Use a .05 level of significance. Be
+        sure to state the null and alternative hypotheses.
+    d. Compute the coefficient of determination. How would you interpret this value?
+
+23. Given below are seven observations collected in a regression study on two variables, X (independent
+    variable) and Y (dependent variable).
+       X        Y
+       2       12
+       3        9
+       6        8
+       7        7
+       8        6
+       7        5
+       9        2
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     a.   Develop the least squares estimated regression equation.
+     b.   At 95% confidence, perform a t test and determine whether or not the slope is significantly
+          different from zero.
+     c.   Perform an F test to determine whether or not the model is significant. Let  = 0.05.
+     d.   Compute the coefficient of determination.
+
+24. The owner of a retail store randomly selected the following weekly data on profits and advertising
+    cost.
+
+                      Week                              Advertising Cost ($)                                 Profit ($)
+                       1                                          0                                            200
+                       2                                         50                                            270
+                       3                                        250                                            420
+                       4                                        150                                            300
+                       5                                        125                                            325
+
+     a.   Write down the appropriate linear relationship between advertising cost and profits. Which is
+          the dependent variable? Which is the independent variable?
+     b.   Calculate the least squares estimated regression line.
+     c.   Predict the profits for a week when $200 is spent on advertising.
+     d.   At 95% confidence, test to determine if the relationship between advertising costs and profits is
+          statistically significant.
+     e.   Calculate the coefficient of determination.
+
+25. The owner of a bakery wants to analyze the relationship between the expenditure of a customer and the
+    customer's income. A sample of 5 customers is taken and the following information was obtained.
+                    Y                                 X
+               Expenditure                Income (In Thousands)
+                    .45                               20
+                 10.75                                19
+                   5.40                               22
+                   7.80                               25
+                   5.60                               14
+    The least squares estimated line is    = 4.348 + 0.0826 X.
+    a. Obtain a measure of how well the estimated regression line fits the data.
+    b. You want to test to see if there is a significant relationship between expenditure and income at
+        the 5% level of significance. Be sure to state the null and alternative hypotheses.
+    c. Construct a 95% confidence interval estimate for the average expenditure for all customers
+        with an income of $20,000.
+    d. Construct a 95% confidence interval estimate for the expenditure of one customer whose
+        income is $20,000.
+
+26. Below you are given information on annual income and years of college education.
+        Income (In Thousands)              Years of College
+                  28                               0
+                  40                               3
+                  36                               2
+                  28                               1
+                  48                               4
+    a. Develop the least squares regression equation.
+    b. Estimate the yearly income of an individual with 6 years of college education.
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     c.   Compute the coefficient of determination.
+     d.   Use a t test to determine whether the slope is significantly different from zero. Let  = 0.05.
+     e.   At 95% confidence, perform an F test and determine whether or not the model is significant.
+
+27. Below you are given information on a woman's age and her annual expenditure on purchase of books.
+                 Age                    Annual Expenditure ($)
+                  18                              210
+                  22                              180
+                  21                              220
+                  28                              280
+    a. Develop the least squares regression equation.
+    b. Compute the coefficient of determination.
+    c. Use a t test to determine whether the slope is significantly different from zero. Let  = 0.05.
+    d. At 95% confidence, perform an F test and determine whether or not the model is significant.
+
+28. The following sample data contains the number of years of college and the current annual salary for a
+    random sample of heavy equipment salespeople.
+                                            Annual Income
+            Years of College                 (In Thousands)
+                    2                              20
+                    2                              23
+                    3                              25
+                    4                              26
+                    3                              28
+                    1                              29
+                    4                              27
+                    3                              30
+                    4                              33
+                    4                              35
+    a. Which variable is the dependent variable? Which is the independent variable?
+    b. Determine the least squares estimated regression line.
+    c. Predict the annual income of a salesperson with one year of college.
+    d. Test if the relationship between years of college and income is statistically significant at the .05
+        level of significance.
+    e. Calculate the coefficient of determination.
+    f. Calculate the sample correlation coefficient between income and years of college. Interpret the
+        value you obtain.
+
+29. The following data shows the yearly income (in $1,000) and age of a sample of seven individuals.
+          Income (in $1,000)                      Age
+                  20                               18
+                  24                               20
+                  24                               23
+                  25                               34
+                  26                               24
+                  27                               27
+                  34                               27
+    a. Develop the least squares regression equation.
+    b. Estimate the yearly income of a 30-year-old individual.
+    c. Compute the coefficient of determination.
+    d. Use a t test to determine whether the slope is significantly different from zero. Let  = 0.05.
+    e. At 95% confidence, perform an F test and determine whether or not the model is significant.
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+30. The following data show the results of an aptitude test (Y) and the grade point average of 10 students.
+              Aptitude Test
+               Score (Y)                          GPA (X)
+                   26                                 1.8
+                   31                                 2.3
+                   28                                 2.6
+                   30                                 2.4
+                   34                                 2.8
+                   38                                 3.0
+                   41                                 3.4
+                   44                                 3.2
+                   40                                 3.6
+                   43                                 3.8
+    a. Develop a least squares estimated regression line.
+    b. Compute the coefficient of determination and comment on the strength of the regression
+        relationship.
+    c. Is the slope significant? Use a t test and let  = 0.05.
+    d. At 95% confidence, test to determine if the model is significant (i.e., perform an F test).
+
+31. Shown below is a portion of the computer output for a regression analysis relating sales (Y in millions
+    of dollars) and advertising expenditure (X in thousands of dollars).
+
+     Predictor                                           Coefficient                    Standard Error
+     Constant                                              4.00                             0.800
+     X                                                     0.12                             0.045
+
+     Analysis of Variance
+
+     SOURCE                                                    DF                               SS
+     Regression                                                 1                              1,400
+     Error                                                     18                              3,600
+
+     a.   What has been the sample size for the above?
+     b.   Perform a t test and determine whether or not advertising and sales are related. Let  = 0.05.
+     c.   Compute the coefficient of determination.
+     d.   Interpret the meaning of the value of the coefficient of determination that you found in Part c.
+          Be very specific.
+     e.   Use the estimated regression equation and predict sales for an advertising expenditure of
+          $4,000. Give your answer in dollars.
+
+32. A company has recorded data on the daily demand for its product (Y in thousands of units) and the
+    unit price (X in hundreds of dollars). A sample of 15 days demand and associated prices resulted in the
+    following data.
+
+     X = 75                         Y-       )X- ) = -59
+     Y = 135                        X-       )2 = 94
+     Y- )2 = 100
+     SSE = 62.9681
+
+     a.   Using the above information, develop the least-squares estimated regression line and write the
+          equation.
+     b.   Compute the coefficient of determination.
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     c.   Perform an F test and determine whether or not there is a significant relationship between
+          demand and unit price. Let  = 0.05.
+     d.   Would the demand ever reach zero? If yes, at what price would the demand be zero?
+
+33. A regression and correlation analysis resulted in the following information regarding an independent
+    variable (x) and a dependent variable (y).
+
+     X = 42                          (Y -      )(X - ) = 37
+     Y = 63                         (X -      )2 = 84
+     n=7                              (Y -      )2 = 28
+
+
+
+     a.   Develop the least squares estimated regression equation.
+     b.   At 95% confidence, perform a t test and determine whether or not the slope is significantly
+          different from zero.
+     c.   Perform an F test to determine whether or not the model is significant. Let  = 0.05.
+     d.   Compute the coefficient of determination.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "商業統計專屬助教（course2）"
+  short_description: "七階段把老師投影片變成新手友善講義：講義化、課本查核、先備補強、圖表、跨章分辨、考古題詳解、題型攻略"
+  default_prompt: "使用 $build-course2-business-statistics 從 course_2/進度.md 最早未完成的項目繼續。"

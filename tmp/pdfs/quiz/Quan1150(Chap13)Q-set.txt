@@ -1,0 +1,1280 @@
+CHAPTER 13—ANALYSIS OF VARIANCE AND EXPERIMENTAL DESIGN
+
+
+MULTIPLE CHOICE
+
+  1. In the analysis of variance procedure (ANOVA), "factor" refers to
+     a. the dependent variable
+     b. the independent variable
+     c. different levels of a treatment
+     d. the critical value of F
+  2. The ANOVA procedure is a statistical approach for determining whether or not
+     a. the means of two samples are equal
+     b. the means of two or more samples are equal
+     c. the means of more than two samples are equal
+     d. the means of two or more populations are equal
+  3. The variable of interest in an ANOVA procedure is called
+     a. a partition
+     b. a treatment
+     c. either a partition or a treatment
+     d. a factor
+  4. In the ANOVA, treatment refers to
+     a. experimental units
+     b. different levels of a factor
+     c. the dependent variable
+     d. applying antibiotic to a wound
+  5. In factorial designs, the response produced when the treatments of one factor interact with the
+     treatments of another in influencing the response variable is known as
+     a. main effect
+     b. replication
+     c. interaction
+     d. None of these alternatives is correct.
+  6. An experimental design where the experimental units are randomly assigned to the treatments is
+     known as
+     a. factor block design
+     b. random factor design
+     c. completely randomized design
+     d. None of these alternatives is correct.
+  7. The number of times each experimental condition is observed in a factorial design is known as
+     a. partition
+     b. replication
+     c. experimental condition
+     d. factor
+  8. In an analysis of variance problem involving 3 treatments and 10 observations per treatment, SSE =
+     399.6. The MSE for this situation is
+     a. 133.2
+     b. 13.32
+     c. 14.8
+     d. 30.0
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+ 9. When an analysis of variance is performed on samples drawn from K populations, the mean square
+    between treatments (MSTR) is
+    a. SSTR/nT
+    b. SSTR/(nT - 1)
+    c. SSTR/K
+    d. SSTR/(K - 1)
+10. In an analysis of variance where the total sample size for the experiment is nT and the number of
+    populations is K, the mean square within treatments is
+    a. SSE/(nT - K)
+    b. SSTR/(nT - K)
+    c. SSE/(K - 1)
+    d. SSE/K
+11. The F ratio in a completely randomized ANOVA is the ratio of
+    a. MSTR/MSE
+    b. MST/MSE
+    c. MSE/MSTR
+    d. MSE/MST
+12. The critical F value with 6 numerator and 60 denominator degrees of freedom at  = .05 is
+    a. 3.74
+    b. 2.25
+    c. 2.37
+    d. 1.96
+13. An ANOVA procedure is applied to data obtained from 6 samples where each sample contains 20
+    observations. The degrees of freedom for the critical value of F are
+    a. 6 numerator and 20 denominator degrees of freedom
+    b. 5 numerator and 20 denominator degrees of freedom
+    c. 5 numerator and 114 denominator degrees of freedom
+    d. 6 numerator and 20 denominator degrees of freedom
+14. The mean square is the sum of squares divided by
+    a. the total number of observations
+    b. its corresponding degrees of freedom
+    c. its corresponding degrees of freedom minus one
+    d. None of these alternatives is correct.
+15. In an analysis of variance problem if SST = 120 and SSTR = 80, then SSE is
+    a. 200
+    b. 40
+    c. 80
+    d. 120
+16. The required condition for using an ANOVA procedure on data from several populations is that the
+    a. the selected samples are dependent on each other
+    b. sampled populations are all uniform
+    c. sampled populations have equal variances
+    d. sampled populations have equal means
+17. An ANOVA procedure is used for data that was obtained from four sample groups each comprised of
+    five observations. The degrees of freedom for the critical value of F are
+    a. 3 and 20
+    b. 3 and 16
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     c. 4 and 17
+     d. 3 and 19
+18. In ANOVA, which of the following is not affected by whether or not the population means are equal?
+    a.
+    b. between-samples estimate of 
+    c. within-samples estimate of 
+    d. None of these alternatives is correct.
+19. A term that means the same as the term "variable" in an ANOVA procedure is
+    a. factor
+    b. treatment
+    c. replication
+    d. variance within
+20. In order to determine whether or not the means of two populations are equal,
+    a. a t test must be performed
+    b. an analysis of variance must be performed
+    c. either a t test or an analysis of variance can be performed
+    d. a chi-square test must be performed
+21. The process of allocating the total sum of squares and degrees of freedom is called
+    a. factoring
+    b. blocking
+    c. replicating
+    d. partitioning
+22. An experimental design that permits statistical conclusions about two or more factors is a
+    a. randomized block design
+    b. factorial design
+    c. completely randomized design
+    d. randomized design
+23. In a completely randomized design involving three treatments, the following information is provided:
+
+                                             Treatment 1                      Treatment 2                       Treatment 3
+     Sample Size                                  5                               10                                 5
+     Sample Mean                                  4                                8                                 9
+
+     The overall mean for all the treatments is
+     a. 7.00
+     b. 6.67
+     c. 7.25
+     d. 4.89
+24. In a completely randomized design involving four treatments, the following information is provided.
+
+                              Treatment 1             Treatment 2            Treatment 3             Treatment 4
+     Sample Size                  50                      18                     15                      17
+     Sample Mean                  32                      38                     42                      48
+
+     The overall mean (the grand mean) for all treatments is
+     a. 40.0
+     b. 37.3
+     c. 48.0
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     d. 37.0
+25. An ANOVA procedure is used for data obtained from five populations. five samples, each comprised
+    of 20 observations, were taken from the five populations. The numerator and denominator
+    (respectively) degrees of freedom for the critical value of F are
+    a. 5 and 20
+    b. 4 and 20
+    c. 4 and 99
+    d. 4 and 95
+26. The critical F value with 8 numerator and 29 denominator degrees of freedom at  = 0.01 is
+    a. 2.28
+    b. 3.20
+    c. 3.33
+    d. 3.64
+27. An ANOVA procedure is used for data obtained from four populations. Four samples, each comprised
+    of 30 observations, were taken from the four populations. The numerator and denominator
+    (respectively) degrees of freedom for the critical value of F are
+    a. 3 and 30
+    b. 4 and 30
+    c. 3 and 119
+    d. 3 and 116
+28. Which of the following is not a required assumption for the analysis of variance?
+    a. The random variable of interest for each population has a normal probability distribution.
+    b. The variance associated with the random variable must be the same for each population.
+    c. At least 2 populations are under consideration.
+    d. Populations have equal means.
+29. In an analysis of variance, one estimate of  is based upon the differences between the treatment
+    means and the
+    a. means of each sample
+    b. overall sample mean
+    c. sum of observations
+    d. populations have equal means
+
+
+     NARRBEGIN: Exhibit 13-1
+     Exhibit 13-1
+
+     SSTR = 6,750                    H0: 1=2=3=4
+     SSE = 8,000                     Ha: at least one mean is different
+     nT = 20
+
+     NARREND
+
+30. Refer to Exhibit 13-1. The mean square between treatments (MSTR) equals
+    a. 400
+    b. 500
+    c. 1,687.5
+    d. 2,250
+31. Refer to Exhibit 13-1. The mean square within treatments (MSE) equals
+    a. 400
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     b. 500
+     c. 1,687.5
+     d. 2,250
+32. Refer to Exhibit 13-1. The test statistic to test the null hypothesis equals
+    a. 0.22
+    b. 0.84
+    c. 4.22
+    d. 4.5
+33. Refer to Exhibit 13-1. The null hypothesis is to be tested at the 5% level of significance. The p-value is
+    a. less than .01
+    b. between .01 and .025
+    c. between .025 and .05
+    d. between .05 and .10
+34. Refer to Exhibit 13-1. The null hypothesis
+    a. should be rejected
+    b. should not be rejected
+    c. was designed incorrectly
+    d. None of these alternatives is correct.
+
+
+     NARRBEGIN: Exhibit 13-2
+     Exhibit 13-2
+
+     Source                           Sum                 Degrees                Mean
+     of Variation                  of Squares           of Freedom              Square                    F
+     Between                         2,073.6                 4
+     Treatments
+     Between Blocks                    6,000                   5                  1,200
+     Error                                                     20                  288
+     Total                                                     29
+
+     NARREND
+
+35. Refer to Exhibit 13-2. The null hypothesis for this ANOVA problem is
+    a. 1=2=3=4
+    b. 1=2=3=4=5
+    c. 1=2=3=4=5=6
+    d. 1=2= ... =20
+36. Refer to Exhibit 13-2. The mean square between treatments equals
+    a. 288
+    b. 518.4
+    c. 1,200
+    d. 8,294.4
+37. Refer to Exhibit 13-2. The sum of squares due to error equals
+    a. 14.4
+    b. 2,073.6
+    c. 5,760
+    d. 6,000
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+38. Refer to Exhibit 13-2. The test statistic to test the null hypothesis equals
+    a. 0.432
+    b. 1.8
+    c. 4.17
+    d. 28.8
+39. Refer to Exhibit 13-2. The null hypothesis is to be tested at the 5% level of significance. The p-value is
+    a. greater than 0.10
+    b. between 0.10 to 0.05
+    c. between 0.05 to 0.025
+    d. between 0.025 to 0.01
+40. Refer to Exhibit 13-2. The null hypothesis
+    a. should be rejected
+    b. should not be rejected
+    c. should be revised
+    d. None of these alternatives is correct.
+
+
+     NARRBEGIN: Exhibit 13-3
+     Exhibit 13-3
+     To test whether or not there is a difference between treatments A, B, and C, a sample of 12
+     observations has been randomly assigned to the 3 treatments. You are given the results below.
+
+
+             Treatment                                        Observation
+                 A                           20              30         25                     33
+                 B                           22              26         20                     28
+                 C                           40              30         28                     22
+
+     NARREND
+
+41. Refer to Exhibit 13-3. The null hypothesis for this ANOVA problem is
+    a. 1=2
+    b. 1=2=3
+    c. 1=2=3=4
+    d. 1=2= ... =12
+42. Refer to Exhibit 13-3. The mean square between treatments (MSTR) equals
+    a. 1.872
+    b. 5.86
+    c. 34
+    d. 36
+
+43. Refer to Exhibit 13-3. The mean square within treatments (MSE) equals
+    a. 1.872
+    b. 5.86
+    c. 34
+    d. 36
+44. Refer to Exhibit 13-3. The test statistic to test the null hypothesis equals
+    a. 0.944
+    b. 1.059
+    c. 3.13
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     d. 19.231
+45. Refer to Exhibit 13-3. The null hypothesis is to be tested at the 1% level of significance. The p-value is
+    a. greater than 0.1
+    b. between 0.1 to 0.05
+    c. between 0.05 to 0.025
+    d. between 0.025 to 0.01
+46. Refer to Exhibit 13-3. The null hypothesis
+    a. should be rejected
+    b. should not be rejected
+    c. should be revised
+    d. None of these alternatives is correct.
+
+
+     NARRBEGIN: Exhibit 13-4
+     Exhibit 13-4
+     In a completely randomized experimental design involving five treatments, 13 observations were
+     recorded for each of the five treatments (a total of 65 observations). The following information is
+     provided.
+
+     SSTR = 200 (Sum Square Between Treatments)
+     SST = 800 (Total Sum Square)
+
+     NARREND
+
+47. Refer to Exhibit 13-4. The sum of squares within treatments (SSE) is
+    a. 1,000
+    b. 600
+    c. 200
+    d. 1,600
+
+48. Refer to Exhibit 13-4. The number of degrees of freedom corresponding to between treatments is
+    a. 60
+    b. 59
+    c. 5
+    d. 4
+
+49. Refer to Exhibit 13-4. The number of degrees of freedom corresponding to within treatments is
+    a. 60
+    b. 59
+    c. 5
+    d. 4
+
+50. Refer to Exhibit 13-4. The mean square between treatments (MSTR) is
+    a. 3.34
+    b. 10.00
+    c. 50.00
+    d. 12.00
+
+51. Refer to Exhibit 13-4. The mean square within treatments (MSE) is
+    a. 50
+    b. 10
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     c. 200
+     d. 600
+
+52. Refer to Exhibit 13-4. The test statistic is
+    a. 0.2
+    b. 5.0
+    c. 3.75
+    d. 15
+
+53. Refer to Exhibit 13-4. If at 95% confidence we want to determine whether or not the means of the five
+    populations are equal, the p-value is
+    a. between 0.05 to 0.10
+    b. between 0.025 to 0.05
+    c. between 0.01 to 0.025
+    d. less than 0.01
+
+     NARRBEGIN: Exhibit 13-5
+     Exhibit 13-5
+     Part of an ANOVA table is shown below.
+
+     Source of                                  Sum of              Degrees of              Mean
+     Variation                                  Squares             Freedom                Square                    F
+     Between
+     Treatments                                     180                    3
+     Within
+     Treatments
+     (Error)
+     TOTAL                                          480                   18
+
+     NARREND
+
+54. Refer to Exhibit 13-5. The mean square between treatments (MSTR) is
+    a. 20
+    b. 60
+    c. 300
+    d. 15
+
+55. Refer to Exhibit 13-5. The mean square within treatments (MSE) is
+    a. 60
+    b. 15
+    c. 300
+    d. 20
+
+56. Refer to Exhibit 13-5. The test statistic is
+    a. 2.25
+    b. 6
+    c. 2.67
+    d. 3
+
+57. Refer to Exhibit 13-5. If at 95% confidence, we want to determine whether or not the means of the
+    populations are equal, the p-value is
+    a. between 0.01 to 0.025
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     b. between 0.025 to 0.05
+     c. between 0.05 to 0.1
+     d. greater than 0.1
+
+     NARRBEGIN: Exhibit 13-6
+     Exhibit 13-6
+     Part of an ANOVA table is shown below.
+
+     Source of                                 Sum of               Degrees                Mean
+     Variation                                 Squares            of Freedom              Square                    F
+     Between Treatments                          64                                                                 8
+     Within Treatments                                                                         2
+     Error
+     Total                                         100
+
+     NARREND
+
+58. Refer to Exhibit 13-6. The number of degrees of freedom corresponding to between treatments is
+    a. 18
+    b. 2
+    c. 4
+    d. 3
+
+59. Refer to Exhibit 13-6. The number of degrees of freedom corresponding to within treatments is
+    a. 22
+    b. 4
+    c. 5
+    d. 18
+
+60. Refer to Exhibit 13-6. The mean square between treatments (MSTR) is
+    a. 36
+    b. 16
+    c. 64
+    d. 15
+
+61. Refer to Exhibit 13-6. If at 95% confidence we want to determine whether or not the means of the
+    populations are equal, the p-value is
+    a. greater than 0.1
+    b. between 0.05 to 0.1
+    c. between 0.025 to 0.05
+    d. less than 0.01
+
+62. Refer to Exhibit 13-6. The conclusion of the test is that the means
+    a. are equal
+    b. may be equal
+    c. are not equal
+    d. None of these alternatives is correct.
+
+     NARRBEGIN: Exhibit 13-7
+     Exhibit 13-7
+     The following is part of an ANOVA table that was obtained from data regarding three treatments and a
+     total of 15 observations.
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                 Source of                      Sum of              Degrees of
+                 Variation                      Squares             Freedom
+      Between
+      Treatments                                    64
+      Error (Within
+      Treatments)                                   96
+
+      NARREND
+
+ 63. Refer to Exhibit 13-7. The number of degrees of freedom corresponding to between treatments is
+     a. 12
+     b. 2
+     c. 3
+     d. 4
+
+ 64. Refer to Exhibit 13-7. The number of degrees of freedom corresponding to within treatments is
+     a. 12
+     b. 2
+     c. 3
+     d. 15
+
+ 65. Refer to Exhibit 13-7. The mean square between treatments (MSTR) is
+     a. 36
+     b. 16
+     c. 8
+     d. 32
+
+ 66. Refer to Exhibit 13-7. The computed test statistics is
+     a. 32
+     b. 8
+     c. 0.667
+     d. 4
+ 67. Refer to Exhibit 13-7. If at 95% confidence, we want to determine whether or not the means of the
+     populations are equal, the p-value is
+     a. between 0.01 to 0.025
+     b. between 0.025 to 0.05
+     c. between 0.05 to 0.1
+     d. greater than 0.1
+
+ 68. Refer to Exhibit 13-7. The conclusion of the test is that the means
+     a. are equal
+     b. may be equal
+     c. are not equal
+     d. None of these alternatives is correct.
+
+
+
+PROBLEM
+
+  1. Information regarding the ACT scores of samples of students in three different majors is given below.
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                                                 Major
+                                      Management Finance                 Accounting
+
+              Sample size                    12                9                12
+              Average                        24               25                26
+              Sample variance                18                7                10
+
+    a.
+         Compute the overall sample mean         .
+    b.   Set up the ANOVA table for this problem including the test statistic.
+    c.   At 95% confidence, determine the critical value of F.
+    d.   Using the critical value approach, test to determine whether there is a significant difference
+         in the means of the three populations.
+    e.   Determine the p-value and use it for the test.
+
+2. Information regarding the starting salaries (in $1,000) of samples of students in four different majors is
+   given below.
+
+                                                                          Majors
+                                         Management               Marketing      Finance                    Accounting
+              Sample size                    12                      10             9                          14
+              Average                        26                      31            22                          25
+              Sample variance                10                      7             15                           9
+
+    a.
+         Compute the overall sample mean         .
+    b.   Set up the ANOVA table for this problem including the test statistic.
+    c.   At 95% confidence, determine the critical value of F.
+    d.   Using the critical value approach, test to determine whether there is a significant difference in
+         the means of the three populations.
+    e.   Determine the p-value and use it for the test.
+
+3. Guitars R. US has three stores located in three different areas. Random samples of the sales of the
+   three stores (in $1000) are shown below.
+
+         Store 1               Store 2               Store 3
+           80                    85                    79
+           75                    86                    85
+           76                    81                    88
+           89                    80
+           80
+
+    a.
+         Compute the overall mean .
+    b.   State the null and alternative hypotheses to be tested.
+    c.   Show the complete ANOVA table for this test including the test statistic.
+    d.   The null hypothesis is to be tested at 95% confidence. Determine the critical value for this
+         test. What do you conclude?
+    e.   Determine the p-value and use it for the test.
+
+
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+4. The heating bills for a selected sample of houses using various forms of heating are given below.
+   (Values are in dollars.)
+
+                                   Natural Gas                Central Electric                 Heat Pump
+                                       84                           95                             85
+                                       64                           60                             93
+                                       93                           89                             90
+                                       88                           96                             92
+                                       71                           90                             80
+
+   a.    At  = 0.05, test to see if there is a significant difference among the average heating bills of the
+         homes. Use the p-value approach.
+   b.    Test the above hypotheses using the critical value approach. Let  = .05.
+
+5. In a completely randomized experimental design, 18 experimental units were used for the first
+   treatment, 10 experimental units for the second treatment, and 15 experimental units for the third
+   treatment. Part of the ANOVA table for this experiment is shown below.
+
+   Source of                         Sum of                   Degrees of                    Mean
+   Variation                         Squares                  Freedom                      Square                         F
+   Between
+   Treatments                         _____?                    _____?                     _____?
+                                                                                                                         3.0
+   Error (Within
+   Treatments)                        _____?                    _____?                         6
+
+   Total                              _____?                    _____?
+
+   a.    Fill in all the blanks in the above ANOVA table.
+   b.    At 95% confidence, test to see if there is a significant difference among the means.
+
+
+6. Random samples were selected from three populations. The data obtained are shown below.                                          Please
+   note that the sample sizes are not equal.
+
+           Treatment 1                      Treatment 2                      Treatment 3
+               37                               43                               28
+               33                               39                               32
+               36                               35                               33
+               38                               38
+                                                40
+
+   a.
+         Compute the overall mean .
+   b.    At 95% confidence using the critical value and p-value approach, test to see if there is a
+         significant difference among the means.
+
+
+7. In a completely randomized experimental design, 7 experimental units were used for the first treatment,
+    9 experimental units for the second treatment, and 14 experimental units for the third treatment. Part of
+    the ANOVA table for this experiment is shown below.
+
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     Source of                        Sum of                   Degrees of                    Mean
+     Variation                        Squares                  Freedom                      Square                         F
+     Between
+     Treatments                        _____?                    _____?                     _____?
+                                                                                                                          4.5
+     Error (Within
+     Treatments)                       _____?                    _____?                         4
+
+     Total                             _____?                    _____?
+
+     a.   Fill in all the blanks in the above ANOVA table.
+     b.   At 95% confidence using both the critical value and p-value approaches, test to see if there is a
+          significant difference among the means.
+
+
+ 8. Random samples were selected from three populations. The data obtained are shown below.                                          Please
+    note that the sample sizes are not equal.
+             Treatment 1                     Treatment 2                      Treatment 3
+                 45                              31                               39
+                 41                              34                               35
+                 37                              35                               40
+                 40                              40
+                 42
+     a.
+          Compute the overall mean .
+     b.   At 95% confidence, test to see if there is a significant difference among the means.
+
+ 9. In order to compare the life expectancies of three different brands of printers, eight printers of each
+    brand were randomly selected. Information regarding the three brands is shown below.
+
+                                                                Brand A                  Brand B                   Brand C
+          Average life (in months)                                62                       52                        60
+          Sample variance                                         36                       25                        49
+
+     a.
+          Compute the overall mean .
+     b.   State the null and alternative hypotheses to be tested.
+     c.   Show the complete ANOVA table for this test including the test statistic.
+     d.   The null hypothesis is to be tested at 95% confidence. Determine the critical value for this
+          test. What do you conclude?
+     e.   Determine the p-value and use it for the test.
+
+10. Six observations were selected from each of three populations. The data obtained is shown below.
+
+              Sample 1                         Sample 2                          Sample 3
+                31                               37                                37
+                28                               32                                31
+                34                               34                                32
+                32                               24                                39
+                26                               32                                30
+                29                               33                                35
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     Test at the  = 0.05 level to determine if there is a significant difference in the means of the three
+     populations. Use both the critical value and the p-value approaches.
+
+
+11. The test scores for selected samples of sociology students who took the course from three different
+    instructors are shown below.
+
+                 Instructor A                                Instructor B                                 Instructor C
+                      83                                          90                                           85
+                      60                                          55                                           90
+                      80                                          84                                           90
+                      85                                          91                                           95
+                      71                                          85                                           80
+
+     At  = 0.05, test to see if there is a significant difference among the averages of the three groups.
+     Use both the critical value and p-value approaches.
+
+
+12. Three universities administer the same comprehensive examination to the recipients of MS degrees in
+    psychology. From each institution, a random sample of MS recipients was selected, and these
+    recipients were then given the exam. The following table shows the scores of the students from each
+    university. Note that the sample sizes are not equal.
+
+                 University A                                University B                                 University C
+                     89                                          60                                           82
+                     95                                          95                                           70
+                     75                                          89                                           90
+                     92                                          80                                           79
+                     99                                          66
+                     90
+
+     a.
+          Compute the overall mean .
+     b.   At  = 0.01, test to see if there is any significant difference in the average scores of the
+          students from the three universities. Use both the critical value and p-value approaches.
+
+13. In a completely randomized experimental design, 11 experimental units were used for each of the 3
+    treatments. Part of the ANOVA table is shown below.
+
+          Source of                    Sum                      Degrees                     Mean
+         Variation                  of Squares                of Freedom                   Squares                         F
+     Between
+     Treatments                         1,500                    _____?                     _____?                     _____?
+     Within                            _____?                    _____?                     _____?
+     Treatments
+     (Error)
+     Total                              6,000
+
+     a.   Fill in the blanks in the above ANOVA table.
+     b.   At 95% confidence, test to determine whether or not the means of the 3 populations are equal.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+14. Carolina, Inc. has three stores located in three different areas. Random samples of the sales of the three
+    stores (in $1,000) are shown below. Please note that the sample sizes are not equal.
+
+                Store 1                           Store 2                          Store 3
+                  88                                76                               85
+                  84                                78                               67
+                  88                                60                               58
+                  82                                62
+                  93
+
+     a.
+           Compute the overall mean .
+     b.    At 95% confidence, test to see if there is a significant difference in the average sales of the
+           three stores. Use both the critical value and p-value approaches. Show your complete work
+           and the ANOVA table.
+
+15. In order to compare the life expectancies of three different brands of tires, ten tires of each brand were
+    randomly selected and were subjected to standard wear testing procedures. Information regarding the
+    three brands is shown below.
+
+                                                             Brand A                     Brand B                     Brand C
+     Average mileage (in 1000 miles)                           37                          38                          33
+     Sample variance                                            3                           4                           2
+
+     Use the above data and test to see if the mean mileage for all three brands of tires is the same. Let  =
+     0.05. Use both the critical value and p-value approaches.
+
+16. Three different models of automobiles (A, B, and C) were compared for gasoline consumption. For
+    each model of car, fifteen cars were randomly selected and subjected to standard driving procedures.
+    The average miles/gallon obtained for each model of car and sample standard deviations are shown
+    below.
+
+                                                                     Car A                        Car B                        Car C
+     Average Mile/Gallon                                              42                           49                           44
+     Sample Standard Deviation                                         4                            5                            3
+
+     Use the above data and test to see if the mean gasoline consumption for all three models of cars is the
+     same. Let  = 0.05, and use both the critical and p-value approaches.
+
+17. At  = 0.05, test to determine if the means of the three populations (from which the following samples
+    are selected) are equal. Use both the critical and p-value approaches.
+
+               Sample 1                         Sample 2                          Sample 3
+                 60                               84                                60
+                 78                               78                                57
+                 72                               93                                69
+                 66                               81                                66
+
+
+18. In order to test to see if there is any significant difference in the mean number of units produced per
+    week by each of three production methods, the following data were collected. (Please note that the
+    sample sizes are not equal.)
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+             Method I                         Method II                        Method III
+               182                              170                               162
+               170                              192                               166
+               179                              190
+
+     a.
+          Compute       .
+     b.   At the  = 0.05 level of significance, is there any difference in the mean number of units
+          produced per week by each method? Show the complete ANOVA table. Use both the critical
+          and p-value approaches.
+
+19. A dietician wants to see if there is any difference in the effectiveness of three diets. Eighteen people
+    were randomly chosen for the test. Then each individual was randomly assigned to one of the three
+    diets. Below you are given the total amount of weight lost in six months by each person.
+
+                Diet A                           Diet B                            Diet C
+                  14                              12                                 25
+                  18                              10                                 32
+                  20                              22                                 18
+                  12                              12                                 14
+                  20                              16                                 17
+                  18                              12                                 14
+
+     a.   State the null and alternative hypotheses.
+     b.   Calculate the test statistic.
+     c.   What would you advise the dietician about the effectiveness of the three diets? Use a .05 level
+          of significance.
+
+20. The Ahmadi Corporation wants to increase the productivity of its line workers. Four different
+    programs have been suggested to help increase productivity. Twenty employees, making up a sample,
+    have been randomly assigned to one of the four programs and their output for a day's work has been
+    recorded. You are given the results below.
+
+            Program A                         Program B                        Program C                         Program D
+               150                               150                              185                               175
+               130                               120                              220                               150
+               120                               135                              190                               120
+               180                               160                              180                               130
+               145                               110                              175                               175
+
+     a.   State the null and alternative hypotheses.
+     b.   Construct an ANOVA table.
+     c.   As the statistical consultant to Ahmadi, what would you advise them? Use a .05 level of
+          significance. Use both the critical and p-value approaches.
+     d.   Use Fisher's LSD procedure and determine which population mean (if any) is different from
+          the others. Let  = .05.
+
+
+
+21. The marketing department of a company has designed three different boxes for its product. It wants to
+    determine which box will produce the largest amount of sales. Each box will be test marketed in five
+    different stores for a period of a month. Below you are given the information on sales.
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                                Store 1               Store 2               Store 3                Store 4               Store 5
+     Box 1                        210                   230                   190                    180                   190
+     Box 2                        195                   170                   200                    190                   193
+     Box 3                        295                   275                   290                    275                   265
+     a.   State the null and alternative hypotheses.
+     b.   Construct an ANOVA table.
+     c.   What conclusion do you draw?
+     d.   Use Fisher's LSD procedure and determine which mean (if any) is different from the others.
+          Let  = 0.01.
+
+22. You are given an ANOVA table below with some missing entries.
+     Source                                            Sum                 Degrees                  Mean
+     Variation                                      of Squares           of Freedom                Square                    F
+     Between Treatments                                                       3                    1,198.8
+     Between Blocks                                     5,040                    6                   840
+     Error                                 5,994              18
+     Total                                                    27
+     a. State the null and alternative hypotheses.
+     b. Compute the sum of squares between treatments.
+     c. Compute the mean square due to error.
+     d. Compute the total sum of squares.
+     e. Compute the test statistic F.
+     f. Test the null hypothesis stated in Part a at the 1% level of significance. Be sure to state your
+         conclusion.
+
+
+23. For four populations, the population variances are assumed to be equal. Random samples from each
+    population provide the following data.
+
+             Population                      Sample Size                     Sample Mean                    Sample Variance
+                 1                              11                               40                              23.4
+                 2                              11                               35                              21.6
+                 3                              11                               39                              25.2
+                 4                              11                               37                              24.6
+
+     Using a .05 level of significance, test to see if the means for all four populations are the same.
+
+24. A research organization wishes to determine whether four brands of batteries for transistor radios
+    perform equally well. Three batteries of each type were randomly selected and installed in the three
+    test radios. The number of hours of use for each battery is given below.
+
+                                                                  Brand
+             Radio                         1                        2                            3                         4
+              A                           25                       27                           20                        28
+              B                           29                       38                           24                        37
+              C                           21                       28                           16                        19
+
+     a.   Use the analysis of variance procedure for completely randomized designs to determine
+          whether there is a significant difference in the mean useful life of the four types of batteries.
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+          (Ignore the fact that there are different test radios.) Use the .05 level of significance and be sure
+          to construct the ANOVA table.
+
+     b.   Now consider the three different test radios and carry out the analysis of variance procedure for
+          a randomized block design. Include the ANOVA table.
+     c.   Compare the results in Parts a and b.
+
+
+25. Employees of MNM Corporation are about to undergo a retraining program. Management is trying to
+    determine which of three programs is the best. They believe that the effectiveness of the programs may
+    be influenced by sex. A factorial experiment was designed. You are given the following information.
+
+                                                                                   Factor B: Sex
+          Factor A: Program                                        Male                                       Female
+               Program A                                           320                                         380
+                                                                   240                                         300
+                  Program B                                        160                                         240
+                                                                   180                                         210
+                  Program C                                        240                                         360
+                                                                   290                                         380
+     a.   Set up the ANOVA table.
+     b.   What advice would you give MNM? Use a .05 level of significance.
+
+
+26. The final examination grades of random samples of students from three different classes are shown
+    below.
+
+               Class A                          Class B                           Class C
+                 92                               91                                85
+                 85                               85                                93
+                 96                               90                                82
+                 95                               86                                84
+
+     At the  = .05 level of significance, is there any difference in the mean grades of the three classes?
+
+
+27. Individuals were randomly assigned to three different production processes. The hourly units of
+    production for the three processes are shown below.
+
+                                        Production Process
+             Process 1                      Process 2                           Process 3
+                33                              33                                 28
+                30                              35                                 36
+                28                              30                                 30
+                29                              38                                 34
+
+     Use the analysis of variance procedure with  = 0.05 to determine if there is a significant difference in
+     the mean hourly units of production for the three types of production processes. Use both the critical
+     and p-value approaches.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+28. Random samples of employees from three different departments of MNM Corporation showed the
+    following yearly incomes (in $1,000).
+
+               Department A                                 Department B                                 Department C
+                    40                                           46                                           46
+                    37                                           41                                           40
+                    43                                           43                                           41
+                    41                                           33                                           48
+                    35                                           41                                           39
+                    38                                           42                                           44
+
+     At  = .05, test to determine if there is a significant difference among the average incomes of the
+     employees from the three departments. Use both the critical and p-value approaches.
+
+29. The heating bills for a selected sample of houses using various forms of heating are given below
+    (values are in dollars).
+
+            Gas Heated Homes                               Central Electric                                Heat Pump
+                   83                                            90                                            81
+                   80                                            88                                            83
+                   82                                            87                                            80
+                   83                                            82                                            82
+                   82                                            83                                            79
+
+     At  = 0.05, test to see if there is a significant difference among the average bills of the homes. Use
+     both the critical and p-value approaches.
+
+30. Three universities in your state decided to administer the same comprehensive examination to the
+    recipients of MBA degrees from the three institutions. From each institution, MBA recipients were
+    randomly selected and were given the test. The following table shows the scores of the students from
+    each university.
+
+                  Northern                                      Central                                     Southern
+                  University                                   University                                   University
+                     75                                           85                                           80
+                     80                                           89                                           81
+                     84                                           86                                           84
+                     85                                           88                                           79
+                     81                                                                                        83
+                                                                                                               85
+
+     At  = 0.01, test to see if there is any significant difference in the average scores of the students from
+     the three universities. (Note that the sample sizes are not equal.) Use both the critical and p-value
+     approaches.
+
+31. The three major automobile manufacturers have entered their cars in the Indianapolis 500 race. The
+    speeds of the tested cars are given below.
+
+              Manufacturer A                               Manufacturer B                              Manufacturer C
+                   180                                          177                                         175
+                   175                                          180                                         176
+                   179                                          167                                         177
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                       176                                          172
+                       190
+
+     At  = .05, test to see if there is a significant difference in the average speeds of the cars of the auto
+     manufacturers. Use both the critical and p-value approaches.
+
+32. Part of an ANOVA table is shown below.
+
+     Source of                        Sum of                   Degrees of                    Mean
+     Variation                        Squares                  Freedom                      Square                         F
+     Between
+     Treatments                          90                          3                      _____?                     _____?
+     Within                              120                         20                     _____?
+     Treatments
+     (Error)
+
+     a.   Compute the missing values and fill in the blanks in the above table. Use  = .01 to determine
+          if there is any significant difference among the means.
+     b.   How many groups have there been in this problem?
+     c.   What has been the total number of observations?
+
+33. Part of an ANOVA table involving 8 groups for a study is shown below.
+
+     Source of                        Sum of                   Degrees of                    Mean
+     Variation                        Squares                  Freedom                      Square                         F
+     Between
+     Treatments                          126                     _____?                     _____?                     _____?
+     Within
+     Treatments                          240                     _____?                     _____?
+     (Error)
+     Total                             _____?                        67
+
+     a.   Complete all the missing values in the above table and fill in the blanks.
+     b.   Use  = 0.05 to determine if there is any significant difference among the means of the eight
+          groups.
+
+34. MNM, Inc. has three stores located in three different areas. Random samples of the daily sales of the
+    three stores (in $1,000) are shown below.
+
+               Store 1                           Store 2                          Store 3
+                  9                                10                                6
+                  8                                11                                7
+                  7                                10                                8
+                  8                                13                               11
+
+     At 95% confidence, test to see if there is a significant difference in the average sales of the three stores.
+     Use both the critical and p-value approaches.
+
+
+35. Five drivers were selected to test drive 2 makes of automobiles. The following table shows the number
+    of miles per gallon for each driver driving each car.
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                                                    Drivers
+          Automobile               1                2               3                4               5
+              A                   30               31               30               27              32
+              B                   36               35               28               31              30
+
+     Consider the makes of automobiles as treatments and the drivers as blocks, test to see if there is any
+     difference in the miles/gallon of the two makes of automobiles. Let  = .05.
+36. A factorial experiment involving 2 levels of factor A and 2 levels of factor B resulted in the following.
+                                                                                            Factor B
+                                                                         Level 1                          Level 2
+                                       Level 1                           14                               18
+                                                                         16                               12
+     Factor A
+                                       Level 2      18                       16
+                                                    20                       14
+     Set up an ANOVA table and test for any significant main effect and any interaction effect. Use 
+     = .05.
+
+37. Ten observations were selected from each of 3 populations, and an analysis of variance was performed
+    on the data. The following are the results:
+
+     Source of                         Sum of                   Degrees of                    Mean
+     Variation                         Squares                  Freedom                      Square                         F
+     Between
+     Treatments                           82.4
+     Within
+     Treatments                          158.4
+     (Error)
+
+     a.    Using  = .05, test to see if there is a significant difference among the means of the three
+           populations.
+     b.    If in Part a you concluded that at least one mean is different from the others, determine which
+           mean is different. The three sample means are
+
+38. The following are the results from a completely randomized design consisting of 3 treatments.
+
+     Source of                 Sum of              Degrees of             Mean                F
+     Variation                Squares               Freedom              Square
+     Between
+     Treatments                390.58
+     Within
+     Treatments                 158.4
+     (Error)
+     Total                     548.98                  23
+     a. Using  = .05, test to see if there is a significant difference among the means of the three
+         populations. The sample sizes for the three treatments are equal.
+     b. If in Part a you concluded that at least one mean is different from the others, determine which
+         mean(s) is(are) different. The three sample means are
+           Use Fisher's LSD procedure and let  = .05.
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+39. Eight observations were selected from each of 3 populations (total of 24 observations), and an analysis
+    of variance was performed on the data. The following are part of the results.
+
+     Source of                        Sum of                   Degrees of                    Mean
+     Variation                        Squares                  Freedom                      Square                         F
+     Between
+     Treatments                          216
+     Within
+     Treatments                          252
+     (Error)
+
+     Using  = .05, test to see if there is a significant difference among the means of the three populations.
+
+40. Random samples of individuals from three different cities were asked how much time they spend per
+    day watching television. The results (in minutes) for the three groups are shown below.
+
+                City I                           City II                          City III
+                 260                              178                               211
+                 280                              190                               190
+                 240                              220                               250
+                 260                              240
+                 300
+
+     At  = 0.05, test to see if there is a significant difference in the averages of the three groups.
+
+41. Three different brands of tires were compared for wear characteristics. From each brand of tire, ten
+    tires were randomly selected and subjected to standard wear-testing procedures. The average mileage
+    obtained for each brand of tire and sample variances (both in 1,000 miles) are shown below.
+
+                                                        Brand A                       Brand B                     Brand C
+     Average Mileage                                      37                            38                          33
+     Sample Variance                                       3                             4                           2
+
+     At 95% confidence, test to see if there is a significant difference in the average mileage of the three
+     brands.
+
+42. Nancy, Inc. has three stores located in three different areas. Random samples of the sales of the three
+    stores (In $1,000) are shown below.
+
+               Store 1                           Store 2                          Store 3
+                 46                                34                               33
+                 47                                36                               31
+                 45                                35                               35
+                 42                                39
+                 45
+
+     a.
+          Compute the overall mean       .
+     b.   At 95% confidence, test to see if there is a significant difference in the average sales of the
+          three stores.
+
+43. In a completely randomized experimental design, 11 experimental units were used for each of the 4
+    treatments. Part of the ANOVA table is shown below.
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     Source of                         Sum of                   Degrees of                    Mean
+     Variation                         Squares                  Freedom                      Square                         F
+     Between
+     Treatments                          1500                     _____?                     _____?                     _____?
+     Within
+     Treatments                         _____?                    _____?                     _____?
+     Total                               5500
+
+     Fill in the blanks in the above ANOVA table.
+
+44. Samples were selected from three populations. The data obtained are shown below.
+
+                                           Sample 1          Sample 2           Sample 3
+                                             10                16                 15
+                                             13                14                 18
+                                             12                15
+                                             13
+
+
+
+     Sample Mean                                12                15                16.5
+
+     Sample Variance                           2.0                1.0                4.5
+
+     a.
+           Compute the overall mean       .
+     b.    Set up an ANOVA table for this problem.
+     c.    At 95% confidence, test to determine whether there is a significant difference in the means of
+           the three populations. Use both the critical and p-value approaches.
+45. In a completely randomized experimental design, 14 experimental units were used for each of the 5
+    levels of the factor (i.e., 5 treatments). Fill in the blanks in the following ANOVA table.
+
+     Source of                         Sum of                   Degrees of                    Mean
+     Variation                         Squares                  Freedom                      Square                         F
+     Between
+     Treatments                         _____?                    _____?                       800?
+                                                                                                                         _____
+     Error (Within
+     Treatments)                        _____?                    _____?                      _____
+
+     Total                              10600?                    _____?
+
+46. Random samples of several days’ sales of handguns per day in three different states are shown below.
+    We are interested in determining whether or not there is a significant difference in the average sales of
+    guns in the three states
+
+                                             Tennessee              Kentucky                 Texas
+                                                12                     15                     16
+                                                   13                    19                     18
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                                                  17                    20
+                                                  10
+                                                  18
+
+     a.
+          Compute the overall mean .
+     b.   State the null and alternative hypotheses to be tested.
+     c.   Show the complete ANOVA table for this test including the test statistic.
+     d.   The null hypothesis is to be tested at 95% confidence. Determine the critical value for this
+          test. What do you conclude?
+     e.   Determine the p-value and use it for the test.
+
+47. Information regarding random samples of annual salaries (in thousands of dollars) of doctors in three
+    different specialties is shown below.
+
+                                      Pediatrics             Radiology          Pathology
+          Sample size                   12                     10                 11
+          Average salary              120                    186                240
+          Sample variance               16                     18                 20
+
+     a.
+          Compute the overall mean .
+     b.   State the null and alternative hypotheses to be tested.
+     c.   Show the complete ANOVA table for this test including the test statistic.
+     d.   The null hypothesis is to be tested at 95% confidence. Determine the critical value for this
+          test. What do you conclude?
+     e.   Determine the p-value and use it for the test.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+

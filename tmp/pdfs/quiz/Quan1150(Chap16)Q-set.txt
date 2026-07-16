@@ -1,0 +1,908 @@
+CHAPTER 16—REGRESSION ANALYSIS: MODEL BUILDING
+
+
+MULTIPLE CHOICE
+
+  1. A model in the form of y = 0 + 1z1 + 2z2 + . . . +pzp +  where each independent variable zj (for j =
+     1, 2, . . ., p) is a function of xj . xj is known as the
+     a. general linear model
+     b. general curvilinear model
+     c. multiplicative model
+     d. multiplicative curvilinear model
+  2. A test used to determine whether or not first order autocorrelation is present is
+     a. z test
+     b. t test
+     c. Chi-square test
+     d. Durbin-Watson Test
+  3. In multiple regression analysis, the general linear model
+     a. can not be used to accommodate curvilinear relationships between dependent variables
+         and independent variables
+     b. can be used to accommodate curvilinear relationships between the independent variables
+         and dependent variable
+     c. must contain more than 2 independent variables
+     d. None of these alternatives is correct.
+  4. The following model
+
+
+
+      is referred to as a
+      a. curvilinear model
+      b. curvilinear model with one predictor variable
+      c. simple second-order model with one predictor variable
+      d. simple first-order model with one predictor variable
+  5. In multiple regression analysis, the word linear in the term "general linear model" refers to the fact that
+     a. , , . . . p, all have exponents of 0
+     b. , , . . . p, all have exponents of 1
+     c. , , . . . p, all have exponents of at least 1
+     d. , , . . . p, all have exponents of less than 1
+  6. Serial correlation is
+     a. the correlation between serial numbers of products
+     b. the same as autocorrelation
+     c. the same as leverage
+     d. None of these alternatives is correct.
+  7. The joint effect of two variables acting together is called
+     a. autocorrelation
+     b. interaction
+     c. serial correlation
+     d. joint regression
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+ 8. A test to determine whether or not first-order autocorrelation is present is
+    a. a t test
+    b. an F test
+    c. a test of interaction
+    d. a chi-square test
+ 9. Which of the following tests is used to determine whether an additional variable makes a significant
+    contribution to a multiple regression model?
+    a. a t test
+    b. a Z test
+    c. an F test
+    d. a chi-square test
+10. A variable such as Z, whose value is Z = X1X2 is added to a general linear model in order to account
+    for potential effects of two variables X1 and X2 acting together. This type of effect is
+    a. impossible to occur
+    b. called interaction
+    c. called multicollinearity effect
+    d. called transformation effect
+11. The following regression model
+
+
+
+
+     is known as
+     a. first-order model with one predictor variable
+     b. second-order model with two predictor variables
+     c. second-order model with one predictor variable
+     d. None of these alternatives is correct.
+12. The parameters of nonlinear models have exponents
+    a. larger than zero
+    b. larger than 1
+    c. larger than 2
+    d. larger than 3
+13. All the variables in a multiple regression analysis
+    a. must be quantitative
+    b. must be either quantitative or qualitative but not a mix of both
+    c. must be positive
+    d. None of these alternatives is correct.
+14. The range of the Durbin-Watson statistic is between
+    a. -1 to 1
+    b. 0 to 1
+    c. -infinity to + infinity
+    d. 0 to 4
+15. The correlation in error terms that arises when the error terms at successive points in time are related is
+    termed
+    a. leverage
+    b. multicorrelation
+    c. autocorrelation
+    d. parallel correlation
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+16. What value of Durbin-Watson statistic indicates no autocorrelation is present?
+    a. 1
+    b. 2
+    c. -2
+    d. 0
+17. When dealing with the problem of non-constant variance, the reciprocal transformation means using
+    a. 1/X as the independent variable instead of X
+    b. X2 as the independent variable instead of X
+    c. Y2 as the dependent variable instead of Y
+    d. 1/Y as the dependent variable instead of Y
+
+
+     NARRBEGIN: Exhibit 16-1
+     Exhibit 16-1
+     In a regression analysis involving 25 observations, the following estimated regression equation was
+     developed.
+
+
+
+     Also, the following standard errors and the sum of squares were obtained.
+
+     Sb1 = 3 Sb2 = 6          Sb3 = 7
+     SST = 4,800              SSE = 1,296
+
+     NARREND
+
+18. Refer to Exhibit 16-1. If you want to determine whether or not the coefficients of the independent
+    variables are significant, the critical value of t statistic at  = 0.05 is
+    a. 2.080
+    b. 2.060
+    c. 2.064
+    d. 1.96
+19. Refer to Exhibit 16-1. The coefficient of X1
+    a. is significant
+    b. is not significant
+    c. can not be tested, because not enough information is provided
+    d. None of these alternatives is correct.
+20. Refer to Exhibit 16-1. The coefficient of X2
+    a. is significant
+    b. is not significant
+    c. can not be tested, because not enough information is provided
+    d. None of these alternatives is correct.
+21. Refer to Exhibit 16-1. The coefficient of X3
+    a. is significant
+    b. is not significant
+    c. can not be tested, because not enough information is provided
+    d. None of these alternatives is correct.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+22. Refer to Exhibit 16-1. The multiple coefficient of determination is
+    a. 0.27
+    b. 0.73
+    c. 0.50
+    d. 0.33
+23. Refer to Exhibit 16-1. If we are interested in testing for the significance of the relationship among the
+    variables (i.e., significance of the model) the critical value of F at  = 0.05 is
+    a. 2.76
+    b. 2.78
+    c. 3.10
+    d. 3.07
+24. Refer to Exhibit 16-1. The test statistic for testing the significance of the model is
+    a. 0.730
+    b. 18.926
+    c. 3.703
+    d. 1.369
+25. Refer to Exhibit 16-1. The p-value for testing the significance of the regression model is
+    a. less than 0.01
+    b. between 0.01 and 0.025
+    c. between 0.025 and 0.05
+    d. between 0.05 and 0.1
+
+
+     NARRBEGIN: Exhibit 16-2
+     Exhibit 16-2
+     In a regression model involving 30 observations, the following estimated regression equation was
+     obtained.
+
+
+
+     For this model, SSR = 1,740 and SST = 2,000.
+     NARREND
+
+26. Refer to Exhibit 16-2. The value of SSE is
+    a. 3,740
+    b. 170
+    c. 260
+    d. 2000
+27. Refer to Exhibit 16-2. The degrees of freedom associated with SSR are
+    a. 24
+    b. 6
+    c. 19
+    d. 5
+28. Refer to Exhibit 16-2. The degrees of freedom associated with SSE are
+    a. 24
+    b. 6
+    c. 19
+    d. 5
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+29. Refer to Exhibit 16-2. The degrees of freedom associated with SST are
+    a. 24
+    b. 6
+    c. 19
+    d. None of these alternatives is correct.
+30. Refer to Exhibit 16-2. The value of MSR is
+    a. 10.40
+    b. 348
+    c. 10.83
+    d. 52
+31. Refer to Exhibit 16-2. The value of MSE is
+    a. 348
+    b. 10.40
+    c. 10.83
+    d. 32.13
+32. Refer to Exhibit 16-2. The test statistic F for testing the significance of the above model is
+    a. 32.12
+    b. 6.69
+    c. 4.8
+    d. 58
+33. Refer to Exhibit 16-2. The p-value for testing the significance of the regression model is
+    a. less than 0.01
+    b. between 0.01 and 0.025
+    c. between 0.025 and 0.05
+    d. between 0.05 and 0.1
+34. Refer to Exhibit 16-2. The coefficient of determination for this model is
+    a. 0.6923
+    b. 0.1494
+    c. 0.1300
+    d. 0.8700
+
+
+     NARRBEGIN: Exhibit 16-3
+     Exhibit 16-3
+     Below you are given a partial computer output based on a sample of 25 observations.
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                                                     Coefficient                               Standard Error
+     Constant                                           145                                         29
+     X1                                                 20                                           5
+     X2                                                 -18                                          6
+     X3                                                  4                                           4
+
+     NARREND
+
+35. Refer to Exhibit 16-3. The estimated regression equation is
+    a.
+    b.
+    c.
+     d.
+
+36. Refer to Exhibit 16-3. We want to test whether the parameter 2 is significant. The test statistic equals
+    a. 4
+    b. 5
+    c. 3
+    d. -3
+37. Refer to Exhibit 16-3. The critical t value obtained from the table to test an individual parameter at the
+    5% level is
+    a. 2.06
+    b. 2.069
+    c. 2.074
+    d. 2.080
+
+
+     NARRBEGIN: Exhibit 16-4
+     Exhibit 16-4
+     In a laboratory experiment, data were gathered on the life span (Y in months) of 33 rats, units of daily
+     protein intake (X1), and whether or not agent X2 (a proposed life extending agent) was added to the
+     rats diet (X2 = 0 if agent X2 was not added, and X2 = 1 if agent was added.) From the results of the
+     experiment, the following regression model was developed.
+
+     Also provided are SSR = 60 and SST = 180.
+     NARREND
+
+38. Refer to Exhibit 16-4. From the above function, it can be said that the life expectancy of rats that were
+    given agent X2 is
+    a. 1.7 months more than those who did not take agent X2
+    b. 1.7 months less than those who did not take agent X2
+    c. 0.8 months less than those who did not take agent X2
+    d. 0.8 months more than those who did not take agent X2
+39. Refer to Exhibit 16-4. The life expectancy of a rat that was given 3 units of protein daily, and who
+    took agent X2 is
+    a. 36.7
+    b. 36
+    c. 49
+    d. 38.4
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+40. Refer to Exhibit 16-4. The life expectancy of a rat that was not given any protein and that did not take
+    agent X2 is
+    a. 36.7
+    b. 34.3
+    c. 36
+    d. 38.4
+41. Refer to Exhibit 16-4. The life expectancy of a rat that was given 2 units of agent X2 daily, but was not
+    given any protein is
+    a. 32.6
+    b. 36
+    c. 38
+    d. 34.3
+42. Refer to Exhibit 16-4. The degrees of freedom associated with SSR are
+    a. 2
+    b. 33
+    c. 32
+    d. 30
+43. Refer to Exhibit 16-4. The degrees of freedom associated with SSE are
+    a. 3
+    b. 33
+    c. 32
+    d. 30
+44. Refer to Exhibit 16-4. The multiple coefficient of determination is
+    a. 0.2
+    b. 0.5
+    c. 0.333
+    d. 5
+45. Refer to Exhibit 16-4. If we want to test for the significance of the model, the critical value of F at
+    95% confidence is
+    a. 4.17
+    b. 3.32
+    c. 2.92
+    d. 1.96
+46. Refer to Exhibit 16-4. The test statistic for testing the significance of the model is
+    a. 0.50
+    b. 5.00
+    c. 0.25
+    d. 0.33
+47. Refer to Exhibit 16-4. The p-value for testing the significance of the regression model is
+    a. less than 0.01
+    b. between 0.01 and 0.025
+    c. between 0.025 and 0.05
+    d. between 0.05 and 0.10
+48. Refer to Exhibit 16-4. The model
+    a. is significant
+    b. is not significant
+    c. Not enough information is provided to answer this question.
+    d. None of these alternatives is correct.
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+PROBLEM
+
+ 1. In a regression analysis involving 21 observations and 4 independent variables, the following
+    information was obtained.
+
+        = 0.80
+    S = 5.0
+
+    Based on the above information, fill in all the blanks in the following ANOVA.
+
+
+    Hint:          =           , but also          = 1-           .
+
+
+    Source                               DF                           SS                       MS                          F
+
+    Regression                         _____?                    _____?                     _____?                     _____?
+
+    Error (Residual)                   _____?                    _____?                     _____?
+
+    Total                              _____?                    _____?
+
+ 2. We are interested in determining what type of model best describes the relationship between two
+    variables x and y.
+
+    a.    For a given data set, an estimated regression equation relating x and y of the form
+                          was developed, using Excel. The results are shown below. Comment on the
+          adequacy of this equation for predicting y. Let  = .05.
+
+    SUMMARY OUTPUT
+               Regression Statistics
+    Multiple R                                     0.5095
+    R Square                                       0.2596
+    Adjusted R Square                              0.1362
+    Standard Error                                 2.0745
+    Observations                                        8
+
+    ANOVA
+                                         df                         SS                      MS               F           Significance F
+    Regression                           1                        9.0536                  9.0536          2.1037            0.1971
+    Residual                             6                        25.8214                 4.3036
+    Total                                7                        34.875
+
+                                  Coefficients               Standard Error                t Stat        P-value
+    Intercept                       2.7857                       1.6164                   1.7234         0.1356
+    x                               0.4643                       0.3201                   1.4504         0.1971
+
+    b.    An estimated regression equation for the same data set (as in part a) of the form
+                                  was developed. The Excel output is shown below. Comment on the
+          adequacy of this equation for predicting y. Let  = .05.
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+   SUMMARY
+   OUTPUT
+
+       Regression
+        Statistics
+   Multiple R                             0.9680
+   R Square                               0.9370
+   Adjusted R Square                      0.9118
+   Standard Error                         0.6628
+   Observations                                8
+
+   ANOVA
+                                      df                    SS                MS              F            Significance F
+   Regression                         2                  32.6786            16.3392        37.1951            0.0010
+   Residual                           5                   2.1964            0.4393
+   Total                              7                   34.875
+
+                               Coefficients        Standard Error t Stat                   P-value
+   Intercept                    -2.8393                0.9247     -3.0706                  0.0278
+   x                             3.8393                0.4714      8.1437                  0.0005
+   x-squared                     -0.375                0.0511     -7.3335                  0.0007
+
+   c.    Use the results of Part b and predict y when x = 4.
+
+3. Consider the following data for two variables x and y.
+          x           y
+          1           1
+          4           6
+          7           9
+          8           7
+          9           4
+          10          3
+   a. An estimated regression equation of the form              was developed for the above
+      data and the results are shown below. Comment on the adequacy of this equation for
+      predicting y. Let  = .05.
+
+   SUMMARY OUTPUT
+
+                                            Regression Statistics
+   Multiple R                                                                                           0.3052
+   R Square                                                                                             0.0932
+   Adjusted R Square                                                                                   -0.1335
+   Standard Error                                                                                       3.0857
+   Observations                                                                                              6
+
+
+   ANOVA
+                                     df                         SS                     MS              F               Significance F
+   Regression                        1                        3.9130                 3.9130         0.4110                0.5564
+   Residual                          4                       38.0870                 9.5217
+   Total                             5                          42
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                              Coefficients               Standard Error               t Stat        P-value
+   Intercept                    3.3043                       2.9297                  1.1279         0.3224
+   x                            0.2609                       0.4069                  0.6411         0.5564
+
+   b.    A regression equation of the form                    was developed for the above data and
+         results are shown below. Comment on the adequacy of this equation for predicting y. Let
+          = .05.
+
+
+   SUMMARY OUTPUT
+
+              Regression Statistics
+   Multiple R                                         0.9508
+   R Square                                           0.9041
+   Adjusted R Square                                  0.8401
+   Standard Error                                     1.1588
+   Observations                                            6
+
+   ANOVA
+                                                    df                   SS                   MS       F                 Significance F
+   Regression                                       2                  37.9713              18.9856 14.1376                 0.0297
+   Residual                                         3                  4.0287                1.343
+   Total                                            5                    42
+
+                                             Coefficients         Standard Error             t Stat       P-value
+   Intercept                                  -2.6808                 1.6196                -1.655        0.1964
+   x                                           3.6803                 0.6960                5.2879        0.0132
+   x-squared                                  -0.3133                 0.0622                -5.036        0.0151
+
+   c.    Predict the value of y when x = 5.
+
+4. The following estimated regression equation has been developed for the relationship between y, the
+   dependent variable, and x, the independent variable.
+
+   The sample size for this regression model was 23, and SSR = 600 and SSE = 400.
+   a. Compute the coefficient of determination.
+   b. Using  = .05, test for a significant relationship.
+
+5. A data set consisting of 7 observations of a dependent variable y and two independent variables x1 and
+   x2 was used in a regression analysis. Using (x1) as the only independent variable, the following
+   function is provided.
+               = 0.408 + 1.338x1
+   The SSE for the above model is 39.535.
+   Using both x1 and x2 as independent variables yields the following function.
+               = 0.805 + 0.498x1 - 0.477x2
+   The SSE for this latter function is 1.015.
+
+   Use an F test and determine if x2 contributes significantly to the model. Let  = 0.05.
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+6. Monthly total production costs and the number of units produced at a local company over a period of
+   10 months are shown below.
+                                         Production Costs (Yi)            Units Produced (Xi)
+               Month                        (in millions $)                   (in millions)
+                   1                               1                               2
+                   2                               1                               3
+                   3                               1                               4
+                   4                               2                               5
+                   5                               2                               6
+                   6                               4                               7
+                   7                               5                               8
+                   8                               7                               9
+                   9                               9                               10
+                  10                              12                               10
+
+   a.    Draw a scatter diagram for the above data.
+   b.    Assume that a model in the form of
+
+
+
+         best describes the relationship between X and Y. Estimate the parameters of this curvilinear
+         regression equation.
+
+7. Consider the following data.
+
+        Yi           Xi
+        2            1
+        3            4
+        5            6
+        8            7
+        10           8
+
+   a.    Draw a scatter diagram. Does the relationship between X and Y appear to be linear?
+   b.    Assume the relationship between X and Y can best be given by
+
+
+
+
+   Estimate the parameters of this curvilinear function.
+
+8. Part of an Excel output relating Y (dependent variable) and 4 independent variables, X1 through X4, is
+   shown below.
+
+   Summary Output
+
+            Regression Statistics
+   Multiple R                      ?
+   R Square                        ?
+   Adjusted R Square               ?
+   Standard Error               72.6093
+   Observations                   20
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     ANOVA
+                                                df                 SS                       MS                F         Significance F
+     Regression                                 ?              422975.2376                   ?                ?            0.0000
+     Residual                                   ?                   ?                        ?
+     Total                                      ?                   ?
+
+                                         Coefficients         Standard Error               t Stat        P-value
+     Intercept                            -203.6125              100.2940                     ?          0.0605
+     X1                                     0.6483                0.1110                      ?          0.0000
+     X2                                     0.0190                0.0065                      ?          0.0101
+     X3                                    40.4577                7.5940                      ?          0.0001
+     X4                                    -0.1032               20.7823                      ?          0.9961
+
+     a.    Fill in all the blanks marked with "?"
+     b.    At 95% confidence, which independent variables are significant and which ones are not? Fully
+           explain how you arrived at your answers.
+
+ 9. In a regression analysis involving 20 observations and five independent variables, the following
+    information was obtained.
+
+                                               ANALYSIS OF VARIANCE
+     Source of                         Degrees        Sum of         Mean
+     Variation                       of Freedom       Squares       Squares                                                 F
+     Regression                        _____?         _____?        _____?
+                                                                                                                        _____?
+     Error (Residual)                   _____?                    _____?                         30
+
+     Total                                                           990
+
+     Fill in all the blanks in the above ANOVA table.
+
+10. A researcher is trying to decide whether or not to add another variable to his model. He has estimated
+    the following model from a sample of 28 observations.
+
+     SSE = 1,425           SSR = 1,326
+
+     He has also estimated the model with an additional variable X3. The results are
+
+     SSE = 1,300           SSR = 1,451
+
+     What advice would you give this researcher? Use a .05 level of significance.
+
+11. We want to test whether or not the addition of 3 variables to a model will be statistically significant.
+    You are given the following information based on a sample of 25 observations.
+
+     SSE = 725             SSR = 526
+
+     The equation was also estimated including the 3 variables. The results are
+
+     SSE = 520             SSR = 731
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     a.    State the null and alternative hypotheses.
+     b.    Test the null hypothesis at the 5% level of significance.
+
+12. Multiple regression analysis was used to study the relationship between a dependent variable, Y, and
+    three independent variables X1, X2 and, X3. The following is a partial result of the regression analysis
+    involving 20 observations.
+
+                                     Coefficient             Standard Error
+     Intercept                          20.00                     5.00
+     X1                                 15.00                     3.00
+     X2                                  8.00                     5.00
+     X3                                -18.00                    10.00
+
+     Analysis of Variance
+
+     Source                               DF                          SS                        MS                          F
+     Regression                                                                                 80
+     Error                                                           320
+
+     a.    Compute the coefficient of determination.
+     b.    Perform a t test and determine whether or not  is significantly different from zero ( = 0.05).
+     c.    Perform a t test and determine whether or not 2 is significantly different from zero ( = 0.05).
+     d.    Perform a t test and determine whether or not 3 is significantly different from zero ( = 0.05).
+     e.    At  = 0.05, perform an F test and determine whether or not the regression model is significant.
+
+13. Multiple regression analysis was used to study the relationship between a dependent variable, Y, and
+    four independent variables; X1, X2, X3 and, X4. The following is a partial result of the regression
+    analysis involving 31 observations.
+                             Coefficient          Standard Error
+    Intercept                    18.00                 6.00
+    X1                           12.00                 8.00
+    X2                           24.00                48.00
+    X3                          -36.00                36.00
+    X4                           16.00                 2.00
+
+     Analysis of Variance
+
+     Source                       df                   SS                     MS                   F
+     Regression                                                               125
+     Error
+     Total                                             760
+     a. Compute the coefficient of determination.
+     b. Perform a t test and determine whether or not  is significantly different from zero ( = 0.05).
+     c. Perform a t test and determine whether or not 4 is significantly different from zero ( = 0.05).
+     d. At  = 0.05, perform an F test and determine whether or not the regression model is significant.
+
+14. A regression model relating a dependent variable, Y, with one independent variable, X1, resulted in an
+    SSE of 400. Another regression model with the same dependent variable, Y, and two independent
+    variables, X1 and X2, resulted in an SSE of 320. At  = .05, determine if X2 contributed significantly to
+    the model. The sample size for both models was 20.
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+15. A regression model with one independent variable, X1, resulted in an SSE of 50. When a second
+    independent variable, X2, was added to the model, the SSE was reduced to 40. At  = 0.05, determine
+    if X2 contributes significantly to the model. The sample size for both models was 30.
+
+16. When a regression model was developed relating sales (Y) of a company to its product's price (X1), the
+    SSE was determined to be 495. A second regression model relating sales (Y) to product's price (X1)
+    and competitor's product price (X2) resulted in an SSE of 396. At  = 0.05, determine if the
+    competitor's product's price contributed significantly to the model. The sample size for both models
+    was 33.
+
+17. A regression model relating units sold (Y), price (X1), and whether or not promotion was used (X2 = 1
+    if promotion was used and 0 if it was not) resulted in the following model.
+
+
+
+
+     and the following information is provided.
+
+     n= 15                Sb1 = .01             Sb2 = 0.1
+
+     a.   Is price a significant variable?
+     b.   Is promotion significant?
+
+18. A regression model relating the yearly income (Y), age (X1), and the gender of the faculty member of a
+    university (X2 = 1 if female and 0 if male) resulted in the following information.
+
+
+
+     n = 20               SSE = 500             SSR = 1,500
+     Sb1 = 0.2            Sb2 = 0.1
+
+     a.   Is gender a significant variable?
+     b.   Determine the multiple coefficient of determination.
+
+19. A regression analysis was applied in order to determine the relationship between a dependent variable
+    and 8 independent variables. The following information was obtained from the regression analysis.
+     R Square = 0.80
+     SSR = 4,280
+     Total number of observations n = 56
+     a.   Fill in the blanks in the following ANOVA table.
+     b.   Is the model significant? Let  = 0.05.
+     Source of                        Degrees                    Sum of                      Mean
+     Variation                      of Freedom                   Squares                    Squares                      F
+     Regression                       _____?                     _____?                     _____?                     _____?
+     Error                            _____?                     _____?                     _____?
+
+
+     Total                             _____?                    _____?
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+20. In a regression analysis involving 18 observations and four independent variables, the following
+    information was obtained.
+
+     Multiple R = 0.6000
+     R Square = 0.3600
+     Standard Error = 4.8000
+
+     Based on the above information, fill in all the blanks in the following ANOVA table.
+
+                                              ANALYSIS OF VARIANCE
+     Source of                        Degrees        Sum of         Mean
+     Variation                      of Freedom       Squares       Squares                                               F
+     Regression                       _____?         _____?        _____?                                              _____?
+     Error                            _____?         _____?        _____?
+
+21. The following are partial results of a regression analysis involving sales (Y in millions of dollars),
+    advertising expenditures (X1 in thousands of dollars), and number of salespeople (X2) for a corporation.
+    The regression was performed on a sample of 10 observations.
+
+                                                    Coefficient                               Standard Error
+     Constant                                         50.00                                       20.00
+     X1                                                3.60                                        1.20
+     X2                                                0.20                                        0.20
+
+     a.   At  = 0.05, test for the significance of the coefficient of advertising.
+     b.   If the company uses $20,000 in advertisement and has 300 salespersons, what are the expected
+          sales? (Give your answer in dollars.)
+
+22. A regression analysis was applied in order to determine the relationship between a dependent variable
+    and 4 independent variables. The following information was obtained from the regression analysis.
+    R Square = 0.80
+    SSR = 680
+    Total number of observations n = 45
+    a. Fill in the blanks in the following ANOVA table.
+    b. At  = 0.05 level of significance, test to determine if the model is significant.
+    Source of                 Degrees             Sum of               Mean
+    Variation               of Freedom            Squares             Squares              F
+    Regression                _____?              _____?              _____?             _____?
+    Error (Residual)          _____?              _____?              _____?
+
+     Total                             _____?                    _____?
+
+23. A regression analysis (involving 45 observations) relating a dependent variable (Y) and two
+    independent variables resulted in the following information.
+
+
+
+     The SSE for the above model is 49.
+     When two other independent variables were added to the model, the following information was
+     provided.
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     This latter model's SSE is 40.
+     At 95% confidence test to determine if the two added independent variables contribute significantly to
+     the model.
+
+24. A computer manufacturer has developed a regression model relating Sales (Y in $10,000) with four
+    independent variables. The four independent variables are Price (in dollars), Competitor's Price (in
+    dollars), Advertising (in $1000) and Type of computer produced (Type = 0 if desktop, Type = 1 if
+    laptop). Part of the regression results are shown below.
+    ANOVA
+                                  df              SS            MS
+    Regression                    4          27641631.121 6910407.780
+    Residual                     35          42277876.624 1207939.332
+
+                          Coefficients Standard Error            t Stat
+     Intercept                2268.233             1237.880
+     Price                        -0.803               0.316
+     Competitor's Price            0.859               0.281
+     Advertising                   0.216               0.079
+     Type                       567.806             373.400
+     a. What has been the sample size?
+     b. Determine the coefficient of determination.
+     c. Compute the test statistic t for each of the four independent variables.
+     d. Determine the p-values for the four variables.
+     e. At 95% confidence, which variables are significant? Explain how you arrived at your
+          conclusion.
+     f. At 95% confidence, test to see if the regression model is significant.
+
+25. Thirty-four observations of a dependent variable (Y) and two independent variables resulted in an SSE
+    of 300. When a third independent variable was added to the model, the SSE was reduced to 250. At
+    95% confidence, determine whether or not the third independent variable contributes significantly to
+    the model.
+
+26. Forty-eight observations of a dependent variable (Y) and five independent variables resulted in an SSE
+    of 438. When two additional independent variables were added to the model, the SSE was reduced to
+    375. At 95% confidence, determine whether or not the two additional independent variables contribute
+    significantly to the model.
+
+27. A regression analysis was applied in order to determine the relationship between a dependent variable
+    and 4 independent variables. The following information was obtained from the regression analysis.
+    R Square = 0.60
+    SSR = 4,800
+    Total number of observations n = 35
+    a. Fill in the blanks in the following ANOVA table.
+    b. At  = 0.05 level of significance, test to determine if the model is significant.
+
+     Source of                        Degrees                    Sum of                      Mean
+     Variation                      of Freedom                   Squares                    Squares                      F
+     Regression                       _____?                     _____?                     _____?                     _____?
+
+     Error (Residual)                  _____?                    _____?                     _____?
+
+     Total                             _____?                    _____?
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+28. A regression analysis relating a company’s sales, their advertising expenditure, price, and time resulted
+    in the following.
+              Regression Statistics
+     Multiple R                     0.8800
+     R Square                       0.7744
+     Adjusted R Square              0.7560
+     Standard Error                 232.29
+     Observations                       25
+
+      ANOVA
+                                            df                 SS                     MS                    F              Significance F
+      Regression                            3              53184931.86            17728310.62             328.56              0.0000
+      Residual                              21             1133108.30              53957.54
+      Total                                 24             54318040.16
+
+                                                              Standard
+                                     Coefficients               Error                  t Stat            P-value
+      Intercept                        927.23                 1229.86                   0.75             0.4593
+      Advertising (X1)                  1.02                    3.09                    0.33             0.7450
+      Price (X2)                       15.61                    5.62                    2.78             0.0112
+      Time (X3)                        170.53                   28.18                   6.05             0.0000
+
+     a.   At 95% confidence, determine whether or not the regression model is significant. Fully
+          explain how you arrived at your conclusion (give numerical reasoning) and what your answer
+          indicates.
+     b.   At 95% confidence determine which variables are significant and which are not. Explain how
+          you arrived at your conclusion (Give numerical reasoning).
+     c.   Fully explain the meaning of R-square, which is given in this model. Be very specific and
+          give numerical explanation.
+
+29. Ziba, Inc. has provided the following information regarding their sales for January through December
+    of 2009. (Part of the data file is shown below.)
+                              Sales              Advertising          Time
+      Year 2009         (Y in $100,000)       (X1 in $10,000)         (X2)
+      January              ………….                  ………….                 1
+      February             ………….                  ………….                 2
+      ………….                ………….                 …………..             ……….
+      ………….                ………….                 …………..             ……….
+      November                 36                     26               11
+      December                 37                     28               12
+     The results of the regression analysis relating these variables are shown below.
+                                         Coefficients      Standard Error       t Stat                              P-value
+      Intercept                              13.01              0.6334        20.5379                               0.0000
+      Advertising (X1 in 10,000)              0.31              0.1293         2.3784                               0.0413
+      Time (X2)                               1.39              0.2863         4.8390                               0.0009
+
+     a.   The company is planning to increase their advertising by 5% per month for the months of
+          January and February of 2010. What would be the advertising for January and February of
+          2010? Give your answers in dollars.
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+b.   Use the regression model that is provided above and forecast sales for January and February of
+     2010, assuming the company increases their advertising by 5% per month for the months of
+     January and February of 2010. Show your computations and write your answers in dollars
+     below.
+
+
+
+
+© 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+      from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+

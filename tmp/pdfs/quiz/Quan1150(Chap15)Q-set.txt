@@ -1,0 +1,1187 @@
+CHAPTER 15—MULTIPLE REGRESSION
+
+
+MULTIPLE CHOICE
+
+  1. The mathematical equation relating the expected value of the dependent variable to the value of the
+     independent variables, which has the form of E(y) =                                   is
+     a.   a simple linear regression model
+     b.   a multiple nonlinear regression model
+     c.   an estimated multiple regression equation
+     d.   a multiple regression equation
+  2. The estimate of the multiple regression equation based on the sample data, which has the form of E(y)
+     =                                        is
+     a.   a simple linear regression model
+     b.   a multiple nonlinear regression model
+     c.   an estimated multiple regression equation
+     d.   a multiple regression equation
+  3. The mathematical equation that explains how the dependent variable y is related to several
+     independent variables x1, x2, , xp and the error term  is
+     a. a simple nonlinear regression model
+     b. a multiple regression model
+     c. an estimated multiple regression equation
+     d. a multiple regression equation
+  4. A measure of the effect of an unusual x value on the regression results is called
+     a. Cook’s D
+     b. Leverage
+     c. odd ratio
+     d. unusual regression
+  5. A variable that cannot be measured in terms of how much or how many but instead is assigned values
+     to represent categories is called
+     a. an interaction
+     b. a constant variable
+     c. a category variable
+     d. a qualitative variable
+  6. In order to test for the significance of a regression model involving 3 independent variables and 47
+     observations, the numerator and denominator degrees of freedom (respectively) for the critical value of
+     F are
+     a. 47 and 3
+     b. 3 and 47
+     c. 2 and 43
+     d. 3 and 43
+  7. In regression analysis, an outlier is an observation whose
+     a. mean is larger than the standard deviation
+     b. residual is zero
+     c. mean is zero
+     d. residual is much larger than the rest of the residual values
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+ 8. A variable that takes on the values of 0 or 1 and is used to incorporate the effect of qualitative
+    variables in a regression model is called
+    a. an interaction
+    b. a constant variable
+    c. a dummy variable
+    d. None of these alternatives is correct.
+ 9. In a multiple regression model, the error term  is assumed to be a random variable with a mean of
+    a. zero
+    b. -1
+    c. 1
+    d. any value
+10. In regression analysis, the response variable is the
+    a. independent variable
+    b. dependent variable
+    c. slope of the regression function
+    d. intercept
+11. A multiple regression model has
+    a. only one independent variable
+    b. more than one dependent variable
+    c. more than one independent variable
+    d. at least 2 dependent variables
+12. A measure of goodness of fit for the estimated regression equation is the
+    a. multiple coefficient of determination
+    b. mean square due to error
+    c. mean square due to regression
+    d. sample size
+13. The numerical value of the coefficient of determination
+    a. is always larger than the coefficient of correlation
+    b. is always smaller than the coefficient of correlation
+    c. is negative if the coefficient of determination is negative
+    d. can be larger or smaller than the coefficient of correlation
+14. The adjusted multiple coefficient of determination is adjusted for
+    a. the number of dependent variables
+    b. the number of independent variables
+    c. the number of equations
+    d. detrimental situations
+15. In a multiple regression model, the variance of the error term  is assumed to be
+    a. the same for all values of the dependent variable
+    b. zero
+    c. the same for all values of the independent variable
+    d. -1
+16. In multiple regression analysis, the correlation among the independent variables is termed
+    a. homoscedasticity
+    b. linearity
+    c. multicollinearity
+    d. adjusted coefficient of determination
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+17. In a multiple regression model, the values of the error term ,, are assumed to be
+    a. zero
+    b. dependent on each other
+    c. independent of each other
+    d. always negative
+18. In a multiple regression model, the error term  is assumed to
+    a. have a mean of 1
+    b. have a variance of zero
+    c. have a standard deviation of 1
+    d. be normally distributed
+19. In multiple regression analysis,
+    a. there can be any number of dependent variables but only one independent variable
+    b. there must be only one independent variable
+    c. the coefficient of determination must be larger than 1
+    d. there can be several independent variables, but only one dependent variable
+20. A regression model in which more than one independent variable is used to predict the dependent
+    variable is called
+    a. a simple linear regression model
+    b. a multiple regression model
+    c. an independent model
+    d. None of these alternatives is correct.
+21. A term used to describe the case when the independent variables in a multiple regression model are
+    correlated is
+    a. regression
+    b. correlation
+    c. multicollinearity
+    d. None of the above answers is correct.
+22. A variable that cannot be measured in numerical terms is called
+    a. a nonmeasurable random variable
+    b. a constant variable
+    c. a dependent variable
+    d. a qualitative variable
+23. In logistic regression,
+    a. there can only be two independent variables
+    b. there are two dependent variables
+    c. the dependent variable only assumes two discrete values
+    d. the dependent variable only assumes two continuous values
+24. In a situation where the dependent variable can assume only one of the two possible discrete values,
+    a. we must use multiple regression
+    b. there can only be two independent variables
+    c. logistic regression should be applied
+    d. all the independent variables must have values of either zero or one
+25. In a regression model involving more than one independent variable, which of the following tests must
+    be used in order to determine if the relationship between the dependent variable and the set of
+    independent variables is significant?
+    a. t test
+    b. F test
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     c. Either a t test or a chi-square test can be used.
+     d. chi-square test
+26. For a multiple regression model, SSR = 600 and SSE = 200. The multiple coefficient of determination
+    is
+    a. 0.333
+    b. 0.275
+    c. 0.300
+    d. 0.75
+27. In a multiple regression analysis involving 15 independent variables and 200 observations, SST = 800
+    and SSE = 240. The coefficient of determination is
+    a. 0.300
+    b. 0.192
+    c. 0.500
+    d. 0.700
+28. A regression model involved 5 independent variables and 136 observations. The critical value of t for
+    testing the significance of each of the independent variable's coefficients will have
+    a. 121 degrees of freedom
+    b. 135 degrees of freedom
+    c. 130 degrees of freedom
+    d. 4 degrees of freedom
+29. The multiple coefficient of determination is
+    a. MSR/MST
+    b. MSR/MSE
+    c. SSR/SST
+    d. SSE/SSR
+30. A multiple regression model has the form
+
+     As x1 increases by 1 unit (holding x2 constant), y is expected to
+     a. increase by 9 units
+     b. decrease by 9 units
+     c. increase by 2 units
+     d. decrease by 2 units
+31. The correct relationship between SST, SSR, and SSE is given by
+    a. SSR = SST + SSE
+    b. SSR = SST - SSE
+    c. SSE = SSR - SST
+    d. None of these alternatives is correct.
+32. In a multiple regression analysis SSR = 1,000 and SSE = 200. The F statistic for this model is
+    a. 5.0
+    b. 1,200
+    c. 800
+    d. Not enough information is provided to answer this question.
+33. The ratio of MSE/MSR yields
+    a. SST
+    b. the F statistic
+    c. SSR
+    d. None of these alternatives is correct.
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+34. In a multiple regression analysis involving 12 independent variables and 166 observations, SSR = 878
+    and SSE = 122. The coefficient of determination is
+    a. 0.1389
+    b. 0.1220
+    c. 0.878
+    d. 0.7317
+35. A regression analysis involved 8 independent variables and 99 observations. The critical value of t for
+    testing the significance of each of the independent variable's coefficients will have
+    a. 98 degrees of freedom
+    b. 97 degrees of freedom
+    c. 90 degrees of freedom
+    d. 7 degrees of freedom
+36. In order to test for the significance of a regression model involving 14 independent variables and 255
+    observations, the numerator and denominator degrees of freedom (respectively) for the critical value of
+    F are
+    a. 14 and 255
+    b. 255 and 14
+    c. 13 and 240
+    d. 14 and 240
+37. A multiple regression model has the form
+
+
+
+     As X increases by 1 unit (holding W constant), Y is expected to
+     a. increase by 11 units
+     b. decrease by 11 units
+     c. increase by 6 units
+     d. decrease by 6 units
+38. In a multiple regression analysis involving 10 independent variables and 81 observations, SST = 120
+    and SSE = 42. The coefficient of determination is
+    a. 0.81
+    b. 0.11
+    c. 0.35
+    d. 0.65
+39. For a multiple regression model, SST = 200 and SSE = 50. The multiple coefficient of determination is
+    a. 0.25
+    b. 4.00
+    c. 250
+    d. 0.75
+40. A regression model involved 18 independent variables and 200 observations. The critical value of t for
+    testing the significance of each of the independent variable's coefficients will have
+    a. 18 degrees of freedom
+    b. 200 degrees of freedom
+    c. 199 degrees of freedom
+    d. 181 degrees of freedom
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+41. In order to test for the significance of a regression model involving 8 independent variables and 121
+    observations, the numerator and denominator degrees of freedom (respectively) for the critical value of
+    F are
+    a. 8 and 121
+    b. 7 and 120
+    c. 8 and 112
+    d. 7 and 112
+42. In a multiple regression analysis involving 5 independent variables and 30 observations, SSR = 360
+    and SSE = 40. The coefficient of determination is
+    a. 0.80
+    b. 0.90
+    c. 0.25
+    d. 0.15
+43. A regression analysis involved 6 independent variables and 27 observations. The critical value of t for
+    testing the significance of each of the independent variable's coefficients will have
+    a. 27 degrees of freedom
+    b. 26 degrees of freedom
+    c. 21 degrees of freedom
+    d. 20 degrees of freedom
+44. In order to test for the significance of a regression model involving 4 independent variables and 36
+    observations, the numerator and denominator degrees of freedom (respectively) for the critical value of
+    F are
+    a. 4 and 36
+    b. 3 and 35
+    c. 4 and 31
+    d. 4 and 32
+
+
+     NARRBEGIN: Exhibit 15-1
+     Exhibit 15-1
+     In a regression model involving 44 observations, the following estimated regression equation was
+     obtained.
+
+     For this model SSR = 600 and SSE = 400.
+     NARREND
+
+45. Refer to Exhibit 15-1. The coefficient of determination for the above model is
+    a. 0.667
+    b. 0.600
+    c. 0.336
+    d. o.400
+46. Refer to Exhibit 15-1. MSR for this model is
+    a. 200
+    b. 10
+    c. 1,000
+    d. 43
+47. Refer to Exhibit 15-1. The computed F statistics for testing the significance of the above model is
+    a. 1.500
+    b. 20.00
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     c. 0.600
+     d. 0.6667
+
+
+     NARRBEGIN: Exhibit 15-2
+     Exhibit 15-2
+     A regression model between sales (Y in $1,000), unit price (X1 in dollars) and television advertisement
+     (X2 in dollars) resulted in the following function:
+
+
+
+
+     For this model SSR = 3500, SSE = 1500, and the sample size is 18.
+     NARREND
+
+48. Refer to Exhibit 15-2. The coefficient of the unit price indicates that if the unit price is
+    a. increased by $1 (holding advertising constant), sales are expected to increase by $3
+    b. decreased by $1 (holding advertising constant), sales are expected to decrease by $3
+    c. increased by $1 (holding advertising constant), sales are expected to increase by $4,000
+    d. increased by $1 (holding advertising constant), sales are expected to decrease by $3,000
+49. Refer to Exhibit 15-2. The coefficient of X2 indicates that if television advertising is increased by $1
+    (holding the unit price constant), sales are expected to
+    a. increase by $5
+    b. increase by $12,000
+    c. increase by $5,000
+    d. decrease by $2,000
+50. Refer to Exhibit 15-2. To test for the significance of the model, the test statistic F is
+    a. 2.33
+    b. 0.70
+    c. 17.5
+    d. 1.75
+51. Refer to Exhibit 15-2. To test for the significance of the model, the p-value is
+    a. less than 0.01
+    b. between 0.01 and 0.025
+    c. between 0.025 and 0.05
+    d. between 0.05 and 0.10
+52. Refer to Exhibit 15-2. The multiple coefficient of correlation for this problem is
+    a. 0.70
+    b. 0.8367
+    c. 0.49
+    d. 0.2289
+
+
+     NARRBEGIN: Exhibit 15-3
+     Exhibit 15-3
+     In a regression model involving 30 observations, the following estimated regression equation was
+     obtained:
+
+     For this model SSR = 700 and SSE = 100.
+     NARREND
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+53. Refer to Exhibit 15-3. The coefficient of determination for the above model is approximately
+    a. -0.875
+    b. 0.875
+    c. 0.125
+    d. 0.144
+54. Refer to Exhibit 15-3. The computed F statistic for testing the significance of the above model is
+    a. 43.75
+    b. 0.875
+    c. 50.19
+    d. 7.00
+55. Refer to Exhibit 15-3. The critical F value at 95% confidence is
+    a. 2.53
+    b. 2.69
+    c. 2.76
+    d. 2.99
+56. Refer to Exhibit 15-3. The conclusion is that the
+    a. model is not significant
+    b. model is significant
+    c. slope of X1 is significant
+    d. slope of X2 is significant
+
+
+     NARRBEGIN: Exhibit 15-4
+     Exhibit 15-4
+
+     a.
+     b.
+     c.
+     d.
+     NARREND
+
+57. Which equation describes the multiple regression model?
+    a. Equation A
+    b. Equation B
+    c. Equation C
+    d. Equation D
+58. Which equation gives the estimated regression line?
+    a. Equation A
+    b. Equation B
+    c. Equation C
+    d. Equation D
+59. Which equation describes the multiple regression equation?
+    a. Equation A
+    b. Equation B
+    c. Equation C
+    d. Equation D
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     NARRBEGIN: Exhibit 15-5
+     Exhibit 15-5
+     Below you are given a partial Minitab output based on a sample of 25 observations.
+                                   Coefficient                       Standard Error
+     Constant                        145.321                              48.682
+     X1                               25.625                              9.150
+     X2                               -5.720                              3.575
+     X3                                0.823                              0.183
+
+     NARREND
+
+60. Refer to Exhibit 15-5. The estimated regression equation is
+    a.
+    b.
+    c.
+     d.
+
+61. Refer to Exhibit 15-5. The interpretation of the coefficient on X1 is that
+    a. a one unit change in X1 will lead to a 25.625 unit change in Y
+    b. a one unit change in X1 will lead to a 25.625 unit increase in Y when all other variables
+       are held constant
+    c. a one unit change in X1 will lead to a 25.625 unit increase in X2 when all other variables
+       are held constant
+    d. It is impossible to interpret the coefficient.
+62. Refer to Exhibit 15-5. We want to test whether the parameter  is significant. The test statistic equals
+    a. 0.357
+    b. 2.8
+    c. 14
+    d. 1.96
+63. Refer to Exhibit 15-5. The t value obtained from the table to test an individual parameter at the 5%
+    level is
+    a. 2.06
+    b. 2.069
+    c. 2.074
+    d. 2.080
+64. Refer to Exhibit 15-5. Carry out the test of significance for the parameter  at the 5% level. The null
+    hypothesis should be
+    a. rejected
+    b. not rejected
+    c. revised
+    d. None of these alternatives is correct.
+
+
+     NARRBEGIN: Exhibit 15-6
+     Exhibit 15-6
+     Below you are given a partial computer output based on a sample of 16 observations.
+                            Coefficient       Standard Error
+     Constant                 12.924              4.425
+       X1                     -3.682              2.630
+       X2                     45.216              12.560
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     Analysis of Variance
+     Source of                         Degrees                     Sum of                      Mean
+     Variation                       of Freedom                    Squares                    Square                        F
+     Regression                                                     4,853                     2,426.5
+     Error                                                                                     485.3
+     NARREND
+
+65. Refer to Exhibit 15-6. The estimated regression equation is
+    a.
+    b.
+    c.
+     d.
+
+66. Refer to Exhibit 15-6. The interpretation of the coefficient of X1 is that
+    a. a one unit change in X1 will lead to a 3.682 unit decrease in Y
+    b. a one unit increase in X1 will lead to a 3.682 unit decrease in Y when all other variables
+       are held constant
+    c. a one unit increase in X1 will lead to a 3.682 unit decrease in X2 when all other variables
+       are held constant
+    d. It is impossible to interpret the coefficient.
+67. Refer to Exhibit 15-6. We want to test whether the parameter  is significant. The test statistic equals
+    a. -1.4
+    b. 1.4
+    c. 3.6
+    d. 5
+68. Refer to Exhibit 15-6. The t value obtained from the table which is used to test an individual parameter
+    at the 1% level is
+    a. 2.65
+    b. 2.921
+    c. 2.977
+    d. 3.012
+69. Refer to Exhibit 15-6. Carry out the test of significance for the parameter  at the 1% level. The null
+    hypothesis should be
+    a. rejected
+    b. not rejected
+    c. revised
+    d. None of these alternatives is correct.
+70. Refer to Exhibit 15-6. The degrees of freedom for the sum of squares explained by the regression (SSR)
+     are
+     a. 2
+     b. 3
+     c. 13
+     d. 15
+71. Refer to Exhibit 15-6. The sum of squares due to error (SSE) equals
+    a. 37.33
+    b. 485.3
+    c. 4,853
+    d. 6,308.9
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+72. Refer to Exhibit 15-6. The test statistic used to determine if there is a relationship among the variables
+    equals
+    a. -1.4
+    b. 0.2
+    c. 0.77
+    d. 5
+73. Refer to Exhibit 15-6. The F value obtained from the table used to test if there is a relationship among
+    the variables at the 5% level equals
+    a. 3.41
+    b. 3.63
+    c. 3.81
+    d. 19.41
+74. Refer to Exhibit 15-6. Carry out the test to determine if there is a relationship among the variables at
+    the 5% level. The null hypothesis should
+    a. be rejected
+    b. not be rejected
+    c. revised
+    d. None of these alternatives is correct.
+
+
+     NARRBEGIN: Exhibit 15-7
+     Exhibit 15-7
+     A regression model involving 4 independent variables and a sample of 15 periods resulted in the
+     following sum of squares.
+     SSR = 165
+     SSE = 60
+
+     NARREND
+
+75. Refer to Exhibit 15-7. The coefficient of determination is
+    a. 0.3636
+    b. 0.7333
+    c. 0.275
+    d. 0.5
+76. Refer to Exhibit 15-7. If we want to test for the significance of the model at 95% confidence, the
+    critical F value (from the table) is
+    a. 3.06
+    b. 3.48
+    c. 3.34
+    d. 3.11
+77. Refer to Exhibit 15-7. The test statistic from the information provided is
+    a. 2.110
+    b. 3.480
+    c. 4.710
+    d. 6.875
+
+
+     NARRBEGIN: Exhibit 15-8
+     Exhibit 15-8
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     The following estimated regression model was developed relating yearly income (Y in $1,000s) of 30
+     individuals with their age (X1) and their gender (X2) (0 if male and 1 if female).
+
+     Also provided are SST = 1,200 and SSE = 384.
+     NARREND
+
+78. Refer to Exhibit 15-8. From the above function, it can be said that the expected yearly income of
+    a. males is $3 more than females
+    b. females is $3 more than males
+    c. males is $3,000 more than females
+    d. females is $3,000 more than males
+79. Refer to Exhibit 15-8. The yearly income of a 24-year-old female individual is
+    a. $19.80
+    b. $19,800
+    c. $49.80
+    d. $49,800
+80. Refer to Exhibit 15-8. The yearly income of a 24-year-old male individual is
+    a. $13.80
+    b. $13,800
+    c. $46,800
+    d. $49,800
+81. Refer to Exhibit 15-8. The multiple coefficient of determination is
+    a. 0.32
+    b. 0.42
+    c. 0.68
+    d. 0.50
+82. Refer to Exhibit 15-8. If we want to test for the significance of the model, the critical value of F at
+    95% confidence is
+    a. 3.33
+    b. 3.35
+    c. 3.34
+    d. 2.96
+83. Refer to Exhibit 15-8. The test statistic for testing the significance of the model is
+    a. 0.73
+    b. 1.47
+    c. 28.69
+    d. 5.22
+84. Refer to Exhibit 15-8. The model
+    a. is significant
+    b. is not significant
+    c. would be significant is the sample size was larger than 30
+    d. None of these alternatives is correct.
+85. Refer to Exhibit 15-8. The estimated income of a 30-year-old male is
+    a. $51,000
+    b. $5,100
+    c. $510
+    d. $51
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+PROBLEM
+
+ 1. The prices of Rawlston, Inc. stock (y) over a period of 12 days, the number of shares (in 100s) of
+    company's stocks sold (x1), and the volume of exchange (in millions) on the New York Stock
+    Exchange (x2) are shown below.
+                Day                (y)                 (x1)                 (x2)
+                  1              87.50                 950                 11.00
+                  2              86.00                 945                 11.25
+                  3              84.00                 940                 11.75
+                  4              83.00                 930                 11.75
+                  5              84.50                 935                 12.00
+                  6              84.00                 935                 13.00
+                  7              82.00                 932                 13.25
+                  8              80.00                 938                 14.50
+                  9              78.50                 925                 15.00
+                 10              79.00                 900                 16.50
+                 11              77.00                 875                 17.00
+                 12              77.50                 870                 17.50
+    Excel was used to determine the least-squares regression equation. Part of the computer output is
+    shown below.
+
+    ANOVA
+                                   df                       SS                      MS                F             Significance F
+    Regression                     2                     118.8474                 59.4237          40.9216             0.0000
+    Residual                       9                      13.0692                 1.4521
+    Total                          11                    131.9167
+
+                            Coefficients              Standard Error               t Stat           P-value
+    Intercept                118.5059                    33.5753                  3.5296            0.0064
+    (x1)                      -0.0163                     0.0315                  -0.5171           0.6176
+    (x2)                      -1.5726                     0.3590                  -4.3807           0.0018
+
+    a.    Use the output shown above and write an equation that can be used to predict the price of the
+          stock.
+    b.    Interpret the coefficients of the estimated regression equation that you found in
+          Part a.
+    c.    At 95% confidence, determine which variables are significant and which are not.
+    d.    If in a given day, the number of shares of the company that were sold was 94,500 and the
+          volume of exchange on the New York Stock Exchange was 16 million, what would you expect
+          the price of the stock to be?
+
+ 2. Multiple regression analysis was used to study how an individual's income (Y in thousands of dollars)
+    is influenced by age (X1 in years), level of education (X2 ranging from 1 to 5), and the person's gender
+    (X3 where 0 =female and 1=male). The following is a partial result of a computer program that was
+    used on a sample of 20 individuals.
+                                  Coefficient        Standard Error
+
+    X1                                         0.6251                      0.094
+    X2                                         0.9210                      0.190
+    X3                                         -0.510                      0.920
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+   Analysis of Variance
+
+   Source of                        Degrees               Sum of            Mean
+   Variation                      of Freedom              Squares           Square         F
+   Regression                                               84
+   Error                                                    112
+   a. Compute the coefficient of determination.
+   b. Perform a t test and determine whether or not the coefficient of the variable "level of
+       education" (i.e., X2) is significantly different from zero. Let  = 0.05.
+   c. At  = 0.05, perform an F test and determine whether or not the regression model is significant.
+   d. As you note the coefficient of X3 is -0.510. Fully interpret the meaning of this coefficient.
+
+3. A multiple regression analysis between yearly income (Y in $1,000s), college grade point average (X1),
+   age of the individuals (X2), and the gender of the individual (X3; zero representing female and one
+   representing male) was performed on a sample of 10 people, and the following results were obtained.
+                               Coefficients      Standard Error
+   Intercept                       4.0928            1.4400
+   X1                            10.0230             1.6512
+   X2                              0.1020            0.1225
+   X3                             -4.4811            1.4400
+
+   ANOVA
+                                  DF                  SS             MS                                                 F
+   Regression                                      360.59
+   Residual (Error)                                 23.91
+   a. Write the regression equation for the above.
+   b. Interpret the meaning of the coefficient of X3.
+   c. Compute the coefficient of determination.
+   d. Is the coefficient of X1 significant? Use  = 0.05.
+   e. Is the coefficient of X2 significant? Use  = 0.05.
+   f. Is the coefficient of X3 significant? Use  = 0.05.
+   g. Perform an F test and determine whether or not the model is significant.
+
+4. The following results were obtained from a multiple regression analysis.
+   Source of                Degrees            Sum of               Mean
+   Variation              of Freedom           Squares             Square                                                   F
+   Regression                                    384                 48
+   Error                                                             20
+   Total                                         704
+   a. How many independent variables were involved in this model?
+   b. How many observations were involved?
+   c. Determine the F statistic.
+
+5. Shown below is a partial computer output from a regression analysis.
+                               Coefficient     Standard Error
+   Constant                      10.00              2.00
+   X1                            -2.00              1.50
+   X2                             6.00              2.00
+   X3                            -4.00              1.00
+
+   Analysis of Variance
+
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+   Source of                      Degrees              Sum of           Mean
+   Variation                    of Freedom             Squares          Square                                           F
+   Regression                                             60
+   Error
+   Total                             19                  140
+   a. Use the above results and write the regression equation.
+   b. Compute the coefficient of determination and fully interpret its meaning.
+   c. At  = 0.05, test to see if there is a relation between X1 and Y.
+   d. At  = 0.05, test to see if there is a relation between X3 and Y.
+   e. Is the regression model significant? Perform an F test and let  = 0.05.
+
+6. In order to determine whether or not the sales volume of a company (Y in millions of dollars) is related
+   to advertising expenditures (X1 in millions of dollars) and the number of salespeople (X2), data were
+   gathered for 10 years. Part of the regression results is shown below.
+                              Coefficients      Standard Error
+   Intercept                     7.0174              1.8972
+   X1                            8.6233              2.3968
+   X2                            0.0858              0.1845
+
+   ANOVA
+                                   DF                   SS                 MS             F
+   Regression                                         321.11
+   Residual (Error)                                    63.39
+   a. Use the above results and write the regression equation that can be used to predict sales.
+   b. Estimate the sales volume for an advertising expenditure of 3.5 million dollars and 45
+       salespeople. Give your answer in dollars.
+   c. At  = 0.05, test to determine if the fitted equation developed in Part a represents a significant
+       relationship between the independent variables and the dependent variable.
+   d. At  = 0.05, test to see if 1 is significantly different from zero.
+   e. Determine the multiple coefficient of determination.
+   f. Compute the adjusted coefficient of determination.
+
+7. In order to determine whether or not the number of automobiles sold per day (Y) is related to price (X1
+   in $1,000), and the number of advertising spots (X2), data were gathered for 7 days. Part of the
+   regression results is shown below.
+                                Coefficient       Standard Error
+   Constant                        0.8051
+   X1                              0.4977             0.4617
+   X2                              0.4733             0.0387
+   Analysis of Variance
+   Source of                      Degrees            Sum of              Mean
+   Variation                    of Freedom           Squares             Square            F
+   Regression                                         40.700
+   Error                                               1.016
+   a. Determine the least squares regression function relating Y to X1 and X2.
+   b. If the company charges $20,000 for each car and uses 10 advertising spots, how many cars
+        would you expect them to sell in a day?
+   c. At  = 0.05, test to determine if the fitted equation developed in Part a represents a significant
+        relationship between the independent variables and the dependent variable.
+   d. At 95% confidence, test to see if price is a significant variable.
+   e. At 95% confidence, test to see if the number of advertising spots is a significant variable.
+   f. Determine the multiple coefficient of determination.
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+ 8. The following is part of the results of a regression analysis involving sales (Y in millions of dollars),
+    advertising expenditures (X1 in thousands of dollars), and number of salespeople (X2) for a corporation.
+    The regression was performed on a sample of 10 observations.
+
+                                                    Coefficient                               Standard Error
+     Constant                                        -11.340                                      20.412
+     X1                                               0.798                                       0.332
+     X2                                               0.141                                       0.278
+
+     a.   Write the regression equation.
+     b.   Interpret the coefficients of the estimated regression equation found in Part (a).
+     c.   At  =0.05, test for the significance of the coefficient of advertising.
+     d.   At  =0.05, test for the significance of the coefficient of number of salespeople.
+     e.   If the company uses $50,000 in advertisement and has 800 salespersons, what are the expected
+          sales? Give your answer in dollars.
+
+ 9. The following is part of the results of a regression analysis involving sales (Y in millions of dollars),
+    advertising expenditures (X1 in thousands of dollars), and number of sales people (X2) for a
+    corporation:
+
+                                             ANALYSIS OF VARIANCE
+     Source of                      Degrees of      Sum of        Mean
+     Variation                       Freedom        Squares       Square                                                   F
+     Regression                         2           822.088
+     Error                              7           736.012
+
+     a.   At  = 0.05 level of significance, test to determine if the model is significant. That is,
+          determine if there exists a significant relationship between the independent variables and the
+          dependent variable.
+     b.   Determine the multiple coefficient of determination.
+     c.   Determine the adjusted multiple coefficient of determination.
+     d.   What has been the sample size for this regression analysis?
+
+10. Below you are given a partial computer output based on a sample of 12 observations relating the
+    number of personal computers sold by a computer shop per month (Y), unit price (X1 in $1,000) and
+    the number of advertising spots (X2) used on a local television station.
+
+                                                    Coefficient                               Standard Error
+     Constant                                        17.145                                       7.865
+     X1                                               -0.104                                      3.282
+     X2                                                1.376                                      0.250
+
+     a.   Use the output shown above and write an equation that can be used to predict the monthly sales
+          of computers.
+     b.   Interpret the coefficients of the estimated regression equation found in Part a.
+     c.   If the company charges $2,000 for each computer and uses 10 advertising spots, how many
+          computers would you expect them to sell?
+     d.   At  = 0.05, test to determine if the price is a significant variable.
+     e.   At  = 0.05, test to determine if the number of advertising spots is a significant variable.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+11. Below you are given a partial computer output based on a sample of 12 observations relating the
+    number of personal computers sold by a computer shop per month (Y), unit price (X1 in $1,000) and
+    the number of advertising spots (X2) they used on a local television station.
+
+     ANOVA
+                                            DF              SS                 MS                  F             Significance F
+     Regression                              2            655.955
+     Residual                                9
+     Total                                                838.917
+
+     a.   At  = 0.05 level of significance, test to determine if the model is significant. That is,
+          determine if there exists a significant relationship between the independent variables and the
+          dependent variable.
+     b.   Determine the multiple coefficient of determination.
+     c.   Determine the adjusted multiple coefficient of determination.
+
+12. Below you are given a computer output based on a sample of 30 days of the price of a company's stock
+    (Y in dollars), the Dow Jones industrial average (X1), and the stock price of the company's major
+    competitor (X2 in dollars).
+
+                                                    Coefficient                               Standard Error
+     Constant                                        20.000                                       5.455
+     X1                                               0.006                                       0.002
+     X2                                               -0.70                                       0.200
+
+     a.   Use the output shown above and write an equation that can be used to predict the price of the
+          stock.
+     b.   If the Dow Jones Industrial Average is 10,000 and the price of the competitor is $50, what
+          would you expect the price of the stock to be?
+     c.   At  = 0.05, test to determine if the Dow Jones average is a significant variable.
+     d.   At  = 0.05, test to determine if the stock price of the major competitor is a significant
+          variable.
+
+13. Below you are given a partial computer output relating the price of a company's stock (Y in dollars),
+    the Dow Jones industrial average (X1), and the stock price of the company's major competitor (X2 in
+    dollars).
+
+     ANOVA
+                                              DF                        SS                       MS                      F
+     Regression
+     Residual                                 20                        40
+     Total                                                             800
+
+     a.   What has been the sample size for this regression analysis?
+     b.   At  = 0.05 level of significance, test to determine if the model is significant. That is,
+          determine if there exists a significant relationship between the independent variables and the
+          dependent variable.
+     c.   Determine the multiple coefficient of determination.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+14. A regression was performed on a sample of 16 observations. The estimated equation is
+                                         . The standard errors for the coefficients are Sb1 = 4.2, Sb2 = 5.6,
+    and Sb3 = 2.8. For this model, SST = 3809.6 and SSR = 3285.4.
+    a. Compute the appropriate t ratios.
+    b. Test for the significance of ,  and at the 5% level of significance.
+    c. Do you think that any of the variables should be dropped from the model? Explain.
+    d. Compute R2 and Ra2. Interpret R2.
+    e. Test the significance of the relationship among the variables at the 5% level of significance.
+
+15. The following results were obtained from a multiple regression analysis of supermarket profitability.
+    The dependent variable, Y, is the profit (in thousands of dollars) and the independent variables, X1 and
+    X2, are the food sales and nonfood sales (also in thousands of dollars).
+
+     ANOVA
+                                               DF                      SS
+     Regression                                 2                    562.363
+     Residual                                   9                    225.326
+     Total
+
+                                         Coefficients           Standard Error
+     Intercept                            -15.0621
+     X1                                     0.0972                     0.054
+     X2                                     0.2484                     0.092
+
+     a.    Write the estimated regression equation for the relationship between the variables.
+     b.    Compute the coefficient of determination and fully interpret its meaning.
+     c.    Carry out a test of whether Y is significantly related to the independent variables. Use a 0.05
+           level of significance.
+     d.    Carry out a test to determine if there is a significant relationship between X1 and Y. Use a .05
+           level of significance.
+     e.    How many supermarkets were in the sample used here?
+
+16. A regression was performed on a sample of 20 observations. Two independent variables were included
+    in the analysis, X and Z. The relationship between X and Z is Z = X2. The following estimated
+    equation was obtained.
+
+
+
+     The standard errors for the coefficients are Sb1 = 4.85 and Sb2 = 0.21
+
+     For this model, SSR = 520.2 and SSE = 340.6
+     a. Estimate the value of Y when X = 5.
+     b. Compute the appropriate t ratios.
+     c. Test for the significance of the coefficients at the 5% level. Which variable(s) is (are)
+         significant?
+     d. Compute the coefficient of determination and the adjusted coefficient of determination.
+         Interpret the meaning of the coefficient of determination.
+     e. Test the significance of the relationship among the variables at the 5% level of significance.
+
+17. A student used multiple regression analysis to study how family spending (Y) is influenced by income
+    (X1), family size (X2), and additions to savings (X3). The variables Y, X1, and X3 are measured in
+    thousands of dollars. The following results were obtained.
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     ANOVA
+                                              DF                      SS
+     Regression                                3                    45.9634
+     Residual                                 11                     2.6218
+     Total
+                                 Coefficients    Standard Error
+     Intercept                      0.0136
+     X1                             0.7992             0.074
+     X2                             0.2280             0.190
+     X3                            -0.5796             0.920
+     a. Write out the estimated regression equation for the relationship between the variables.
+     b. Compute R2. What can you say about the strength of this relationship?
+     c. Carry out a test of whether Y is significantly related to the independent variables. Use a .05
+          level of significance.
+     d. Carry out a test to see if X3 and Y are significantly related. Use a .05 level of significance.
+
+18. A regression model involving 3 independent variables for a sample of 20 periods resulted in the
+    following sum of squares.
+                                         Sum of Squares
+    Regression                                  90
+    Residual (Error)                            100
+    a. Compute the coefficient of determination and fully explain its meaning.
+    b. At  = 0.05 level of significance, test to determine whether or not there is a significant
+         relationship between the independent variables and the dependent variable.
+
+19. A regression model involving 8 independent variables for a sample of 69 periods resulted in the
+    following sum of squares.
+    SSE = 306
+    SST = 1800
+    a. Compute the coefficient of determination.
+    b. At  = 0.05, test to determine whether or not the model is significant.
+
+20. In a regression model involving 46 observations, the following estimated regression equation was
+    obtained.
+
+     For this model, SST = 3410 and SSE = 510.
+     a. Compute the coefficient of determination.
+     b. Perform an F test and determine whether or not the regression model is significant.
+
+21. A microcomputer manufacturer has developed a regression model relating his sales (Y in $10,000s)
+    with three independent variables. The three independent variables are price per unit (Price in $100s),
+    advertising (ADV in $1,000s) and the number of product lines (Lines). Part of the regression results is
+    shown below.
+                                               Coefficient                    Standard Error
+    Intercept                                     1.0211                          22.8752
+    Price                                        -0.1524                           0.1411
+    ADV                                           0.8849                           0.2886
+    Lines                                        -0.1463                           1.5340
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     Analysis of Variance
+
+     Source of                                                   Degrees                                      Sum of
+     Variation                                                 of Freedom                                     Squares
+     Regression                                                                                               2708.61
+     Error (Residuals)                                               14                                       2840.51
+
+     a.   Use the above results and write the regression equation that can be used to predict sales.
+     b.   If the manufacturer has 10 product lines, advertising of $40,000, and the price per unit is
+          $3,000, what is your estimate of their sales? Give your answer in dollars.
+     c.   Compute the coefficient of determination and fully interpret its meaning.
+     d.   At  = 0.05, test to see if there is a significant relationship between sales and unit price.
+     e.   At  = 0.05, test to see if there is a significant relationship between sales and the number of
+          product lines.
+     f.   Is the regression model significant? (Perform an F test.)
+     g.   Fully interpret the meaning of the regression (coefficient of price) per unit that is, the slope for
+          the price per unit.
+     h.   What has been the sample size for this analysis?
+
+22. The following is part of the results of a regression analysis involving sales (Y in millions of dollars),
+    advertising expenditures (X1 in thousands of dollars), and number of salespeople (X2) for a corporation.
+    The regression was performed on a sample of 10 observations.
+
+                                                    Coefficient                               Standard Error
+     Intercept                                        40.00                                        7.00
+        X1                                             8.00                                        2.50
+        X2                                             6.00                                        3.00
+
+     a.   If the company uses $40,000 in advertisement and has 30 salespersons, what are the expected
+          sales? Give your answer in dollars.
+     b.   At  = 0.05, test for the significance of the coefficient of advertising.
+     c.   At  = 0.05, test for the significance of the coefficient of the number of salespeople.
+
+23. Sherri Cola Company has developed a regression model relating its sales (Y in $10,000s) with four
+    independent variables. The four independent variables are price per unit (PRICE, in dollars),
+    competitor's price (COMPRICE, in dollars), advertising (ADV, in $1,000s) and type of container used
+    (CONTAIN; 1 = Cans and 0 = Bottles). Part of the regression results is shown below. (Assume n = 25)
+                                              Coefficient                      Standard Error
+    Intercept                                   443.143
+    PRICE                                       -57.170                            20.426
+    COMPRICE                                     27.681                            19.991
+    ADV                                          0.025                             0.023
+    CONTAIN                                     -95.353                            91.027
+
+     a.   If the manufacturer uses can containers, his price is $1.25, advertising $200,000, and his
+          competitor's price is $1.50, what is your estimate of his sales? Give your answer in dollars.
+     b.   Test to see if there is a significant relationship between sales and unit price. Let  = 0.05.
+     c.   Test to see if there is a significant relationship between sales and advertising. Let  = 0.05.
+     d.   Is the type of container a significant variable? Let  = 0.05.
+     e.   Test to see if there is a significant relationship between sales and competitor's price. Let  =
+          0.05.
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+24. The Brock Juice Company has developed a regression model relating sales (Y in $10,000s) with four
+    independent variables. The four independent variables are price per unit (X1, in dollars), competitor's
+    price (X2, in dollars), advertising (X3, in $1,000s) and type of container used (X4) (1 = Cans and 0 =
+    Bottles). Part of the regression results are shown below:
+    Analysis of Variance
+
+     Source of                                 Degrees of                         Sum of
+     Variation                                  Freedom                           Squares
+     Regression                                      4                          283,940.60
+     Error (Residuals)                              18                          621,735.14
+     a. Compute the coefficient of determination and fully interpret its meaning.
+     b. Is the regression model significant? Explain what your answer implies. Let  = 0.05.
+     c. What has been the sample size for this analysis?
+
+25. The following regression model has been proposed to predict sales at a furniture store.
+
+
+
+
+     a.   Fully interpret the meaning of the coefficient of X3.
+     b.   Predict sales (in dollars) for a store with competitor's previous day's sale of $3,000, a
+          population of 10,000 within 1 mile, and six radio advertisements.
+
+26. A sample of 30 houses that were sold in the last year was taken. The value of the house (Y) was
+    estimated. The independent variables included in the analysis were the number of rooms (X1), the size
+    of the lot (X2), the number of bathrooms (X3), and a dummy variable (X4), which equals 0 if the house
+    does not have a garage and equals 1 otherwise. The following results were obtained:
+                                Coefficients    Standard Error
+    Intercept                     15,232.5           8,462.5
+    X1                             2,178.4             778.0
+    X2                                 7.8               2.2
+    X3                             2,675.2           2,229.3
+    X4                             1,157.8             463.1
+    Analysis of Variance
+
+                                    DF                   SS                MS
+     Regression                                     204,242.88          51,060.72
+     Residual (Error)                               205,890.00           8,235.60
+     a. Write out the estimated equation.
+     b. Interpret the coefficient on the number of rooms (X1).
+     c. Interpret the coefficient on the dummy variable (X4).
+     d. What are the degrees of freedom for the sum of squares explained by the regression (SSR) and
+         the sum of squares due to error (SSE)?
+     e. Test whether or not there is a significant relationship between the value of a house and the
+         independent variables. Use a .05 level of significance. Be sure to state the null and alternative
+         hypotheses.
+     f. Test the significance of 1 at the 5% level. Be sure to state the null and alternative hypotheses.
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     g.   Compute the coefficient of determination and interpret its meaning.
+     h.   Estimate the value of a house that has 9 rooms, a lot with an area of 7,500, 2 bathrooms, and 2
+          garages.
+
+27. A sample of 25 families was taken. The objective of the study was to estimate the factors that
+    determine the monthly expenditure on food for families. The independent variables included in the
+    analysis were the number of members in the family (X1), the number of meals eaten outside the home
+    (X2), and a dummy variable (X3) that equals 1 if a family member is on a diet and equals 0 if there is
+    no family member on a diet. The following results were obtained.
+
+                                        Coefficients           Standard Error
+     Intercept                            450.08                    53.6
+     X1                                    49.92                     9.6
+     X2                                    10.12                     2.2
+     X3                                      -.60                   12.0
+
+     Analysis of Variance
+
+                                              DF                       SS                        MS
+     Regression                                                     3,078.39                  1,026.13
+     Residual (Error)                                               2,013.90                     95.90
+
+     a.   Write out the estimated regression equation.
+     b.   Interpret all coefficients.
+     c.   Test for the significance of 1, 2, and 3 at the 1% level of significance.
+     d.   What are the degrees of freedom for the sum of squares explained by the regression (SSR) and
+          the sum of squares due to error (SSE)?
+     e.   Test whether of not there is a significant relationship between the monthly expenditure on food
+          and the independent variables. Use a .01 level of significance. Be sure to state the null and
+          alternative hypotheses.
+     f.   Compute the coefficient of determination and explain its meaning.
+     g.   Estimate the monthly expenditure on food for a family that has 4 members, eats out 3 times,
+          and does not have any member of the family on a diet.
+
+28. The following regression model has been proposed to predict sales at a fast food outlet.
+
+
+
+
+     a.   What is the interpretation of 15 (the coefficient of X3) in the regression equation?
+     b.   Predict sales for a store with 2 competitors, a population of 10,000 within one mile, and one
+          drive-up window (give the answer in dollars).
+     c.   Predict sales for the store with 2 competitors, a population of 10,000 within one mile, and no
+          drive-up window (give the answer in dollars).
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+29. The following regression model has been proposed to predict sales at a computer store.
+
+
+
+
+     Predict sales (in dollars) for a store with the competitor's previous day's sale of $5,000, a population of
+     20,000 within 1 mile, and nine radio advertisements.
+
+30. The following regression model has been proposed to predict monthly sales at a shoe store.
+
+
+
+
+     a.   Predict sales (in dollars) for the shoe store if the competitor's previous month's sales were
+          $9,000, the store's previous month's sales were $30,000, and no radio advertisements were run.
+     b.   Predict sales (in dollars) for the shoe store if the competitor's previous month's sales were
+          $9,000, the store's previous month's sales were $30,000, and 10 radio advertisements were run.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+

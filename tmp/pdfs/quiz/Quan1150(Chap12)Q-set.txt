@@ -1,0 +1,1037 @@
+CHAPTER 12—TESTS OF GOODNESS OF FIT AND INDEPENDENCE
+
+
+MULTIPLE CHOICE
+
+  1. A population where each element of the population is assigned to one and only one of several classes
+     or categories is a
+     a. multinomial population
+     b. Poisson population
+     c. normal population
+     d. None of these alternatives is correct.
+
+  2. The sampling distribution for a goodness of fit test is the
+     a. Poisson distribution
+     b. t distribution
+     c. normal distribution
+     d. chi-square distribution
+
+  3. A goodness of fit test is always conducted as a
+     a. lower-tail test
+     b. upper-tail test
+     c. middle test
+     d. None of these alternatives is correct.
+
+  4. An important application of the chi-square distribution is
+     a. making inferences about a single population variance
+     b. testing for goodness of fit
+     c. testing for the independence of two variables
+     d. All of these alternatives are correct.
+
+  5. The number of degrees of freedom for the appropriate chi-square distribution in a test of independence
+     is
+     a. n-1
+     b. K-1
+     c. number of rows minus 1 times number of columns minus 1
+     d. a chi-square distribution is not used
+
+  6. In order not to violate the requirements necessary to use the chi-square distribution, each expected
+     frequency in a goodness of fit test must be
+     a. at least 5
+     b. at least 10
+     c. no more than 5
+     d. less than 2
+
+  7. A statistical test conducted to determine whether to reject or not reject a hypothesized probability
+     distribution for a population is known as a
+     a. contingency test
+     b. probability test
+     c. goodness of fit test
+     d. None of these alternatives is correct.
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+ 8. The degrees of freedom for a contingency table with 12 rows and 12 columns is
+    a. 144
+    b. 121
+    c. 12
+    d. 120
+
+ 9. The degrees of freedom for a contingency table with 6 rows and 3 columns is
+    a. 18
+    b. 15
+    c. 6
+    d. 10
+
+10. The degrees of freedom for a contingency table with 10 rows and 11 columns is
+    a. 100
+    b. 110
+    c. 21
+    d. 90
+
+     NARRBEGIN: Exhibit 12-1
+     Exhibit 12-1
+     When individuals in a sample of 150 were asked whether or not they supported capital punishment, the
+     following information was obtained.
+
+                     Do you support                                              Number of
+                   capital punishment?                                           individuals
+                            Yes                                                      40
+                            No                                                       60
+                       No Opinion                                                    50
+
+     We are interested in determining whether or not the opinions of the individuals (as to Yes, No, and No
+     Opinion) are uniformly distributed.
+     NARREND
+
+11. Refer to Exhibit 12-1. The expected frequency for each group is
+    a. 0.333
+    b. 0.50
+    c. 1/3
+    d. 50
+
+12. Refer to Exhibit 12-1. The calculated value for the test statistic equals
+    a. 2
+    b. -2
+    c. 20
+    d. 4
+
+13. Refer to Exhibit 12-1. The number of degrees of freedom associated with this problem is
+    a. 150
+    b. 149
+    c. 2
+    d. 3
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+14. Refer to Exhibit 12-1. The p-value is
+    a. larger than 0.1
+    b. less than 0.1
+    c. less than 0.05
+    d. larger than 0.9
+
+15. Refer to Exhibit 12-1. The conclusion of the test (at 95% confidence) is that the
+    a. distribution is uniform
+    b. distribution is not uniform
+    c. test is inconclusive
+    d. None of these alternatives is correct.
+
+     NARRBEGIN: Exhibit 12-2
+     Exhibit 12-2
+     Last school year, the student body of a local university consisted of 30% freshmen, 24% sophomores,
+     26% juniors, and 20% seniors. A sample of 300 students taken from this year's student body showed
+     the following number of students in each classification.
+
+     Freshmen                         83
+     Sophomores                       68
+     Juniors                          85
+     Seniors                          64
+
+     We are interested in determining whether or not there has been a significant change in the
+     classifications between the last school year and this school year.
+     NARREND
+
+16. Refer to Exhibit 12-2. The expected number of freshmen is
+    a. 83
+    b. 90
+    c. 30
+    d. 10
+
+17. Refer to Exhibit 12-2. The expected frequency of seniors is
+    a. 60
+    b. 20%
+    c. 68
+    d. 64
+
+18. Refer to Exhibit 12-2. The calculated value for the test statistic equals
+    a. 0.5444
+    b. 300
+    c. 1.6615
+    d. 6.6615
+
+19. Refer to Exhibit 12-2. The p-value is
+    a. less than .005
+    b. between .025 and 0.05
+    c. between .05 and 0.1
+    d. greater than 0.1
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+20. Refer to Exhibit 12-2. At 95% confidence, the null hypothesis
+    a. should not be rejected
+    b. should be rejected
+    c. was designed wrong
+    d. None of these alternatives is correct.
+
+     NARRBEGIN: Exhibit 12-3
+     Exhibit 12-3
+     In order to determine whether or not a particular medication was effective in curing the common cold,
+     one group of patients was given the medication, while another group received sugar pills. The results
+     of the study are shown below.
+
+                                                              Patients Cured                           Patients Not Cured
+     Received medication                                            70                                          10
+     Received sugar pills                                           20                                          50
+
+     We are interested in determining whether or not the medication was effective in curing the common
+     cold.
+     NARREND
+
+21. Refer to Exhibit 12-3. The expected frequency of those who received medication and were cured is
+    a. 70
+    b. 150
+    c. 28
+    d. 48
+
+22. Refer to Exhibit 12-3. The test statistic is
+    a. 10.08
+    b. 54.02
+    c. 1.96
+    d. 1.645
+
+23. Refer to Exhibit 12-3. The number of degrees of freedom associated with this problem is
+    a. 4
+    b. 149
+    c. 1
+    d. 3
+
+24. Refer to Exhibit 12-3. The hypothesis is to be tested at the 5% level of significance. The critical value
+    from the table equals
+    a. 3.84
+    b. 7.81
+    c. 5.99
+    d. 9.34
+
+25. Refer to Exhibit 12-3. The p-value is
+    a. less than .005
+    b. between .005 and .01
+    c. between .01 and .025
+    d. between .025 and .05
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     NARRBEGIN: Exhibit 12-4
+     Exhibit 12-4
+     In the past, 35% of the students at ABC University were in the Business College, 35% of the students
+     were in the Liberal Arts College, and 30% of the students were in the Education College. To see
+     whether or not the proportions have changed, a sample of 300 students was taken. Ninety of the
+     sample students are in the Business College, 120 are in the Liberal Arts College, and 90 are in the
+     Education College.
+     NARREND
+
+26. Refer to Exhibit 12-4. This problem is an example of a
+    a. normally distributed variable
+    b. test for independence
+    c. Poisson distributed variable
+    d. multinomial population
+
+27. Refer to Exhibit 12-4. The expected frequency for the Business College is
+    a. 0.3
+    b. 0.35
+    c. 90
+    d. 105
+
+28. Refer to Exhibit 12-4. The calculated value for the test statistic equals
+    a. 0.01
+    b. 0.75
+    c. 4.29
+    d. 4.38
+
+29. Refer to Exhibit 12-4. The hypothesis is to be tested at the 5% level of significance. The critical value
+    from the table equals
+    a. 1.645
+    b. 1.96
+    c. 5.991
+    d. 7.815
+
+30. Refer to Exhibit 12-4. The p-value is
+    a. greater than 0.1
+    b. between 0.05 and 0.1
+    c. between 0.025 and 0.05
+    d. between 0.01 and .025
+
+
+31. Refer to Exhibit 12-4. The conclusion of the test is that the
+    a. proportions have changed significantly
+    b. proportions have not changed significantly
+    c. test is inconclusive
+    d. None of these alternatives is correct.
+
+
+     NARRBEGIN: Exhibit 12-5
+     Exhibit 12-5
+     The table below gives beverage preferences for random samples of teens and adults.
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                                                   Teens                            Adults                            Total
+     Coffee                                         50                               200                               250
+     Tea                                            100                              150                               250
+     Soft Drink                                     200                              200                               400
+     Other                                          50                                50                               100
+     400                                            400                              600                              1,000
+
+     We are asked to test for independence between age (i.e., adult and teen) and drink preferences.
+     NARREND
+32. Refer to Exhibit 12-5. With a .05 level of significance, the critical value for the test is
+    a. 1.645
+    b. 7.815
+    c. 14.067
+    d. 15.507
+
+33. Refer to Exhibit 12-5. The expected number of adults who prefer coffee is
+    a. 0.25
+    b. 0.33
+    c. 150
+    d. 200
+
+34. Refer to Exhibit 12-5. The test statistic for this test of independence is
+    a. 0
+    b. 8.4
+    c. 62.5
+    d. 82.5
+
+35. Refer to Exhibit 12-5. The p-value is
+    a. between .1 and .05
+    b. between .05 and .025
+    c. between .025 and .01
+    d. less than 0.005
+
+     NARRBEGIN: Exhibit 12-6
+     Exhibit 12-6
+     The owner of a car wash wants to see if the arrival rate of cars follows a Poisson distribution. In order
+     to test the assumption of a Poisson distribution, a random sample of 150 ten-minute intervals was
+     taken. You are given the following observed frequencies:
+
+         Number of Cars Arriving
+          in a 10-Minute Interval                               Frequency
+                    0                                               3
+                    1                                               10
+                    2                                               15
+                    3                                               23
+                    4                                               30
+                    5                                               24
+                    6                                               20
+                    7                                               13
+                    8                                               8
+                    9                                               4
+                                                                   150
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     NARREND
+
+36. Refer to Exhibit 12-6. The expected frequency of exactly 3 cars arriving in a 10-minute interval is
+    a. 0.1533
+    b. 0.1743
+    c. 23
+    d. 26.145
+
+37. Refer to Exhibit 12-6. The calculated value for the test statistic equals
+    a. -0.18
+    b. 0.18
+    c. 1.72
+    d. 2.89
+
+38. Refer to Exhibit 12-6. The p-value is
+    a. greater than 0.1
+    b. between 0.05 and 0.1
+    c. between .025 and .05
+    d. between .01 and .025
+
+39. Refer to Exhibit 12-6. At 95% confidence, the conclusion of the test is that the
+    a. arrival of cars follows a Poisson distribution
+    b. arrival of cars does not follow a Poisson distribution
+    c. test is inconclusive
+    d. None of these alternatives is correct.
+
+     NARRBEGIN: Exhibit 12-7
+     Exhibit 12-7
+     You want to test whether or not the following sample of 30 observations follows a normal distribution.
+     The mean of the sample equals 11.83, and the standard deviation equals 4.53.
+
+         2              3           5              5           7             8            8            9             9            10
+         11            11           12            12           12           12            13           13            13           14
+         15            15           15            16           16           17            17           18            18           19
+
+     NARREND
+
+40. Refer to Exhibit 12-7. The number of intervals or categories used to test the hypothesis for this
+    problem is
+    a. 4
+    b. 5
+    c. 6
+    d. 10
+
+41. Refer to Exhibit 12-7. The expected frequency in the 3rd interval is
+    a. 3
+    b. 4
+    c. 5
+    d. 10
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+42. Refer to Exhibit 12-7. The calculated value for the test statistic equals
+    a. 0
+    b. 1.67
+    c. 2
+    d. 6
+
+43. Refer to Exhibit 12-7. The p-value is
+    a. greater than 0.1
+    b. between .05 and 0.1
+    c. between .025 and .05
+    d. between .01 and .025
+
+44. Refer to Exhibit 12-7. At 95% confidence, the conclusion of the test is that the
+    a. data follows a normal distribution
+    b. data does not follow a normal distribution
+    c. test is inconclusive
+    d. None of these alternatives is correct.
+
+     NARRBEGIN: Exhibit 12-8
+     Exhibit 12-8
+     The following shows the number of individuals in a sample of 300 who indicated they support the new
+     tax proposal.
+
+                  Political Party              Support
+                  Democrats                      100
+                  Republicans                    120
+                  Independents                    80
+
+     We are interested in determining whether or not the opinions of the individuals of the three groups are
+     uniformly distributed.
+     NARREND
+
+45. Refer to Exhibit 12-8. The expected frequency for each group is
+    a. 0.333
+    b. 0.50
+    c. 50
+    d. None of these alternatives is correct.
+
+46. Refer to Exhibit 12-8. The calculated value for the test statistic equals
+    a. 300
+    b. 4
+    c. 0
+    d. 8
+
+47. Refer to Exhibit 12-8. The number of degrees of freedom associated with this problem is
+    a. 2
+    b. 3
+    c. 300
+    d. 299
+
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+PROBLEM
+
+ 1. In the last presidential election, before the candidates started their major campaigns, the percentages of
+    registered voters who favored the various candidates were as follows.
+
+                                                                                   Percentages
+                                        Republicans                                   34%
+                                        Democrats                                     43%
+                                        Independents                                  23%
+     After the major campaigns began, a random sample of 400 voters showed that 172 favored the
+     Republican candidate; 164 were in favor of the Democratic candidate; and 64 favored the Independent
+     candidate. We are interested in determining whether the proportion of voters who favored the
+     various candidates had changed.
+     a.   Compute the test statistic.
+     b.   Using the p-value approach, test to see if the proportions have changed.
+     c.   Using the critical value approach, test the hypotheses.
+
+ 2. During the first few weeks of the new television season, the evening news audience proportions were
+    recorded as ABC- 31%, CBS- 34%, and NBC- 35%. A sample of 600 homes yielded the following
+    viewing audience data.
+                                    Number of
+                                     Homes
+                                         150
+           ABC
+
+           CBS                           200
+
+           NBC                           250
+
+     We want to determine whether or not there has been a significant change in the number of viewing
+     audience of the three networks.
+
+     a.   State the null and alternative hypotheses to be tested.
+     b.   Compute the expected frequencies.
+     c.   Compute the test statistic.
+     d.   The null hypothesis is to be tested at 95% confidence. Determine the critical value for this
+          test. What do you conclude?
+     e.   Determine the p-value and perform the test.
+
+ 3. The results of a recent study regarding smoking and three types of illness are shown in the following
+    table.
+
+                            Illness                          Non-Smokers               Smokers              Totals
+                            Emphysema                            20                      60                   80
+                            Heart problem                        70                      80                  150
+                            Cancer                                   30                   40                  70
+                            Totals                                  120                   180                300
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+   We are interested in determining whether or not illness is independent of smoking.
+
+   a.    State the null and alternative hypotheses to be tested.
+   b.    Show the contingency table of the expected frequencies.
+   c.    Compute the test statistic.
+   d.    The null hypothesis is to be tested at 95% confidence. Determine the critical value for this
+         test. What do you conclude?
+   e.    Determine the p-value and perform the test.
+
+
+4. Among 1,000 managers with degrees in business administration, the following data have been
+   accumulated as to their fields of concentration.
+
+                            Major                  Top Management                   Middle Management                  TOTAL
+
+                     Management                             280                                220                       500
+                     Marketing                              120                                80                        200
+                     Accounting                             150                                150                       300
+                     TOTAL                                  550                                450                       1000
+
+   We want to determine if the position in management is independent of field (major) of concentration.
+
+   a.    Compute the test statistic.
+   b.    Using the p-value approach at 90% confidence, test to determine if management position is
+         independent of major.
+   c.    Using the critical value approach, test the hypotheses. Let  = 0.10.
+
+
+5. From a poll of 800 television viewers, the following data have been accumulated as to their levels of
+   education and their preference of television stations. We are interested in determining if the selection
+   of a TV station is independent of the level of education.
+
+                                                          Educational Level
+                                       High School             Bachelor                    Graduate                     TOTAL
+
+   Public Broadcasting                        50                     150                        80                         280
+   Commercial Stations                       150                     250                       120                         520
+
+   TOTAL                           200              400            200                  800
+   a. State the null and the alternative hypotheses.
+   b. Show the contingency table of the expected frequencies.
+   c. Compute the test statistic.
+   d. The null hypothesis is to be tested at 95% confidence. Determine the critical value for this
+      test.
+   e. Determine the p-value and perform the test.
+
+
+
+6. Before the start of the Winter Olympics, it was expected that the percentages of medals awarded to the
+   top contenders to be as follows.
+
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+                                             Percentages
+   United States                                25%
+   Germany                                      22%
+   Norway                                       18%
+   Austria                                      14%
+   Russia                                       11%
+   France                                       10%
+
+   Midway through the Olympics, of the 120 medals awarded, the following distribution was observed.
+
+                                        Number of Medals
+   United States                              33
+   Germany                                    36
+   Norway                                     18
+   Austria                                    15
+   Russia                                     12
+   France                                      6
+
+   We want to test to see if there is a significant difference between the expected and actual awards given.
+   a. Compute the test statistic.
+   b. Using the p-value approach, test to see if there is a significant difference between the expected
+      and the actual values. Let  = .05.
+   c. At 95% confidence, test for a significant difference using the critical value approach.
+
+7. A medical journal reported the following frequencies of deaths due to cardiac arrest for each day of the
+   week:
+
+          Cardiac Death by Day of the Week
+   Day                                  f
+   Monday                              40
+   Tuesday                             17
+   Wednesday                           16
+   Thursday                            29
+   Friday                              15
+   Saturday                            20
+   Sunday                              17
+
+   We want to determine whether the number of deaths is uniform over the week.
+   a. Compute the test statistic.
+   b. Using the p-value approach at 95% confidence, test for the uniformity of death over the week.
+   c. Using the critical value approach, perform the test for uniformity.
+
+8. Before the presidential debates, it was expected that the percentages of registered voters in favor of
+   various candidates would be as follows.
+
+                                                             Percentages
+   Democrats                                                    48%
+   Republicans                                                  38%
+   Independent                                                   4%
+   Undecided                                                    10%
+
+
+
+
+    © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+          from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     After the presidential debates, a random sample of 1200 voters showed that 540 favored the
+     Democratic candidate; 480 were in favor of the Republican candidate; 40 were in favor of the
+     Independent candidate, and 140 were undecided. We want to see if the proportion of voters has
+     changed.
+     a. Compute the test statistic.
+     b. Use the p-value approach to test the hypotheses. Let  = .05.
+     c. Using the critical value approach, test the hypotheses. Let  = .05.
+
+
+ 9. Last school year, in the school of Business Administration, 30% were Accounting majors, 24%
+    Management majors, 26% Marketing majors, and 20% Economics majors. A sample of 300 students
+    taken from this year's students of the school showed the following number of students in each major:
+
+     Accounting                                    83
+     Management                                    68
+     Marketing                                     85
+     Economics                                     64
+     Total                                         300
+
+     We want to see if there has been a significant change in the number of students in each major.
+     a. Compute the test statistic.
+     b. Has there been any significant change in the number of students in each major between the last
+        school year and this school year. Use the p-value approach and let  = .05.
+
+
+10. The personnel department of a large corporation reported sixty resignations during the last year. The
+    following table groups these resignations according to the season in which they occurred:
+
+                                                         Number of
+     Season                                             Resignations
+     Winter                                                  10
+     Spring                                                  22
+     Summer                                                  19
+     Fall                                                    9
+
+     Test to see if the number of resignations is uniform over the four seasons.
+     Let  = 0.05.
+
+
+11. In 2002, forty percent of the students at a major university were Business majors, 35% were
+    Engineering majors and the rest of the students were majoring in other fields. In a sample of 600
+    students from the same university taken in 2003, two hundred were Business majors, 220 were
+    Engineering majors and the remaining students in the sample were majoring in other fields. At 95%
+    confidence, test to see if there has been a significant change in the proportions between 2002 and 2003.
+
+12. Before the rush began for Christmas shopping, a department store had noted that the percentage of its
+    customers who use the store's credit card, the percentage of those who use a major credit card, and the
+    percentage of those who pay cash are the same. During the Christmas rush in a sample of 150 shoppers,
+    46 used the store's credit card; 43 used a major credit card; and 61 paid cash. With  = 0.05, test to see
+    if the methods of payment have changed during the Christmas rush.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+13. A major automobile manufacturer claimed that the frequencies of repairs on all five models of its cars
+    are the same. A sample of 200 repair services showed the following frequencies on the various makes
+    of cars.
+
+           Model of Car                        Frequency
+               A                                   32
+               B                                   45
+               C                                   43
+               D                                   34
+               E                                   46
+
+     At  = 0.05, test the manufacturer's claim.
+
+
+14. A lottery is conducted that involves the random selection of numbers from 0 to 4. To make sure that
+    the lottery is fair, a sample of 250 was taken. The following results were obtained:
+
+                Value                          Frequency
+                  0                                40
+                  1                                45
+                  2                                55
+                  3                                60
+                  4                                50
+
+     a.   State the null and alternative hypotheses to be tested.
+     b.   Compute the test statistic.
+     c.   The null hypothesis is to be tested at the 5% level of significance. Determine the critical value
+          from the table.
+     d.   What do you conclude about the fairness of this lottery?
+
+
+15. The makers of Compute-All know that in the past, 40% of their sales were from people under 30 years
+    old, 45% of their sales were from people who are between 30 and 50 years old, and 15% of their sales
+    were from people who are over 50 years old. A sample of 300 customers was taken to see if the market
+    shares had changed. In the sample, 100 of the people were under 30 years old, 150 people were
+    between 30 and 50 years old, and 50 people were over 50 years old.
+    a. State the null and alternative hypotheses to be tested.
+    b. Compute the test statistic.
+    c. The null hypothesis is to be tested at the 1% level of significance. Determine the critical value
+         from the table.
+    d. What do you conclude?
+
+
+16. The following table shows the results of recent study regarding gender of individuals and their selected
+    field of study.
+
+     Field of study              Male           Female           TOTAL
+     Medicine                     80              40              120
+     Business                     60              20               80
+     Engineering                 160              40              200
+     TOTAL                       300             100              400
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     We want to determine if the selected field of study is independent of gender.
+     a. Compute the test statistic.
+     b. Using the p-value approach at 90% confidence, test to see if the field of study is independent of
+        gender.
+     c. Using the critical method approach at 90% confidence, test for the independence of major and
+        gender.
+
+17. Shown below is 3 x 2 contingency table with observed values from a sample of 1,500. At 95%
+    confidence, test for independence of the row and column factors.
+
+                                                            Column Factor
+     Row Factor                                     X                                 Y                              Total
+     A                                             450                               300                              750
+     B                                             300                               300                              600
+     C                                             100                                50                              150
+     Total                                         850                               650                             1,500
+
+18. Shown below is 2 x 3 contingency table with observed values from a sample of 500. At 95%
+    confidence using the critical value approach, test for independence of the row and column factors.
+
+                                                 Column Factor
+     Row Factor                             X                           Y                           Z
+     A                                      40                          50                         110
+     B                                      60                         100                         140
+
+19. A sample of 150 individuals (males and females) was surveyed, and the individuals were asked to
+    indicate their yearly incomes. Their incomes were categorized as follows.
+
+     Category 1                                  $20,000         up to        $40,000
+     Category 2                                  $40,000         up to        $60,000
+     Category 3                                  $60,000         up to        $80,000
+
+     The results of the survey are shown below.
+
+              Income Category                                Male                            Female
+                 Category 1                                   10                               30
+                 Category 2                                   35                               15
+                 Category 3                                   15                               45
+
+     We want to determine if yearly income is independent of gender.
+     a. Compute the test statistic.
+     b. Using the p-value approach, test to determine if yearly income is independent of gender.
+
+20. A group of 2000 individuals from 3 different cities were asked whether they owned a foreign or a
+    domestic car. The following contingency table shows the results of the survey.
+
+                                                                   CITY
+     Type of Car                                       Detroit               Atlanta               Denver                  Total
+     Domestic                                           80                    200                    520                    800
+     Foreign                                            120                   600                    480                   1200
+     Total                                              200                   800                   1000                   2000
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     At  = 0.05 using the p-value approach, test to determine if the type of car purchased is independent of
+     the city in which the purchasers live.
+
+
+21. Dr. Sherri Brock's diet pills are supposed to cause significant weight loss. The following table shows
+    the results of a recent study where some individuals took the diet pills and some did not.
+
+                                                         Diet Pills                 No Diet Pills                      Total
+     No Weight Loss                                         80                           20                            100
+     Weight Loss                                           100                          100                            200
+     Total                                                 180                          120                            300
+
+     We want to see if losing weight is independent of taking the diet pills.
+     a. Compute the test statistic.
+     b. Using the p-value approach at 95% confidence, test to determine if weight loss is independent
+        on taking the pill.
+     c. Use the critical method approach and test for independence.
+
+
+22. Five hundred randomly selected automobile owners were questioned on the main reason they had
+    purchased their current automobile. The results are given below.
+
+                                   Styling                 Engineering                Fuel Economy                      Total
+     Male                            70                       130                          150                           350
+     Female                          30                        20                          100                           150
+     Total                           100                      150                          250                           500
+
+     a.   State the null and alternative hypotheses for a contingency table test.
+     b.   State the decision rule for the critical value approach. Let  = .01.
+     c.   Calculate the  test statistic.
+     d.   Give your conclusion for this test.
+
+23. A group of 500 individuals were asked to cast their votes regarding a particular issue of the Equal
+    Rights Amendment. The following contingency table shows the results of the votes:
+
+            Sex                  Favor                 Undecided                     Oppose                     TOTAL
+
+          Female                  180                        80                         40                         300
+           Male                   150                        20                         30                         200
+          TOTAL                   330                       100                         70                         500
+
+     At  = .05 using the p-value approach, test to determine if the votes cast were independent of the sex
+     of the individuals.
+
+24. Two hundred fifty managers with degrees in business administration indicated their fields of
+    concentration as shown below.
+
+           Major                     Top Management                     Middle Management                     TOTAL
+     Management                            65                                   60                             125
+     Marketing                             30                                   20                              50
+     Accounting                            25                                   50                              75
+     TOTAL                                120                                  130                             250
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     At  = .01 using the p-value approach, test to determine if the position in management is independent
+     of the major of concentration.
+
+
+25. From a poll of 800 television viewers, the following data have been accumulated as to their levels of
+    education and their preference of television stations.
+
+                                                     Level of Education
+
+                                               High School               Bachelor              Graduate               TOTAL
+     Public Broadcasting                           110                     190                   100                   400
+     Commercial Stations                            80                     220                   100                   400
+     TOTAL                                         190                     410                   200                   800
+
+     Test at  = .05 to determine if the selection of a TV station is dependent upon the level of education.
+     Use the p-value approach.
+
+
+26. The data below represents the fields of specialization for a randomly selected sample of undergraduate
+    students. We want to determine whether there is a significant difference in the fields of specialization
+    between regions of the country.
+
+                                   Northeast             Midwest                South                 West                 Total
+     Business                         54                   65                    28                    93                  240
+     Engineering                      15                   24                     8                    33                   80
+     Liberal Arts                     65                   84                    33                    98                  280
+     Fine Arts                        13                   15                     7                    25                   60
+     Health Sciences                   3                   12                     4                    21                   40
+                                     150                  200                    80                   270                  700
+
+     a.   Determine the critical value of the chi-square  for this test of independence.
+     b.   Calculate the value of the test statistic.
+     c.   What is the conclusion for this test? Let  = .05.
+
+
+27. A department store believes that telephone calls come into the switchboard at 10-minute intervals,
+    according to a Poisson distribution. Before ordering new equipment, the store wishes to determine
+    whether the Poisson model is a valid assumption. Records on the number of calls received were kept
+    for a random selection of 150 ten-minute intervals. The results are shown below.
+
+          Number of Calls                      Frequency
+               0                                    5
+               1                                   18
+               2                                   24
+               3                                   30
+               4                                   32
+               5                                   13
+               6                                   20
+               7                                    8
+                                                  150
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     a.    What is the average number of calls during these ten-minute intervals?
+     b.    Generate the expected number of calls using a Poisson probability table.
+     c.    Give the null and alternative hypotheses for the appropriate test.
+     d.    Determine the number of degrees of freedom for this test.
+     e.    Calculate the value of the test statistic.
+     f.    Determine the p-value and state whether or not the Poisson model is a valid model for the
+           phone calls?
+
+
+28. It is believed that sales of books at a local bookstore follow a Poisson distribution. Below you are
+    given information on the number of books sold during a sample of 15-minute intervals.
+
+          Number of Books                       Frequency
+                0                                    2
+                1                                    3
+                2                                   12
+                3                                   16
+                4                                   19
+                5                                   20
+                6                                   18
+                7                                   16
+                8                                    9
+                9                                    5
+                                                   120
+
+     a.    What is the average number of books sold during a 15-minute period?
+     b.    Using the Poisson distribution, find the probability associated with the number of books sold.
+     c.    Generate the expected number of books sold using a Poisson probability table.
+     d.    State the null and alternative hypotheses.
+     e.    Calculate the test statistic.
+     f.    Use the p-value approach to test the hypotheses. What is your conclusion? Let  = .05.
+
+
+29. The number of emergency calls per day at a hospital over a period of 120 days is shown below.
+
+                     Number of                                                   Observed
+                  Emergency Calls (x)                                          Frequency (f)
+                          0                                                         9
+                          1                                                         12
+                          2                                                         30
+                          3                                                         27
+                          4                                                         22
+                          5                                                         13
+                          6                                                         7
+                        Total                                                      120
+
+     Use  = 0.05 and the p-value approach to see if the above data have a Poisson distribution.
+
+
+30. An insurance company has gathered the following information regarding the number of accidents
+    reported per day over a period of 100 days.
+
+
+
+      © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+            from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+               Accidents Per Day                          Number of Days (f )
+                       0                                          5
+                       1                                         18
+                       2                                         25
+                       3                                         24
+                       4                                         20
+                       5                                          8
+
+     Using the critical value approach test to see if the above data have a Poisson distribution. Let  = 0.05.
+
+
+31. A professor believes that the final examination scores in statistics are normally distributed. A sample
+    of 40 final scores has been taken. You are given the sample below. The mean of the scores is 83.1, and
+    the standard deviation is 10.43.
+
+          56     63        65         68        72         72        73        75        77         78
+          78     79        80         80        80         80        80        80        81         81
+          82     84        84         86        86         87        88        90        90         92
+          92     93        93         94        95         96        97        98       100        100
+
+     a.    State the null and alternative hypotheses.
+     b.    Compute the test statistic for the goodness of fit test.
+     c.    At 99% confidence using the p-value approach, test the hypotheses. What do you conclude
+           about the distribution of final examination scores?
+
+
+32. A manager believes that the shelf life of apple juice is normally distributed. A sample of 30 containers
+    of juice was taken and the shelf life was recorded. You are given the results below. The average shelf
+    life in the sample was 23.07 days with a standard deviation of 4.29 days.
+
+          15         17        19         20         20         20        21          21         21        21
+          21         21        21         22         22         22        22          22         22        22
+          24         24        25         25         27         29        30          31         32        33
+
+     a.    State the null and alternative hypotheses.
+     b.    Compute the test statistic for the goodness of fit test.
+     c.    At 95% confidence using the p-value approach, test the hypotheses. What do you conclude
+           about the distribution?
+
+
+33. The following data show the grades of a sample of 40 students who have taken statistics.
+
+     98         64        96         69
+     45         94        58         59
+     63         49        88         83
+     85         87        68         77
+     56         63        86         89
+     84         73        52         63
+     64         80        69         68
+     79         73        78         79
+     72         82        78         88
+     83         76        66         76
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+     Use  = 0.1 and conduct a goodness of fit test to determine if the sample comes from a population that
+     has a normal distribution. Use the critical value approach.
+
+34. Use  = 0.05 to determine if the following sample comes from a normal distribution. Use the critical
+    value approach.
+
+     105         260          314          400         520
+     300         306          115          200         208
+     418         110          410          312         360
+     310         314          418          316         412
+     516         480          490          504         518
+     280         270          516          419         520
+     420         438          511          708         300
+     420         519          702          690         518
+     510         700          650          670         612
+     460         600          680          692         600
+
+
+35. We want to determine if the following sample comes from a normal distribution.
+
+                          105                260                 314                400                       520
+                          300                306                 115                200                       208
+                          418                110                 410                312                       360
+                          310                314                 418                316                       412
+                          516                480                 490                504                       518
+                          280                270                 516                419                       520
+                          420                438                 511                708                       300
+                          420                519                 702                690                       518
+                          510                700                 650                670                       612
+                          460                600                 680                692                       600
+
+     a.    Compute the mean and the standard deviation.
+     b.    Compute the test statistic. Hint: divide the distribution into 10 equal intervals.
+     c.    At 95% confidence using the critical value approach, test to determine if the sample comes
+           from a normal population.
+     d.    Compute the p-value.
+
+
+
+
+     © 2011 Cengage Learning. All Rights Reserved. This edition is intended for use outside of the U.S. only, with content that may be different
+           from the U.S. Edition. May not be scanned, copied, duplicated, or posted to a publicly accessible website, in whole or in part.
+
