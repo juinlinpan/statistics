@@ -4,7 +4,7 @@
 
 - 課程：Quan1150 商業數量方法（政治大學統計系，余清祥老師，2026 夏季密集課程）
 - 教材：Anderson, Sweeney, Williams et al., *Statistics for Business and Economics*, **14e Metric Version**（投影片依此版）
-- 本地課本 PDF：`course_2/DavidAnderson_Statistics_for_Business_an.pdf` 是 **11e**。兩版章節主題相同但節號可能略有差異（例如 14e 的 7.9 Big Data and Standard Errors 在 11e 沒有）。查核時以內容對照為準，不要硬對節號；11e 找不到的內容以投影片為準並註記。
+- 本地課本 PDF：`course_2/DavidAnderson_Statistics_for_Business_an.pdf` 是 **11e**。兩版章節主題相同但章號、節號可能不同（例如本課 14e Metric 的 Ch17 時間數列、Ch18 無母數，在 11e 分別是 Ch18、Ch19；14e 的 7.9 Big Data and Standard Errors 在 11e 沒有）。查核時以內容對照為準，不要硬對章節號；11e 找不到的內容以投影片為準並註記。
 - **考試範圍：Ch12–18**（有考古題）。**Ch7–10 只是複習**，不直接考，但它是 Ch12 之後所有推論方法的地基。
 
 ## 投影片 ↔ 講義對應表
@@ -17,10 +17,10 @@
 | Quan1150(Simple Regression).pdf | 2026/7/8–9 | 第 14 章 簡單線性迴歸 | 14-simple-linear-regression.md |
 | Quan1150(Multiple Regression).pdf | 2026/7/13–14 | 第 15 章 複迴歸 | 15-multiple-regression.md |
 | Quan1150(Model Construction).pdf | 2026/7/15–16 | 第 16 章 建立迴歸模型 | 16-regression-model-building.md |
-| （尚未公布，2026-07-15 時點） | — | 第 17 章 指數 | 17-index-numbers.md |
-| （尚未公布，2026-07-15 時點） | — | 第 18 章 時間序列分析與預測 | 18-time-series-and-forecasting.md |
+| Quan1150(Forecast).pdf | 2026/7/20–21 | 第 17 章 時間數列與預測 | 17-time-series-and-forecasting.md |
+| Quan1150(Nonparametric).pdf | 2026/7/22–23 | 第 18 章 無母數方法 | 18-nonparametric-methods.md |
 
-老師公布新投影片後：先更新本表與 `course_2/進度.md`，再對新投影片做 Phase 1。Ch17、18 在投影片公布前不可開始 Phase 1（考古題已在 quiz-set，屆時 Phase 6 素材已備）。
+Ch17、18 投影片已於 2026-07-16 放入 `course_2/ppt/`；實際章序是 Ch17 時間數列與預測、Ch18 無母數方法，取代先前依舊版課本預估的「Ch17 指數、Ch18 時間序列」。考古題已在 quiz-set，Phase 6 素材齊備。
 
 ## 考古題
 
@@ -39,8 +39,8 @@
 - **Ch14 簡單線性迴歸**：迴歸模型與最小平方法；判定係數與相關係數;模型假設；顯著性檢定（t、F）；估計與預測區間；殘差分析；離群值與影響點。
 - **Ch15 複迴歸**：模型與估計；多元判定係數與調整後 $R^2$；F 與 t 檢定；多重共線性；類別（虛擬）變數；殘差分析；（視投影片）邏輯斯迴歸。
 - **Ch16 建立迴歸模型**：一般線性模型（曲線關係、交互作用、變數轉換）；變數增刪判斷；逐步/向前/向後/最佳子集選取；實驗設計的迴歸做法；自相關與 Durbin-Watson 檢定。
-- **Ch17 指數**：價格相對比；加權綜合價格指數（Laspeyres、Paasche）；CPI、PPI、道瓊等重要指數；以指數平減；數量指數。
-- **Ch18 時間序列分析與預測**：時間序列型態；預測準確度量；移動平均與指數平滑；趨勢投影；季節性與趨勢；時間序列分解。
+- **Ch17 時間數列與預測**：時間數列型態；預測準確度量；移動平均與指數平滑；趨勢投影；季節性與趨勢；時間數列分解。
+- **Ch18 無母數方法**：符號檢定；Wilcoxon 符號等級檢定；Mann-Whitney-Wilcoxon 檢定；Kruskal-Wallis 檢定；Spearman 等級相關。
 
 ## course_1 先備知識對應表（Phase 3 用）
 
@@ -54,8 +54,8 @@ course_1（初級統計，`course_1/chapters/`）已完成 12 章。各講義的
 | 14-simple-regression | 06-regression.md（相關、最小平方、殘差）、07/08（區間與檢定邏輯） |
 | 15-multiple-regression | 06-regression.md、08-significance-tests.md；複迴歸本身 course_1 未教，斷層要在講義內補 |
 | 16-model-building | 06-regression.md（殘差診斷、轉換）；變數選取、DW 檢定 course_1 未教 |
-| 17-index-numbers | 無先修對應（course_1 未涵蓋），講義需自給自足 |
-| 18-time-series | 無先修對應（course_1 未涵蓋；僅 01 章的折線圖概念沾邊），講義需自給自足 |
+| 17-time-series-and-forecasting | 無完整先修對應（course_1 僅有 01 章折線圖、03 章平均與誤差概念、06 章迴歸），講義需補齊時間索引、預測誤差、平滑、趨勢、季節性與分解 |
+| 18-nonparametric-methods | 01 章資料尺度、04 章二項分配、08 章檢定、09 章配對資料、11 章 ANOVA；等級轉換與各無母數檢定需在本章補齊 |
 
 課本第 1–6 章（敘述統計、機率、離散/連續分配）不在授課範圍，但屬於 ch7–10 複習講義的斷層補強來源（Phase 3 第 1 項）。
 

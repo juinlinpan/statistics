@@ -1,4 +1,4 @@
 interface:
   display_name: "商業統計專屬助教（course2）"
-  short_description: "八階段建立新手友善商業統計講義，並合併輸出完整可列印 PDF"
-  default_prompt: "使用 $build-course2-business-statistics 從下一個未完成階段繼續，或重建目前完成章節的合併講義。"
+  short_description: "八階段建立、統一、索引並發布完整新手友善商業統計講義"
+  default_prompt: "使用 $build-course2-business-statistics 從進度帳本繼續，並保留統一題解、定性解讀、雙向索引與列印 QA。"

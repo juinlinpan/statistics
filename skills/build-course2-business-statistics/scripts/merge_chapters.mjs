@@ -2,23 +2,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { chapterFiles } from "./handout_manifest.mjs";
+
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoDir = path.resolve(scriptDir, "../../..");
 const courseDir = path.join(repoDir, "course_2");
 const chaptersDir = path.join(courseDir, "chapters");
 const outputPath = path.join(courseDir, "merged_chapters.md");
-
-// Only chapters whose learner-facing notes are complete belong in the handout.
-// Ch17 and Ch18 intentionally stay out until their source decks and all phases
-// are complete. Keep this manifest in teaching order.
-const chapterFiles = [
-  "07-10-review-estimation-and-testing.md",
-  "12-chi-square-tests.md",
-  "13-anova.md",
-  "14-simple-linear-regression.md",
-  "15-multiple-regression.md",
-  "16-regression-model-building.md",
-];
 
 const mergedBasenames = new Set(chapterFiles);
 
@@ -282,7 +272,7 @@ function addExamCrossReferences(records) {
 function validateChapter(body, filename) {
   const h1 = body.match(/^# .+$/gm) ?? [];
   if (h1.length !== 1) throw new Error(`Expected exactly one H1 in ${filename}, found ${h1.length}`);
-  if (!/^# 第 (?:7[–-]10|12|13|14|15|16) 章/m.test(body)) {
+  if (!/^# 第 (?:7[–-]10|\d+) 章/m.test(body)) {
     throw new Error(`Unexpected chapter title in ${filename}: ${h1[0] ?? "missing"}`);
   }
   if (/本檔為講義骨架|老師尚未公布|<!--\s*Phase\s+[1-8]/.test(body)) {

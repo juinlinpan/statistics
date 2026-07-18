@@ -1,0 +1,762 @@
+CHAPTER 18—NONPARAMETRIC METHODS
+MULTIPLE CHOICE
+
+  1. A collection of statistical methods that generally requires very few, if any, assumptions about the
+     population distribution is known as
+     a. parametric methods
+     b. nonparametric methods
+     c. distribution-fixed methods
+     d. normal
+  2. The collection of statistical methods that require assumptions about the population is known as
+     a. distribution free methods
+     b. nonparametric methods
+     c. small populations
+     d. parametric methods
+  3. Parametric methods are statistical methods that
+     a. require some assumptions about the population
+     b. require no assumptions about the population
+     c. only deal with small samples
+     d. considers the sign of two matched samples
+  4. Which of the following tests would not be an example of a nonparametric method?
+     a. Mann-Whitney-Wilcoxon test
+     b. Wilcoxon signed-rank test
+     c. sign test
+     d. t-test
+  5. A sign test is a
+     a. parametric method for determining the differences between two populations based on two
+         matched samples
+     b. nonparametric method for determining the differences between two populations based on
+         two matched samples
+     c. nonparametric method for determining the differences between two or more populations
+         based on two or more matched samples
+     d. parametric method for determining the differences between two or more populations based
+         on two or more matched samples
+  6. The level of measurement that allows for the rank ordering of data items is
+     a. nominal measurement
+     b. ratio measurement
+     c. interval measurement
+     d. ordinal measurement
+  7. The level of measurement that is simply a label for the purpose of identifying an item is
+     a. ordinal measurement
+     b. ratio measurement
+     c. nominal measurement
+     d. internal measurement
+  8. The labeling of parts as "defective" or "non-defective" is an example of
+     a. ordinal data
+     b. ratio data
+     c. interval data
+     d. nominal data
+ 9. In a questionnaire, respondents are asked to mark their marital status. Marital status is an example of
+    the
+    a. ordinal scale
+    b. nominal scale
+    c. ratio scale
+    d. interval scale
+10. The scale of measurement that is used to rank order the observation for a variable is called the
+    a. ratio scale
+    b. ordinal scale
+    c. nominal scale
+    d. interval scale
+11. On a teacher evaluation form students are asked to rate their professor's performance as excellent, very
+    good, good, and poor. This is an example of the
+    a. ordinal scale
+    b. ratio scale
+    c. nominal scale
+    d. interval scale
+12. Temperature is an example of a variable that uses
+    a. the ratio scale
+    b. the interval scale
+    c. the ordinal scale
+    d. either the ratio or the ordinal scale
+13. The speed of an automobile is an example of a variable that uses the
+    a. ratio scale
+    b. interval scale
+    c. nominal scale
+    d. ordinal scale
+14. Statistical methods that generally require very few, if any, assumptions about the population
+    distribution are known as
+    a. parametric
+    b. nonparametric
+    c. free methods
+    d. None of these alternatives is correct.
+15. Which of the following tests would not be an example of nonparametric method?
+    a. Mann-Whitney-Wilcoxon test
+    b. Wilcoxon signed-rank test
+    c. sign test
+    d. t test
+16. A nonparametric version of the Parametric analysis of variance test is the
+    a. Kruskal-Wallis Test
+    b. Mann-Whitney-Wilcoxon Test
+    c. sign test
+    d. Wilcoxon Signed-rank test
+17. A nonparametric method for determining the differences between two populations based on two
+    matched samples where only preference data is required is the
+    a. Mann-Whitney-Wilcoxon test
+    b. Wilcoxon signed-rank test
+    c. sign test
+     d. Kruskal-Wallis Test
+18. When ranking combined data in a Wilcoxon signed rank test, the data that receives a rank of 1 is the
+    a. lowest value
+    b. highest value
+    c. middle value
+    d. average of the highest and the lowest of values
+19. Statistical methods that require assumptions about the population are known as
+    a. distribution free
+    b. nonparametric
+    c. either distribution free of nonparametric
+    d. parametric
+20. The Spearman rank-correlation coefficient is
+    a. a correlation measure based on the average of data items
+    b. a correlation measure based on rank-ordered data for two variables
+    c. a correlation measure based on the median of data items
+    d. None of these alternatives is correct.
+21. A nonparametric test for the equivalence of two populations would be used instead of a parametric test
+    for the equivalence of the population parameters if
+    a. the samples are very large
+    b. the samples are not independent
+    c. no information about the populations is available
+    d. The parametric test is always used in this situation.
+22. A nonparametric test would be used if
+    a. nominal data is available
+    b. interval data is available
+    c. it is known that the population is normally distributed
+    d. None of these alternatives is correct.
+23. If a null hypothesis that states that two populations are identical is rejected using a nonparametric test,
+    then it is safe to assume that
+    a. neither the means nor the variances are equal
+    b. the means of the populations are not the same
+    c. the variances of the populations are not the same
+    d. We cannot be sure of the way in which the populations differ from each other.
+24. The Spearman rank-correlation coefficient for 20 pairs of data when di2 = 50 is.
+    a. 0.0063
+    b. 0.0376
+    c. 0.9624
+    d. 0.9937
+     Exhibit 18-1
+     Fifteen people were given two types of cereal, Brand X and Brand Y. Two people preferred Brand X
+     and thirteen people preferred Brand Y. We want to determine whether or not customers prefer one
+     brand over the other.
+
+25. Refer to Exhibit 18-1. The null hypothesis that is being tested is
+    a. H0:  = 5
+    b. H0:  = 0.5
+    c. H0: P = 5
+    d. H0: P = 0.5
+26. Refer to Exhibit 18-1. To test the null hypothesis, the appropriate probability distribution to use is
+    a. normal
+    b. chi-square
+    c. Poisson
+    d. binomial
+27. Refer to Exhibit 18-1. The p-value for this test is
+    a. 0.0005
+    b. 0.001
+    c. 0.0037
+    d. 0.0074
+28. Refer to Exhibit 18-1. At 95% confidence, the null hypothesis should
+    a. be rejected
+    b. not be rejected
+    c. be revised
+    d. None of these alternatives is correct.
+     Exhibit 18-2
+     Students in statistics classes were asked whether they preferred a 10-minute break or to get out of class
+     10 minutes early. In a sample of 150 students, 40 preferred a 10-minute break, 80 preferred to get out
+     10 minutes early, and 30 had no preference. We want to determine if there is a difference in students'
+     preferences.
+
+29. Refer to Exhibit 19-2. The null hypothesis that is being tested is
+    a. H0:  = 5
+    b. H0:  = 0.5
+    c. H0: P = 5
+    d. H0: P = 0.5
+30. Refer to Exhibit 19-2. The mean and the standard deviation of the sampling distribution of the number
+    of students who preferred to get out early are
+    a. 50 and 30
+    b. 60 and 30
+    c. 50 and 5.478
+    d. 60 and 5.478
+31. Refer to Exhibit 19-2. To test the null hypothesis, the appropriate probability distribution to use is the
+    a. normal
+    b. chi-square
+    c. t distribution
+    d. binomial
+32. Refer to Exhibit 19-2. The test statistic based on the number of students who preferred to get out early
+    equals
+    a. 1.825
+    b. 0.67
+    c. 0.82
+    d. 3.65
+33. Refer to Exhibit 19-2. The p-value for testing the hypotheses is
+    a. less than 0.002
+    b. between 0.002 and 0.05
+    c. between 0.05 and 0.10
+    d. greater than 0.10
+34. Refer to Exhibit 19-2. The null hypothesis should be
+    a. rejected
+    b. not rejected
+    c. revised
+    d. None of these alternatives is correct.
+     Exhibit 18-3
+     It is believed that the median yearly income in a suburb of Atlanta is $70,000. A sample of 67
+     residents was taken. Thirty-eight had yearly incomes above $70,000, 26 had yearly incomes below
+     $70,000, and 3 had yearly incomes equal to $70,000. The null hypothesis to be tested is H0: median =
+     $70,000.
+
+35. Refer to Exhibit 18-3. To test the null hypothesis, the appropriate probability distribution to use is
+    a. normal
+    b. chi-square
+    c. t distribution
+    d. binomial
+36. Refer to Exhibit 18-3. The mean and the standard deviation (respectively) for this test about the
+    median are
+    a. 32 and 4
+    b. 32 and 16
+    c. 33.5 and 4
+    d. 33.5 and 16
+37. Refer to Exhibit 18-3. The test statistic has a value of
+    a. 1.00
+    b. 1.50
+    c. 2.00
+    d. 2.50
+38. Refer to Exhibit 18-3. The p-value for this test is
+    a. 0.4332
+    b. 0.8664
+    c. 0.0668
+    d. 0.1336
+39. Refer to Exhibit 18-3. The null hypothesis should be
+    a. rejected
+    b. not rejected
+    c. revised
+    d. None of these alternatives is correct.
+     Exhibit 18-4
+     A company advertises that food preparation time can be significantly reduced with the Handy Dandy
+     Slicer. A sample of 12 individuals prepared the ingredients for a meal with and without the slicer. You
+     are given the preparation times below.
+
+                                                               Preparation Times
+                  Person                         With Slicer                   Without Slicer
+                    1                                20                             22
+                    2                                12                             18
+                    3                                20                             18
+                    4                                14                             22
+                    5                                19                             19
+                    6                                20                             21
+                     7                                 19                               18
+                     8                                 15                               12
+                     9                                 22                               18
+                    10                                 19                               25
+                    11                                 21                               26
+                    12                                 23                               20
+
+40. Refer to Exhibit 18-4. To test the null hypothesis, the appropriate probability distribution to use is
+    a. Normal
+    b. chi-square
+    c. t distribution
+    d. Binomial
+41. Refer to Exhibit 18-4. The test statistic equals
+    a. -0.81 or 0.81
+    b. -0.89 or 0.89
+    c. -10 or 10
+    d. -20 or 20
+42. Refer to Exhibit 18-4. The p-value for this test is
+    a. 0.3133
+    b. 0.6266
+    c. 0.3734
+    d. 0.8167
+43. Refer to Exhibit 18-4. The null hypothesis should
+    a. be rejected
+    b. not be rejected
+    c. be revised
+    d. None of these alternatives is correct.
+     Exhibit 18-5
+     It has been hypothesized that there is no difference in the mathematical ability of men and women. To
+     test this hypothesis, it was decided to use the Mann-Whitney-Wilcoxon test. A sample of men and
+     women were given math tests. The scores on the tests are given below.
+
+                          Women                                               Men
+              Person                    Score                   Person                    Score
+                 1                       95                        1                       80
+                 2                       86                        2                       87
+                 3                       100                       3                       93
+                 4                       100                       4                       95
+                 5                       99                        5                       97
+                 6                       98                        6                       82
+                 7                       88                        7                       89
+                 8                       92                        8                       86
+                 9                       94                        9                       75
+                10                       89                       10                       82
+                                                                  11                       79
+
+44. Refer to Exhibit 18-5. To test the null hypothesis, the appropriate probability distribution to use is
+    a. normal
+    b. chi-square
+    c. t distribution
+    d. binomial
+45. Refer to Exhibit 18-5. The mean (T) is
+    a. 10
+    b. 110
+    c. 66
+    d. 55
+46. Refer to Exhibit 18-5. The standard deviation (T) is
+    a. 10
+    b. 11.5
+    c. 14.2
+    d. 110
+     Exhibit 18-6
+     Forty-one individuals from a sample of 60 indicated they oppose legalized abortion. We are interested
+     in determining whether or not there is a significant difference between the proportions of opponents
+     and proponents of legalized abortion.
+
+47. Refer to Exhibit 18-6. The null hypothesis that is being tested is
+    a. H0:  = 5
+    b. H0:  = 0.5
+    c. H0: P = 5
+    d. H0: P = 0.5
+48. Refer to Exhibit 18-6.  in this situation is
+    a. 60
+    b. 30
+    c. 41
+    d. 2
+49. Refer to Exhibit 18-6.  in this problem is
+    a. 15
+    b. 5.47
+    c. 3.87
+    d. 7.45
+50. Refer to Exhibit 18-6. The test statistics is
+    a. 3.87
+    b. 2.84
+    c. 60
+    d. 0.5
+51. Refer to Exhibit 18-6. p-value is
+    a. 0.0023
+    b. 0.0046
+    c. 0.4954
+    d. 0.4977
+52. Refer to Exhibit 18-6. The null hypothesis should be
+    a. Rejected
+    b. not rejected
+    c. Not enough information is given to answer this question.
+    d. None of these alternatives.
+53. Refer to Exhibit 18-6. The conclusion is that there
+    a. is no significant difference between the proportions
+    b. is a significant difference between the proportions
+    c. could be a difference in proportions, depending on the sample size
+    d. None of these alternatives is correct.
+PROBLEM
+
+ 1. In a sample of 400 people, 250 indicated that they prefer domestic wines, while 140 said they prefer
+    European wines, and 10 indicated no preference. We want to use the sign test to determine if there is
+    evidence of a significant difference in the preferences for the two types of wine.
+
+    a.    Provide the hypotheses to be tested.
+    b.    Compute the mean.
+    c.    Compute the standard deviation.
+    d..   At 95% confidence, test to determine if there is evidence of a significant difference in the
+          preferences for the two types of wine.
+
+ 2. In a sample of 200 racquetball players, 120 indicated they prefer Penn racquetballs, 75 favored Ektelon,
+     and 5 were indifferent. We want to use the sign test to determine if there is evidence of a significant
+     difference in the preferences for the two types of racquetballs.
+
+    a.    Provide the hypotheses to be tested.
+    b.    Compute the mean.
+    c.    Compute the standard deviation.
+    d..   At 95% confidence, test to determine if there is evidence of a significant difference in the
+          preferences for the two types of racquetballs.
+
+ 3. The monthly sales records of two branches of a department store (Branch A and Branch B) over the
+    last year (12 months) were gathered. It was decided to use the Mann-Whitney-Wilcoxon test to
+    determine if there has been a significant difference between the sales of the two branches.
+
+    a.    Provide the hypotheses for this test.
+    b.    Compute the mean T.
+    c.    Compute the standard deviation T.
+    d.    The sum of the ranks for branch A was determined to be 184.5. Compute the test statistic Z.
+    e.    Use  = 0.05 and test to determine if there is a significant difference in the populations of the
+          sales of the two branches.
+
+ 4. Independent random samples of the scores of 10 daily quizzes from day students and 15 quizzes from
+    evening students were gathered. It was decided to use the Mann-Whitney-Wilcoxon test to determine
+    if there is a significant difference between the scores of the two groups of students.
+
+    a.    Provide the hypotheses for this test.
+    b.    Compute the mean T.
+    c.    Compute the standard deviation T.
+    d.    The sum of the ranks for the day students was determined to be 184.5. Compute the test
+          statistic Z.
+    e.    Use  = 0.05 and test to determine if there is a significant difference in the populations of the
+          scores of the two groups.
+
+ 5. The sales records of two branches of a department store over the last 12 months are shown below.
+    (Sales figures are in thousands of dollars.) We want to use the Mann-Whitney-Wilcoxon test to
+    determine if there is a significant difference in the sales of the two branches.
+
+                  Month                            Branch A                          Branch B
+                      1                               257                               210
+                      2                               280                               230
+                      3                               200                               250
+                      4                               250                               260
+                      5                               284                               275
+                      6                               295                               300
+                      7                               297                               320
+                      8                               265                               290
+                      9                               330                               310
+                     10                               350                               325
+                     11                               340                               329
+                     12                               272                               335
+
+    a.    Compute the sum of the ranks (T) for branch A.
+    b.    Compute the mean T.
+    c.    Compute T.
+    d..   Use  = 0.05 and test to determine if there is a significant difference in the populations of the
+          sales of the two branches.
+
+6. Independent random samples of ten day students and ten evening students at a university showed the
+   following age distributions. We want to use the Mann-Whitney-Wilcoxon test to determine if there is
+   a significant difference in the age distribution of the two groups.
+
+           Day            Evening
+           26               32
+           18               24
+           25               23
+           27               30
+           19               40
+           30               41
+           34               42
+           21               39
+           33               45
+           31               35
+
+    a.    Compute the sum of the ranks (T) for the day students.
+    b.    Compute the mean T.
+    c.    Compute T.
+    d..   Use  = 0.05 and test for any significant differences in the age distribution of the two
+          populations.
+
+7. From the courthouse records, it is found that in 60 divorce cases, the filing for divorce was initiated by
+   the wife 41 times. Using the sign test, test for a difference in filing between husband and wives. Let 
+   = 0.05
+
+8. Two employers (A and B) ranked five candidates for a new position. Their rankings of the candidates
+   are shown below.
+
+    Candidate                        Rank by A                 Rank by B
+    Nancy                                2                        1
+    Mary                                 1                        3
+    John                                 3                        4
+    Lynda                                5                        5
+     Steve                                4                        2
+
+     Compute the Spearman rank-correlation and test it for significance. Let  = 0.05.
+
+ 9. The following data show the test scores of six individuals on a standardized test before and after
+    attending a preparation seminar for the test.
+
+              Person                   Before                    After
+                A                       108                       110
+                B                       102                       118
+                C                       107                       105
+                D                        97                       97
+                E                       112                       116
+                F                       108                       106
+
+     Use the Wilcoxon Signed-Rank test in order to determine whether or nor the seminar has been
+     effective. Hint: This is a one tailed test. Let  = 0.05.
+
+10. Fifteen people were asked to indicate their preference for domestic versus imported cars. The
+    following data showed their preferences.
+
+             Individual           Domestic vs. Imported
+                  1                         +
+                  2                         +
+                  3                         -
+                  4                         +
+                  5                         +
+                  6                         +
+                  7                         -
+                  8                         +
+                  9                         +
+                 10                         +
+                 11                         +
+                 12                         +
+                 13                         +
+                 14                         +
+                 15                         -
+
+     With  = 0.05, test for a significant difference in the preferences for cars. A "+" indicates a preference
+     for imported cars.
+
+11. The following data show the preference of 20 people for a candidate to a public office. A "+" indicates
+    a preference for the Democratic candidate, and a "-" indicates a preference for the Republican
+    candidate.
+
+                                                 Republicans
+                Individual                      vs. Democrats
+                    1                                 +
+                    2                                 -
+                    3                                 +
+                    4                                 +
+                    5                                 +
+                    6                                 +
+                     7                                 -
+                     8                                 +
+                     9                                 +
+                    10                                 +
+                    11                                 +
+                    12                                 -
+                    13                                 -
+                    14                                 +
+                    15                                 +
+                    16                                 -
+                    17                                 -
+                    18                                 +
+                    19                                 +
+                    20                                 +
+
+     With  = 0.05, test for a significant difference in the preference for the candidates.
+
+12. In a sample of 120 people, 50 indicated that they prefer domestic automobiles, 60 said they prefer
+    foreign-made cars, and 10 indicated no difference in their preference. At a 0.05 level of significance,
+    determine if there is evidence of a significant difference in the preferences for the two makes of
+    automobiles.
+
+13. In a sample of 300 shoppers, 160 indicated they prefer fluoride toothpaste, 120 favored nonfluoride,
+    and 20 were indifferent. At a 0.05 level of significance, test for a difference in the preference for the
+    two kinds of toothpaste.
+
+14. Test scores of ten individuals before and after a training program are shown below.
+
+                                                     Score                             Score
+                                                    Before                             After
+                Individual                       the Program                       the Program
+                     1                                59                                57
+                     2                                57                                62
+                     3                                60                                60
+                     4                                66                                63
+                     5                                68                                69
+                     6                                59                                63
+                     7                                72                                74
+                     8                                52                                56
+                     9                                58                                64
+                    10                                63                                64
+
+     At  = 0.05, what can be concluded about the effectiveness of the training program?
+
+15. Ten drivers were asked to drive two models of a car. Each car was given one gallon of gasoline. The
+    distance that each automobile traveled on a gallon of gasoline is shown below.
+
+                                                         Distance Traveled (Miles)
+                  Driver                           Model A                      Model B
+                    1                               27.7                           27.1
+                    2                               28.4                           28.0
+                    3                               28.9                           28.7
+                    4                               27.9                           27.6
+                      5                             26.5                             26.0
+                      6                             29.1                             29.0
+                      7                             28.9                             28.2
+                      8                             28.9                             28.0
+                      9                             28.8                             28.0
+                     10                             28.0                             27.0
+
+     At  = 0.05, what can be concluded about the performance of the two models?
+
+16. A PTA group wishes to determine whether a barrage of letters sent to the local station has reduced the
+    amount of violence broadcast between the hours of 4 P.M. and 9 P.M. The results of a survey of
+    viewers are given here.
+
+     Response                            Number of Respondents
+     More Violence                                 4
+     Less Violence                                11
+     No Change                                     6
+
+     Carry out a sign test to determine whether or not the letters were effective in reducing the amount of
+     violence during the 4 to 9 p.m. period. Use a .05 level of significance. Be sure to state the null and
+     alternative hypotheses.
+
+17. A clothing manufacturer purchased some newly designed sewing machines in the hopes that
+    production would be increased. The production records of a random sample of workers are shown
+    below.
+
+                 Worker                        Old Machine                      New Machine
+                   1                               28                               36
+                   2                               36                               40
+                   3                               27                               25
+                   4                               25                               32
+                   5                               38                               30
+                   6                               36                               32
+                   7                               40                               40
+                   8                               29                               28
+                   9                               32                               35
+                  10                               28                               33
+                  11                               20                               26
+                  12                               32                               31
+                  13                               32                               23
+                  14                               32                               34
+                  15                               36                               36
+
+     Use the Wilcoxon signed-rank test to determine whether the new machines have significantly
+     increased production. Use a .05 level of significance.
+
+18. The president of a company wants to see if the new anti-smoking campaign is having any influence on
+    his employees. A sample of 100 employees who smoked prior to the campaign is taken. Thirty-six
+    employees said they smoked less, 15 employees said they smoked more, and 49 employees said there
+    was no change.
+    a. State the null and alternative hypotheses.
+    b. Test the null hypothesis at the 1% level of significance.
+19. It is believed that the median age of college students is 21 years. A sample of 80 college students is
+    taken. Thirty of the students were under 21, 45 of the students were over 21, and 10 were 21 years old.
+    a. State the null and alternative hypotheses.
+    b. Test the null hypothesis at the 1% level of significance.
+
+20. We want to see if the workers on the day and night shifts differ significantly in their productivity
+    levels. A sample of workers from both shifts was taken.
+
+                         Day Shift                                        Night Shift
+             Worker                    Output                   Worker                  Output
+               1                        31                        1                      31
+               2                        32                        2                      25
+               3                        26                        3                      29
+               4                        34                        4                      30
+               5                        24                        5                      27
+               6                        35                        6                      33
+               7                        39                        7                      37
+               8                        28                        8                      39
+               9                        44                        9                      38
+              10                        42                       10                      36
+                                                                 11                      40
+
+     a.   State the null and alternative hypotheses.
+     b.   Test the null hypothesis at the 5% level of significance.
+
+21. The manager of a company believes that differences in sales performance depends upon the
+    salesperson's age. Independent samples of salespeople were taken and their weekly sales record is
+    reported below.
+
+             Below 30 Years                Between 30 & 45 Years                Over 45 Years
+              No. of Sales                      No. of Sales                     No. of Sales
+                   24                                23                               30
+                   16                                17                               20
+                   21                                22                               23
+                   15                                25                               25
+                   19                                18                               34
+                   26                                29                               36
+                                                     27                               28
+
+     a.   State the null and alternative hypotheses.
+     b.   At 95% confidence, test the hypotheses.
+
+22. Two faculty members ranked 12 candidates for scholarships. Calculate the Spearman rank-correlation
+    coefficient and test it for significance. Use a .02 level of significance.
+
+                                                  Rank by                          Rank by
+                Candidate                        Professor A                      Professor B
+                   1                                  6                                5
+                   2                                 10                               11
+                   3                                  2                                6
+                   4                                  1                                3
+                   5                                  5                                4
+                   6                                 11                               12
+                     7                                  4                                 2
+                     8                                  3                                 1
+                     9                                  7                                 7
+                    10                                 12                                10
+                    11                                  9                                 8
+                    12                                  8                                 9
+
+23. A comprehensive statistics examination is given to 16 students in order to determine whether or not
+    there is a significant difference in the performance of students majoring in the various disciplines of
+    Business Administration. The following data show the scores of the 16 students (5 majoring in
+    accounting, 6 majoring in management, and 5 majoring in marketing).
+
+               Accounting                        Management                          Marketing
+                   91                                63                                 95
+                   80                                92                                 80
+                   70                                86                                 70
+                   60                                75                                 60
+                   85                                70                                 90
+                                                     99
+
+     At  = 0.05 level of significance, test to see if there is a significant difference in the performance of
+     the students in the three majors.
+
+24. A survey of male and female students showed the following ranking of 12 professors in the
+    management department:
+
+                                                 Ranking By                         Ranking By
+                Professor                      Female Students                     Male Students
+                    1                                 7                                  8
+                    2                                 8                                  7
+                    3                                 1                                  2
+                    4                                 2                                  3
+                    5                                 9                                  1
+                    6                                 3                                 10
+                    7                                10                                  9
+                    8                                11                                  4
+                    9                                 4                                  6
+                   10                                 6                                 11
+                   11                                12                                  5
+                   12                                 5                                 12
+
+     Do the rankings given by the female students agree with the rankings given by the male students? Use
+      = 0.05.
+
+25. Two individuals were asked to rank the performances of eight different automobiles. The following
+    show their rankings.
+
+                                                 Ranking by                        Ranking by
+               Automobile                        First Person                     Second Person
+                   1                                   3                                2
+                   2                                   5                                1
+                   3                                   1                                4
+                   4                                   6                                7
+                     5                                 2                                5
+                     6                                 4                                8
+                     7                                 7                                6
+                     8                                 8                                3
+
+     Determine the Spearman rank-correlation coefficient; and at 95% confidence, test for its significance.
+
+26. Two groups of students were asked to rank the activities sponsored by the Student Government
+    Association on campus. The following show their rankings.
+
+                                                  Resident                        Nonresident
+                 Activity                     Student Ranking                   Student Ranking
+                    1                                3                                 6
+                    2                                1                                 2
+                    3                                8                                 5
+                    4                                2                                 1
+                    5                                5                                 7
+                    6                                7                                 8
+                    7                                4                                 3
+                    8                                6                                 4
+
+     Determine the Spearman rank-correlation coefficient and test for a significant correlation with  =
+     0.05.
+
+27. Two faculty members (X and Y) ranked five candidates for scholarships. The rankings are shown
+    below.
+
+     Candidate                                   Rank By X                         Rank By Y
+     Peter                                           5                                 1
+     Nancy                                           2                                 2
+     Michael                                         1                                 3
+     Mary                                            3                                 5
+     Judy                                            4                                 4
+
+     Compute the Spearman rank-correlation and test it for significance. Let  = 0.05.
+
+28. Three universities in your state have decided to administer the same comprehensive examination to the
+    recipients of MBA degrees. From each institution, a random sample of MBA recipients has been
+    selected and given the test. The following table shows the scores of the students from each university.
+
+                Northern                           Central                         Southern
+                University                        University                       University
+                   56                                62                               94
+                   85                                97                               72
+                   65                                91                               93
+                   86                                82                               78
+                   93                                                                 54
+                                                                                      77
+
+     Use the Kruskal-Wallis test to determine if there is a significant difference in the average scores of the
+     students from the three universities. Let  = 0.01.
+

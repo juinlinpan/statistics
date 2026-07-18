@@ -1,0 +1,670 @@
+                                                                       商業數量方法
+                                                                                                                                                                                                 Summer 2026
+
+
+政治大學統計系余清祥
+2026年7月22日及23日
+第十八章：無母數方法
+http://csyue.nccu.edu.tw
+© 2020 Cengage. May not be scanned, copied or duplicated, or posted to a publicly accessible website, in whole or in part, except for use as permitted in a license distributed with a certain product or service or otherwise on a
+password-protected website or school-approved learning management system for classroom use.
+                           Chapter Contents
+
+18.1   Sign Test
+18.2   Wilcoxon Signed Rank Test
+18.3   Mann-Whitney-Wilcoxon Test
+18.4   Kruskal-Wallis Test
+18.5   Rank Correlation
+       Summary
+
+
+
+
+             © 2024 Cengage Group. All Rights Reserved.
+                                         Introduction
+
+Nonparametric methods can be used to make inferences about a population without requiring
+an assumption about the specific form of the population’s probability distribution.
+   • For this reason, nonparametric methods are also called distribution-free methods.
+Nonparametric methods are often the only approach to analyze categorical (nominal or ordinal)
+data and draw statistical conclusions.
+    • Whenever the data are quantitative, we will transform the data into categorical data to
+       conduct the nonparametric test.
+In this chapter, we first show how the binomial distribution uses two categories of data to make
+an inference about a population median.
+Then, we show how rank-ordered data are used in nonparametric tests about two or more
+populations.
+Finally, we use rank-ordered data to compute the rank correlation for two variables.
+
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+「淑女與下午茶」
+ 在英國劍橋有位女士，聲稱把茶加到牛
+  奶、把牛奶加到茶裡，兩種方法調出來
+  的下午茶喝起來味道不同。在座的科學
+  家都對她的說法嗤之以鼻，但有位來訪
+  的瘦小紳士（RA費雪），提議要用科學
+  的方法檢驗這位女士的假設。
+實驗設計(Experimental Design)
+如果十次測試，這位女士全部猜中茶加
+ 奶、奶加茶的順序，可能會是亂猜嗎？
+  © 2020 Cengage. May not be scanned, copied or duplicated, or posted to a publicly accessible website, in whole or in part, except for use as permitted in a license distributed with a certain product or service or otherwise on a
+  password-protected website or school-approved learning management system for classroom use.
+5
+
+
+
+
+                                                                                                                                                               https://www.youtube.com/watch?app=desktop&v=S92tT4dzfSg&ab_channel=%E5%8F%B0%E8%A6%96%E6%96%B0%E8%81%9ETTVNEWS
+
+
+
+
+【2022年2月14日】台南白河木屐寮舉辦擲筊大賽，只要有點燈，擲出兩個聖筊，
+就有機會參加比賽，最後由來自高雄的陳姓男子跟朋友，抱走66萬6666元大獎！
+    © 2020 Cengage. May not be scanned, copied or duplicated, or posted to a publicly accessible website, in whole or in part, except for use as permitted in a license distributed with a certain product or service or otherwise on a
+    password-protected website or school-approved learning management system for classroom use.
+          18.1 Sign Test About a Population Median
+
+The sign test is a versatile distribution-free method for the testing of a population median.
+We conduct the nonparametric sign test about a population median by:
+ • recording a plus sign “+” whenever the data in the sample are above the hypothesized
+    value of the median.
+  •   recording a minus sign “−” whenever the data in the sample are below the hypothesized
+      value of the median.
+  • discarding any observation exactly equal to the hypothesized median.
+The hypotheses for a sign test about a population median are:
+         𝑯𝟎 : 𝒑 = 𝟎. 𝟓𝟎
+         𝑯𝒂 : 𝒑 ≠ 𝟎. 𝟓𝟎
+Because there are only two possible outcomes per trial, the distribution of the count of plus
+signs follows a binomial distribution where 𝑝 denotes the probability of a plus sign.
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+     18.1 Sign Test About a Population Median: n ≤ 20
+Lawler’s Grocery Store made the decision to carry Cape May Potato Chips based on the
+manufacturer’s estimate that the median sales should be $450 per week on a per-store basis.
+One-week sales at 10 randomly selected Lawler’s stores, as well as whether weekly sales
+were higher (“+”) or lower (“−”) than $450, are shown in the table.
+Thus, the hypotheses for the test about a population median are:
+        𝐻0 : Median = $450                                       Store Number Weekly Sales ($)   Sign
+                                                                       56          485             +
+        𝐻𝑎 : Median ≠ $450                                             19          562             +
+To use the sign test, we convert to the hypotheses                     36          415             −
+about the binomial probability 𝑝 of a plus sign:                      128          860             +
+                                                                       12          426             −
+        𝐻0 : 𝑝 = 0.50                                                  63          474             +
+        𝐻𝑎 : 𝑝 ≠ 0.50                                                  39          662             +
+                                                                       84          380             −
+If we reject 𝐻0 , we can conclude that the                            102          515             +
+population median is not $450.                                         44          721             +
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+       18.1 p-Value Approach to a Sign Test: n ≤ 20
+We will use an 𝛼 = 0.10 level of significance for the test.
+Since the observed number of plus signs, 7, is in the upper tail of the binomial distribution, we
+begin by computing the probability of obtaining 7 or more plus signs out of 10 trials. Then, for
+a two-tailed test, we multiply the probability by two to obtain the p-value. Number of
+The probabilities shown in the table can be also obtained using Table 5 in Plus Signs Probability
+Appendix B, with 𝑛 = 10 trials or stores, and 𝑝 = 0.50.                           0       0.0010
+                                                                                  1       0.0098
+Thus, we have:                                                                    2       0.0439
+𝑝−value = 2(0.1172 + 0.0439 + 0.0098 + 0.0010) = 2(0.1719) = 0.3438              3       0.1172
+                                                                                 4       0.2051
+Alternatively, we can use BINOM.DIST in Excel (*see notes.)                      5       0.2461
+With 𝑝−value = 0.3438 > 𝛼 = 0.10, we cannot reject 𝐻0 . Thus, we cannot          6       0.2051
+conclude that the population median weekly sales is not $450 per store.          7       0.1172
+                                                                                 8       0.0439
+Calculations about a one-tailed sign test proceed similarly.                     9       0.0098
+                                                                                10       0.0010
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+屏東慈天宮連擲20聖筊拚300萬 2萬人挑戰仍槓龜
+                                                https://www.ctee.com.tw/news/20260218700278-431401
+
+
+
+
+   © 2024 Cengage Group. All Rights Reserved.
+   18.1 Normal Approximation of a Sign Test: n > 20
+
+The binomial probabilities provided in Table 5 of Appendix B are used to compute the p-value
+when the sample size is 20 or less.
+With larger sample sizes, we rely on the normal distribution approximation of the binomial
+distribution to compute the p-value; this makes the computations quicker and easier.
+To conduct the normal approximation of the sampling distribution of the number of plus signs
+when 𝐻0 : 𝑝 = 0.50, and 𝑛 > 20, we set:
+                       Mean: 𝝁 = 𝟎. 𝟓𝟎𝒏
+        Standard deviation: 𝝈 = 𝟎. 𝟐𝟓𝒏
+Example: a real estate firm used a sample of recent home sales to determine if the population
+median price of a new home is less today than it was a year ago (DATAfile: HomeSales.)
+The real estate firm has determined that one year ago, the median price of a new home was
+$336,000. We use a significance level, 𝛼 = 0.05.
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+     18.1 Sign Test About a Population Median: n > 20
+
+Because we are testing for a population median decrease from last year, the hypotheses for
+the one-tailed test about the population median price of a new home is
+        𝐻0 : Median ≥ $336,000     𝐻𝑎 : Median < $336,000
+Data analysis reveals that, of the 𝑛 = 61 home sales, 22 sold for more than $336,000, 38 for
+sold for less than $336,000, and one home sold for $336,000.
+Thus, we delete the home sold for $336,000, and we are left with 22 “+” signs, 38 “−” signs,
+and a sample size, 𝑛 = 60.
+To use the sign test, we convert to the hypotheses about the probability 𝑝 of a plus sign:
+         𝐻0 : 𝑝 ≥ 0.50    𝐻𝑎 : 𝑝 < 0.50
+The normal approximation of the sampling distribution of the number of plus signs for the
+home sales example, when 𝐻0 : 𝑝 = 0.50, and 𝑛 = 60, is:
+        𝜇 = 0.50𝑛 = 0.5 60 = 30 homes and 𝜎 = 0.25𝑛 =            0.25 60 = 15 = 3.873 homes
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+       18.1 p-Value Approach to a Sign Test: n > 20
+Because the normal distribution is a continuous probability distribution, we need to account for
+the fact that the number of plus signs is a discrete variable.
+Thus, to calculate the p-value as the lower tail probability of having no more than 22 plus signs
+out of 60, we need to apply the continuity correction factor, and set the test statistic to 22.5.
+Using Table 2 of Appendix B, or the NORM.S.DIST
+function in Excel, we have:
+                                     22.5 − 30
+    𝑝−value = 𝑃 𝑥 ≤ 22.5 = 𝑃 𝑧 ≤
+                                       3.873
+    = 𝑃 𝑧 ≤ −1.94 = 0.0262
+With 𝑝−value = 0.0262 ≤ 𝛼 = 0.05, we reject 𝐻0
+and conclude that the median price of a new home
+is less than the $336,000 median price a year ago.
+
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+             18.1 Sign Test With Matched Samples
+A common application of the sign test involves using a sample of customers to determine
+whether there is a difference in preference between the two brands being compared.
+We record the preference data, using a plus sign (”+”) if the   Individual Preference     Sign
+individual prefers one brand and a minus sign (“–”) if the           1    Tropical Orange   −
+individual prefers the other brand.                                  2    Tropical Orange   −
+                                                                      3    Citrus Valley     +
+Because the data are recorded as plus and minus signs, we             4    Tropical Orange   −
+use the nonparametric sign test to analyze the matched-               5    Tropical Orange   −
+sample data.                                                          6    No Preference
+                                                                      7    Tropical Orange   −
+Consider the following application of matched sample data.
+                                                                      8    Tropical Orange   −
+Sun Coast Farms conducted a consumer preference study                 9    Tropical Orange   −
+between its orange juice, Citrus Valley, and the primary             10    No Preference
+competition, Tropical Orange.                                        11    Tropical Orange   −
+                                                                     12    Citrus Valley     +
+The table shows the study results for the brand of orange juice      13    Tropical Orange   −
+preferred by 14 randomly selected individuals.                       14    Tropical Orange   −
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+       18.1 Hypothesis Test With Matched Samples
+
+Deleting the two individuals who could not express a preference for either brand, we are left
+with a sign test having 2 plus signs and 10 minus signs for the 𝑛 = 12 individuals who could
+express a preference for one of the two brands.
+Letting 𝑝 indicate the proportion of the population of customers who prefer Citrus Valley orange
+juice, we want to test the hypotheses that there is no difference between the preferences for
+the two brands as follows:
+        𝐻0 : 𝑝 = 0.50
+        𝐻𝑎 : 𝑝 ≠ 0.50
+We will use an 𝛼 = 0.05 level of significance for the test.
+Since the observed number of plus signs, 2, is in the lower tail of the binomial distribution, we
+will calculate the p-value by multiplying by two the probability of obtaining 2 or less plus signs
+out of 12 individuals.
+
+
+
+                        © 2024 Cengage Group. All Rights Reserved.
+18.1 p-Value Approach to a Matched Samples Sign Test
+
+The probabilities shown in the table can also be obtained using Table 5 in Appendix B, with
+𝑛 = 10 trials or stores, and 𝑝 = 0.50.
+                                                                       Number of
+Thus, we have:                                                          Plus Signs Probability
+    𝑝−value = 2(0.0002 + 0.0029 + 0.0161) = 2(0.0192) = 0.0384                0      0.0002
+                                                                              1      0.0029
+Alternatively, we can use Excel to calculate the p-value:                     2      0.0161
+    𝑝−value=2∗BINOM.DIST(2,12,0.5,TRUE)=0.0384                                3      0.0537
+                                                                              4      0.1208
+With 𝑝−value = 0.0384 ≤ 𝛼 = 0.05, we reject 𝐻0 .                              5      0.1934
+                                                                              6      0.2256
+The taste test provides significant evidence that consumer
+                                                                              7      0.1934
+preference differs significantly for the two brands of orange juice.          8      0.1208
+We would advise Sun Coast Farms of this result and conclude that              9      0.0537
+the competitor’s Tropical Orange product is the preferred one.               10      0.0161
+                                                                             11      0.0029
+Sun Coast Farms can then pursue a strategy to address this issue.            12      0.0002
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+                  18.2 Wilcoxon Signed-Rank Test
+The Wilcoxon signed-rank test analyzes quantitative data from a matched samples
+experiment, but only requires the assumption that the differences have a symmetric distribution.
+  • This occurs whenever the shapes of the two populations are the same and the focus is on
+     determining whether there is a difference between the two populations’ medians.
+  • The Wilcoxon signed-rank test does not require the assumption that the differences
+     between the paired observations are normally distributed.
+To perform a Wilcoxon signed-rank test:
+  1. Compute the difference for each matched pair in the sample.
+  2. Delete any difference equal to zero.
+  3. Rank the remaining differences in ascending order, with tied values being assigned the
+     average of the ranks.
+When 𝐻0 is true, the medians of the two populations are equal, and the sum of the negative
+signed ranks, 𝑇 − , and the sum of the positive signed ranks, 𝑇 + , are approximately the same.
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+            18.2 Wilcoxon Signed-Rank Test Statistic
+The Wilcoxon signed-rank test uses the sum of the positive signed ranks, 𝑇 + , as a test statistic.
+𝑇 + is a random variable that follows a normally-distributed sampling distribution with mean and
+standard deviation defined as:
+
+                   𝒏 𝒏+𝟏                          𝒏 𝒏 + 𝟏 𝟐𝒏 + 𝟏
+        𝝁   𝑻+   =                   𝝈   𝑻+   =
+                      𝟒                                  𝟐𝟒
+so long as the sample size 𝑛 ≥ 10.
+As an application of the Wilcoxon signed-rank test, consider a manufacturing firm that wants to
+determine whether two production methods differ in terms of task completion time.
+Using a matched-samples experimental design, 11 randomly selected workers completed the
+production task two times, once using method A and once using method B, and the completion
+times for the two methods is recorded.
+The production method that the worker used first was randomly selected.
+
+
+
+                      © 2024 Cengage Group. All Rights Reserved.
+ 18.2 Application of the Wilcoxon Signed-Rank Test
+
+Because we are testing for the difference between the median completion times for the two
+production methods, the hypotheses are
+                                                                                                    Signed Ranks
+    𝐻0 : Median Method A − Median Method B = 0                                  Absolute
+                                                             Worker Difference Difference Rank Negative Positive
+    𝐻𝑎 : Median Method A − Median Method B ≠ 0
+                                                                1        0.7       0.7         8                8
+We delete worker 8 from the data set because it                 2       -0.2       0.2         2       -2
+had a difference of zero,                                       3        0.4       0.4         3.5             3.5
+                                                                4        0.5       0.5         5.5             5.5
+Then, we compute the absolute difference in                     5       -0.4       0.4         3.5     -3.5
+completion time for the 𝑛 = 10 remaining workers                6        0.9       0.9       10               10
+                                                                7        0.1       0.1         1               1
+and rank them in ascending order.
+                                                                8        0.0       0.0
+The sum of the positive signed ranks is                         9        0.6       0.6         7               7
+                                                              10         0.5       0.5         5.5             5.5
+  𝑇 + = 8 + 3.5 + 5.5 + 10 + 1 + 7 + 5.5 + 9                  11         0.8       0.8         9               9
+  = 49.5                                                                                                    +
+                                                                             Sum of positive signed ranks T = 49.5
+
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+18.2 p-Value Approach to a Wilcoxon Signed-Rank Test
+With 𝑛 = 10, the sampling distribution is normal with mean and standard deviation equal to
+          𝑛 𝑛+1   10 10 + 1   110
+    𝜇𝑇+ =       =           =     = 27.5
+             4        4        4
+             𝑛 𝑛 + 1 2𝑛 + 1           10 10 + 1 20 + 1           2310
+    𝜎 𝑇+ =                  =                          =              = 9.8107
+                    24                       24                   24
+
+Because 𝑇 + = 49.5 is a discrete value located in the upper tail of a contintuous normal
+distribution, we apply the continuity correction factor and set 𝑇 + = 49.
+Thus, for a two-tailed test, we calculate the p-value as
+                   +
+                                       49 − 27.5
+  𝑝−value = 2𝑃 𝑇 ≥ 49 = 2𝑃 𝑧 ≥                     = 2𝑃 𝑧 ≥ 2.19 = 2 1 − 𝑃(𝑧 ≤ 2.19) = 0.0286
+                                         9.8107
+Because 𝑝−value = 0.0286 ≤ 𝛼 = 0.05, we reject 𝐻0 and conclude that the median completion
+times for the two production methods are not equal.
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+       18.2 Sign Test vs. Wilcoxon Signed-Rank Test
+
+In Section 18.1, we learned that the sign test can be used for both a hypothesis test about a
+population median and a hypothesis test with matched samples.
+Besides a hypothesis test with matched samples, as shown in this section, the Wilcoxon
+signed-rank test can also be used for a nonparametric test about a population median.
+   •   If the population distribution is symmetric, the Wilcoxon signed-rank test is the preferred
+       nonparametric test for a population median (* see notes.)
+    • If the population distribution is skewed, the sign test is preferred.
+To perform a Wilcoxon signed-rank test on a population median, the differences between the
+observations and the hypothesized value of the population median are used instead of the
+differences between the matched-pair observations.
+Otherwise, the calculations are exactly as shown in this section.
+
+
+
+
+                     © 2024 Cengage Group. All Rights Reserved.
+                18.3 Mann-Whitney-Wilcoxon Test
+The Mann-Whitney-Wilcoxon (MWW) test is a nonparametric method that uses two
+independent sample to determine whether there is a difference between two populations.
+Advantages of this procedure are:
+  •   It can be used with either ordinal data or quantitative data.
+  •   It does not require the assumption that the populations have a normal distribution.
+The MWW test determines whether the two populations are identical:
+      𝑯𝟎 : The two populations are identical
+      𝑯𝒂 : The two populations are not identical
+
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+        18.3 Mann-Whitney-Wilcoxon Test Statistic
+The steps to conduct at Mann-Whitney-Wilcoxon test are:
+  1. Combine the data from the two independent samples into one.
+  2. Rank the combined sample data in ascending order, with tied values being assigned the
+      average of the ranks.
+  3. Compute 𝑊, the sum of the ranks for the first sample.
+ 4. Compare the observed value of 𝑊 to the sampling distribution of 𝑊 for identical
+    populations.
+       •   For small sample sizes, the exact sampling distribution of 𝑊 has to be computed.
+       •   For larger sample sizes such that 𝑛1 ≥ 7 and 𝑛2 ≥ 7, the sampling distribution of 𝑊
+           can be approximated by a normal distribution with mean and standard deviation:
+
+                         𝒏𝟏 𝒏𝟏 + 𝒏 𝟐 + 𝟏                           𝒏 𝟏 𝒏𝟐 𝒏𝟏 + 𝒏 𝟐 + 𝟏
+                    𝝁𝑾 =                                    𝝈𝑾 =
+                                𝟐                                           𝟏𝟐
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+18.3 Mann-Whitney-Wilcoxon Test: Small Samples Case
+
+A manager at Showtime Cinemas, rated all 35 employees from best                    Manager's
+(rating 1) to worst (rating 35) in the theater’s annual report.           College Performance
+                                                                          Student    Rating     Rank
+Knowing that the part-time employees were primarily college and              1         15         4
+high school students, the district manager asked if there was                2          3         1
+evidence of a significant difference in their performance.                   3         23         7
+                                                                             4          8         2
+Among the 35 employees, four were college students and five were                   Sum of ranks 14
+high school students, for a combined sample of nine students.
+                                                                            High   Manager's
+The hypothesis test, with 𝛼 = 0.05, was set as follows:                    School Performance
+   𝐻0 : College and high school student populations are identical         Student    Rating     Rank
+                                                                             1         18         5
+     𝐻𝑎 : College and high school student populations are not identical      2         20         6
+The ratings were sorted, ranked in ascending order, and summed.              3         32         9
+                                                                             4          9         3
+The sum of ranks for the first sample (the college students) will be         5         25         8
+the test statistic, 𝑊 = 4 + 1 + 7 + 2 = 14.                                        Sum of ranks 31
+
+
+
+                     © 2024 Cengage Group. All Rights Reserved.
+18.3 p-Value Approach to MWW Test: Small Samples Case
+
+ To build the sampling distribution, we observe that the possible values of 𝑊, for 4 college
+ students out of 9, range between 𝑊 = 1 + 2 + 3 + 4 = 10 and 𝑊 = 6 + 7 + 8 + 9 = 30.
+ Because there is a total of 126 possible ranking combinations, the sampling distribution of 𝑊
+ can be computed as shown in the table (*see notes.)                    W Probability W Probability
+ When 𝐻0 is true, the two populations are identical, and we would       10  0.0079    20  0.0952
+ expect a mix in the ordering of the ranks so that 𝑊 is near the        11  0.0079    21  0.0873
+ average of the two extremes, (10 + 30)/2 = 20.                         12  0.0159    22  0.0873
+                                                                        13  0.0238    23  0.0714
+ Thus, for a two-tailed test, the p-value will be twice the probability 14  0.0397    24  0.0635
+ that 𝑊 is less than or equal to 14.                                    15  0.0476    25  0.0476
+     𝑝−value = 2𝑃 𝑊 ≤ 14                                                16  0.0635    26  0.0397
+     = 2 0.0079 + 0.0079 + 0.0159 + 0.0238 + 0.0397 = 0.1904            17  0.0714    27  0.0238
+                                                                        18  0.0873    28  0.0159
+ Because 𝑝−value > 𝛼, we cannot reject 𝐻0 and conclude that the 19          0.0873    29  0.0079
+ populations of college and high school students are not identical.                   30  0.0079
+
+
+
+
+                     © 2024 Cengage Group. All Rights Reserved.
+18.3 Mann-Whitney-Wilcoxon Test: Large Samples Case
+                                                                              Branch Account Balance   Rank
+A bank manager wants to determine if the populations of checking                 2       6    750       1
+account balances at two Third National Bank branches are identical.              2       5    800       2
+                                                                                 1       7    805       3
+Two independent samples of checking accounts are taken with sample               2       2    850       4
+sizes 𝑛1 = 12 at branch 1 and 𝑛2 = 10 at branch 2.                               2       7    865       5
+                                                                                 1       9    875       6
+As it was for the small samples case, the balances for the 22 combined           2       1    885       7
+                                                                                 2       3    915       8
+accounts were sorted and ranked in ascending order, with tied values             1       5    925       9
+being assigned the average of the ranks.                                         2      10    935      10
+                                                                                 1       8    945      11
+The test statistic 𝑊 is the sum of the rankings for sample 1.                    1       6    950      12.5
+                                                                                 2       4    950      12.5
+  𝑊 = 3 + 6 + 9 + 11 + 12.5 + 14 + 15 + 17 + 19 + 20 + 21 + 22 = 169.5           1       2    955      14
+                                                                                 1      12    975      15
+Because 𝑛1 ≥ 7 and 𝑛2 ≥ 7, we can approximate the sampling distribution          2       8   1000      16
+of 𝑊 with a normal distribution, having mean and standard deviation:             1      11   1025      17
+                                                                                 2       9   1050      18
+                                                                                 1      10   1055      19
+       12 12 + 10 + 1                        (12)(10) 12 + 10 + 1                1       1   1095      20
+  𝜇𝑊 =                = 138 𝜎𝑊 =                                  = 15.1658      1       4   1195      21
+              2                                       12                         1       3   1200      22
+
+
+
+
+                   © 2024 Cengage Group. All Rights Reserved.
+18.3 p-Value Approach to MWW Test: Large Samples Case
+
+ Because the normal distribution is a continuous probability distribution, we need to account for
+ the fact that the test statistic 𝑊 is a discrete variable.
+ In this case, to calculate the p-value as the upper tail probability of having 𝑊 ≥ 169.5, we need
+ to apply the continuity correction factor, and set the test statistic to 𝑊 = 169.
+ Using Table 2 of Appendix B, we have:
+                                         169 − 138
+ 𝑝−value = 2𝑃 𝑊 ≥ 169 = 2𝑃 𝑧 ≥                        = 2𝑃 𝑧 ≥ 2.04 = 2 1 − 𝑃(𝑧 ≤ 2.04) = 0.0286
+                                           15.1658
+ With 𝑝−value = 0.0286 ≤ 𝛼 = 0.05, we reject the null hypothesis and conclude that the two
+ populations of account balances are not identical.
+ The upper tail value for test statistic 𝑊 indicates that the population of account balances at
+ branch 1 tends to be larger.
+
+
+
+
+                     © 2024 Cengage Group. All Rights Reserved.
+18.3 Mann-Whitney-Wilcoxon Test: Final Remarks
+
+If the two populations have identical shapes, then the hypothesis test for the Mann-Whitney-
+Wilcoxon test may be stated in terms of the difference between the two population medians.
+Thus, any difference between the medians can be interpreted as the shift in location of one
+population compared to the other.
+In such case, the three forms of the Mann-Whitney-Wilcoxon test of hypotheses about the
+medians of the two populations are as follows:
+
+          Lower Tail Test                    Upper Tail Test        Two-Tailed Test
+
+      𝐻0 : Median1 ≥ Median2           𝐻0 : Median1 ≤ Median2    𝐻0 : Median1 = Median2
+      𝐻𝑎 : Median1 < Median2           𝐻𝑎 : Median1 > Median2    𝐻𝑎 : Median1 ≠ Median2
+
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+                            18.4 Kruskal-Wallis Test
+
+The Kruskal-Wallis test is based on the analysis of independent random samples from 𝑘
+populations. It can be used with either ordinal data or quantitative data and does not require
+the assumption that the populations have normal distributions.
+The general form of the null and alternative hypotheses is as follows (*see notes):
+        𝑯𝟎 : All 𝒌 populations are identical
+        𝑯𝒂 : Not all 𝒌 populations are identical
+The Kruskal-Wallis test statistic, 𝐻, is calculated using the sum of the ranks, 𝑅𝑖 , for k samples:
+                                  𝒌                                          𝒌
+                     𝟏𝟐                𝑹𝟐𝒊
+            𝑯=              ∑    − 𝟑 𝒏𝑻 + 𝟏                       where 𝒏𝑻 = ∑ 𝒏𝒊
+                  𝒏𝑻 𝒏𝑻 + 𝟏   𝒏𝒊
+                                 𝒊=𝟏                                        𝒊=𝟏
+
+When 𝐻0 is true, the sampling distribution of 𝐻 can be approximated by a chi-square
+distribution with 𝑘 − 1 degrees of freedom, so long as 𝑛𝑖 ≥ 5 for each of the 𝑘 samples.
+
+
+
+                     © 2024 Cengage Group. All Rights Reserved.
+     18.4 An Application of the Kruskal-Wallis Test
+
+The personnel director at Williams Manufacturing Company reviewed the annual performance
+reports for the management staff to determine whether there are differences in the
+performance ratings among the managers who graduated from either college A, B, or C.
+𝑛 𝑇 = 20 performance ratings, recorded on a scale from 0 to 100, are available for
+independent samples of 𝑛1 = 7 managers who graduated from college A, 𝑛2 = 6 managers
+who graduated from college B, and 𝑛3 = 7 managers who graduated from college C.
+To test whether the three populations of managers College A Rank College B Rank College C Rank
+have identical performance ratings, the director:     25      3      60      9     50      7
+                                                      70     12      20      2     70     12
+ 1. ranked the combined 20 ratings                    60      9      30      4     60      9
+ 2. assigned the average of ranks to tied ratings     85     17      15      1     80     15.5
+                                                                 95   20     40     6   90   18.5
+ 3. summed the ranks for each sample                             90   18.5   35     5   70   12
+A 0.05 significance level was used for this test.                80   15.5        ___   75   14
+                                                                      95           27        88
+
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+   18.4 p-Value Approach to the Kruskal-Wallis Test
+The Kruskal-Wallis test statistic for the three rating samples is computed as follows:
+                      𝑘
+           12      𝑅𝑖2                  12    952 272 882
+    𝐻=           ∑     − 3 𝑛𝑇 + 1 =              +   +    − 3 20 + 1 = 8.92
+       𝑛𝑇 𝑛𝑇 + 1   𝑛𝑖               20 20 + 1 7    6   7
+                     𝑖=1
+
+Using the chi-square distribution table (Table 3 of Appendix B) for 𝑘 = 3 − 1 = 2 degrees of
+freedom, we find 𝑃 Χ 2 ≥ 0.025 = 7.378 and 𝑃 Χ 2 ≥ 0.01 = 9.21.
+Thus, with 𝐻 = 8.92, we conclude that 0.01 ≤ 𝑝−value ≤ 0.025.
+We can also use Excel to calculate the exact p-value as =CHISQ.DIST.RT(8.92,2)=0.0116.
+Because 𝑝−value ≤ 𝛼 = 0.05, we reject 𝐻0 and conclude that the three populations of
+performance ratings are not identical and differ significantly depending upon the college.
+Because the sum of the ranks is relatively low for the managers who graduated from college B,
+the company should thoroughly evaluate college B graduates before making a hiring decision.
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+                               18.5 Rank Correlation
+
+The Pearson correlation coefficient, 𝑟, is a measure of the linear association between two
+variables for which interval or ratio data are available.
+The Spearman rank-correlation coefficient, 𝑟𝑠 , is a measure of association between two
+variables when only ordinal or rank-ordered data are available.
+The Spearman rank-correlation coefficient is defined as
+                 𝟔 ∑𝒏𝒊=𝟏 𝒅𝟐𝒊
+        𝒓𝒔 = 𝟏 −
+                 𝒏 𝒏𝟐 ─𝟏
+Where
+        𝑛 = number of observations being ranked
+        𝑥𝑖 = rank of observation 𝑖 with respect to the first variable
+        𝑦𝑖 = rank of observation 𝑖 with respect to the second variable
+        𝑑𝑖 = 𝑥𝑖 − 𝑦𝑖
+
+
+
+                     © 2024 Cengage Group. All Rights Reserved.
+     18.5 Testing for Rank Correlation Significance
+
+We can use the sample rank correlation, 𝑟𝑠 , to make an inference about the population rank
+correlation coefficient, 𝜌𝑠 , by testing the following hypotheses:
+        𝑯 𝟎 : 𝝆𝒔 = 𝟎
+        𝑯 𝒂 : 𝝆𝒔 ≠ 𝟎
+Under the assumption that 𝐻0 is true and 𝜌𝑠 = 0, the sampling distribution of 𝑟𝑠 follows a normal
+distribution with mean and standard deviation defined as
+         𝝁𝒓𝒔 = 𝟎
+
+                 𝟏
+        𝝈𝒓𝒔 =
+                𝒏−𝟏
+
+Provided that the sample size, 𝑛 ≥ 10.
+
+
+
+
+                       © 2024 Cengage Group. All Rights Reserved.
+       18.5 Spearman Rank-Correlation Coefficient
+
+A company’s personnel director reviewed the hiring files of 𝑛 = 10 members of the sales force
+and ranked them in terms of their potential for success at the time of employment by
+assigning the salesperson who had the most potential the rank of 1.
+A second ranking of the 10 salespersons, based                          xi = Ranking yi = Ranking
+on the actual sales records, was also obtained.             Salesperson of Potential Sales Perf. di = xi − yi di2
+                                                                 A             2            1         1          1
+The table provides the ranks based on potential
+                                                                 B             4            3         1          1
+(𝑥𝑖 ), the ranks based on the actual performance                 C             7            5         2          4
+(𝑦𝑖 ), as well as the calculations for ∑𝑛𝑖=1 𝑑𝑖2 .               D             1            6        -5         25
+                                                                 E             6            7        -1          1
+We can calculate 𝑟𝑠 as follows                                   F             3            4        -1          1
+           6 ∑𝑛𝑖=1 𝑑𝑖2          6 44                             G            10           10         0          0
+  𝑟𝑠 = 1 −     2
+                       = 1 −       2
+                                       = 0.739                   H             9            8         1          1
+           𝑛 𝑛 +1            10 10 + 1                           I             8            9        -1          1
+                                                                 J             5            2         3          9
+                                                                                                         Σdi2 = 44
+
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+     18.5 p-Value Approach to a Rank Correlation Test
+
+With 𝑛 = 10, we can approximate the sampling distribution of 𝑟𝑠 with a normal distribution,
+having mean and standard deviation equal to
+
+                                  1             1    1
+        𝜇𝑟𝑠 = 0 and 𝜎𝑟𝑠 =            =              = = 0.333
+                                 𝑛−1          10 − 1 3
+We conduct a test on the Spearman rank-correlation coefficient using a 0.05 significance level.
+We calculate the p-value multiplying by two the upper tail probability of having 𝑟𝑠 ≥ 0.739.
+Using Table 2 of Appendix B, we have:
+                                     0.739 − 0
+𝑝−value = 2𝑃 𝑟𝑠 ≥ 0.739 = 2𝑃 𝑧 ≥                 = 2𝑃 𝑧 ≥ 2.20 = 2 1 − 𝑃(𝑧 ≤ 2.20) = 0.0278
+                                       0.333
+With 𝑝−value = 0.0278 ≤ 𝛼 = 0.05, we reject 𝐻0 and conclude that there is a significant rank
+correlation between potential at the time of employment and actual sales performance.
+
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+                                            Summary
+• In this chapter, we have presented statistical procedures that are classified as
+  nonparametric methods and can be applied to categorical data as well as quantitative data.
+• The sign test is a nonparametric procedure for testing a hypothesis about a population
+  median or for testing a hypothesis with matched samples.
+• The Wilcoxon signed-rank test analyzes matched samples from two populations when
+  quantitative data are available.
+   • It can also be used to make inferences about the median of a symmetric population.
+• The Mann-Whitney-Wilcoxon (MWW) test is a nonparametric procedure for the difference
+  between two populations; the test uses the combined ranks from two independent samples.
+   • The MWW test can also provide an inference about the difference between the medians
+     of the two populations having the same shape.
+• The Kruskal-Wallis test extends the MWW test to three or more populations.
+• Finally, we introduced the Spearman rank-correlation coefficient as a measure of
+  association between two variables based on rank-ordered data.
+
+
+                    © 2024 Cengage Group. All Rights Reserved.
+

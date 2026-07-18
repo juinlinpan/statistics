@@ -15,8 +15,8 @@ NOTES = [
     ("14", "14-simple-linear-regression", "第 14 章：簡單線性迴歸", "Quan1150(Simple Regression).pdf"),
     ("15", "15-multiple-regression", "第 15 章：複迴歸", "Quan1150(Multiple Regression).pdf"),
     ("16", "16-regression-model-building", "第 16 章：建立迴歸模型", "Quan1150(Model Construction).pdf"),
-    ("17", "17-index-numbers", "第 17 章：指數", None),
-    ("18", "18-time-series-and-forecasting", "第 18 章：時間序列分析與預測", None),
+    ("17", "17-time-series-and-forecasting", "第 17 章：時間數列與預測", "Quan1150(Forecast).pdf"),
+    ("18", "18-nonparametric-methods", "第 18 章：無母數方法", "Quan1150(Nonparametric).pdf"),
 ]
 
 
@@ -108,7 +108,7 @@ def scaffold(root: Path) -> list[Path]:
 |---|---|---|
 | 2026-07-12 | 考古題 Ch12–18（quiz-set/） | Ch12–18 的 Phase 6、Phase 8 素材已備 |
 | 2026-07-15 | 投影片：Ch7–10 複習、Ch12、Ch13、Ch14、Ch15、Ch16（ppt/） | 這六份講義可開始 Phase 1 |
-| （待補） | 投影片：Ch17、Ch18 | 公布後其講義才可開始 Phase 1 |
+| 2026-07-16 | 投影片：Ch17 時間數列與預測、Ch18 無母數方法（ppt/） | Ch17、Ch18 可開始 Phase 1 |
 
 ## 講義進度
 

@@ -10,11 +10,56 @@ import remarkMath from "../../../website/node_modules/remark-math/index.js";
 import rehypeRaw from "../../../website/node_modules/rehype-raw/index.js";
 import rehypeKatex from "../../../website/node_modules/rehype-katex/index.js";
 
+import { chapterFiles, examChapterFiles } from "./handout_manifest.mjs";
+
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoDir = path.resolve(scriptDir, "../../..");
 const courseDir = path.join(repoDir, "course_2");
-const inputPath = path.join(courseDir, "merged_chapters.md");
-const outputPath = path.join(courseDir, "merged_chapters.html");
+
+const editions = {
+  full: {
+    input: "merged_chapters.md",
+    output: "merged_chapters.html",
+    expectedChapters: chapterFiles.length,
+    documentTitle: "商業統計講義｜推論、迴歸、預測與無母數",
+    coverKicker: "BUSINESS STATISTICS · COURSE HANDOUT",
+    coverTitle: "商業統計講義",
+    coverSubtitle: "從估計與檢定，到卡方、ANOVA、迴歸、時間數列與無母數方法：用直覺、公式、圖解與完整考古題詳解串起統計推理。",
+    coverMeta({ chapters, questions, figures }) {
+      return `已完成章節版 · 第 7–18 章 · ${chapters} 份講義<br>${questions} 題考古題 · ${figures} 張統計圖解 · 詳解完整展開`;
+    },
+  },
+  slides: {
+    input: "course2-slides-handout.md",
+    output: "course2-slides-handout.html",
+    expectedChapters: chapterFiles.length,
+    documentTitle: "商業統計講義｜投影片講義版",
+    coverKicker: "BUSINESS STATISTICS · LECTURE NOTES",
+    coverTitle: "商業統計講義",
+    coverSubtitle: "投影片教學內容專冊：保留先備知識、公式、例題、圖解、跨章分辨與定性意義，不重印考古題。",
+    coverMeta({ chapters, figures }) {
+      return `投影片講義版 · 第 7–18 章 · ${chapters} 份講義<br>${figures} 張統計圖解 · 不含考古題與詳解`;
+    },
+  },
+  solutions: {
+    input: "course2-exam-solutions.md",
+    output: "course2-exam-solutions.html",
+    expectedChapters: examChapterFiles.length,
+    documentTitle: "商業統計｜考古題詳解版",
+    coverKicker: "BUSINESS STATISTICS · WORKED SOLUTIONS",
+    coverTitle: "商業統計考古題詳解",
+    coverSubtitle: "每題保留一份完整題目與詳解，共用 Exhibit 緊鄰所屬題組；不另外重複編排一段只有原題的題本。",
+    coverMeta({ chapters, questions }) {
+      return `考古題詳解版 · 第 12–18 章 · ${chapters} 章<br>${questions} 題題目與完整詳解 · 可直接搭配作答`;
+    },
+  },
+};
+
+const editionName = process.env.COURSE2_HANDOUT_EDITION ?? "full";
+const edition = editions[editionName];
+if (!edition) throw new Error(`Unknown COURSE2_HANDOUT_EDITION: ${editionName}`);
+const inputPath = path.join(courseDir, edition.input);
+const outputPath = path.join(courseDir, edition.output);
 
 function escapeHtml(value) {
   return value
@@ -101,8 +146,8 @@ const markdown = fs.readFileSync(inputPath, "utf8");
 const renderMarkdown = normalizeInlineCurrencyMath(markdown);
 const headings = collectHeadings(markdown);
 const chapterHeadings = headings.filter(({ level }) => level === 1);
-if (chapterHeadings.length !== 6) {
-  throw new Error(`Expected 6 completed chapters in merged Markdown, found ${chapterHeadings.length}`);
+if (chapterHeadings.length !== edition.expectedChapters) {
+  throw new Error(`Expected ${edition.expectedChapters} chapters for ${editionName}, found ${chapterHeadings.length}`);
 }
 
 const questionCount = (markdown.match(/^#### (?:選擇題|計算題) \d+(?:：.*?)?(?:\s+<a id="exam-ch\d+-(?:mc|problem)-\d+"><\/a>)?$/gm) ?? []).length;
@@ -398,18 +443,18 @@ const output = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>商業統計講義｜估計、檢定與迴歸</title>
+  <title>${escapeHtml(edition.documentTitle)}</title>
   <style>${katexCss}\n${handoutCss}\n${chapterPageCss}</style>
 </head>
 <body>
   <main class="book">
     <section class="cover">
-      <p class="cover-kicker">BUSINESS STATISTICS · COURSE HANDOUT</p>
+      <p class="cover-kicker">${escapeHtml(edition.coverKicker)}</p>
       <div>
-        <h1>商業統計講義</h1>
-        <p class="cover-subtitle">從估計與檢定，到卡方、ANOVA 與迴歸模型：用直覺、公式、圖解與完整考古題詳解串起統計推理。</p>
+        <h1>${escapeHtml(edition.coverTitle)}</h1>
+        <p class="cover-subtitle">${escapeHtml(edition.coverSubtitle)}</p>
       </div>
-      <p class="cover-meta">已完成章節版 · 第 7–16 章 · ${chapterHeadings.length} 份講義<br>${questionCount} 題考古題 · ${figureCount} 張統計圖解 · 詳解完整展開</p>
+      <p class="cover-meta">${edition.coverMeta({ chapters: chapterHeadings.length, questions: questionCount, figures: figureCount })}</p>
     </section>
     <nav class="toc" aria-label="目錄">
       <h2>目錄</h2>
@@ -423,4 +468,4 @@ const output = `<!doctype html>
 
 fs.writeFileSync(outputPath, output);
 console.log(`Built ${path.relative(repoDir, outputPath)} from ${path.relative(repoDir, inputPath)}`);
-console.log(`${chapterHeadings.length} chapters; ${questionCount} exam questions; ${figureCount} figures`);
+console.log(`${editionName}: ${chapterHeadings.length} chapters; ${questionCount} exam questions; ${figureCount} figures`);

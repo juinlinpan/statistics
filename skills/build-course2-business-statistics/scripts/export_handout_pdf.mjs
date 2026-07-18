@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { spawnSync } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
@@ -25,6 +25,75 @@ function run(command, args, options = {}) {
   return result;
 }
 
+const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+
+function signalProcessGroup(child, signal) {
+  try {
+    if (process.platform !== "win32" && child.pid) process.kill(-child.pid, signal);
+    else child.kill(signal);
+  } catch (error) {
+    if (error.code !== "ESRCH") throw error;
+  }
+}
+
+async function printPdf(chromePath, profileDir) {
+  fs.rmSync(pdfPath, { force: true });
+  const child = spawn(chromePath, [
+    "--headless=new",
+    "--disable-gpu",
+    "--disable-extensions",
+    "--disable-background-networking",
+    "--disable-component-update",
+    "--disable-sync",
+    "--metrics-recording-only",
+    "--no-first-run",
+    "--no-pdf-header-footer",
+    "--run-all-compositor-stages-before-draw",
+    `--user-data-dir=${profileDir}`,
+    `--print-to-pdf=${pdfPath}`,
+    pathToFileURL(htmlPath).href,
+  ], {
+    cwd: repoDir,
+    detached: process.platform !== "win32",
+    stdio: ["ignore", "inherit", "inherit"],
+  });
+
+  let exited = false;
+  let exitCode = null;
+  child.once("exit", (code) => {
+    exited = true;
+    exitCode = code;
+  });
+
+  const deadline = Date.now() + 300_000;
+  let previousSize = -1;
+  let stableChecks = 0;
+  let valid = false;
+  while (Date.now() < deadline) {
+    if (fs.existsSync(pdfPath)) {
+      const stat = fs.statSync(pdfPath);
+      const signature = fs.readFileSync(pdfPath).subarray(0, 4).toString("ascii");
+      if (signature === "%PDF" && stat.size >= 100_000) {
+        stableChecks = stat.size === previousSize ? stableChecks + 1 : 0;
+        previousSize = stat.size;
+        if (stableChecks >= 3) {
+          valid = true;
+          break;
+        }
+      }
+    }
+    if (exited && exitCode !== 0) break;
+    await sleep(500);
+  }
+
+  if (!exited) {
+    signalProcessGroup(child, "SIGTERM");
+    for (let attempt = 0; attempt < 10 && !exited; attempt += 1) await sleep(200);
+    if (!exited) signalProcessGroup(child, "SIGKILL");
+  }
+  if (!valid) throw new Error(`Chrome did not create a stable PDF (exit ${exitCode ?? "pending"})`);
+}
+
 run(process.execPath, [path.join(scriptDir, "merge_chapters.mjs")]);
 run(process.execPath, [path.join(scriptDir, "build_handout.mjs")]);
 
@@ -44,17 +113,7 @@ if (!chromePath) {
 fs.mkdirSync(outputDir, { recursive: true });
 const profileDir = fs.mkdtempSync(path.join(os.tmpdir(), "course2-handout-chrome-"));
 try {
-  run(chromePath, [
-    "--headless=new",
-    "--disable-gpu",
-    "--disable-extensions",
-    "--no-first-run",
-    "--no-pdf-header-footer",
-    "--run-all-compositor-stages-before-draw",
-    `--user-data-dir=${profileDir}`,
-    `--print-to-pdf=${pdfPath}`,
-    pathToFileURL(htmlPath).href,
-  ], { timeout: 600_000 });
+  await printPdf(chromePath, profileDir);
 } finally {
   fs.rmSync(profileDir, { recursive: true, force: true });
 }
